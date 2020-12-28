@@ -1,0 +1,29 @@
+@mixin breakpoint($bp) {
+  @if $bp == only-small-phone {
+    @media (min-width: 300px) and (max-width: 369px) {
+      @content;
+    }
+  } @else if $bp == only-phone {
+    @media (max-width: 767px) {
+      @content;
+    }
+  } @else if $bp == sm {
+    @media (min-width: 768px) {
+      @content;
+    }
+  } @else if $bp == md {
+    @media (min-width: 992px) {
+      @content;
+    }
+  } @else if $bp == ml {
+    @media (min-width: 1024px) {
+      @content;
+    }
+  } @else if $bp == lg {
+    @media (min-width: 1232px) {
+      @content;
+    }
+  } @else {
+    @warn "Breakpoint mixin supports: only-small-phone, only-phone, sm, md, ml and lg";
+  }
+}

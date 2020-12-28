@@ -1,0 +1,23 @@
+:root {
+  --color-base: #1f1e34;
+  --color-primary: #d57b2e;
+  --color-light: #ecedf1;
+  --color-danger: #973d3d;
+  --color-success: #afbf00;
+  --color-soft: #8b7670;
+  --color-soft-light: #d4cec5;
+}
+
+/**
+* Use only sass vars for functions, etc
+*
+* ex: background-color: background-opacity($--color-primary, 0.5);
+*/
+
+$--color-base: #1f1e34;
+$--color-primary: #d57b2e;
+$--color-light: #ecedf1;
+$--color-danger: #973d3d;
+$--color-success: #afbf00;
+$--color-soft: #8b7670;
+$--color-soft-light: #d4cec5;

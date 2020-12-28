@@ -1,0 +1,16 @@
+html,
+body,
+#__nuxt,
+#__layout {
+  @apply h-full;
+}
+
+body {
+  font-size: 16px;
+  font-weight: 100;
+  letter-spacing: 0.6px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-kerning: none;
+  font-kerning: none;
+}
