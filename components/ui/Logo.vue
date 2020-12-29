@@ -1,5 +1,5 @@
 <template>
-  <div class="logo">
+  <div class="logo" :class="{ 'logo--is-sticky': isSticky }">
     <n-link :to="link">
       <img :src="getLogoImage" :alt="altText" class="logo__image" />
     </n-link>
@@ -25,6 +25,10 @@ export default Vue.extend({
       type: String,
       default: 'Tartaytantas Logo',
     },
+    isSticky: {
+      type: Boolean,
+      default: false,
+    },
   },
 
   computed: {
@@ -37,9 +41,16 @@ export default Vue.extend({
 
 <style lang="scss" scoped>
 .logo {
+  $--self: &;
   &__image {
     width: rem(204);
     max-width: 100%;
+    transition: $--logo-t;
+  }
+  &--is-sticky {
+    #{$--self}__image {
+      width: rem(120);
+    }
   }
 }
 </style>

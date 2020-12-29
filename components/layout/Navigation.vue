@@ -8,6 +8,7 @@
         v-for="item in navigation"
         :key="item.name"
         class="navigation-item mx-6"
+        :class="{ 'navigation-item--is-sticky': isSticky }"
       >
         <component
           :is="getLinkTag(item)"
@@ -28,6 +29,13 @@ import { NavigationItem } from '@/types/index'
 
 export default Vue.extend({
   name: 'Navigation',
+
+  props: {
+    isSticky: {
+      type: Boolean,
+      default: false,
+    },
+  },
 
   data() {
     return {
@@ -60,8 +68,11 @@ export default Vue.extend({
 
 <style lang="scss" scoped>
 .navigation-item {
+  $--self: &;
+
+  transition: $--nav-item-t;
   &__inner {
-    font-size: rem(16);
+    font-size: rem(14);
     &:not(.nuxt-link-exact-active):not(:hover) {
       &::after {
         background-color: transparent;
@@ -69,6 +80,11 @@ export default Vue.extend({
     }
     &.nuxt-link-exact-active {
       color: var(--color-base);
+    }
+  }
+  &--is-sticky {
+    #{$--self}__inner {
+      font-size: rem(12);
     }
   }
 }
