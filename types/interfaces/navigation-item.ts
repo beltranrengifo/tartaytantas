@@ -1,4 +1,4 @@
-export interface navigationItem {
+export interface NavigationItem {
   name: string
   path: string
   target: string

@@ -1,5 +1,8 @@
 <template>
-  <nav class="flex flex-col justify-between items-center md:items-end">
+  <nav
+    role="navigation"
+    class="flex flex-col justify-between items-center md:items-end"
+  >
     <ul class="flex">
       <li
         v-for="item in navigation"
@@ -21,7 +24,7 @@
 <script lang="ts">
 import Vue from 'vue'
 import { navigation } from '@/config'
-import { navigationItem } from '@/types/index'
+import { NavigationItem } from '@/types/index'
 
 export default Vue.extend({
   name: 'Navigation',
@@ -34,13 +37,13 @@ export default Vue.extend({
 
   computed: {
     getLinkTag(): Function {
-      return ({ target }: navigationItem): string => {
+      return ({ target }: NavigationItem): string => {
         return target.includes('self') ? 'n-link' : 'a'
       }
     },
 
     getLinkProps(): Function {
-      return ({ target, path }: navigationItem): object => {
+      return ({ target, path }: NavigationItem): object => {
         return target.includes('self')
           ? {
               to: path,

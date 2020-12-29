@@ -1,3 +1,4 @@
-import { navigationItem } from './interfaces/navigation-item'
+import { NavigationItem } from './interfaces/navigation-item'
+import { Hero } from './interfaces/hero'
 
-export { navigationItem }
+export { NavigationItem, Hero }

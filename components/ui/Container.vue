@@ -1,5 +1,12 @@
 <template>
-  <component :is="tag" class="container" :class="{ 'container--boxed': boxed }">
+  <component
+    :is="tag"
+    class="app-container"
+    :class="{
+      'app-container--boxed': boxed,
+      'app-container--fullwidth': fullwidth,
+    }"
+  >
     <slot />
   </component>
 </template>
@@ -8,7 +15,7 @@
 import Vue from 'vue'
 
 export default Vue.extend({
-  name: 'Container',
+  name: 'AppContainer',
 
   props: {
     tag: {
@@ -19,14 +26,20 @@ export default Vue.extend({
       type: Boolean,
       default: false,
     },
+    fullwidth: {
+      type: Boolean,
+      default: false,
+    },
   },
 })
 </script>
 
 <style lang="scss" scoped>
-.container {
-  max-width: rem(1920);
+.app-container {
   margin: 0 auto;
+  &:not(.app-container--fullwidth) {
+    max-width: rem(1920);
+  }
   &--boxed {
     max-width: rem(1024);
   }
