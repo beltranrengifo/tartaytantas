@@ -1,0 +1,16 @@
+a,
+a:hover {
+  position: relative;
+  transition: all 0.2s ease-out;
+  color: var(--color-base);
+  &::after {
+    transition: all 0.2s ease-out;
+    content: '';
+    width: 100%;
+    height: rem(3);
+    background-color: var(--color-primary);
+    position: absolute;
+    bottom: rem(-8);
+    left: 0;
+  }
+}

@@ -18,7 +18,14 @@ export default {
         content: 'Obrador de tartas en Madrid, Aravaca',
       },
     ],
-    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
+    link: [
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      {
+        rel: 'stylesheet',
+        href:
+          'https://fonts.googleapis.com/css2?family=Duru+Sans&family=Playfair+Display:wght@400;500&display=swap',
+      },
+    ],
   },
 
   // Global CSS (https://go.nuxtjs.dev/config-css)
@@ -29,6 +36,7 @@ export default {
       '@/assets/scss/_config.functions.scss',
       '@/assets/scss/_config.colors.scss',
       '@/assets/scss/_config.responsive.scss',
+      '@/assets/scss/_config.components.scss',
     ],
   },
 
@@ -46,6 +54,7 @@ export default {
     '@nuxtjs/stylelint-module',
     // https://go.nuxtjs.dev/tailwindcss
     '@nuxtjs/tailwindcss',
+    '@nuxtjs/style-resources',
   ],
 
   // Modules (https://go.nuxtjs.dev/config-modules)

@@ -7,10 +7,11 @@ body,
 
 body {
   font-size: 16px;
-  font-weight: 100;
+  font-weight: 400;
   letter-spacing: 0.6px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-kerning: none;
   font-kerning: none;
+  color: var(--color-base);
 }
