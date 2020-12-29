@@ -5,4 +5,8 @@
     logo: 'tartaytantas.svg',
     logoAlt: 'Logomarca de Tartaytantas',
   },
+  intro: {
+    content: 'Somos un pequeño obrador de tartas inspiradas en recetas clásicas, con referencias a la pastelería americana de mediados del siglo XX.',
+    image: 'tartaytantas-intro-image.jpg',
+  },
 }

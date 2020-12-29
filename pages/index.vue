@@ -1,6 +1,9 @@
 <template>
   <container tag="div" fullwidth>
     <hero v-bind="hero" />
+    <section>
+      <text-block />
+    </section>
   </container>
 </template>
 
@@ -11,9 +14,10 @@ export default Vue.extend({
   name: 'Home',
 
   async asyncData({ $content }): Promise<Object> {
-    const { hero }: any = await $content('home').fetch()
+    const { hero, intro }: any = await $content('home').fetch()
     return {
       hero,
+      intro,
     }
   },
 })

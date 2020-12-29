@@ -75,11 +75,12 @@ export default Vue.extend({
     font-size: rem(14);
     &:not(.nuxt-link-exact-active):not(:hover) {
       &::after {
+        width: 0;
         background-color: transparent;
       }
     }
     &.nuxt-link-exact-active {
-      color: var(--color-base);
+      width: var(--color-base);
     }
   }
   &--is-sticky {
