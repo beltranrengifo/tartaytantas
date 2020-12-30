@@ -17,7 +17,7 @@ module.exports = {
       tertiary: 'var(--color-tertiary)',
       brand: 'var(--color-brand)',
       'brand-secondary': 'var(--color-brand-secondary)',
-      navigation: 'var(--color-navigation)',
+      dark: 'var(--color-dark)',
     }),
     textColor: (theme) => ({
       ...theme('colors'),
@@ -27,7 +27,7 @@ module.exports = {
       tertiary: 'var(--color-tertiary)',
       brand: 'var(--color-brand)',
       'brand-secondary': 'var(--color-brand-secondary)',
-      navigation: 'var(--color-navigation)',
+      dark: 'var(--color-dark)',
     }),
     extend: {},
   },

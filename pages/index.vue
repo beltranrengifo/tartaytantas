@@ -1,9 +1,12 @@
 <template>
   <container tag="div" fullwidth>
-    <hero v-bind="hero" />
-    <section>
-      <text-block />
-    </section>
+    <container tag="section" fullwidth>
+      <hero v-bind="hero" />
+    </container>
+    <!-- <section class="flex">
+      <text-block v-bind="textBlock" />
+      <image-block v-bind="imageBlock" />
+    </section> -->
   </container>
 </template>
 
@@ -14,10 +17,24 @@ export default Vue.extend({
   name: 'Home',
 
   async asyncData({ $content }): Promise<Object> {
-    const { hero, intro }: any = await $content('home').fetch()
+    const {
+      hero: {
+        components: {
+          carousel: {
+            options: { slides },
+          },
+          logo: { options: logo },
+        },
+      },
+    }: any = await $content('home').fetch()
+
     return {
-      hero,
-      intro,
+      hero: {
+        slides,
+        ...logo,
+      },
+      /* textBlock,
+      imageBlock, */
     }
   },
 })

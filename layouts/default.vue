@@ -43,17 +43,18 @@ export default Vue.extend({
 
 <style lang="scss" scoped>
 .main-content {
-  transition: $--main-t;
+  /* transition: $--main-t;
   padding-top: $--header-h;
   &--expand {
     padding-top: $--header-h-shrink;
-  }
+  } */
 }
 .main-header {
   transition: $--header-t;
   height: $--header-h;
   &--shrink {
     height: $--header-h-shrink;
+    background-color: var(--color-tertiary);
   }
 }
 </style>

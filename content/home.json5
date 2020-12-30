@@ -1,12 +1,69 @@
 {
   hero: {
-    image: 'tartaytantas-hero-image.jpg',
-    imageAlt: 'Mostrador de tartas en Tartaytantas',
-    logo: 'tartaytantas.svg',
-    logoAlt: 'Logomarca de Tartaytantas',
+    components: {
+      carousel: {
+        name: 'carousel',
+        options: {
+          slides: [
+            {
+              image: 'tartaytantas-carousel-image-1.jpg',
+              imageAlt: 'Tartaytantas Obrador de tartas en Madrid',
+              content: '',
+              button: {
+                text: '',
+                link: '',
+                target: '',
+              },
+            },
+            {
+              image: 'tartaytantas-carousel-image-2.jpg',
+              imageAlt: 'Tartaytantas Obrador de tartas en Madrid',
+              content: '',
+              button: {
+                text: '',
+                link: '',
+                target: '',
+              },
+            },
+            {
+              image: 'tartaytantas-carousel-image-3.jpg',
+              imageAlt: 'Tartaytantas Obrador de tartas en Madrid',
+              content: '',
+              button: {
+                text: '',
+                link: '',
+                target: '',
+              },
+            },
+          ],
+        },
+      },
+      logo: {
+        name: 'hero-logo',
+        options: {
+          logo: 'tartaytantas.svg',
+          logoAlt: 'Tartaytantas Logo',
+        },
+      },
+    },
   },
   intro: {
-    content: 'Somos un pequeño obrador de tartas inspiradas en recetas clásicas, con referencias a la pastelería americana de mediados del siglo XX.',
-    image: 'tartaytantas-intro-image.jpg',
+    components: [
+      {
+        name: 'text-block',
+        options: {
+          content: 'Somos un pequeño obrador de tartas inspiradas en recetas clásicas, con referencias a la pastelería americana de mediados del siglo XX.',
+          showLines: true,
+          background: 'tertiary',
+        },
+      },
+      {
+        name: 'image-block',
+        options: {
+          image: 'tartaytantas-intro-image.jpg',
+          imageAlt: 'Detalle de tartas artesanas hechas con mimo.',
+        },
+      },
+    ],
   },
 }

@@ -7,10 +7,10 @@ a:hover {
     transition: $--a-t;
     content: '';
     width: 100%;
-    height: rem(3);
+    height: rem(1);
     background-color: var(--color-primary);
     position: absolute;
-    bottom: rem(-8);
+    bottom: rem(-4);
     left: 0;
   }
 }

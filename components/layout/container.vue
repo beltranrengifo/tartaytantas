@@ -1,10 +1,10 @@
 <template>
   <component
     :is="tag"
-    class="app-container"
+    class="content-container"
     :class="{
-      'app-container--boxed': boxed,
-      'app-container--fullwidth': fullwidth,
+      'content-container--boxed': boxed,
+      'content-container--fullwidth': fullwidth,
     }"
   >
     <slot />
@@ -35,9 +35,9 @@ export default Vue.extend({
 </script>
 
 <style lang="scss" scoped>
-.app-container {
+.content-container {
   margin: 0 auto;
-  &:not(.app-container--fullwidth) {
+  &:not(.content-container--fullwidth) {
     max-width: rem(1920);
   }
   &--boxed {

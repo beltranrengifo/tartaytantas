@@ -1,6 +1,7 @@
+import { Slide } from '..'
+
 export interface Hero {
-  image: string
-  imageAlt: string
+  slides: Array<Slide>
   logo?: string
   logoAlt?: string
 }

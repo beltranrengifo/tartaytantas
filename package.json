@@ -19,7 +19,8 @@
     "lodash": "^4.17.20",
     "nuxt": "^2.14.6",
     "sass": "^1.30.0",
-    "sass-loader": "^10.1.0"
+    "sass-loader": "^10.1.0",
+    "vue-slick-carousel": "^1.0.6"
   },
   "devDependencies": {
     "@commitlint/cli": "^11.0.0",

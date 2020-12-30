@@ -72,7 +72,8 @@ export default Vue.extend({
 
   transition: $--nav-item-t;
   &__inner {
-    font-size: rem(14);
+    font-size: rem(13);
+    color: var(--color-dark);
     &:not(.nuxt-link-exact-active):not(:hover) {
       &::after {
         width: 0;
@@ -80,12 +81,16 @@ export default Vue.extend({
       }
     }
     &.nuxt-link-exact-active {
-      width: var(--color-base);
+      color: var(--color-white);
     }
   }
   &--is-sticky {
     #{$--self}__inner {
       font-size: rem(12);
+      color: var(--color-dark);
+      &.nuxt-link-exact-active {
+        color: var(--color-base);
+      }
     }
   }
 }

@@ -1,9 +1,7 @@
 <template>
   <container tag="section" fullwidth class="hero relative">
     <main>
-      <figure class="hero__bg-image">
-        <img :src="getImage" :alt="imageAlt" />
-      </figure>
+      <carousel :slides="slides" />
       <figure class="hero__logo-image absolute top-0">
         <img :src="getLogo" :alt="logoAlt" />
       </figure>
@@ -19,13 +17,9 @@ export default Vue.extend({
   name: 'Hero',
 
   props: {
-    image: {
-      type: String as () => Hero['image'],
+    slides: {
+      type: Array as () => Hero['slides'],
       required: true,
-    },
-    imageAlt: {
-      type: String as () => Hero['imageAlt'],
-      default: 'Tartaytantas',
     },
     logo: {
       type: String as () => Hero['logo'],
@@ -38,10 +32,6 @@ export default Vue.extend({
   },
 
   computed: {
-    getImage(): String {
-      return require(`@/assets/images/${this.image}`)
-    },
-
     getLogo(): String {
       return require(`@/assets/images/${this.logo}`)
     },
@@ -54,8 +44,13 @@ export default Vue.extend({
   &__logo-image {
     width: 25vw;
     max-width: rem(460);
-    left: 20%;
+    left: 15%;
     margin-top: rem(-2);
+    img {
+      &:hover {
+        mix-blend-mode: color-burn;
+      }
+    }
   }
 }
 </style>
