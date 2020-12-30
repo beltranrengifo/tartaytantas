@@ -36,8 +36,9 @@ export default Vue.extend({
 
 <style lang="scss" scoped>
 .content-container {
-  margin: 0 auto;
+  overflow: hidden;
   &:not(.content-container--fullwidth) {
+    margin: 0 auto;
     max-width: rem(1920);
   }
   &--boxed {

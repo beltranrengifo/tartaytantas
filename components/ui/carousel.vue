@@ -60,7 +60,7 @@ export default Vue.extend({
       return {
         dots: true,
         arrows: false,
-        autoplay: true,
+        autoplay: false,
         autoplaySpeed: 5000,
         speed: 1200,
         fade: true,
@@ -82,6 +82,7 @@ export default Vue.extend({
 <style lang="scss">
 .carousel {
   .slick-slide {
+    margin-bottom: rem(-6); // shitty hack
     transform: scale(1.05);
     transition: all 0.9s ease-out !important;
     &.slick-current {

@@ -48,22 +48,123 @@
     },
   },
   intro: {
-    components: [
-      {
+    components: {
+      textBlock: {
         name: 'text-block',
         options: {
-          content: 'Somos un pequeño obrador de tartas inspiradas en recetas clásicas, con referencias a la pastelería americana de mediados del siglo XX.',
-          showLines: true,
+          content: 'TartayTantas somos un pequeño obrador de tartas inspiradas en recetas clásicas, con referencias a la pastelería americana de mediados del siglo XX.',
+          decorate: true,
+          tag: 'h1',
+          width: '1/2',
+          height: '3/4-screen',
+          contentWidth: 'sm',
           background: 'tertiary',
         },
       },
-      {
+      imageBlock: {
         name: 'image-block',
         options: {
-          image: 'tartaytantas-intro-image.jpg',
-          imageAlt: 'Detalle de tartas artesanas hechas con mimo.',
+          image: 'tartaytantas-espinacas-frambuesa.jpg',
+          imageAlt: 'Tarta de bizcocho de espinacas con frambuesas',
+          width: '1/2',
+          height: '3/4-screen',
         },
       },
-    ],
+    },
+  },
+  claims: {
+    components: {
+      textBlockA: {
+        name: 'text-block',
+        options: {
+          content: 'Apostamos por la calidad en la materia prima y el diseño de pasteles con un aspecto sencillo pero cuidado.',
+          decorate: false,
+          tag: 'h2',
+          width: '1/2',
+          height: '1/3-screen',
+          contentWidth: 'md',
+          background: 'secondary-light',
+        },
+      },
+      textBlockB: {
+        name: 'text-block',
+        options: {
+          content: 'Nuestra identidad gráfica, es un homenaje a la obra de Wayne Thiebaud. Su delicioso trabajo, nos inspira. Puedes verlo aquí.',
+          decorate: false,
+          tag: 'h2',
+          width: '1/2',
+          height: '1/3-screen',
+          contentWidth: 'md',
+          background: 'secondary-light',
+        },
+      },
+    },
+  },
+  cakesPicture: {
+    components: {
+      imageBlock: {
+        name: 'image-block',
+        options: {
+          image: 'tartaytantas-composicion-frontal-lineas.jpg',
+          imageAlt: 'Composición de tartas inspirada en Wayne Thiebaud.',
+          width: '1/1',
+          height: '1/3-screen',
+          align: 'top',
+        },
+      },
+    },
+  },
+  more: {
+    components: {
+      textBlock: {
+        name: 'text-block',
+        options: {
+          content: 'Y no sólo tartas. También ofrecemos bizcochos, brownies, galletas, tartaletas y tantas otras recetas. No dudes en preguntarnos.',
+          decorate: true,
+          tag: 'h2',
+          width: '1/3',
+          height: '3/4-screen',
+          contentWidth: 'sm',
+          background: 'secondary',
+          color: 'white',
+        },
+      },
+      imageBlock: {
+        name: 'image-block',
+        options: {
+          image: 'tartaytantas-mas-que-tartas.jpg',
+          imageAlt: 'En TartayTantas no sólo se venden tartas. Bizcochos, brownies, galletas, tartaletas y tantas otras recetas.',
+          width: '2/3',
+          height: '3/4-screen',
+          align: 'center',
+        },
+      },
+    },
+  },
+  carrotCake: {
+    components: {
+      textBlock: {
+        name: 'text-block',
+        options: {
+          content: 'Nuestra identidad gráfica, es un homenaje a la obra de Wayne Thiebaud. Su delicioso trabajo, nos inspira. Puedes verlo aquí.',
+          decorate: false,
+          tag: 'h2',
+          width: '1/2',
+          height: '1/3-screen',
+          contentWidth: 'md',
+          background: 'secondary-light',
+        },
+      },
+      imageBlock: {
+        name: 'image-block',
+        options: {
+          image: 'tartaytantas-composicion-frontal-lineas.jpg',
+          imageAlt: 'Composición de tartas inspirada en Wayne Thiebaud.',
+          width: '1/1',
+          height: '1/3-screen',
+          align: 'top',
+        },
+      },
+    },
   },
 }

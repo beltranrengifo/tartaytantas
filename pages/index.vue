@@ -3,10 +3,21 @@
     <container tag="section" fullwidth>
       <hero v-bind="hero" />
     </container>
-    <!-- <section class="flex">
-      <text-block v-bind="textBlock" />
-      <image-block v-bind="imageBlock" />
-    </section> -->
+    <container tag="section" fullwidth class="flex">
+      <text-block v-bind="introTextBlock" />
+      <image-block v-bind="introImageBlock" />
+    </container>
+    <container tag="section" fullwidth class="flex">
+      <text-block v-bind="claimsTextBlockA" />
+      <text-block v-bind="claimsTextBlockB" />
+    </container>
+    <container tag="section" fullwidth class="flex">
+      <image-block v-bind="cakesPicture" />
+    </container>
+    <container tag="section" fullwidth class="flex">
+      <text-block v-bind="moreTextBlock" />
+      <image-block v-bind="moreImageBlock" />
+    </container>
   </container>
 </template>
 
@@ -26,6 +37,29 @@ export default Vue.extend({
           logo: { options: logo },
         },
       },
+      intro: {
+        components: {
+          textBlock: { options: introTextBlock },
+          imageBlock: { options: introImageBlock },
+        },
+      },
+      claims: {
+        components: {
+          textBlockA: { options: claimsTextBlockA },
+          textBlockB: { options: claimsTextBlockB },
+        },
+      },
+      cakesPicture: {
+        components: {
+          imageBlock: { options: cakesPicture },
+        },
+      },
+      more: {
+        components: {
+          textBlock: { options: moreTextBlock },
+          imageBlock: { options: moreImageBlock },
+        },
+      },
     }: any = await $content('home').fetch()
 
     return {
@@ -33,8 +67,13 @@ export default Vue.extend({
         slides,
         ...logo,
       },
-      /* textBlock,
-      imageBlock, */
+      introTextBlock,
+      introImageBlock,
+      claimsTextBlockA,
+      claimsTextBlockB,
+      cakesPicture,
+      moreTextBlock,
+      moreImageBlock,
     }
   },
 })

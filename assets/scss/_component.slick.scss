@@ -3,8 +3,8 @@
     display: flex !important;
     justify-content: center;
     position: absolute;
-    bottom: 0;
-    right: 0;
+    bottom: rem(8);
+    right: rem(16);
     .slick-active {
       .dot {
         background-color: transparent;
