@@ -78,10 +78,19 @@ export default Vue.extend({
       &::after {
         width: 0;
         background-color: transparent;
+        height: rem(1);
+      }
+    }
+    &:not(.nuxt-link-exact-active):hover {
+      &::after {
+        height: rem(1);
       }
     }
     &.nuxt-link-exact-active {
       color: var(--color-white);
+      &::after {
+        height: rem(1);
+      }
     }
   }
   &--is-sticky {

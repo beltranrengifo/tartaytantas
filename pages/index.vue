@@ -1,5 +1,5 @@
 <template>
-  <container tag="div" fullwidth>
+  <container tag="div" fullwidth class="bg-tertiary">
     <container tag="section" fullwidth>
       <hero v-bind="hero" />
     </container>
@@ -17,6 +17,18 @@
     <container tag="section" fullwidth class="flex">
       <text-block v-bind="moreTextBlock" />
       <image-block v-bind="moreImageBlock" />
+    </container>
+    <container tag="section" fullwidth class="flex">
+      <image-block v-bind="carrotImageBlock" />
+      <text-block v-bind="carrotTextBlock" />
+    </container>
+    <container tag="section" fullwidth class="flex">
+      <text-block v-bind="uniqueTextBlock" />
+      <image-block v-bind="uniqueImageBlock" />
+    </container>
+    <container tag="section" fullwidth class="">
+      <title-block v-bind="socialTitle" />
+      <image-grid v-bind="socialImageGrid" />
     </container>
   </container>
 </template>
@@ -60,6 +72,24 @@ export default Vue.extend({
           imageBlock: { options: moreImageBlock },
         },
       },
+      carrotCake: {
+        components: {
+          imageBlock: { options: carrotImageBlock },
+          textBlock: { options: carrotTextBlock },
+        },
+      },
+      unique: {
+        components: {
+          textBlock: { options: uniqueTextBlock },
+          imageBlock: { options: uniqueImageBlock },
+        },
+      },
+      social: {
+        components: {
+          titleBlock: { options: socialTitle },
+          imageGrid: { options: socialImageGrid },
+        },
+      },
     }: any = await $content('home').fetch()
 
     return {
@@ -74,6 +104,12 @@ export default Vue.extend({
       cakesPicture,
       moreTextBlock,
       moreImageBlock,
+      carrotImageBlock,
+      carrotTextBlock,
+      uniqueTextBlock,
+      uniqueImageBlock,
+      socialTitle,
+      socialImageGrid,
     }
   },
 })

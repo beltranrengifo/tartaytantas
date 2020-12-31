@@ -1,20 +1,19 @@
 <template>
   <container
     class="text-block flex justify-center items-center flex-shrink-0 flex-grow-0"
-    :class="[`h-${getHeight} w-${getWidth} bg-${background}`]"
+    :class="[`min-h-${getHeight} w-${getWidth} bg-${background}`]"
     fullwidth
   >
     <component
       :is="tag"
+      v-sanitize.nothing="content"
       class="text-block__content relative font-serif text-2xl"
       :class="[
         `w-t-block-${getContentWidth}`,
         `text-${getColor}`,
-        { 'text-block__content--decorate': decorate },
+        getDecoration,
       ]"
-    >
-      {{ content }}
-    </component>
+    />
   </container>
 </template>
 
@@ -30,9 +29,13 @@ export default Vue.extend({
       type: String as () => TextBlock['content'],
       required: true,
     },
-    decorate: {
-      type: Boolean as () => TextBlock['decorate'],
+    decoration: {
+      type: Boolean as () => TextBlock['decoration'],
       default: false,
+    },
+    decorationColor: {
+      type: String as () => TextBlock['decorationColor'],
+      default: 'base',
     },
     tag: {
       type: String as () => TextBlock['tag'],
@@ -73,6 +76,13 @@ export default Vue.extend({
     getColor(): string {
       return this.color || 'base'
     },
+    getDecoration(): string | null {
+      return (
+        (this.decoration &&
+          `border-t-3 border-${this.decorationColor} border-b-3 border-${this.decorationColor} pt-16 pb-16`) ||
+        null
+      )
+    },
   },
 })
 </script>
@@ -82,7 +92,7 @@ export default Vue.extend({
   min-height: $--section-min-h;
   &__content {
     &--decorate {
-      &::before,
+      /* &::before,
       &::after {
         content: '';
         height: rem(3);
@@ -97,7 +107,7 @@ export default Vue.extend({
       }
       &::after {
         bottom: rem(-64);
-      }
+      } */
     }
   }
 }

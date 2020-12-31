@@ -1,6 +1,7 @@
 export interface TextBlock {
   content: string
-  decorate?: boolean
+  decoration?: boolean
+  decorationColor?: string
   tag?: string
   color?: string
   contentWidth?: string

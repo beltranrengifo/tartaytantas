@@ -28,9 +28,12 @@
 <script lang="ts">
 import Vue from 'vue'
 import { Slides, Slide } from '@/types'
+import ImageUrl from '@/mixins/image-url'
 
 export default Vue.extend({
   name: 'Carousel',
+
+  mixins: [ImageUrl],
 
   props: {
     slides: {
@@ -46,22 +49,12 @@ export default Vue.extend({
       }
     },
 
-    imageUrl(): Function {
-      return (image: string): object | string => {
-        try {
-          return require(`@/assets/images/${image}`)
-        } catch (e) {
-          return ''
-        }
-      }
-    },
-
     options() {
       return {
         dots: true,
         arrows: false,
-        autoplay: false,
-        autoplaySpeed: 5000,
+        autoplay: true,
+        autoplaySpeed: 4000,
         speed: 1200,
         fade: true,
         pauseOnHover: false,
@@ -84,7 +77,8 @@ export default Vue.extend({
   .slick-slide {
     margin-bottom: rem(-6); // shitty hack
     transform: scale(1.05);
-    transition: all 0.9s ease-out !important;
+    transition: opacity 1.2s ease 0s, visibility 1.2s ease 0s,
+      transform 0.9s ease-out !important;
     &.slick-current {
       transform: scale(1);
     }

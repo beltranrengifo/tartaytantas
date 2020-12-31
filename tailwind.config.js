@@ -19,6 +19,7 @@ module.exports = {
       brand: 'var(--color-brand)',
       'brand-secondary': 'var(--color-brand-secondary)',
       dark: 'var(--color-dark)',
+      white: 'var(--color-white)',
     }),
     textColor: (theme) => ({
       ...theme('colors'),
@@ -30,6 +31,19 @@ module.exports = {
       brand: 'var(--color-brand)',
       'brand-secondary': 'var(--color-brand-secondary)',
       dark: 'var(--color-dark)',
+      white: 'var(--color-white)',
+    }),
+    borderColor: (theme) => ({
+      ...theme('colors'),
+      base: 'var(--color-base)',
+      primary: 'var(--color-primary)',
+      secondary: 'var(--color-secondary)',
+      'secondary-light': 'var(--color-secondary-light)',
+      tertiary: 'var(--color-tertiary)',
+      brand: 'var(--color-brand)',
+      'brand-secondary': 'var(--color-brand-secondary)',
+      dark: 'var(--color-dark)',
+      white: 'var(--color-white)',
     }),
     extend: {
       height: {
@@ -40,6 +54,9 @@ module.exports = {
       width: {
         't-block-sm': '280px',
         't-block-md': '380px',
+      },
+      borderWidth: {
+        3: '3px',
       },
     },
   },

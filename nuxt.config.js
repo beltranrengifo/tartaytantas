@@ -45,7 +45,7 @@ export default {
   },
 
   // Plugins to run before rendering page (https://go.nuxtjs.dev/config-plugins)
-  plugins: ['@/plugins/slick.js'],
+  plugins: ['@/plugins/slick.js', '@/plugins/sanitize.client.js'],
 
   // Auto import components (https://go.nuxtjs.dev/config-components)
   components: true,
@@ -65,6 +65,7 @@ export default {
   modules: [
     // https://go.nuxtjs.dev/content
     '@nuxt/content',
+    ['v-sanitize/nuxt'],
   ],
 
   // Content module configuration (https://go.nuxtjs.dev/config-content)
