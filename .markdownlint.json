@@ -1,0 +1,13 @@
+{
+  "no-inline-html": {
+    "allowed_elements": [
+      "container",
+      "hero",
+      "text-block",
+      "image-block",
+      "image-grid",
+      "script"
+    ]
+  },
+  "MD013": false
+}

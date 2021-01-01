@@ -1,8 +1,8 @@
 <template>
   <container tag="section" fullwidth class="hero relative">
     <main>
-      <carousel :slides="slides" />
-      <figure class="hero__logo-image absolute top-0">
+      <carousel v-if="slides" :slides="slides" />
+      <figure v-if="logo" class="hero__logo-image absolute top-0">
         <img :src="getLogo" :alt="logoAlt" />
       </figure>
     </main>
