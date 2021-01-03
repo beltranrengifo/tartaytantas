@@ -46,9 +46,14 @@ module.exports = {
       white: 'var(--color-white)',
     }),
     extend: {
-      height: {
-        '1/2-screen': '50vh',
+      minHeight: {
         '1/3-screen': '33vh',
+        '1/2-screen': '50vh',
+        '3/4-screen': '75vh',
+      },
+      height: {
+        '1/3-screen': '33vh',
+        '1/2-screen': '50vh',
         '3/4-screen': '75vh',
       },
       width: {

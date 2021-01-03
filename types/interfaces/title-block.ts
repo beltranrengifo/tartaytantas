@@ -4,7 +4,7 @@ export interface TitleBlock {
   transform?: string
   align?: string
   font?: string
-  subtitle?: string | boolean
+  subtitle?: string
   subtitleTag?: string
   useLink?: boolean
   href?: string | boolean

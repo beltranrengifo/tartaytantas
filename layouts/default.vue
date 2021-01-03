@@ -6,6 +6,7 @@
       :is-sticky="stickyHeader"
     />
     <main
+      role="main"
       class="main-content flex-auto"
       :class="{ 'main-content--expand': stickyHeader }"
     >

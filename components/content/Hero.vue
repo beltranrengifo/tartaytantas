@@ -1,5 +1,5 @@
 <template>
-  <container tag="section" fullwidth class="hero relative">
+  <container tag="article" fullwidth class="hero relative">
     <main>
       <carousel :slides="slides" />
       <figure class="hero__logo-image absolute top-0">

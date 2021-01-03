@@ -1,8 +1,14 @@
-{
-  hero: {
-    components: {
-      carousel: {
-        name: 'carousel',
+import introText from '@/content/home/intro.txt'
+
+export default [
+  {
+    name: 'hero',
+    options: {
+      fullwidth: true,
+    },
+    components: [
+      {
+        name: 'hero',
         options: {
           slides: [
             {
@@ -36,23 +42,23 @@
               },
             },
           ],
-        },
-      },
-      logo: {
-        name: 'hero-logo',
-        options: {
           logo: 'tartaytantas.svg',
           logoAlt: 'Tartaytantas Logo',
         },
       },
-    },
+    ],
   },
-  intro: {
-    components: {
-      textBlock: {
+  {
+    name: 'intro',
+    options: {
+      fullwidth: true,
+      flex: true,
+    },
+    components: [
+      {
         name: 'text-block',
         options: {
-          content: 'Tartaytantas somos un pequeño obrador de tartas inspiradas en recetas clásicas, con referencias a la pastelería americana de mediados del siglo XX.',
+          content: introText,
           decoration: true,
           decorationColor: 'primary',
           tag: 'h1',
@@ -62,7 +68,7 @@
           background: 'tertiary',
         },
       },
-      imageBlock: {
+      {
         name: 'image-block',
         options: {
           image: 'tartaytantas-espinacas-frambuesa.jpg',
@@ -71,14 +77,20 @@
           height: '3/4-screen',
         },
       },
-    },
+    ],
   },
-  claims: {
-    components: {
-      textBlockA: {
+  {
+    name: 'claims',
+    options: {
+      fullwidth: true,
+      flex: true,
+    },
+    components: [
+      {
         name: 'text-block',
         options: {
-          content: 'Apostamos por la calidad en la materia prima y el diseño de pasteles con un aspecto sencillo pero cuidado.',
+          content:
+            'Apostamos por la calidad en la materia prima y el diseño de pasteles con un aspecto sencillo pero cuidado.',
           decoration: false,
           tag: 'h2',
           width: '1/2',
@@ -87,10 +99,11 @@
           background: 'secondary-light',
         },
       },
-      textBlockB: {
+      {
         name: 'text-block',
         options: {
-          content: 'Nuestra identidad gráfica, es un homenaje a la obra de Wayne Thiebaud. Su delicioso trabajo, nos inspira. <a target="_blank" href="https://google.es">Puedes verlo aquí.</a>',
+          content:
+            'Nuestra identidad gráfica, es un homenaje a la obra de Wayne Thiebaud. Su delicioso trabajo, nos inspira. <a target="_blank" href="https://google.es">Puedes verlo aquí.</a>',
           decoration: false,
           tag: 'h2',
           width: '1/2',
@@ -99,11 +112,16 @@
           background: 'secondary-light',
         },
       },
-    },
+    ],
   },
-  cakesPicture: {
-    components: {
-      imageBlock: {
+  {
+    name: 'cakes',
+    options: {
+      fullwidth: true,
+      flex: true,
+    },
+    components: [
+      {
         name: 'image-block',
         options: {
           image: 'tartaytantas-composicion-frontal-lineas.jpg',
@@ -113,14 +131,20 @@
           align: 'top',
         },
       },
-    },
+    ],
   },
-  more: {
-    components: {
-      textBlock: {
+  {
+    name: 'more',
+    options: {
+      fullwidth: true,
+      flex: true,
+    },
+    components: [
+      {
         name: 'text-block',
         options: {
-          content: '<span class="block mb-6">Y no sólo tartas. También ofrecemos bizcochos, brownies, galletas, tartaletas <span class="text-primary">y tantas</span> otras recetas.</span> <span class="block mb-6">No dudes en preguntarnos.</span>',
+          content:
+            '<span class="block mb-6">Y no sólo tartas. También ofrecemos bizcochos, brownies, galletas, tartaletas <span class="text-primary">y tantas</span> otras recetas.</span> <span class="block mb-6">No dudes en preguntarnos.</span>',
           decoration: true,
           decorationColor: 'white',
           tag: 'h2',
@@ -131,34 +155,42 @@
           color: 'white',
         },
       },
-      imageBlock: {
+      {
         name: 'image-block',
         options: {
           image: 'tartaytantas-mas-que-tartas.jpg',
-          imageAlt: 'En TartayTantas no sólo se venden tartas. Bizcochos, brownies, galletas, tartaletas y tantas otras recetas.',
+          imageAlt:
+            'En TartayTantas no sólo se venden tartas. Bizcochos, brownies, galletas, tartaletas y tantas otras recetas.',
           width: '2/3',
           height: '3/4-screen',
           align: 'center',
         },
       },
-    },
+    ],
   },
-  carrotCake: {
-    components: {
-      imageBlock: {
+  {
+    name: 'carrot',
+    options: {
+      fullwidth: true,
+      flex: true,
+    },
+    components: [
+      {
         name: 'image-block',
         options: {
           image: 'tartaytantas-tarta-zanahoria.jpg',
-          imageAlt: 'Tarta de zanahoria artesana en Tartaytantas, en Aravaca, Madrid',
+          imageAlt:
+            'Tarta de zanahoria artesana en Tartaytantas, en Aravaca, Madrid',
           width: '2/3',
           height: '3/4-screen',
           align: 'center',
         },
       },
-      textBlock: {
+      {
         name: 'text-block',
         options: {
-          content: '<span class="block mb-6">Nuestra Tarta de Zanahoria, es uno de nuestros productos estrella. </span> <span class="block mb-6">Cada vez son más los restaurantes de la Capital que la incluyen en su carta de postres, junto a otros de nuestros productos.</span> <span class="block mb-6">Encarga la tuya, <a href="https://google.es" target="_blank">aquí</a>.</span>',
+          content:
+            '<span class="block mb-6">Nuestra Tarta de Zanahoria, es uno de nuestros productos estrella. </span> <span class="block mb-6">Cada vez son más los restaurantes de la Capital que la incluyen en su carta de postres, junto a otros de nuestros productos.</span> <span class="block mb-6">Encarga la tuya, <a href="https://google.es" target="_blank">aquí</a>.</span>',
           decoration: false,
           decorationColor: 'white',
           tag: 'h2',
@@ -169,14 +201,20 @@
           color: 'base',
         },
       },
-    },
+    ],
   },
-  unique: {
-    components: {
-      textBlock: {
+  {
+    name: 'unique',
+    options: {
+      fullwidth: true,
+      flex: true,
+    },
+    components: [
+      {
         name: 'text-block',
         options: {
-          content: 'Nuestro trabajo es artesano, producimos para particulares, eventos y restaurantes. Cada tarta es única.',
+          content:
+            'Nuestro trabajo es artesano, producimos para particulares, eventos y restaurantes. Cada tarta es única.',
           decoration: true,
           decorationColor: 'primary',
           tag: 'h2',
@@ -186,20 +224,25 @@
           background: 'tertiary',
         },
       },
-      imageBlock: {
+      {
         name: 'image-block',
         options: {
           image: 'tartaytantas-tartas-unicas.jpg',
-          imageAlt: 'En Tartaytantas ofrecemos tartas únicas hechas a diario en el obrador',
+          imageAlt:
+            'En Tartaytantas ofrecemos tartas únicas hechas a diario en el obrador',
           width: '1/2',
           height: '3/4-screen',
         },
       },
-    },
+    ],
   },
-  social: {
-    components: {
-      titleBlock: {
+  {
+    name: 'social',
+    options: {
+      fullwidth: true,
+    },
+    components: [
+      {
         name: 'title-block',
         options: {
           title: 'Síguenos en Instagram',
@@ -216,7 +259,7 @@
           paddingBottom: 'pb-16',
         },
       },
-      imageGrid: {
+      {
         name: 'image-grid',
         options: {
           images: [
@@ -237,6 +280,31 @@
           gap: 12,
         },
       },
-    },
+    ],
   },
-}
+  {
+    name: 'all-cakes',
+    options: {
+      boxed: true,
+      flex: true,
+    },
+    components: [
+      {
+        name: 'title-block',
+        options: {
+          title: 'Todas nuestras tartas',
+          titleTag: 'h2',
+          subtitle:
+            '<span class="block">Trabajamos de manera artesana.</span><span class="block">Diseñamos tartas sencillas y deliciosas.</span>',
+          subtitleTag: 'p',
+          width: '1/3',
+          transform: 'uppercase',
+          align: 'left',
+          font: 'sans',
+          maxWidth: 'none',
+          height: '1/2-screen',
+        },
+      },
+    ],
+  },
+]

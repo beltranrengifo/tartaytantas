@@ -1,4 +1,4 @@
 export interface InteractiveTag {
-  link?: string
-  linkTarget?: string
+  link?: string | boolean
+  linkTarget?: string | boolean
 }

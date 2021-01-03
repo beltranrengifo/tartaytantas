@@ -16,7 +16,10 @@ export default Vue.extend({
 
   props: {
     link: {
-      type: String as () => InteractiveTag['link'],
+      type: [
+        String as () => InteractiveTag['link'],
+        Boolean as () => InteractiveTag['link'],
+      ],
       default: '',
     },
     linkTarget: {
@@ -31,7 +34,8 @@ export default Vue.extend({
       if (!this.link) return tag
 
       switch (Boolean(this.link)) {
-        case this.link?.includes(this.$config.baseUrl):
+        case typeof this.link === 'string' &&
+          this.link?.includes(this.$config.baseUrl):
           tag = 'n-link'
           break
         default:

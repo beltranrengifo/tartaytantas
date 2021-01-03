@@ -1,11 +1,19 @@
 <template>
-  <container class="w-full" boxed :class="[paddingTop, paddingBottom]">
+  <container
+    boxed
+    :class="[paddingTop, paddingBottom, `w-${width}`, `min-h-${height}`]"
+    tag="article"
+  >
     <div
-      class="grid justify-center"
+      class="grid justify-center h-full"
       :class="[`gap-${gap}`, `grid-cols-${columns}`]"
     >
       <figure v-for="(image, i) in images" :key="image + i">
-        <img class="w-full" :src="imageUrl(image.src)" :alt="image.alt" />
+        <img
+          class="w-full h-full object-cover"
+          :src="imageUrl(image.src)"
+          :alt="image.alt"
+        />
       </figure>
     </div>
   </container>
@@ -15,12 +23,9 @@
 import Vue from 'vue'
 import { ImageGrid } from '@/types/index'
 import ImageUrl from '@/mixins/image-url'
-
 export default Vue.extend({
   name: 'ImageGrid',
-
   mixins: [ImageUrl],
-
   props: {
     images: {
       type: Array as () => ImageGrid['images'],
@@ -41,6 +46,14 @@ export default Vue.extend({
     paddingBottom: {
       type: String as () => ImageGrid['paddingBottom'],
       default: 'pb-0',
+    },
+    width: {
+      type: String as () => ImageGrid['width'],
+      default: 'full',
+    },
+    height: {
+      type: String as () => ImageGrid['height'],
+      default: 'auto',
     },
   },
 })

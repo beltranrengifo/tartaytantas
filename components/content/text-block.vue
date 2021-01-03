@@ -1,5 +1,6 @@
 <template>
   <container
+    tag="article"
     class="text-block flex justify-center items-center flex-shrink-0 flex-grow-0"
     :class="[`min-h-${getHeight} w-${getWidth} bg-${background}`]"
     fullwidth

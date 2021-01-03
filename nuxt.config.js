@@ -76,5 +76,11 @@ export default {
     babel: {
       plugins: ['@babel/plugin-proposal-optional-chaining'],
     },
+    extend(config) {
+      config.module.rules.push({
+        test: /\.txt$/i,
+        loader: 'raw-loader',
+      })
+    },
   },
 }

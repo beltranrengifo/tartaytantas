@@ -1,6 +1,19 @@
 <template>
   <container tag="div" fullwidth class="bg-tertiary">
-    <container tag="section" fullwidth>
+    <container
+      v-for="section in home"
+      :id="section.name"
+      :key="section.name"
+      v-bind="section.options"
+    >
+      <component
+        :is="component.name"
+        v-for="(component, i) in section.components"
+        :key="`${section.name}-${component.name}-${i}`"
+        v-bind="component.options"
+      />
+    </container>
+    <!-- <container tag="section" fullwidth>
       <hero v-bind="hero" />
     </container>
     <container tag="section" fullwidth class="flex">
@@ -29,7 +42,7 @@
     <container tag="section" fullwidth class="">
       <title-block v-bind="socialTitle" />
       <image-grid v-bind="socialImageGrid" />
-    </container>
+    </container> -->
   </container>
 </template>
 
@@ -37,84 +50,33 @@
 import Vue from 'vue'
 import MetaData from '@/mixins/meta-data'
 
+import { home } from '@/content'
+
+import Hero from '@/components/content/hero.vue'
+import TextBlock from '@/components/content/text-block.vue'
+import ImageBlock from '@/components/content/image-block.vue'
+import TitleBlock from '@/components/content/title-block.vue'
+import ImageGrid from '@/components/content/image-grid.vue'
+
 export default Vue.extend({
   name: 'Home',
 
+  components: {
+    Hero,
+    TextBlock,
+    ImageBlock,
+    TitleBlock,
+    ImageGrid,
+  },
+
   mixins: [MetaData],
 
-  async asyncData({ $content }): Promise<Object> {
-    const {
-      hero: {
-        components: {
-          carousel: {
-            options: { slides },
-          },
-          logo: { options: logo },
-        },
-      },
-      intro: {
-        components: {
-          textBlock: { options: introTextBlock },
-          imageBlock: { options: introImageBlock },
-        },
-      },
-      claims: {
-        components: {
-          textBlockA: { options: claimsTextBlockA },
-          textBlockB: { options: claimsTextBlockB },
-        },
-      },
-      cakesPicture: {
-        components: {
-          imageBlock: { options: cakesPicture },
-        },
-      },
-      more: {
-        components: {
-          textBlock: { options: moreTextBlock },
-          imageBlock: { options: moreImageBlock },
-        },
-      },
-      carrotCake: {
-        components: {
-          imageBlock: { options: carrotImageBlock },
-          textBlock: { options: carrotTextBlock },
-        },
-      },
-      unique: {
-        components: {
-          textBlock: { options: uniqueTextBlock },
-          imageBlock: { options: uniqueImageBlock },
-        },
-      },
-      social: {
-        components: {
-          titleBlock: { options: socialTitle },
-          imageGrid: { options: socialImageGrid },
-        },
-      },
-    }: any = await $content('home').fetch()
-
+  asyncData(): any {
     return {
-      hero: {
-        slides,
-        ...logo,
-      },
-      introTextBlock,
-      introImageBlock,
-      claimsTextBlockA,
-      claimsTextBlockB,
-      cakesPicture,
-      moreTextBlock,
-      moreImageBlock,
-      carrotImageBlock,
-      carrotTextBlock,
-      uniqueTextBlock,
-      uniqueImageBlock,
-      socialTitle,
-      socialImageGrid,
+      home,
     }
   },
+
   head(): object {
     return (this as any).getMetadata({
       title: (this as any).home.title,

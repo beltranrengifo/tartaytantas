@@ -9,4 +9,6 @@ export interface ImageGrid {
   gap?: number
   paddingTop?: string
   paddingBottom?: string
+  width?: string
+  height?: string
 }
