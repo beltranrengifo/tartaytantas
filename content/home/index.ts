@@ -1,6 +1,12 @@
-import introText from '@/content/home/intro.txt'
+import introText from '@/content/home/1-intro.txt'
+import claim1 from '@/content/home/2-claim-1.txt'
+import claim2 from '@/content/home/2-claim-2.txt'
+import more from '@/content/home/3-more.txt'
+import carrotText from '@/content/home/4-carrot.txt'
+import uniqueText from '@/content/home/5-unique.txt'
 
 export default [
+  /* hero */
   {
     name: 'hero',
     options: {
@@ -48,6 +54,7 @@ export default [
       },
     ],
   },
+  /* intro */
   {
     name: 'intro',
     options: {
@@ -79,6 +86,7 @@ export default [
       },
     ],
   },
+  /* claims */
   {
     name: 'claims',
     options: {
@@ -89,8 +97,7 @@ export default [
       {
         name: 'text-block',
         options: {
-          content:
-            'Apostamos por la calidad en la materia prima y el diseño de pasteles con un aspecto sencillo pero cuidado.',
+          content: claim1,
           decoration: false,
           tag: 'h2',
           width: '1/2',
@@ -102,8 +109,7 @@ export default [
       {
         name: 'text-block',
         options: {
-          content:
-            'Nuestra identidad gráfica, es un homenaje a la obra de Wayne Thiebaud. Su delicioso trabajo, nos inspira. <a target="_blank" href="https://google.es">Puedes verlo aquí.</a>',
+          content: claim2,
           decoration: false,
           tag: 'h2',
           width: '1/2',
@@ -114,6 +120,7 @@ export default [
       },
     ],
   },
+  /* cakes */
   {
     name: 'cakes',
     options: {
@@ -133,6 +140,7 @@ export default [
       },
     ],
   },
+  /* more */
   {
     name: 'more',
     options: {
@@ -143,8 +151,7 @@ export default [
       {
         name: 'text-block',
         options: {
-          content:
-            '<span class="block mb-6">Y no sólo tartas. También ofrecemos bizcochos, brownies, galletas, tartaletas <span class="text-primary">y tantas</span> otras recetas.</span> <span class="block mb-6">No dudes en preguntarnos.</span>',
+          content: more,
           decoration: true,
           decorationColor: 'white',
           tag: 'h2',
@@ -168,6 +175,7 @@ export default [
       },
     ],
   },
+  /* carrot */
   {
     name: 'carrot',
     options: {
@@ -189,8 +197,7 @@ export default [
       {
         name: 'text-block',
         options: {
-          content:
-            '<span class="block mb-6">Nuestra Tarta de Zanahoria, es uno de nuestros productos estrella. </span> <span class="block mb-6">Cada vez son más los restaurantes de la Capital que la incluyen en su carta de postres, junto a otros de nuestros productos.</span> <span class="block mb-6">Encarga la tuya, <a href="https://google.es" target="_blank">aquí</a>.</span>',
+          content: carrotText,
           decoration: false,
           decorationColor: 'white',
           tag: 'h2',
@@ -203,6 +210,7 @@ export default [
       },
     ],
   },
+  /* unique */
   {
     name: 'unique',
     options: {
@@ -213,8 +221,7 @@ export default [
       {
         name: 'text-block',
         options: {
-          content:
-            'Nuestro trabajo es artesano, producimos para particulares, eventos y restaurantes. Cada tarta es única.',
+          content: uniqueText,
           decoration: true,
           decorationColor: 'primary',
           tag: 'h2',
@@ -236,6 +243,7 @@ export default [
       },
     ],
   },
+  /* social */
   {
     name: 'social',
     options: {
@@ -282,6 +290,7 @@ export default [
       },
     ],
   },
+  /* all cakes */
   {
     name: 'all-cakes',
     options: {
@@ -303,6 +312,26 @@ export default [
           font: 'sans',
           maxWidth: 'none',
           height: '1/2-screen',
+        },
+      },
+      {
+        name: 'image-grid',
+        options: {
+          width: '2/3',
+          height: '1/2-screen',
+          images: [
+            {
+              src: 'tartaytantas-mostrador-1.jpg',
+              alt: 'Mostrador de Tartaytantas',
+            },
+            {
+              src: 'tartaytantas-mostrador-2-detalle.jpg',
+              alt:
+                'Detalle del mostrador de Tartaytantas con una foto de Mamá Amelia',
+            },
+          ],
+          columns: 2,
+          gap: 12,
         },
       },
     ],
