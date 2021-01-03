@@ -6,6 +6,7 @@ import { Slides, Slide } from './interfaces/carousel'
 import { TitleBlock } from './interfaces/title-block'
 import { ImageGrid } from './interfaces/image-grid'
 import { InteractiveTag } from './interfaces/interactive-tag'
+import { MetaData } from './interfaces/meta-data'
 
 export {
   NavigationItem,
@@ -17,4 +18,5 @@ export {
   TitleBlock,
   ImageGrid,
   InteractiveTag,
+  MetaData,
 }

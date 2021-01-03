@@ -35,9 +35,12 @@
 
 <script lang="ts">
 import Vue from 'vue'
+import MetaData from '@/mixins/meta-data'
 
 export default Vue.extend({
   name: 'Home',
+
+  mixins: [MetaData],
 
   async asyncData({ $content }): Promise<Object> {
     const {
@@ -111,6 +114,12 @@ export default Vue.extend({
       socialTitle,
       socialImageGrid,
     }
+  },
+  head(): object {
+    return (this as any).getMetadata({
+      title: (this as any).home.title,
+      description: (this as any).home.description,
+    })
   },
 })
 </script>
