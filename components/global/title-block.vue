@@ -1,22 +1,24 @@
 <template>
   <container
-    class="w-full"
-    :class="[paddingTop, paddingBottom, `text-${align}`]"
+    tag="article"
+    :class="[
+      paddingTop,
+      paddingBottom,
+      `text-${align}`,
+      `w-${width}`,
+      `min-h-${height}`,
+    ]"
   >
-    <interactive-tag :link="href" :link-target="target">
-      <component
-        :is="titleTag"
-        v-sanitize.nothing="title"
-        class="text-lg mb-6"
-        :class="[`font-${font}`, transform]"
-      />
-      <component
-        :is="subtitleTag"
-        v-if="subtitle"
-        v-sanitize.nothing="subtitle"
-        class="text-sm"
-      />
-    </interactive-tag>
+    <component
+      :is="titleTag"
+      class="text-lg mb-6"
+      :class="[`font-${font}`, transform]"
+    >
+      <slot />
+    </component>
+    <component :is="subtitleTag" class="text-sm">
+      <slot name="subtitle" />
+    </component>
   </container>
 </template>
 
@@ -28,10 +30,6 @@ export default Vue.extend({
   name: 'TitleBlock',
 
   props: {
-    title: {
-      type: String as () => TitleBlock['title'],
-      required: true,
-    },
     titleTag: {
       type: String as () => TitleBlock['titleTag'],
       default: 'h2',
@@ -47,10 +45,6 @@ export default Vue.extend({
     font: {
       type: String as () => TitleBlock['font'],
       default: 'serif',
-    },
-    subtitle: {
-      type: String as () => TitleBlock['subtitle'],
-      default: false,
     },
     subtitleTag: {
       type: String as () => TitleBlock['subtitleTag'],
@@ -74,6 +68,14 @@ export default Vue.extend({
     target: {
       type: String as () => TitleBlock['target'],
       default: '_self',
+    },
+    width: {
+      type: String as () => TitleBlock['width'],
+      default: 'full',
+    },
+    height: {
+      type: String as () => TitleBlock['height'],
+      default: 'auto',
     },
   },
 })

@@ -2,6 +2,7 @@
   <container
     class="image-block flex justify-center items-center flex-shrink-0 flex-grow-0"
     :class="[`min-h-${getHeight} w-${getWidth}`]"
+    tag="article"
   >
     <figure class="w-full h-full">
       <img

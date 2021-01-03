@@ -1,10 +1,8 @@
 export interface TitleBlock {
-  title: string
   titleTag?: string
   transform?: string
   align?: string
   font?: string
-  subtitle?: string | boolean
   subtitleTag?: string
   useLink?: boolean
   href?: string | boolean
@@ -12,4 +10,6 @@ export interface TitleBlock {
   maxWidth?: number | string
   paddingTop?: string
   paddingBottom?: string
+  width?: string
+  height?: string
 }

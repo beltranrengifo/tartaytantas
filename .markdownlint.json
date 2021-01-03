@@ -6,7 +6,13 @@
       "text-block",
       "image-block",
       "image-grid",
-      "script"
+      "title-block",
+      "a",
+      "span",
+      "template",
+      "h1",
+      "h2",
+      "interactive-tag"
     ]
   },
   "MD013": false

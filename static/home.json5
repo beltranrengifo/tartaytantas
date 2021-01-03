@@ -202,12 +202,10 @@
       titleBlock: {
         name: 'title-block',
         options: {
-          title: 'Síguenos en Instagram',
           titleTag: 'h2',
           transform: 'uppercase',
           align: 'center',
           font: 'sans',
-          subtitle: '@tartaytantas',
           subtitleTag: 'h3',
           useLink: true,
           href: 'http://instagram.com',

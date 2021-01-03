@@ -1,11 +1,11 @@
 <template>
-  <container tag="section" fullwidth class="hero relative">
-    <main>
+  <container tag="article" fullwidth class="hero relative">
+    <div>
       <carousel v-if="slides" :slides="slides" />
       <figure v-if="logo" class="hero__logo-image absolute top-0">
         <img :src="getLogo" :alt="logoAlt" />
       </figure>
-    </main>
+    </div>
   </container>
 </template>
 

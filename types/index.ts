@@ -7,6 +7,7 @@ import { TitleBlock } from './interfaces/title-block'
 import { ImageGrid } from './interfaces/image-grid'
 import { InteractiveTag } from './interfaces/interactive-tag'
 import { MetaData } from './interfaces/meta-data'
+import { Container } from './interfaces/container'
 
 export {
   NavigationItem,
@@ -19,4 +20,5 @@ export {
   ImageGrid,
   InteractiveTag,
   MetaData,
+  Container,
 }

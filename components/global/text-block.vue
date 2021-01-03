@@ -2,18 +2,20 @@
   <container
     class="text-block flex justify-center items-center flex-shrink-0 flex-grow-0"
     :class="[`min-h-${getHeight} w-${getWidth} bg-${background}`]"
+    tag="article"
     fullwidth
   >
     <component
       :is="tag"
-      v-sanitize.nothing="content"
       class="text-block__content relative font-serif text-2xl"
       :class="[
         `w-t-block-${getContentWidth}`,
         `text-${getColor}`,
         getDecoration,
       ]"
-    />
+    >
+      <slot />
+    </component>
   </container>
 </template>
 
@@ -25,10 +27,6 @@ export default Vue.extend({
   name: 'TextBlock',
 
   props: {
-    content: {
-      type: String as () => TextBlock['content'],
-      required: true,
-    },
     decoration: {
       type: Boolean as () => TextBlock['decoration'],
       default: false,
