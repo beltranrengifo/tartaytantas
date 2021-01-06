@@ -1,0 +1,65 @@
+.reveal.fadeInUp {
+  opacity: 0;
+  transition-property: all;
+  transition-duration: 1s;
+  transform: translateY(20px);
+}
+
+.reveal.fadeInUp.visible {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.reveal.fadeInDown {
+  opacity: 0;
+  transition-property: all;
+  transition-duration: 1s;
+  transform: translateY(-20px);
+}
+
+.reveal.fadeInDown.visible {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.reveal.fadeInRight {
+  opacity: 0;
+  transition-property: all;
+  transition-duration: 1s;
+  transform: translateX(20px);
+}
+
+.reveal.fadeInRight.visible {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+.reveal.fadeInLeft {
+  opacity: 0;
+  transition-property: all;
+  transition-duration: 1s;
+  transform: translateX(-20px);
+}
+
+.reveal.fadeInLeft.visible {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+.reveal.fadeIn {
+  transition-property: opacity;
+  transition-duration: 1s;
+  opacity: 0;
+}
+
+.reveal.fadeIn.visible {
+  opacity: 1;
+}
+
+[data-delay='300ms'] {
+  transition-delay: 300ms;
+}
+
+[data-delay='600ms'] {
+  transition-delay: 600ms;
+}

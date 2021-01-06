@@ -1,14 +1,14 @@
 <template>
   <container
     class="image-block flex justify-center items-center flex-shrink-0 flex-grow-0"
-    :class="[`min-h-${getHeight} w-${getWidth}`]"
+    :class="[`h-${getHeight} w-${getWidth}`]"
   >
     <figure class="w-full h-full">
       <img
         :src="src"
         :alt="imageAlt"
         srcset=""
-        class="w-full h-full object-cover"
+        class="w-full h-full object-cover reveal fadeInDown"
         :class="[`object-${getAlign}`]"
       />
     </figure>

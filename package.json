@@ -16,8 +16,10 @@
     "@nuxt/content": "^1.9.0",
     "@nuxt/typescript-runtime": "^2.0.0",
     "core-js": "^3.6.5",
+    "jarallax": "^1.12.5",
     "lodash": "^4.17.20",
     "nuxt": "^2.14.6",
+    "object-fit-images": "^3.2.4",
     "sass": "^1.30.0",
     "sass-loader": "^10.1.0",
     "v-sanitize": "^0.0.4",
@@ -51,6 +53,7 @@
     "stylelint-config-prettier": "^8.0.2",
     "stylelint-config-standard": "^20.0.0",
     "ts-jest": "^26.4.1",
-    "vue-jest": "^3.0.4"
+    "vue-jest": "^3.0.4",
+    "vue-parallax": "^1.1.1"
   }
 }

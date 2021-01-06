@@ -1,9 +1,15 @@
 <template>
   <container
-    class="w-full"
-    :class="[paddingTop, paddingBottom, `text-${align}`]"
+    tag="article"
+    :class="[
+      paddingTop,
+      paddingBottom,
+      `text-${align}`,
+      `w-${width}`,
+      `min-h-${height}`,
+    ]"
   >
-    <interactive-tag :link="href" :link-target="target">
+    <div class="flex flex-col justify-center h-full">
       <component
         :is="titleTag"
         v-sanitize.nothing="title"
@@ -16,17 +22,15 @@
         v-sanitize.nothing="subtitle"
         class="text-sm"
       />
-    </interactive-tag>
+    </div>
   </container>
 </template>
 
 <script lang="ts">
 import Vue from 'vue'
 import { TitleBlock } from '@/types/index'
-
 export default Vue.extend({
   name: 'TitleBlock',
-
   props: {
     title: {
       type: String as () => TitleBlock['title'],
@@ -44,13 +48,17 @@ export default Vue.extend({
       type: String as () => TitleBlock['align'],
       default: 'left',
     },
+    vAlign: {
+      type: String as () => TitleBlock['vAlign'],
+      default: '',
+    },
     font: {
       type: String as () => TitleBlock['font'],
       default: 'serif',
     },
     subtitle: {
       type: String as () => TitleBlock['subtitle'],
-      default: false,
+      default: '',
     },
     subtitleTag: {
       type: String as () => TitleBlock['subtitleTag'],
@@ -74,6 +82,24 @@ export default Vue.extend({
     target: {
       type: String as () => TitleBlock['target'],
       default: '_self',
+    },
+    width: {
+      type: String as () => TitleBlock['width'],
+      default: 'full',
+    },
+    maxWidth: {
+      type: String as () => TitleBlock['maxWidth'],
+      default: 'none',
+    },
+    height: {
+      type: String as () => TitleBlock['height'],
+      default: 'auto',
+    },
+  },
+
+  computed: {
+    getVAlign() {
+      return `flex flex-col justify-center h-full`
     },
   },
 })

@@ -21,6 +21,6 @@ module.exports = {
       },
     ],
     'block-no-empty': null,
-    'unit-allowed-list': ['em', 'rem', 's', 'px', '%', 'vh', 'vw'],
+    'unit-allowed-list': ['em', 'rem', 's', 'px', '%', 'vh', 'vw', 'ms'],
   },
 }

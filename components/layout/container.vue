@@ -1,12 +1,15 @@
 <template>
   <component
     :is="tag"
-    class="content-container"
-    :class="{
-      'content-container--boxed': boxed,
-      'content-container--fullwidth': fullwidth,
-      flex,
-    }"
+    class="content-container mx-auto"
+    :class="[
+      {
+        'content-container--boxed': boxed,
+        'content-container--fullwidth': fullwidth,
+        flex,
+      },
+      classes,
+    ]"
   >
     <slot />
   </component>
@@ -35,6 +38,10 @@ export default Vue.extend({
       type: Boolean as () => Container['flex'],
       default: false,
     },
+    classes: {
+      type: String as () => Container['classes'],
+      default: 'mt-0',
+    },
   },
 })
 </script>
@@ -43,12 +50,10 @@ export default Vue.extend({
 .content-container {
   overflow: hidden;
   &:not(.content-container--fullwidth):not(.content-container--boxed) {
-    margin: 0 auto;
     max-width: rem(1920);
   }
   &--boxed {
     max-width: rem(1440);
-    margin: 0 auto;
   }
 }
 </style>

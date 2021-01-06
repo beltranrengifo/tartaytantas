@@ -20,9 +20,13 @@
 import Vue from 'vue'
 import { debounce } from 'lodash'
 
+import Parallax from '@/mixins/parallax'
+
 const SCROLL_THRESHOLD: number = 50
 
 export default Vue.extend({
+  mixins: [Parallax],
+
   data() {
     const scrollPosition: Nullable<number> = 0
     return {

@@ -3,4 +3,5 @@ export interface Container {
   boxed?: boolean
   fullwidth?: boolean
   flex?: boolean
+  classes?: string
 }

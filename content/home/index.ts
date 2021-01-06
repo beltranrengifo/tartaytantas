@@ -4,6 +4,10 @@ import claim2 from '@/content/home/2-claim-2.txt'
 import more from '@/content/home/3-more.txt'
 import carrotText from '@/content/home/4-carrot.txt'
 import uniqueText from '@/content/home/5-unique.txt'
+import igTitle from '@/content/home/6-ig-title.txt'
+import igSubtitle from '@/content/home/6-ig-subtitle.txt'
+import allCakesTitle from '@/content/home/7-all-cakes-title.txt'
+import allCakesText from '@/content/home/7-all-cakes-text.txt'
 
 export default [
   /* hero */
@@ -253,12 +257,12 @@ export default [
       {
         name: 'title-block',
         options: {
-          title: 'Síguenos en Instagram',
+          title: igTitle,
           titleTag: 'h2',
           transform: 'uppercase',
           align: 'center',
           font: 'sans',
-          subtitle: '@tartaytantas',
+          subtitle: igSubtitle,
           subtitleTag: 'h3',
           useLink: true,
           href: 'http://instagram.com',
@@ -296,15 +300,16 @@ export default [
     options: {
       boxed: true,
       flex: true,
+      classes:
+        'pt-20 pb-20 mt-40 mb-24 border-solid border-primary border-t border-b',
     },
     components: [
       {
         name: 'title-block',
         options: {
-          title: 'Todas nuestras tartas',
+          title: allCakesTitle,
           titleTag: 'h2',
-          subtitle:
-            '<span class="block">Trabajamos de manera artesana.</span><span class="block">Diseñamos tartas sencillas y deliciosas.</span>',
+          subtitle: allCakesText,
           subtitleTag: 'p',
           width: '1/3',
           transform: 'uppercase',
@@ -312,6 +317,7 @@ export default [
           font: 'sans',
           maxWidth: 'none',
           height: '1/2-screen',
+          vAlign: 'center',
         },
       },
       {

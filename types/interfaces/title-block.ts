@@ -9,7 +9,10 @@ export interface TitleBlock {
   useLink?: boolean
   href?: string | boolean
   target?: string
-  maxWidth?: number | string
   paddingTop?: string
   paddingBottom?: string
+  width?: string
+  maxWidth?: number | string
+  height?: string
+  vAlign?: string
 }
