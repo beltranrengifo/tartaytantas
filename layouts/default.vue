@@ -2,13 +2,12 @@
   <section class="flex flex-col h-full">
     <Header
       class="main-header"
-      :class="{ 'main-header--shrink': stickyHeader }"
-      :is-sticky="stickyHeader"
+      :class="{ 'main-header--shrink': $state.stickyNav }"
     />
     <main
       role="main"
       class="main-content flex-auto"
-      :class="{ 'main-content--expand': stickyHeader }"
+      :class="{ 'main-content--expand': $state.stickyNav }"
     >
       <Nuxt />
     </main>
@@ -41,14 +40,14 @@ export default Vue.extend({
     }
   },
 
-  computed: {
-    stickyHeader(): boolean {
-      return this.scrollPosition > SHOW_MENU_SCROLL_THRESHOLD
-    },
-  },
-
   mounted() {
-    window.onscroll = debounce(() => (this.scrollPosition = window.scrollY), 25)
+    window.onscroll = debounce(async () => {
+      this.scrollPosition = window.scrollY
+      await this.$state.mutate(
+        'stickyNav',
+        this.scrollPosition > SHOW_MENU_SCROLL_THRESHOLD
+      )
+    }, 25)
   },
 })
 </script>

@@ -24,6 +24,8 @@ import { tartas } from '@/content'
 
 import Hero from '@/components/content/hero.vue'
 import ProductGrid from '@/components/content/product-grid.vue'
+import FeaturedProduct from '@/components/content/featured-product.vue'
+import OnePageNav from '@/components/content/one-page-nav.vue'
 
 export default Vue.extend({
   name: 'Tartas',
@@ -31,6 +33,8 @@ export default Vue.extend({
   components: {
     Hero,
     ProductGrid,
+    FeaturedProduct,
+    OnePageNav,
   },
 
   mixins: [MetaData],

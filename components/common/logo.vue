@@ -1,5 +1,5 @@
 <template>
-  <div class="logo" :class="{ 'logo--is-sticky': isSticky }">
+  <div class="logo" :class="{ 'logo--is-sticky': $state.stickyNav }">
     <n-link :to="link">
       <img :src="getLogoImage" :alt="altText" class="logo__image" />
     </n-link>
@@ -24,10 +24,6 @@ export default Vue.extend({
     altText: {
       type: String,
       default: 'Tartaytantas Logo',
-    },
-    isSticky: {
-      type: Boolean,
-      default: false,
     },
   },
 

@@ -10,7 +10,7 @@
         :key="item.name"
         class="navigation-item mx-6"
         :class="{
-          'navigation-item--is-sticky': isSticky,
+          'navigation-item--is-sticky': $state.stickyNav,
           'navigation-item--is-secondary': isSecondaryNav,
         }"
       >
@@ -35,10 +35,6 @@ export default Vue.extend({
   name: 'Navigation',
 
   props: {
-    isSticky: {
-      type: Boolean,
-      default: false,
-    },
     isSecondaryNav: {
       type: Boolean,
       default: false,

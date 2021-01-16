@@ -49,6 +49,7 @@ export default {
     '@/plugins/slick.js',
     '@/plugins/sanitize.client.js',
     '@/plugins/scroll.client.js',
+    '@/plugins/state.js',
   ],
 
   // Auto import components (https://go.nuxtjs.dev/config-components)
