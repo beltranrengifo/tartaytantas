@@ -1,14 +1,18 @@
 <template>
   <nav
     role="navigation"
-    class="flex flex-col justify-between items-center md:items-end"
+    class="flex items-center md:items-end"
+    :class="[isSecondaryNav ? 'justify-end' : 'justify-between']"
   >
-    <ul class="flex">
+    <ul class="flex" :class="{ 'flex-col': isSecondaryNav }">
       <li
         v-for="item in navigation"
         :key="item.name"
         class="navigation-item mx-6"
-        :class="{ 'navigation-item--is-sticky': isSticky }"
+        :class="{
+          'navigation-item--is-sticky': isSticky,
+          'navigation-item--is-secondary': isSecondaryNav,
+        }"
       >
         <component
           :is="getLinkTag(item)"
@@ -32,6 +36,10 @@ export default Vue.extend({
 
   props: {
     isSticky: {
+      type: Boolean,
+      default: false,
+    },
+    isSecondaryNav: {
       type: Boolean,
       default: false,
     },
@@ -93,12 +101,35 @@ export default Vue.extend({
       }
     }
   }
+
   &--is-sticky {
     #{$--self}__inner {
       font-size: rem(12);
       color: var(--color-dark);
       &.nuxt-link-exact-active {
         color: var(--color-base);
+      }
+    }
+  }
+
+  &--is-secondary {
+    #{$--self}__inner {
+      font-size: rem(12);
+      color: var(--color-dark);
+      @apply mb-4;
+      @apply inline-block;
+
+      &.nuxt-link-exact-active {
+        color: var(--color-brand);
+        &::after {
+          display: none;
+        }
+      }
+
+      &:not(.nuxt-link-exact-active):hover {
+        &::after {
+          background-color: var(--color-brand);
+        }
       }
     }
   }

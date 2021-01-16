@@ -316,7 +316,7 @@ export default [
       boxed: true,
       flex: true,
       classes:
-        'pt-20 pb-20 pl-5 2xl:pl-0 mt-40 mb-24 border-solid border-primary border-t border-b',
+        'pt-20 pb-20 pl-5 2xl:pl-0 mt-40 border-solid border-primary border-t border-b',
     },
     components: [
       {

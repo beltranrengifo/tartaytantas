@@ -23,6 +23,7 @@
     "sass": "^1.30.0",
     "sass-loader": "^10.1.0",
     "v-sanitize": "^0.0.4",
+    "vue-scrollactive": "^0.9.3",
     "vue-slick-carousel": "^1.0.6"
   },
   "devDependencies": {
@@ -46,6 +47,7 @@
     "eslint-config-prettier": "^6.12.0",
     "eslint-plugin-nuxt": "^1.0.0",
     "eslint-plugin-prettier": "^3.1.4",
+    "eslint-plugin-tailwind": "^0.2.0",
     "jest": "^26.5.0",
     "prettier": "^2.1.2",
     "raw-loader": "^4.0.2",

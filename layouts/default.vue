@@ -12,7 +12,7 @@
     >
       <Nuxt />
     </main>
-    <Footer class="flex-shrink-0" />
+    <Footer class="flex-shrink-0" :content="footer" />
   </section>
 </template>
 
@@ -21,16 +21,23 @@ import Vue from 'vue'
 import { debounce } from 'lodash'
 
 import Parallax from '@/mixins/parallax.vue'
+import { layout } from '@/content'
 
-import { SHOW_MENU_SCROLL_THRESHOLD } from '@/constants'
+import { SHOW_MENU_SCROLL_THRESHOLD } from '@/config'
 
 export default Vue.extend({
   mixins: [Parallax],
 
-  data() {
+  fetch(): void {
+    const { footer } = layout
+    this.footer = footer
+  },
+
+  data(): any {
     const scrollPosition: Nullable<number> = 0
     return {
       scrollPosition,
+      footer: '',
     }
   },
 
