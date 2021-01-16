@@ -50,21 +50,36 @@ module.exports = {
         '1/3-screen': '33vh',
         '1/2-screen': '50vh',
         '3/4-screen': '75vh',
+        66: '16rem',
+      },
+      maxHeight: {
+        '1/3-screen': '33vh',
+        '1/2-screen': '50vh',
+        '3/4-screen': '75vh',
+        32: '8rem',
+        66: '16rem',
+        160: '40rem',
       },
       height: {
         '1/3-screen': '33vh',
         '1/2-screen': '50vh',
         '3/4-screen': '75vh',
+        66: '16rem',
       },
       width: {
         't-block-sm': '280px',
         't-block-md': '380px',
+        80: '20rem',
+        72: '18rem',
       },
       borderWidth: {
         3: '3px',
       },
       screens: {
         '2xl': '1536px',
+      },
+      padding: {
+        36: '9rem',
       },
     },
   },

@@ -2,7 +2,7 @@
   <container tag="article" fullwidth class="hero relative">
     <main>
       <carousel :slides="slides" />
-      <figure class="hero__logo-image absolute top-0">
+      <figure v-if="logo" class="hero__logo-image absolute top-0">
         <img :src="getLogo" :alt="logoAlt" />
       </figure>
     </main>

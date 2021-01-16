@@ -1,6 +1,10 @@
 <template>
   <footer class="px-5 py-24 bg-tertiary">
-    <container tag="section" boxed class="grid grid-cols-3">
+    <container
+      tag="section"
+      boxed
+      class="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1"
+    >
       <article>
         <h3 class="mb-6 text-xs">{{ footerInfoTitle }}</h3>
         <ul>

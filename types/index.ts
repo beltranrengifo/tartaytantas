@@ -8,6 +8,7 @@ import { ImageGrid } from './interfaces/image-grid'
 import { InteractiveTag } from './interfaces/interactive-tag'
 import { MetaData } from './interfaces/meta-data'
 import { Container } from './interfaces/container'
+import { ProductGrid, ProductItem } from './interfaces/product-grid'
 
 export {
   NavigationItem,
@@ -21,4 +22,6 @@ export {
   InteractiveTag,
   MetaData,
   Container,
+  ProductGrid,
+  ProductItem,
 }

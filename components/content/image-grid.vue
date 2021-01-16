@@ -26,8 +26,9 @@
 
 <script lang="ts">
 import Vue from 'vue'
-import { ImageGrid } from '@/types/index'
+import { ImageGrid } from '@/types'
 import ImageUrl from '@/mixins/image-url'
+
 export default Vue.extend({
   name: 'ImageGrid',
   mixins: [ImageUrl],

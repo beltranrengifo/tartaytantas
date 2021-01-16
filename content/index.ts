@@ -1,4 +1,5 @@
-import home from './home'
 import * as layout from './layout'
+import home from './home'
+import tartas from './tartas'
 
-export { home, layout }
+export { layout, home, tartas }

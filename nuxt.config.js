@@ -40,7 +40,7 @@ export default {
       '@/assets/scss/_config.colors.scss',
       '@/assets/scss/_config.responsive.scss',
       '@/assets/scss/_config.components.scss',
-      '@/assets/scss/_utils.animations.scss',
+      '@/assets/scss/_utils.animations-transitions.scss',
     ],
   },
 

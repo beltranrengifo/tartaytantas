@@ -1,7 +1,7 @@
 <template>
-  <container v-if="home" tag="div" fullwidth class="bg-tertiary">
+  <container v-if="tartas" tag="div" fullwidth class="bg-tertiary">
     <container
-      v-for="section in home"
+      v-for="section in tartas"
       :id="section.name"
       :key="section.name"
       v-bind="section.options"
@@ -20,36 +20,30 @@
 import Vue from 'vue'
 import MetaData from '@/mixins/meta-data'
 
-import { home } from '@/content'
+import { tartas } from '@/content'
 
 import Hero from '@/components/content/hero.vue'
-import TextBlock from '@/components/content/text-block.vue'
-import ImageBlock from '@/components/content/image-block.vue'
-import TitleBlock from '@/components/content/title-block.vue'
-import ImageGrid from '@/components/content/image-grid.vue'
+import ProductGrid from '@/components/content/product-grid.vue'
 
 export default Vue.extend({
-  name: 'Home',
+  name: 'Tartas',
 
   components: {
     Hero,
-    TextBlock,
-    ImageBlock,
-    TitleBlock,
-    ImageGrid,
+    ProductGrid,
   },
 
   mixins: [MetaData],
 
   asyncData(): object {
     return {
-      home,
+      tartas,
     }
   },
 
   head(): object {
     return (this as any).getMetadata({
-      title: 'Tartaytantas | Obrador de tartas en Aravaca, Madrid',
+      title: 'Tartaytantas | Tartas hechas en nuestro obrador',
       description:
         'Somos un pequeño obrador de tartas inspiradas en recetas clásicas, con referencias a la pastelería americana de mediados del S XX.',
     })
