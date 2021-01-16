@@ -4,4 +4,5 @@ export interface ImageBlock {
   width?: string
   height?: string
   align?: string
+  extraClasses?: string
 }

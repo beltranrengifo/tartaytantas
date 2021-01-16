@@ -8,8 +8,8 @@
         :src="src"
         :alt="imageAlt"
         srcset=""
-        class="w-full h-full object-cover reveal fadeInDown"
-        :class="[`object-${getAlign}`]"
+        class="w-full h-full object-cover"
+        :class="[`object-${getAlign}`, extraClasses]"
       />
     </figure>
   </container>
@@ -42,6 +42,10 @@ export default Vue.extend({
     align: {
       type: String as () => ImageBlock['align'],
       default: 'center',
+    },
+    extraClasses: {
+      type: String as () => ImageBlock['extraClasses'],
+      default: '',
     },
   },
 

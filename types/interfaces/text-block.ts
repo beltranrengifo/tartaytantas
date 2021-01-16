@@ -8,4 +8,5 @@ export interface TextBlock {
   width?: string
   height?: string
   background?: string
+  extraClasses?: string
 }

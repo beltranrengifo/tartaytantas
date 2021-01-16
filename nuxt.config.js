@@ -83,4 +83,12 @@ export default {
       })
     },
   },
+  extends: ['@nuxtjs/eslint-config-typescript'],
+  typescript: {
+    typeCheck: {
+      eslint: {
+        files: './**/*.{ts,js,vue}',
+      },
+    },
+  },
 }

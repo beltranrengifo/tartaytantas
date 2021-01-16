@@ -77,6 +77,7 @@ export default [
           height: '3/4-screen',
           contentWidth: 'sm',
           background: 'tertiary',
+          extraClasses: 'parallax-item',
         },
       },
       {
@@ -86,6 +87,7 @@ export default [
           imageAlt: 'Tarta de bizcocho de espinacas con frambuesas',
           width: '1/2',
           height: '3/4-screen',
+          extraClasses: 'reveal zoom-out',
         },
       },
     ],
@@ -108,6 +110,7 @@ export default [
           height: '1/3-screen',
           contentWidth: 'md',
           background: 'secondary-light',
+          extraClasses: 'parallax-item',
         },
       },
       {
@@ -120,6 +123,7 @@ export default [
           height: '1/3-screen',
           contentWidth: 'md',
           background: 'secondary-light',
+          extraClasses: 'parallax-item',
         },
       },
     ],
@@ -140,6 +144,7 @@ export default [
           width: '1/1',
           height: '1/3-screen',
           align: 'top',
+          extraClasses: 'reveal zoom-out',
         },
       },
     ],
@@ -164,6 +169,7 @@ export default [
           contentWidth: 'sm',
           background: 'secondary',
           color: 'white',
+          extraClasses: 'parallax-item',
         },
       },
       {
@@ -175,6 +181,7 @@ export default [
           width: '2/3',
           height: '3/4-screen',
           align: 'center',
+          extraClasses: 'reveal zoom-out',
         },
       },
     ],
@@ -196,6 +203,7 @@ export default [
           width: '2/3',
           height: '3/4-screen',
           align: 'center',
+          extraClasses: 'reveal zoom-out',
         },
       },
       {
@@ -210,6 +218,7 @@ export default [
           contentWidth: 'sm',
           background: 'tertiary',
           color: 'base',
+          extraClasses: 'parallax-item',
         },
       },
     ],
@@ -233,6 +242,7 @@ export default [
           height: '3/4-screen',
           contentWidth: 'sm',
           background: 'tertiary',
+          extraClasses: 'parallax-item',
         },
       },
       {
@@ -243,6 +253,7 @@ export default [
             'En Tartaytantas ofrecemos tartas únicas hechas a diario en el obrador',
           width: '1/2',
           height: '3/4-screen',
+          extraClasses: 'reveal zoom-out',
         },
       },
     ],
@@ -269,6 +280,7 @@ export default [
           maxWidth: 'none',
           paddingTop: 'pt-40',
           paddingBottom: 'pb-16',
+          extraClasses: 'parallax-item',
         },
       },
       {
@@ -278,14 +290,17 @@ export default [
             {
               src: 'tartaytantas-grid-image-1.jpg',
               alt: 'Tarta de frambuesas',
+              extraClasses: 'parallax-item',
             },
             {
               src: 'tartaytantas-grid-image-2.jpg',
               alt: 'Tarta de limón',
+              extraClasses: 'parallax-item',
             },
             {
               src: 'tartaytantas-grid-image-3.jpg',
               alt: 'Cheesecake',
+              extraClasses: 'parallax-item',
             },
           ],
           columns: 3,
@@ -301,7 +316,7 @@ export default [
       boxed: true,
       flex: true,
       classes:
-        'pt-20 pb-20 mt-40 mb-24 border-solid border-primary border-t border-b',
+        'pt-20 pb-20 pl-5 2xl:pl-0 mt-40 mb-24 border-solid border-primary border-t border-b',
     },
     components: [
       {
@@ -318,6 +333,7 @@ export default [
           maxWidth: 'none',
           height: '1/2-screen',
           vAlign: 'center',
+          extraClasses: 'parallax-item',
         },
       },
       {
@@ -329,11 +345,13 @@ export default [
             {
               src: 'tartaytantas-mostrador-1.jpg',
               alt: 'Mostrador de Tartaytantas',
+              extraClasses: 'reveal zoom-out',
             },
             {
               src: 'tartaytantas-mostrador-2-detalle.jpg',
               alt:
                 'Detalle del mostrador de Tartaytantas con una foto de Mamá Amelia',
+              extraClasses: 'reveal zoom-out',
             },
           ],
           columns: 2,

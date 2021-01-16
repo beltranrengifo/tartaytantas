@@ -50,10 +50,10 @@ export default Vue.extend({
 .content-container {
   overflow: hidden;
   &:not(.content-container--fullwidth):not(.content-container--boxed) {
-    max-width: rem(1920);
+    max-width: $--xxl;
   }
   &--boxed {
-    max-width: rem(1440);
+    max-width: $--xl;
   }
 }
 </style>

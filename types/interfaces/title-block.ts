@@ -15,4 +15,5 @@ export interface TitleBlock {
   maxWidth?: number | string
   height?: string
   vAlign?: string
+  extraClasses?: string
 }

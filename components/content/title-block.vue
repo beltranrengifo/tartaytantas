@@ -14,13 +14,14 @@
         :is="titleTag"
         v-sanitize.nothing="title"
         class="text-lg mb-6"
-        :class="[`font-${font}`, transform]"
+        :class="[`font-${font}`, transform, extraClasses]"
       />
       <component
         :is="subtitleTag"
         v-if="subtitle"
         v-sanitize.nothing="subtitle"
         class="text-sm"
+        :class="[extraClasses]"
       />
     </div>
   </container>
@@ -94,6 +95,10 @@ export default Vue.extend({
     height: {
       type: String as () => TitleBlock['height'],
       default: 'auto',
+    },
+    extraClasses: {
+      type: String as () => TitleBlock['extraClasses'],
+      default: '',
     },
   },
 

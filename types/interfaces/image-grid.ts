@@ -1,6 +1,7 @@
 export interface GridImage {
   src: string
   alt?: string
+  extraClasses?: string
 }
 
 export interface ImageGrid {

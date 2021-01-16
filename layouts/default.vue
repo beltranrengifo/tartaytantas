@@ -20,9 +20,9 @@
 import Vue from 'vue'
 import { debounce } from 'lodash'
 
-import Parallax from '@/mixins/parallax'
+import Parallax from '@/mixins/parallax.vue'
 
-const SCROLL_THRESHOLD: number = 50
+import { SHOW_MENU_SCROLL_THRESHOLD } from '@/constants'
 
 export default Vue.extend({
   mixins: [Parallax],
@@ -36,7 +36,7 @@ export default Vue.extend({
 
   computed: {
     stickyHeader(): boolean {
-      return this.scrollPosition > SCROLL_THRESHOLD
+      return this.scrollPosition > SHOW_MENU_SCROLL_THRESHOLD
     },
   },
 

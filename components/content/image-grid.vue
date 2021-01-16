@@ -8,11 +8,16 @@
       class="grid justify-center h-full"
       :class="[`gap-${gap}`, `grid-cols-${columns}`]"
     >
-      <figure v-for="(image, i) in images" :key="image + i">
+      <figure
+        v-for="(image, i) in images"
+        :key="image + i"
+        class="overflow-hidden"
+      >
         <img
           class="w-full h-full object-cover"
           :src="imageUrl(image.src)"
           :alt="image.alt"
+          :class="[image.extraClasses]"
         />
       </figure>
     </div>
