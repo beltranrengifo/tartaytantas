@@ -1,0 +1,18 @@
+a:not(.no-decoration) {
+  &,
+  &:hover {
+    position: relative;
+    transition: $--a-t;
+    color: var(--color-base);
+    &::after {
+      transition: $--a-t;
+      content: '';
+      width: 100%;
+      height: rem(3);
+      background-color: var(--color-primary);
+      position: absolute;
+      bottom: rem(-4);
+      left: 0;
+    }
+  }
+}

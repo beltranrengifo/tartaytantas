@@ -1,0 +1,20 @@
+.slick {
+  &-dots {
+    display: flex !important;
+    justify-content: center;
+    position: absolute;
+    bottom: rem(8);
+    right: rem(16);
+    .slick-active {
+      .dot {
+        background-color: transparent;
+        border: 2px solid var(--color-primary);
+      }
+    }
+  }
+
+  &-slide,
+  &-slide * {
+    outline: none !important;
+  }
+}

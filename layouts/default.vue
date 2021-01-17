@@ -1,55 +1,64 @@
 <template>
-  <div>
-    <Nuxt />
-  </div>
+  <section class="flex flex-col h-full">
+    <Header
+      class="main-header"
+      :class="{ 'main-header--shrink': $state.stickyNav }"
+    />
+    <main
+      role="main"
+      class="main-content flex-auto"
+      :class="{ 'main-content--expand': $state.stickyNav }"
+    >
+      <Nuxt />
+    </main>
+    <Footer class="flex-shrink-0" :content="footer" />
+  </section>
 </template>
 
-<style>
-html {
-  font-family: 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI',
-    Roboto, 'Helvetica Neue', Arial, sans-serif;
-  font-size: 16px;
-  word-spacing: 1px;
-  -ms-text-size-adjust: 100%;
-  -webkit-text-size-adjust: 100%;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
-  box-sizing: border-box;
-}
+<script lang="ts">
+import Vue from 'vue'
+import { debounce } from 'lodash'
 
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-  margin: 0;
-}
+import Parallax from '@/mixins/parallax.vue'
+import { layout } from '@/content'
 
-.button--green {
-  display: inline-block;
-  border-radius: 4px;
-  border: 1px solid #3b8070;
-  color: #3b8070;
-  text-decoration: none;
-  padding: 10px 30px;
-}
+import { SHOW_MENU_SCROLL_THRESHOLD } from '@/config'
 
-.button--green:hover {
-  color: #fff;
-  background-color: #3b8070;
-}
+export default Vue.extend({
+  mixins: [Parallax],
 
-.button--grey {
-  display: inline-block;
-  border-radius: 4px;
-  border: 1px solid #35495e;
-  color: #35495e;
-  text-decoration: none;
-  padding: 10px 30px;
-  margin-left: 15px;
-}
+  fetch(): void {
+    const { footer } = layout
+    this.footer = footer
+  },
 
-.button--grey:hover {
-  color: #fff;
-  background-color: #35495e;
+  data(): any {
+    const scrollPosition: Nullable<number> = 0
+    return {
+      scrollPosition,
+      footer: '',
+    }
+  },
+
+  mounted() {
+    window.onscroll = debounce(async () => {
+      this.scrollPosition = window.scrollY
+      await this.$state.mutate(
+        'stickyNav',
+        this.scrollPosition > SHOW_MENU_SCROLL_THRESHOLD
+      )
+    }, 25)
+  },
+})
+</script>
+
+<style lang="scss" scoped>
+.main-header {
+  transition: $--header-t;
+  height: $--header-h;
+  &--shrink {
+    height: $--header-h-shrink;
+    background-color: var(--color-tertiary);
+  }
 }
 </style>

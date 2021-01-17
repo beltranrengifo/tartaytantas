@@ -1,29 +1,47 @@
+$--xxs: 300px;
+$--xs: 369px;
+$--sm-down: 767px;
+$--sm-up: 768px;
+$--md: 992px;
+$--ml: 1024px;
+$--lg: 1280px;
+$--xl: 1536px;
+$--xxl: 1920px;
+
 @mixin breakpoint($bp) {
   @if $bp == only-small-phone {
-    @media (min-width: 300px) and (max-width: 369px) {
+    @media (min-width: $--xxs) and (max-width: $--xs) {
       @content;
     }
   } @else if $bp == only-phone {
-    @media (max-width: 767px) {
+    @media (max-width: $--sm-down) {
       @content;
     }
   } @else if $bp == sm {
-    @media (min-width: 768px) {
+    @media (min-width: $--sm-up) {
       @content;
     }
   } @else if $bp == md {
-    @media (min-width: 992px) {
+    @media (min-width: $--md) {
       @content;
     }
   } @else if $bp == ml {
-    @media (min-width: 1024px) {
+    @media (min-width: $--ml) {
       @content;
     }
   } @else if $bp == lg {
-    @media (min-width: 1232px) {
+    @media (min-width: $--lg) {
+      @content;
+    }
+  } @else if $bp == xl {
+    @media (min-width: $--xl) {
+      @content;
+    }
+  } @else if $bp == xxl {
+    @media (min-width: $--xxl) {
       @content;
     }
   } @else {
-    @warn "Breakpoint mixin supports: only-small-phone, only-phone, sm, md, ml and lg";
+    @warn "Breakpoint mixin supports: only-small-phone, only-phone, sm, md, ml, lg, xl and xxl";
   }
 }

@@ -7,7 +7,7 @@
     "build": "nuxt-ts build",
     "start": "nuxt-ts start",
     "generate": "nuxt-ts generate",
-    "lint:js": "eslint --ext .js,.vue --ignore-path .gitignore .",
+    "lint:js": "eslint --ext .ts,.js,.vue --ignore-path .gitignore .",
     "lint:style": "stylelint **/*.{vue,css} --ignore-path .gitignore",
     "lint": "yarn lint:js && yarn lint:style",
     "test": "jest"
@@ -16,11 +16,18 @@
     "@nuxt/content": "^1.9.0",
     "@nuxt/typescript-runtime": "^2.0.0",
     "core-js": "^3.6.5",
+    "jarallax": "^1.12.5",
+    "lodash": "^4.17.20",
     "nuxt": "^2.14.6",
+    "object-fit-images": "^3.2.4",
     "sass": "^1.30.0",
-    "sass-loader": "^10.1.0"
+    "sass-loader": "^10.1.0",
+    "v-sanitize": "^0.0.4",
+    "vue-scrollactive": "^0.9.3",
+    "vue-slick-carousel": "^1.0.6"
   },
   "devDependencies": {
+    "@babel/plugin-proposal-optional-chaining": "^7.12.7",
     "@commitlint/cli": "^11.0.0",
     "@commitlint/config-conventional": "^11.0.0",
     "@nuxt/types": "^2.14.6",
@@ -28,8 +35,10 @@
     "@nuxtjs/eslint-config": "^3.1.0",
     "@nuxtjs/eslint-config-typescript": "^3.0.0",
     "@nuxtjs/eslint-module": "^2.0.0",
+    "@nuxtjs/style-resources": "^1.0.0",
     "@nuxtjs/stylelint-module": "^4.0.0",
     "@nuxtjs/tailwindcss": "^3.1.0",
+    "@types/lodash": "^4.14.166",
     "@vue/test-utils": "^1.1.0",
     "babel-core": "7.0.0-bridge.0",
     "babel-eslint": "^10.1.0",
@@ -38,12 +47,15 @@
     "eslint-config-prettier": "^6.12.0",
     "eslint-plugin-nuxt": "^1.0.0",
     "eslint-plugin-prettier": "^3.1.4",
+    "eslint-plugin-tailwind": "^0.2.0",
     "jest": "^26.5.0",
     "prettier": "^2.1.2",
+    "raw-loader": "^4.0.2",
     "stylelint": "^13.7.2",
     "stylelint-config-prettier": "^8.0.2",
     "stylelint-config-standard": "^20.0.0",
     "ts-jest": "^26.4.1",
-    "vue-jest": "^3.0.4"
+    "vue-jest": "^3.0.4",
+    "vue-parallax": "^1.1.1"
   }
 }

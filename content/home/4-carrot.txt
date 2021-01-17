@@ -1,0 +1,1 @@
+<span class="block mb-6">Nuestra Tarta de Zanahoria, es uno de nuestros productos estrella. </span> <span class="block mb-6">Cada vez son más los restaurantes de la Capital que la incluyen en su carta de postres, junto a otros de nuestros productos.</span> <span class="block mb-6">Encarga la tuya, <a href="https://google.es" target="_blank">aquí</a>.</span>

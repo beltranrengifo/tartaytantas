@@ -1,32 +1,58 @@
 <template>
-  <div class="container">
-    <div>
-      <Logo />
-      <h1 class="title">tartaytantas</h1>
-      <div class="links">
-        <a
-          href="https://nuxtjs.org/"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="button--green"
-        >
-          Documentation
-        </a>
-        <a
-          href="https://github.com/nuxt/nuxt.js"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="button--grey"
-        >
-          GitHub
-        </a>
-      </div>
-    </div>
-  </div>
+  <container v-if="home" tag="div" fullwidth class="bg-tertiary">
+    <container
+      v-for="section in home"
+      :id="section.name"
+      :key="section.name"
+      v-bind="section.options"
+    >
+      <component
+        :is="component.name"
+        v-for="(component, i) in section.components"
+        :key="`${section.name}-${component.name}-${i}`"
+        v-bind="component.options"
+      />
+    </container>
+  </container>
 </template>
 
 <script lang="ts">
 import Vue from 'vue'
+import MetaData from '@/mixins/meta-data'
 
-export default Vue.extend({})
+import { home } from '@/content'
+
+import Hero from '@/components/content/hero.vue'
+import TextBlock from '@/components/content/text-block.vue'
+import ImageBlock from '@/components/content/image-block.vue'
+import TitleBlock from '@/components/content/title-block.vue'
+import ImageGrid from '@/components/content/image-grid.vue'
+
+export default Vue.extend({
+  name: 'Home',
+
+  components: {
+    Hero,
+    TextBlock,
+    ImageBlock,
+    TitleBlock,
+    ImageGrid,
+  },
+
+  mixins: [MetaData],
+
+  asyncData(): object {
+    return {
+      home,
+    }
+  },
+
+  head(): object {
+    return (this as any).getMetadata({
+      title: 'Tartaytantas | Obrador de tartas en Aravaca, Madrid',
+      description:
+        'Somos un pequeño obrador de tartas inspiradas en recetas clásicas, con referencias a la pastelería americana de mediados del S XX.',
+    })
+  },
+})
 </script>

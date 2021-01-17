@@ -1,11 +1,13 @@
 :root {
-  --color-base: #1f1e34;
-  --color-primary: #d57b2e;
-  --color-light: #ecedf1;
-  --color-danger: #973d3d;
-  --color-success: #afbf00;
-  --color-soft: #8b7670;
-  --color-soft-light: #d4cec5;
+  --color-base: #988a65;
+  --color-primary: #f9ba13;
+  --color-secondary: #7c99a5;
+  --color-secondary-light: #cdd5dc;
+  --color-tertiary: #f4f4ef;
+  --color-brand: #b82529;
+  --color-brand-secondary: #e4e1d9;
+  --color-dark: #463737;
+  --color-white: #fff;
 }
 
 /**
@@ -14,10 +16,12 @@
 * ex: background-color: background-opacity($--color-primary, 0.5);
 */
 
-$--color-base: #1f1e34;
-$--color-primary: #d57b2e;
-$--color-light: #ecedf1;
-$--color-danger: #973d3d;
-$--color-success: #afbf00;
-$--color-soft: #8b7670;
-$--color-soft-light: #d4cec5;
+$--color-base: #988a65;
+$--color-primary: #f9ba13;
+$--color-secondary: #7c99a5;
+$--color-secondary-light: #cdd5dc;
+$--color-tertiary: #f4f4ef;
+$--color-brand: #b82529;
+$--color-brand-secondary: #e4e1d9;
+$--color-dark: #463737;
+$--color-white: #fff;
