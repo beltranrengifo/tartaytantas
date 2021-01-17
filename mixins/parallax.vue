@@ -90,7 +90,7 @@ export default Vue.extend({
 })
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 .reveal {
   &.zoom-out {
     opacity: 0;

@@ -1,19 +1,26 @@
-import featuredCake from '@/content/tartas/seminaked.txt'
-
-const featuredCakeArr = featuredCake.split('---')
-
 export default [
   /* page nav */
   {
     name: 'page-nav',
-    options: {
-      classes: 'bg-primary',
-      fullwidth: true,
-    },
     components: [
       {
         name: 'one-page-nav',
-        options: {},
+        options: {
+          nav: [
+            {
+              name: 'Tartas',
+              link: '#cakes-grid',
+            },
+            {
+              name: 'Naked',
+              link: '#naked-cakes',
+            },
+            {
+              name: 'Más',
+              link: '#more',
+            },
+          ],
+        },
       },
     ],
   },
@@ -178,24 +185,13 @@ export default [
       },
     ],
   },
-  /* featured cake */
+  /* naked cakes */
   {
-    name: 'featured',
+    name: 'naked-cakes',
     options: {
       classes: 'bg-brand-secondary',
       fullwidth: true,
     },
-    components: [
-      {
-        name: 'featured-product',
-        options: {
-          title: featuredCakeArr[0],
-          content: featuredCakeArr[1],
-          pricing: featuredCakeArr[2],
-          image: '',
-          imageAlt: 'Tartas seminaked en Tartaytantas',
-        },
-      },
-    ],
+    components: [],
   },
 ]

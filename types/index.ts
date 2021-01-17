@@ -9,7 +9,7 @@ import { InteractiveTag } from './interfaces/interactive-tag'
 import { MetaData } from './interfaces/meta-data'
 import { Container } from './interfaces/container'
 import { ProductGrid, ProductItem } from './interfaces/product-grid'
-import { FeaturedProduct } from './interfaces/featured-product'
+import { OnePageNav } from './interfaces/one-page-nav'
 
 export {
   NavigationItem,
@@ -25,5 +25,5 @@ export {
   Container,
   ProductGrid,
   ProductItem,
-  FeaturedProduct,
+  OnePageNav,
 }
