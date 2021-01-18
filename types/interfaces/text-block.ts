@@ -9,4 +9,5 @@ export interface TextBlock {
   height?: string
   background?: string
   extraClasses?: string
+  isParagraph?: boolean
 }

@@ -10,6 +10,7 @@ import { MetaData } from './interfaces/meta-data'
 import { Container } from './interfaces/container'
 import { ProductGrid, ProductItem } from './interfaces/product-grid'
 import { OnePageNav } from './interfaces/one-page-nav'
+import { CallToAction, CtaButton } from './interfaces/call-to-action'
 
 export {
   NavigationItem,
@@ -26,4 +27,6 @@ export {
   ProductGrid,
   ProductItem,
   OnePageNav,
+  CallToAction,
+  CtaButton,
 }

@@ -1,13 +1,6 @@
-import introText from '@/content/home/1-intro.txt'
-import claim1 from '@/content/home/2-claim-1.txt'
-import claim2 from '@/content/home/2-claim-2.txt'
-import more from '@/content/home/3-more.txt'
-import carrotText from '@/content/home/4-carrot.txt'
-import uniqueText from '@/content/home/5-unique.txt'
-import igTitle from '@/content/home/6-ig-title.txt'
-import igSubtitle from '@/content/home/6-ig-subtitle.txt'
-import allCakesTitle from '@/content/home/7-all-cakes-title.txt'
-import allCakesText from '@/content/home/7-all-cakes-text.txt'
+import home from '@/content/home/home.txt'
+
+const homeContents = home.split(/---/g)
 
 export default [
   /* hero */
@@ -69,7 +62,7 @@ export default [
       {
         name: 'text-block',
         options: {
-          content: introText,
+          content: homeContents[0],
           decoration: true,
           decorationColor: 'primary',
           tag: 'h1',
@@ -103,7 +96,7 @@ export default [
       {
         name: 'text-block',
         options: {
-          content: claim1,
+          content: homeContents[1],
           decoration: false,
           tag: 'h2',
           width: '1/2',
@@ -116,7 +109,7 @@ export default [
       {
         name: 'text-block',
         options: {
-          content: claim2,
+          content: homeContents[2],
           decoration: false,
           tag: 'h2',
           width: '1/2',
@@ -160,7 +153,7 @@ export default [
       {
         name: 'text-block',
         options: {
-          content: more,
+          content: homeContents[3],
           decoration: true,
           decorationColor: 'white',
           tag: 'h2',
@@ -209,7 +202,7 @@ export default [
       {
         name: 'text-block',
         options: {
-          content: carrotText,
+          content: homeContents[4],
           decoration: false,
           decorationColor: 'white',
           tag: 'h2',
@@ -217,7 +210,7 @@ export default [
           height: '3/4-screen',
           contentWidth: 'sm',
           background: 'tertiary',
-          color: 'base',
+          color: 'base-color',
           extraClasses: 'parallax-item',
         },
       },
@@ -234,7 +227,7 @@ export default [
       {
         name: 'text-block',
         options: {
-          content: uniqueText,
+          content: homeContents[5],
           decoration: true,
           decorationColor: 'primary',
           tag: 'h2',
@@ -268,12 +261,12 @@ export default [
       {
         name: 'title-block',
         options: {
-          title: igTitle,
+          title: homeContents[7],
           titleTag: 'h2',
           transform: 'uppercase',
           align: 'center',
           font: 'sans',
-          subtitle: igSubtitle,
+          subtitle: homeContents[6],
           subtitleTag: 'h3',
           useLink: true,
           href: 'http://instagram.com',
@@ -316,15 +309,15 @@ export default [
       boxed: true,
       flex: true,
       classes:
-        'pt-20 pb-20 pl-5 2xl:pl-0 mt-40 border-solid border-primary border-t border-b',
+        'pt-20 pb-20 pl-5 2xl:pl-0 mt-40 border-solid border-primary border-t',
     },
     components: [
       {
         name: 'title-block',
         options: {
-          title: allCakesTitle,
+          title: homeContents[9],
           titleTag: 'h2',
-          subtitle: allCakesText,
+          subtitle: homeContents[8],
           subtitleTag: 'p',
           width: '1/3',
           transform: 'uppercase',

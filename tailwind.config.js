@@ -11,7 +11,7 @@ module.exports = {
     },
     backgroundColor: (theme) => ({
       ...theme('colors'),
-      base: 'var(--color-base)',
+      'base-color': 'var(--color-base)',
       primary: 'var(--color-primary)',
       secondary: 'var(--color-secondary)',
       'secondary-light': 'var(--color-secondary-light)',
@@ -23,7 +23,7 @@ module.exports = {
     }),
     textColor: (theme) => ({
       ...theme('colors'),
-      base: 'var(--color-base)',
+      'base-color': 'var(--color-base)',
       primary: 'var(--color-primary)',
       secondary: 'var(--color-secondary)',
       'secondary-light': 'var(--color-secondary-light)',
@@ -35,7 +35,7 @@ module.exports = {
     }),
     borderColor: (theme) => ({
       ...theme('colors'),
-      base: 'var(--color-base)',
+      'base-color': 'var(--color-base)',
       primary: 'var(--color-primary)',
       secondary: 'var(--color-secondary)',
       'secondary-light': 'var(--color-secondary-light)',
@@ -67,8 +67,8 @@ module.exports = {
         66: '16rem',
       },
       width: {
-        't-block-sm': '280px',
-        't-block-md': '380px',
+        'text-block-sm': '280px',
+        'text-block-md': '380px',
         80: '20rem',
         72: '18rem',
       },
