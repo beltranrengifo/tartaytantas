@@ -22,7 +22,7 @@ import MetaData from '@/mixins/meta-data'
 
 import { home } from '@/content'
 
-import Hero from '@/components/content/hero.vue'
+import Hero from '@/components/content/Hero.vue'
 import TextBlock from '@/components/content/text-block.vue'
 import ImageBlock from '@/components/content/image-block.vue'
 import TitleBlock from '@/components/content/title-block.vue'
