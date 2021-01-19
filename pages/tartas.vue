@@ -22,7 +22,7 @@ import MetaData from '@/mixins/meta-data'
 
 import { tartas } from '@/content'
 
-import Hero from '@/components/content/hero.vue'
+import Hero from '@/components/content/Hero.vue'
 import ProductGrid from '@/components/content/product-grid.vue'
 import OnePageNav from '@/components/content/one-page-nav.vue'
 
