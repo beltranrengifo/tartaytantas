@@ -8,12 +8,13 @@
     <component
       :is="tag"
       v-sanitize.nothing="content"
-      class="text-block__content relative font-serif text-2xl"
+      class="text-block__content relative font-serif"
       :class="[
-        `w-t-block-${getContentWidth}`,
+        `w-text-block-${getContentWidth}`,
         `text-${getColor}`,
         getDecoration,
         extraClasses,
+        isParagraph ? 'text-base' : 'text-2xl',
       ]"
     />
   </container>
@@ -37,7 +38,7 @@ export default Vue.extend({
     },
     decorationColor: {
       type: String as () => TextBlock['decorationColor'],
-      default: 'base',
+      default: 'base-color',
     },
     tag: {
       type: String as () => TextBlock['tag'],
@@ -45,11 +46,12 @@ export default Vue.extend({
     },
     color: {
       type: String as () => TextBlock['color'],
-      default: 'base',
+      default: 'base-color',
     },
     contentWidth: {
       type: String as () => TextBlock['contentWidth'],
       default: 'md',
+      validator: (val: string): boolean => ['md', 'sm'].includes(val),
     },
     width: {
       type: String as () => TextBlock['width'],
@@ -66,6 +68,10 @@ export default Vue.extend({
     extraClasses: {
       type: String as () => TextBlock['extraClasses'],
       default: '',
+    },
+    isParagraph: {
+      type: Boolean as () => TextBlock['isParagraph'],
+      default: false,
     },
   },
 

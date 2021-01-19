@@ -1,5 +1,5 @@
 <template>
-  <footer class="px-5 py-24 bg-tertiary">
+  <footer class="px-5 py-24 bg-tertiary border-t border-primary">
     <container
       tag="section"
       boxed
@@ -58,7 +58,7 @@ export default Vue.extend({
     },
 
     footerInfoSplit(): string[] {
-      return this.content.split(/\n/g)
+      return this.content.split(/---/g)
     },
 
     footerInfoTitle(): string {

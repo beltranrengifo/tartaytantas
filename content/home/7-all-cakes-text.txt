@@ -1,3 +1,0 @@
-<span class="block">Trabajamos de manera artesana.</span>
-<span class="block">Diseñamos tartas sencillas y deliciosas.</span>
-<span class="mt-6 block"><a href="https://google.es" target="_blank">Saber más</a></span>

@@ -1,0 +1,21 @@
+Tartaytantas somos un pequeño obrador de tartas inspiradas en recetas clásicas, con referencias a la pastelería americana de mediados del siglo XX.
+---
+Apostamos por la calidad en la materia prima y el diseño de pasteles con un aspecto sencillo pero cuidado.
+---
+Nuestra identidad gráfica, es un homenaje a la obra de Wayne Thiebaud. Su delicioso trabajo, nos inspira. <a target="_blank" href="https://google.es">Puedes verlo aquí.</a>
+---
+<span class="block mb-6">Y no sólo tartas. También ofrecemos bizcochos, brownies, galletas, tartaletas <span class="text-primary">y tantas</span> otras recetas.</span> <span class="block mb-6">No dudes en preguntarnos.</span>
+---
+<span class="block mb-6">Nuestra Tarta de Zanahoria, es uno de nuestros productos estrella. </span> <span class="block mb-6">Cada vez son más los restaurantes de la Capital que la incluyen en su carta de postres, junto a otros de nuestros productos.</span> <span class="block mb-6">Encarga la tuya, <a href="https://google.es" target="_blank">aquí</a>.</span>
+---
+Nuestro trabajo es artesano, producimos para particulares, eventos y restaurantes. Cada tarta es única.
+---
+<a class="no-decoration" href="https://instagram.com" target="_blank">@tartaytantas</a>
+---
+<a class="no-decoration" href="https://instagram.com" target="_blank">Síguenos en Instagram</a>
+---
+<span class="block">Trabajamos de manera artesana.</span>
+<span class="block">Diseñamos tartas sencillas y deliciosas.</span>
+<span class="mt-6 block"><a href="https://google.es" target="_blank">Saber más</a></span>
+---
+Todas nuestras tartas

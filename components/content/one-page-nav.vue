@@ -4,15 +4,15 @@
       class="one-page-nav fixed w-full bg-primary opacity-0"
       :class="{ 'one-page-nav--visible': $state.stickyNav }"
     >
-      <scrollactive class="flex justify-center items-center h-10">
-        <a
-          v-for="item in nav"
-          :key="item.link"
-          :href="item.link"
-          class="one-page-nav__link mx-4 text-xs scrollactive-item no-decoration text-dark"
-        >
-          {{ item.name }}
-        </a>
+      <scrollactive class="flex justify-center items-center h-10" tag="ul">
+        <li v-for="item in nav" :key="item.link">
+          <a
+            :href="item.link"
+            class="one-page-nav__link mx-4 text-xs scrollactive-item no-decoration text-dark"
+          >
+            {{ item.name }}
+          </a>
+        </li>
       </scrollactive>
     </nav>
   </transition>

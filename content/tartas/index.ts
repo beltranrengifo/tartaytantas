@@ -9,15 +9,15 @@ export default [
           nav: [
             {
               name: 'Tartas',
-              link: '#cakes-grid',
+              link: '#tartas',
             },
             {
-              name: 'Naked',
-              link: '#naked-cakes',
+              name: 'Tartas naked',
+              link: '#naked',
             },
             {
-              name: 'Más',
-              link: '#more',
+              name: 'Bizcochos, muffins y cookies',
+              link: '#mas',
             },
           ],
         },
@@ -35,6 +35,16 @@ export default [
         name: 'hero',
         options: {
           slides: [
+            {
+              image: 'tartaytantas-carousel-tartas-4.jpg',
+              imageAlt: 'Tartaytantas Obrador de tartas en Madrid',
+              content: '',
+              button: {
+                text: '',
+                link: '',
+                target: '',
+              },
+            },
             {
               image: 'tartaytantas-carousel-tartas-1.jpg',
               imageAlt: 'Tartaytantas Obrador de tartas en Madrid',
@@ -55,26 +65,6 @@ export default [
                 target: '',
               },
             },
-            {
-              image: 'tartaytantas-carousel-tartas-3.jpg',
-              imageAlt: 'Tartaytantas Obrador de tartas en Madrid',
-              content: '',
-              button: {
-                text: '',
-                link: '',
-                target: '',
-              },
-            },
-            {
-              image: 'tartaytantas-carousel-tartas-4.jpg',
-              imageAlt: 'Tartaytantas Obrador de tartas en Madrid',
-              content: '',
-              button: {
-                text: '',
-                link: '',
-                target: '',
-              },
-            },
           ],
         },
       },
@@ -82,7 +72,7 @@ export default [
   },
   /* cakes grid */
   {
-    name: 'cakes-grid',
+    name: 'tartas',
     components: [
       {
         name: 'product-grid',
@@ -187,11 +177,81 @@ export default [
   },
   /* naked cakes */
   {
-    name: 'naked-cakes',
+    name: 'naked',
     options: {
       classes: 'bg-brand-secondary',
       fullwidth: true,
     },
-    components: [],
+    components: [
+      {
+        name: 'product-grid',
+        options: {
+          imageDir: 'naked-grid',
+          hoverSuffix: '-hover',
+          items: [
+            {
+              image: 'seminaked-red-velvet.jpg',
+              title: 'SEMINAKED RED VELVET',
+              description:
+                'Cuatro pisos de bizcocho de red velvet relleno de crema de merengue italiano, de dulce de leche o de chocolate. Cobertura crema de merengue italiano.',
+              listInfo:
+                'Molde de 18x10 cm, 10 raciones. 44 €\nMolde de 20x10 cm. 15 raciones. 60 €\nMolde de 24x10 cm. 25 raciones. 95 €',
+            },
+            {
+              image: 'seminaked-vainilla.jpg',
+              title: 'SEMINAKED VAINILLA',
+              description:
+                'Cuatro pisos de bizcocho de vainilla relleno de crema de merengue italiano, de dulce de leche o de chocolate. Cobertura crema de merengue italiano.',
+              listInfo:
+                'Molde de 18x10 cm, 10 raciones. 44 €\nMolde de 20x10 cm. 15 raciones. 60 €\nMolde de 24x10 cm. 25 raciones. 95 €',
+            },
+            {
+              image: 'seminaked-chocolate.jpg',
+              title: 'SEMINAKED CHOCOLATE',
+              description:
+                'Cuatro pisos de bizcocho de chocolate relleno de crema de merengue italiano, de dulce de leche o de chocolate. Cobertura crema de merengue italiano.',
+              listInfo:
+                'Molde de 18x10 cm, 10 raciones. 44 €\nMolde de 20x10 cm. 15 raciones. 60 €\nMolde de 24x10 cm. 25 raciones. 95 €',
+            },
+          ],
+        },
+      },
+    ],
+  },
+  /* mas */
+  {
+    name: 'mas',
+    options: {
+      fullwidth: true,
+    },
+    components: [
+      {
+        name: 'product-grid',
+        options: {
+          imageDir: 'more-grid',
+          hoverSuffix: '-hover',
+          items: [
+            {
+              image: 'muffins.jpg',
+              title: 'MUFFINS',
+              listInfo:
+                'Vainilla\nZanahoria\nOreo\nRed Velvet\nChocolate\nRed Velvet',
+            },
+            {
+              image: 'bizcochos.jpg',
+              title: 'BIZCOCHOS',
+              listInfo:
+                'Vainilla\nZanahoria\nOreo\nRed Velvet\nChocolate\nRed Velvet',
+            },
+            {
+              image: 'galletas-cookies.jpg',
+              title: 'GALLETAS Y COOKIES',
+              listInfo:
+                'Pepitas de chocolate\nDoble chocolate\nLacasitos\nCacahuete\nMantequilla\nLimón\nNata y frambuesa\nAvena\nChocolate blanco\nNueces',
+            },
+          ],
+        },
+      },
+    ],
   },
 ]
