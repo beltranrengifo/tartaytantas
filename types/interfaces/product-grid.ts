@@ -1,7 +1,8 @@
 export interface ProductItem {
   image: string
   title: string
-  description: string
+  description?: string
+  listInfo?: string
 }
 
 export interface ProductGrid {

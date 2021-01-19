@@ -1,10 +1,12 @@
+import { SHOP_URL } from '@/config/constants'
+
 export default [
-  { name: 'Obrador', path: '/', target: '_self' },
-  { name: 'Tartas', path: '/tartas', target: '_self' },
+  { name: 'Inicio', path: '/', target: '_self' },
+  { name: 'Del obrador', path: '/tartas', target: '_self' },
   {
     name: 'Tienda',
-    path: 'https://www.apanymantel.com/pastelerias/madrid/tartaytantas',
+    path: SHOP_URL,
     target: '_blank',
   },
-  { name: 'Contacto', path: '/contacto', target: '_self' },
+  { name: 'Nosotros', path: '/nosotros', target: '_self' },
 ]
