@@ -13,19 +13,30 @@
       :class="[showDescription ? 'max-h-160' : 'max-h-32']"
     >
       <h2
-        class="cursor-pointer relative"
+        class="cursor-pointer relative mb-10"
         :class="{ 'product-grid-item__title--active': showDescription }"
         @click="handleClick"
       >
         {{ item.title }}
       </h2>
       <transition name="slide-fade">
-        <p
-          v-show="showDescription"
-          class="product-grid-item__description w-80 max-w-full mt-10 mb-0 mx-auto pl-4 text-left"
-        >
-          {{ item.description }}
-        </p>
+        <div v-show="showDescription">
+          <p
+            v-if="item.description"
+            class="product-grid-item__description w-80 max-w-full mb-6 mx-auto pl-4 text-left font-serif leading-7"
+          >
+            {{ item.description }}
+          </p>
+          <ul v-if="item.listInfo">
+            <li
+              v-for="listItem in listInfoAsArray(item.listInfo)"
+              :key="listItem"
+              class="font-serif italic leading-6 mb-1"
+            >
+              {{ listItem }}
+            </li>
+          </ul>
+        </div>
       </transition>
     </div>
   </article>
@@ -74,6 +85,12 @@ export default Vue.extend({
         return require(`@/assets/images/${dir}${image}`)
       } catch (e) {
         return null
+      }
+    },
+
+    listInfoAsArray(): Function {
+      return (str: string): string[] => {
+        return str.split(/\n/g)
       }
     },
   },

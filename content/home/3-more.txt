@@ -1,1 +1,0 @@
-<span class="block mb-6">Y no sólo tartas. También ofrecemos bizcochos, brownies, galletas, tartaletas <span class="text-primary">y tantas</span> otras recetas.</span> <span class="block mb-6">No dudes en preguntarnos.</span>
