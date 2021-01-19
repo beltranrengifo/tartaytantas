@@ -91,16 +91,7 @@ export default Vue.extend({
     getDecoration(): string | null {
       return (
         (this.decoration &&
-          `
-          border-t-3
-          border-${this.decorationColor}
-          border-b-3
-          border-${this.decorationColor}
-          2xl:pt-16 2xl:pb-16
-          xl:pt-12 xl:pb-12
-          lg:pt-8 lg:pb-8
-          pt-4 pb-4
-          `) ||
+          `border-t-3 border-${this.decorationColor} border-b-3 border-${this.decorationColor} 2xl:pt-16 2xl:pb-16 xl:pt-12 xl:pb-12 lg:pt-8 lg:pb-8 pt-4 pb-4`) ||
         null
       )
     },
