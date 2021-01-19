@@ -65,4 +65,25 @@ export default [
       },
     ],
   },
+  /* cakes */
+  {
+    name: 'cakes',
+    options: {
+      fullwidth: true,
+      flex: true,
+    },
+    components: [
+      {
+        name: 'image-block',
+        options: {
+          image: 'nosotros-muestras-de-tartas.jpg',
+          imageAlt: 'Composición de tartas inspirada en Wayne Thiebaud.',
+          width: '1/1',
+          height: '1/2-screen',
+          align: 'top',
+          extraClasses: 'reveal zoom-out',
+        },
+      },
+    ],
+  },
 ]
