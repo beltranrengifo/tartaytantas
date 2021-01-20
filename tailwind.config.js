@@ -4,8 +4,7 @@ module.exports = {
     purgeLayersByDefault: true,
   },
   purge: {
-    enabled: true,
-    content: ['./src/**/*.vue', './public/**/*.html'],
+    enabled: false,
   },
   theme: {
     fontFamily: {
