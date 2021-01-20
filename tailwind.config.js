@@ -5,7 +5,7 @@ module.exports = {
   },
   purge: {
     enabled: true,
-    content: ['./public/**/*.html'],
+    content: ['./src/**/*.vue', './public/**/*.html'],
   },
   theme: {
     fontFamily: {
