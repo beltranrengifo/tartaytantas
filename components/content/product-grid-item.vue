@@ -6,7 +6,21 @@
       @mouseover="showAltImage = true"
       @mouseleave="showAltImage = false"
     >
-      <img :key="src" :src="src" :alt="item.title" class="w-full" />
+      <img
+        v-show="!showAltImage"
+        :key="src"
+        :src="src"
+        :alt="item.title"
+        class="w-full"
+      />
+      <img
+        v-show="showAltImage"
+        :key="src"
+        :src="src"
+        :alt="item.title"
+        class="w-full"
+        rel="preload"
+      />
     </figure>
     <div
       class="product-grid-item__content text-center py-12 overflow-hidden"
