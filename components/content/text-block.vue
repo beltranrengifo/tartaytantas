@@ -79,15 +79,19 @@ export default Vue.extend({
     getContentWidth(): string {
       return this.contentWidth || 'md'
     },
+
     getWidth(): string {
       return this.width || '1/4'
     },
+
     getHeight(): string {
       return this.height || 'auto'
     },
+
     getColor(): string {
       return this.color || 'base'
     },
+
     getDecoration(): string | null {
       return (
         (this.decoration &&
