@@ -7,12 +7,12 @@
       @mouseleave="showAltImage = false"
     >
       <img
-        :src="primarySrc"
+        :src="getImageSrc()"
         :alt="item.title"
         class="w-full product-grid-item__primary-image"
       />
       <img
-        :src="secondarySrc"
+        :src="getImageSrc({ useSecondary: true })"
         :alt="item.title"
         class="w-full product-grid-item__secondary-image"
         :class="{
@@ -59,6 +59,10 @@
 import Vue from 'vue'
 import { ProductItem, ProductGrid } from '@/types'
 
+interface getImageSrcParams {
+  useSecondary?: boolean
+}
+
 export default Vue.extend({
   name: 'ProductGridItem',
 
@@ -93,21 +97,19 @@ export default Vue.extend({
       return this.imageDir ? `${this.imageDir}/` : ''
     },
 
-    primarySrc(): object | Nullable<null> {
-      try {
-        return require(`@/assets/images/${this.dir}${this.item.image}`)
-      } catch (e) {
-        return null
-      }
-    },
+    getImageSrc(): Function {
+      return ({ useSecondary }: getImageSrcParams = {}):
+        | object
+        | Nullable<null> => {
+        const imageSrc = useSecondary
+          ? `${this.imageSrcSplit[0]}${this.hoverSuffix}.${this.imageSrcSplit[1]}`
+          : this.item.image
 
-    secondarySrc(): object | Nullable<null> {
-      const imageSrc = `${this.imageSrcSplit[0]}${this.hoverSuffix}.${this.imageSrcSplit[1]}`
-
-      try {
-        return require(`@/assets/images/${this.dir}${imageSrc}`)
-      } catch (e) {
-        return null
+        try {
+          return require(`@/assets/images/${this.dir}${imageSrc}`)
+        } catch (e) {
+          return null
+        }
       }
     },
 
