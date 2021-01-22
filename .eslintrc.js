@@ -10,7 +10,6 @@ module.exports = {
     'prettier/vue',
     'plugin:prettier/recommended',
     'plugin:nuxt/recommended',
-    'plugin:tailwind/recommended',
   ],
   plugins: ['prettier'],
   // add your custom rules here

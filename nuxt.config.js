@@ -55,19 +55,13 @@ export default {
   buildModules: [
     // https://go.nuxtjs.dev/typescript
     '@nuxt/typescript-build',
-    // https://go.nuxtjs.dev/stylelint
-    '@nuxtjs/stylelint-module',
     // https://go.nuxtjs.dev/tailwindcss
     '@nuxtjs/tailwindcss',
     '@nuxtjs/style-resources',
   ],
 
   // Modules (https://go.nuxtjs.dev/config-modules)
-  modules: [
-    // https://go.nuxtjs.dev/content
-    '@nuxt/content',
-    ['v-sanitize/nuxt'],
-  ],
+  modules: ['v-sanitize/nuxt'],
 
   // Content module configuration (https://go.nuxtjs.dev/config-content)
   content: {},
@@ -82,14 +76,6 @@ export default {
         test: /\.txt$/i,
         loader: 'raw-loader',
       })
-    },
-  },
-  extends: ['@nuxtjs/eslint-config-typescript'],
-  typescript: {
-    typeCheck: {
-      eslint: {
-        files: './**/*.{ts,js,vue}',
-      },
     },
   },
 }

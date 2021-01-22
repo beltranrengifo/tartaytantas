@@ -1,25 +1,24 @@
 <template>
   <article class="product-grid-item">
     <figure
-      class="cursor-pointer"
+      class="cursor-pointer product-grid-item__figure"
       @click="handleClick"
       @mouseover="showAltImage = true"
       @mouseleave="showAltImage = false"
     >
       <img
-        v-show="!showAltImage"
-        :key="src"
-        :src="src"
+        :src="primarySrc"
         :alt="item.title"
-        class="w-full"
+        class="w-full product-grid-item__primary-image"
       />
       <img
-        v-show="showAltImage"
-        :key="src"
-        :src="src"
+        :src="secondarySrc"
         :alt="item.title"
-        class="w-full"
-        rel="preload"
+        class="w-full product-grid-item__secondary-image"
+        :class="{
+          'product-grid-item__secondary-image--visible':
+            showAltImage || showDescription,
+        }"
       />
     </figure>
     <div
@@ -86,17 +85,27 @@ export default Vue.extend({
   },
 
   computed: {
-    src(): object | Nullable<null> {
-      const imageSplit = this.item.image.split('.')
-      const dir = this.imageDir ? `${this.imageDir}/` : ''
+    imageSrcSplit(): string[] {
+      return this.item.image.split('.')
+    },
 
-      const image =
-        this.showAltImage || this.showDescription
-          ? `${imageSplit[0]}${this.hoverSuffix}.${imageSplit[1]}`
-          : this.item.image
+    dir(): string {
+      return this.imageDir ? `${this.imageDir}/` : ''
+    },
+
+    primarySrc(): object | Nullable<null> {
+      try {
+        return require(`@/assets/images/${this.dir}${this.item.image}`)
+      } catch (e) {
+        return null
+      }
+    },
+
+    secondarySrc(): object | Nullable<null> {
+      const imageSrc = `${this.imageSrcSplit[0]}${this.hoverSuffix}.${this.imageSrcSplit[1]}`
 
       try {
-        return require(`@/assets/images/${dir}${image}`)
+        return require(`@/assets/images/${this.dir}${imageSrc}`)
       } catch (e) {
         return null
       }
@@ -136,6 +145,22 @@ export default Vue.extend({
         background-color: var(--color-primary);
         content: '';
       }
+    }
+  }
+
+  &__figure {
+    position: relative;
+  }
+
+  &__secondary-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity 0.15s ease-out;
+
+    &--visible {
+      opacity: 1;
     }
   }
 }
