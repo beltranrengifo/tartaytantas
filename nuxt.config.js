@@ -58,6 +58,17 @@ export default {
     // https://go.nuxtjs.dev/tailwindcss
     '@nuxtjs/tailwindcss',
     '@nuxtjs/style-resources',
+    [
+      'nuxt-compress',
+      {
+        gzip: {
+          cache: true,
+        },
+        brotli: {
+          threshold: 10240,
+        },
+      },
+    ],
   ],
 
   // Modules (https://go.nuxtjs.dev/config-modules)
