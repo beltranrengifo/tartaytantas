@@ -9,13 +9,14 @@
     "sourceMap": true,
     "strict": true,
     "noEmit": true,
+
     "experimentalDecorators": true,
     "baseUrl": ".",
     "paths": {
       "~/*": ["./*"],
       "@/*": ["./*"]
     },
-    "types": ["@types/node", "@nuxt/types", "@nuxt/content"]
+    "types": ["@types/node", "@nuxt/types"]
   },
   "exclude": ["node_modules", ".nuxt", "dist"]
 }
