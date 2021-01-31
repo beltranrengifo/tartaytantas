@@ -6,8 +6,8 @@ export interface GridImage {
 
 export interface ImageGrid {
   images: Array<GridImage>
-  columns?: number
-  gap?: number
+  columns?: string
+  gap?: string
   paddingTop?: string
   paddingBottom?: string
   width?: string

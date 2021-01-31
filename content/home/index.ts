@@ -292,8 +292,8 @@ export default [
               extraClasses: 'parallax-item',
             },
           ],
-          columns: 3,
-          gap: 12,
+          columns: 'grid-cols-3',
+          gap: 'gap-12',
         },
       },
     ],
@@ -328,8 +328,8 @@ export default [
       {
         name: 'image-grid',
         options: {
-          width: '2/3',
-          height: '1/2-screen',
+          width: 'w-2/3',
+          height: 'min-h-1/2-screen',
           images: [
             {
               src: 'tartaytantas-mostrador-1.jpg',
@@ -343,8 +343,8 @@ export default [
               extraClasses: 'reveal zoom-out',
             },
           ],
-          columns: 2,
-          gap: 12,
+          columns: 'grid-cols-2',
+          gap: 'gap-12',
         },
       },
     ],
