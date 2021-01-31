@@ -3,6 +3,15 @@ module.exports = {
     removeDeprecatedGapUtilities: true,
     purgeLayersByDefault: true,
   },
+  purge: {
+    enabled: true,
+    content: [
+      './src/**/*.vue',
+      './public/**/*.html',
+      './src/**/*.ts',
+      './src/**/*.js',
+    ],
+  },
   theme: {
     fontFamily: {
       sans: ['Duru Sans', 'sans-serif'],
