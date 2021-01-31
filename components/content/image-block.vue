@@ -1,7 +1,7 @@
 <template>
   <container
     class="image-block flex justify-center items-center flex-shrink-0 flex-grow-0 w-full"
-    :class="[getHeight, getWidth]"
+    :class="[`${height || 'h-auto'}`, `${width || 'md:w-1/4'}`]"
   >
     <figure class="w-full h-full">
       <img
@@ -9,7 +9,7 @@
         :alt="imageAlt"
         srcset=""
         class="w-full h-full object-cover"
-        :class="[getAlign, extraClasses]"
+        :class="[`${align || 'object-center'}`, extraClasses]"
       />
     </figure>
   </container>
@@ -56,15 +56,6 @@ export default Vue.extend({
       } catch (e) {
         return null
       }
-    },
-    getWidth(): string {
-      return this.width || 'md:w-1/4'
-    },
-    getHeight(): string {
-      return this.height || 'h-auto'
-    },
-    getAlign(): string {
-      return this.align || 'object-center'
     },
   },
 })
