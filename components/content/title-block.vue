@@ -1,20 +1,15 @@
 <template>
   <container
     tag="article"
-    :class="[
-      paddingTop,
-      paddingBottom,
-      `text-${align}`,
-      `w-${width}`,
-      `min-h-${height}`,
-    ]"
+    class="w-full"
+    :class="[paddingTop, paddingBottom, align, width, height]"
   >
     <div class="flex flex-col justify-center h-full">
       <component
         :is="titleTag"
         v-sanitize.nothing="title"
         class="text-lg mb-6"
-        :class="[`font-${font}`, transform, extraClasses]"
+        :class="[font, transform, extraClasses]"
       />
       <component
         :is="subtitleTag"
@@ -86,7 +81,7 @@ export default Vue.extend({
     },
     width: {
       type: String as () => TitleBlock['width'],
-      default: 'full',
+      default: 'w-full',
     },
     maxWidth: {
       type: String as () => TitleBlock['maxWidth'],
@@ -103,8 +98,8 @@ export default Vue.extend({
   },
 
   computed: {
-    getVAlign() {
-      return `flex flex-col justify-center h-full`
+    getHeight() {
+      return this.height || 'auto'
     },
   },
 })
