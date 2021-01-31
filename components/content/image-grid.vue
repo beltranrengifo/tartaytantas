@@ -1,10 +1,14 @@
 <template>
   <container
     boxed
+    class="image-grid w-full"
     :class="[paddingTop, paddingBottom, width, height]"
     tag="article"
   >
-    <div class="grid justify-center h-full" :class="[gap, columns]">
+    <div
+      class="grid justify-center h-full grid-cols-1 gap-2"
+      :class="[gap, columns]"
+    >
       <figure
         v-for="(image, i) in images"
         :key="image + i"
@@ -61,3 +65,12 @@ export default Vue.extend({
   },
 })
 </script>
+
+<style lang="scss" scoped>
+.image-grid {
+  .grid {
+    @include breakpoint(only-phone) {
+    }
+  }
+}
+</style>

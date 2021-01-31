@@ -68,6 +68,11 @@ export default Vue.extend({
 .carousel {
   &__image {
     pointer-events: none;
+    @include breakpoint(only-phone) {
+      min-height: 60vh;
+      object-fit: cover;
+      object-position: center;
+    }
   }
 }
 </style>

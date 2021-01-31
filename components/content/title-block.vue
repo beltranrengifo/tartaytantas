@@ -4,7 +4,7 @@
     class="w-full"
     :class="[paddingTop, paddingBottom, align, width, height]"
   >
-    <div class="flex flex-col justify-center h-full">
+    <div class="flex flex-col justify-center h-full px-4 sm:px-0">
       <component
         :is="titleTag"
         v-sanitize.nothing="title"

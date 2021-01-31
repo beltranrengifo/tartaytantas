@@ -183,6 +183,7 @@ export default [
     options: {
       fullwidth: true,
       flex: true,
+      classes: 'flex-col-reverse',
     },
     components: [
       {
@@ -267,8 +268,8 @@ export default [
           useLink: true,
           href: 'http://instagram.com',
           maxWidth: 'none',
-          paddingTop: 'pt-40',
-          paddingBottom: 'pb-16',
+          paddingTop: 'pt-12 sm:pt-40',
+          paddingBottom: 'pb-12 sm:pb-16',
           extraClasses: 'parallax-item',
         },
       },
@@ -292,8 +293,8 @@ export default [
               extraClasses: 'parallax-item',
             },
           ],
-          columns: 'grid-cols-3',
-          gap: 'gap-12',
+          columns: 'sm:grid-cols-3',
+          gap: 'sm:gap-12',
         },
       },
     ],
@@ -305,7 +306,7 @@ export default [
       boxed: true,
       flex: true,
       classes:
-        'pt-20 pb-20 pl-5 2xl:pl-0 mt-40 border-solid border-primary border-t',
+        'pt-20 pb-20 sm:pl-5 2xl:pl-0 mt-40 border-solid border-primary border-t',
     },
     components: [
       {
@@ -327,7 +328,7 @@ export default [
       {
         name: 'image-grid',
         options: {
-          width: 'w-2/3',
+          width: 'md:w-2/3',
           height: 'min-h-1/2-screen',
           images: [
             {
@@ -342,8 +343,8 @@ export default [
               extraClasses: 'reveal zoom-out',
             },
           ],
-          columns: 'grid-cols-2',
-          gap: 'gap-12',
+          columns: 'sm:grid-cols-2',
+          gap: 'sm:gap-12',
         },
       },
     ],

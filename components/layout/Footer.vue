@@ -20,13 +20,13 @@
         </ul>
       </article>
 
-      <article>
+      <article class="hidden sm:block">
         <figure>
           <img :src="getLogo" alt="Logo Tartaytantas" class="my-0 mx-auto" />
         </figure>
       </article>
 
-      <article>
+      <article class="mt-12 sm:mt-0">
         <Navigation is-secondary-nav />
       </article>
     </container>

@@ -3,7 +3,7 @@
     class="image-block flex justify-center items-center flex-shrink-0 flex-grow-0 w-full"
     :class="[`${height || 'h-auto'}`, `${width || 'md:w-1/4'}`]"
   >
-    <figure class="w-full h-full">
+    <figure class="image-block__figure w-full h-full">
       <img
         :src="src"
         :alt="imageAlt"
@@ -64,5 +64,13 @@ export default Vue.extend({
 <style lang="scss" scoped>
 .image-block {
   min-height: $--section-min-h;
+  &__figure {
+    img {
+      @include breakpoint(only-phone) {
+        min-height: $--section-min-h;
+        object-fit: cover;
+      }
+    }
+  }
 }
 </style>
