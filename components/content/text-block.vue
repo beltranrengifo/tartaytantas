@@ -1,20 +1,20 @@
 <template>
   <container
     tag="article"
-    class="text-block flex justify-center items-center flex-shrink-0 flex-grow-0"
-    :class="[`min-h-${getHeight} w-${getWidth} bg-${background}`]"
+    class="text-block flex justify-center items-center flex-shrink-0 flex-grow-0 w-full"
+    :class="[`min-h-${getHeight} md:w-${getWidth} bg-${background}`]"
     fullwidth
   >
     <component
       :is="tag"
       v-sanitize.nothing="content"
-      class="text-block__content relative font-serif"
+      class="text-block__content relative font-serif text-lg"
       :class="[
         `w-text-block-${getContentWidth}`,
         `text-${getColor}`,
         getDecoration,
         extraClasses,
-        isParagraph ? 'text-base' : 'text-2xl',
+        isParagraph ? 'md:text-base' : 'md:text-2xl',
       ]"
     />
   </container>
@@ -106,25 +106,5 @@ export default Vue.extend({
 <style lang="scss" scoped>
 .text-block {
   min-height: $--section-min-h;
-  &__content {
-    &--decorate {
-      /* &::before,
-      &::after {
-        content: '';
-        height: rem(3);
-        background-color: inherit;
-        width: calc(100% + 12px);
-        position: absolute;
-        left: 0;
-        transform: translateX(rem(-12));
-      }
-      &::before {
-        top: rem(-64);
-      }
-      &::after {
-        bottom: rem(-64);
-      } */
-    }
-  }
 }
 </style>

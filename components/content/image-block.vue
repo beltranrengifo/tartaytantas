@@ -1,7 +1,7 @@
 <template>
   <container
     class="image-block flex justify-center items-center flex-shrink-0 flex-grow-0"
-    :class="[`h-${getHeight} w-${getWidth}`]"
+    :class="[`h-${getHeight} md:w-${getWidth}`]"
   >
     <figure class="w-full h-full">
       <img
