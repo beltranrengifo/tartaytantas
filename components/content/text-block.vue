@@ -2,7 +2,7 @@
   <container
     tag="article"
     class="text-block flex justify-center items-center flex-shrink-0 flex-grow-0 w-full"
-    :class="[`min-h-${getHeight} md:w-${getWidth} bg-${background}`]"
+    :class="[height, width, background]"
     fullwidth
   >
     <component
@@ -10,8 +10,8 @@
       v-sanitize.nothing="content"
       class="text-block__content relative font-serif text-lg"
       :class="[
-        `w-text-block-${getContentWidth}`,
-        `text-${getColor}`,
+        contentWidth,
+        getColor,
         getDecoration,
         extraClasses,
         isParagraph ? 'md:text-base' : 'md:text-2xl',
@@ -33,12 +33,11 @@ export default Vue.extend({
       required: true,
     },
     decoration: {
-      type: Boolean as () => TextBlock['decoration'],
+      type: [
+        Boolean as () => TextBlock['decoration'],
+        String as () => TextBlock['decoration'],
+      ],
       default: false,
-    },
-    decorationColor: {
-      type: String as () => TextBlock['decorationColor'],
-      default: 'base-color',
     },
     tag: {
       type: String as () => TextBlock['tag'],
@@ -50,8 +49,9 @@ export default Vue.extend({
     },
     contentWidth: {
       type: String as () => TextBlock['contentWidth'],
-      default: 'md',
-      validator: (val: string): boolean => ['md', 'sm'].includes(val),
+      default: 'w-text-block-md',
+      validator: (val: string): boolean =>
+        ['w-text-block-sm', 'w-text-block-md'].includes(val),
     },
     width: {
       type: String as () => TextBlock['width'],
@@ -76,26 +76,14 @@ export default Vue.extend({
   },
 
   computed: {
-    getContentWidth(): string {
-      return this.contentWidth || 'md'
-    },
-
-    getWidth(): string {
-      return this.width || '1/4'
-    },
-
-    getHeight(): string {
-      return this.height || 'auto'
-    },
-
     getColor(): string {
-      return this.color || 'base'
+      return this.color || 'text-base'
     },
 
     getDecoration(): string | null {
       return (
         (this.decoration &&
-          `border-t-3 border-${this.decorationColor} border-b-3 border-${this.decorationColor} 2xl:pt-16 2xl:pb-16 xl:pt-12 xl:pb-12 lg:pt-8 lg:pb-8 pt-4 pb-4`) ||
+          `border-t-3 border-b-3 2xl:pt-16 2xl:pb-16 xl:pt-12 xl:pb-12 lg:pt-8 lg:pb-8 pt-4 pb-4 ${this.decoration}`) ||
         null
       )
     },
