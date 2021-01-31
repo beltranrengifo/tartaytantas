@@ -1,7 +1,7 @@
 <template>
   <container
     tag="article"
-    class="text-block flex justify-center items-center flex-shrink-0 flex-grow-0 w-full"
+    class="text-block flex justify-center items-center flex-shrink-0 flex-grow-0 w-full p-6 md:p-0"
     :class="[height, width, background]"
     fullwidth
   >
@@ -83,7 +83,7 @@ export default Vue.extend({
     getDecoration(): string | null {
       return (
         (this.decoration &&
-          `border-t-3 border-b-3 2xl:pt-16 2xl:pb-16 xl:pt-12 xl:pb-12 lg:pt-8 lg:pb-8 pt-4 pb-4 ${this.decoration}`) ||
+          `border-t-2 border-b-2 2xl:pt-20 2xl:pb-20 xl:pt-16 xl:pb-16 lg:pt-12 lg:pb-12 pt-6 pb-6 ${this.decoration}`) ||
         null
       )
     },
@@ -93,6 +93,9 @@ export default Vue.extend({
 
 <style lang="scss" scoped>
 .text-block {
-  min-height: $--section-min-h;
+  min-height: rem(400);
+  &__content {
+    max-width: 100%;
+  }
 }
 </style>

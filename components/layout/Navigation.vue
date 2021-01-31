@@ -2,13 +2,13 @@
   <nav
     role="navigation"
     class="flex items-center md:items-end"
-    :class="[isSecondaryNav ? 'justify-end' : 'justify-between']"
+    :class="[isSecondaryNav ? 'sm:justify-end' : 'justify-between']"
   >
     <ul class="flex" :class="{ 'flex-col': isSecondaryNav }">
       <li
         v-for="item in navigation"
         :key="item.name"
-        class="navigation-item mx-6"
+        class="navigation-item sm:mx-6"
         :class="{
           'navigation-item--is-sticky': $state.stickyNav,
           'navigation-item--is-secondary': isSecondaryNav,

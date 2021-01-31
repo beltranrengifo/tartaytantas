@@ -49,6 +49,9 @@ export default Vue.extend({
 <style lang="scss" scoped>
 .content-container {
   overflow: hidden;
+  @include breakpoint(only-phone) {
+    margin-bottom: rem(-2);
+  }
   &:not(.content-container--fullwidth):not(.content-container--boxed) {
     max-width: $--xxl;
   }
