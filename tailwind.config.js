@@ -15,6 +15,8 @@ module.exports = {
       'plugins/**/*.ts',
       'content/**/*.ts',
       'nuxt.config.ts',
+      // .txt
+      'content/**/*.txt',
     ],
   },
   theme: {
