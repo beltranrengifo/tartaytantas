@@ -3,9 +3,6 @@ module.exports = {
     removeDeprecatedGapUtilities: true,
     purgeLayersByDefault: true,
   },
-  purge: {
-    enabled: false,
-  },
   theme: {
     fontFamily: {
       sans: ['Duru Sans', 'sans-serif'],

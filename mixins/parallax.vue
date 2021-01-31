@@ -94,8 +94,8 @@ export default Vue.extend({
 .reveal {
   &.zoom-out {
     opacity: 0;
-    transition: all 1.8s ease-out;
-    transform: scale(1.2);
+    transition: all 1s ease-out;
+    transform: scale(1.05);
   }
 
   &.fade-in-up {

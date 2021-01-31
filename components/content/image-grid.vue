@@ -1,13 +1,10 @@
 <template>
   <container
     boxed
-    :class="[paddingTop, paddingBottom, `w-${width}`, `min-h-${height}`]"
+    :class="[paddingTop, paddingBottom, width, height]"
     tag="article"
   >
-    <div
-      class="grid justify-center h-full"
-      :class="[`gap-${gap}`, `grid-cols-${columns}`]"
-    >
+    <div class="grid justify-center h-full" :class="[gap, columns]">
       <figure
         v-for="(image, i) in images"
         :key="image + i"
@@ -38,12 +35,12 @@ export default Vue.extend({
       required: true,
     },
     columns: {
-      type: Number as () => ImageGrid['columns'],
-      default: 2,
+      type: String as () => ImageGrid['columns'],
+      default: 'grid-cols-2',
     },
     gap: {
-      type: Number as () => ImageGrid['gap'],
-      default: 4,
+      type: String as () => ImageGrid['gap'],
+      default: 'gap-4',
     },
     paddingTop: {
       type: String as () => ImageGrid['paddingTop'],
