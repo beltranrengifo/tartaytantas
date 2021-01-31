@@ -69,7 +69,12 @@ export default {
         },
       },
     ],
+    '@aceforth/nuxt-optimized-images',
   ],
+
+  optimizedImages: {
+    optimizeImages: true,
+  },
 
   // Modules (https://go.nuxtjs.dev/config-modules)
   modules: ['v-sanitize/nuxt'],
