@@ -8,11 +8,15 @@
           class="relative"
         >
           <figure>
-            <img
-              :src="`${imageUrl(slide.image)}`"
-              :alt="slide.imageAlt || 'Tartaytantas'"
-              class="carousel__image"
-            />
+            <picture>
+              <source type="image/webp" :srcset="imageUrlWebP(slide.image)" />
+              <source type="image/jpeg" :srcset="imageUrl(slide.image)" />
+              <img
+                :src="`${imageUrl(slide.image)}`"
+                :alt="slide.imageAlt || 'Tartaytantas'"
+                class="carousel__image"
+              />
+            </picture>
           </figure>
         </article>
       </template>

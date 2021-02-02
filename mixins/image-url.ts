@@ -11,5 +11,15 @@ export default Vue.extend({
         }
       }
     },
+    imageUrlWebP(): Function {
+      return (image: string): object | string => {
+        const imageName = image.split('.')[0]
+        try {
+          return require(`@/assets/images/${imageName}.webp`)
+        } catch (e) {
+          return ''
+        }
+      }
+    },
   },
 })

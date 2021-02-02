@@ -6,20 +6,34 @@
       @mouseover="showAltImage = true"
       @mouseleave="showAltImage = false"
     >
-      <img
-        :src="getImageSrc()"
-        :alt="item.title"
-        class="w-full product-grid-item__primary-image"
-      />
-      <img
-        :src="getImageSrc({ useSecondary: true })"
-        :alt="item.title"
-        class="w-full product-grid-item__secondary-image"
-        :class="{
-          'product-grid-item__secondary-image--visible':
-            showAltImage || showDescription,
-        }"
-      />
+      <picture>
+        <source type="image/webp" :srcset="getImageSrc({ useWebP: true })" />
+        <source type="image/jpeg" :srcset="getImageSrc()" />
+        <img
+          :src="getImageSrc()"
+          :alt="item.title"
+          class="w-full product-grid-item__primary-image"
+        />
+      </picture>
+      <picture>
+        <source
+          type="image/webp"
+          :srcset="getImageSrc({ useSecondary: true, useWebP: true })"
+        />
+        <source
+          type="image/jpeg"
+          :srcset="getImageSrc({ useSecondary: true })"
+        />
+        <img
+          :src="getImageSrc({ useSecondary: true })"
+          :alt="item.title"
+          class="w-full product-grid-item__secondary-image"
+          :class="{
+            'product-grid-item__secondary-image--visible':
+              showAltImage || showDescription,
+          }"
+        />
+      </picture>
     </figure>
     <div
       class="product-grid-item__content text-center py-12 overflow-hidden"
@@ -61,6 +75,7 @@ import { ProductItem, ProductGrid } from '@/types'
 
 interface getImageSrcParams {
   useSecondary?: boolean
+  useWebP?: boolean
 }
 
 export default Vue.extend({
@@ -98,12 +113,14 @@ export default Vue.extend({
     },
 
     getImageSrc(): Function {
-      return ({ useSecondary }: getImageSrcParams = {}):
+      return ({ useSecondary, useWebP }: getImageSrcParams = {}):
         | object
         | Nullable<null> => {
-        const imageSrc = useSecondary
+        let imageSrc = useSecondary
           ? `${this.imageSrcSplit[0]}${this.hoverSuffix}.${this.imageSrcSplit[1]}`
           : this.item.image
+
+        imageSrc = useWebP ? `${imageSrc.split('.')[0]}.webp` : imageSrc
 
         try {
           return require(`@/assets/images/${this.dir}${imageSrc}`)
