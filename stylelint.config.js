@@ -25,7 +25,7 @@ module.exports = {
       },
     ],
     'block-no-empty': null,
-    'unit-allowed-list': ['em', 'rem', 's', 'px', '%', 'vh', 'vw', 'ms'],
+    'unit-allowed-list': ['em', 'rem', 's', 'px', '%', 'vh', 'vw', 'ms', 'deg'],
     'declaration-block-trailing-semicolon': null,
     'no-descending-specificity': null,
   },
