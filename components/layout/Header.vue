@@ -4,6 +4,7 @@
   >
     <Logo class="self-center sm:self-auto mb-4 sm:m-0" />
     <Navigation class="self-center sm:self-auto mb-4 sm:m-0" />
+    <hamburguer-icon @hamburguerClick="handleHamburguerClick" />
   </header>
 </template>
 
@@ -12,5 +13,17 @@ import Vue from 'vue'
 
 export default Vue.extend({
   name: 'Header',
+
+  data() {
+    return {
+      menuIsVisible: false,
+    }
+  },
+
+  methods: {
+    handleHamburguerClick(value: boolean): void {
+      this.menuIsVisible = value
+    },
+  },
 })
 </script>

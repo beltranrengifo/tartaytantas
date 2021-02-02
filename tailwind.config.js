@@ -92,6 +92,7 @@ module.exports = {
       },
       screens: {
         '2xl': '1536px',
+        'desktop-menu': '992px',
       },
       padding: {
         36: '9rem',

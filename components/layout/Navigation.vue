@@ -1,10 +1,13 @@
 <template>
   <nav
     role="navigation"
-    class="flex items-center md:items-end"
+    class="flex items-center md:items-end opacity-0 desktop-menu:opacity-100"
     :class="[isSecondaryNav ? 'sm:justify-end' : 'justify-between']"
   >
-    <ul class="flex" :class="{ 'flex-col': isSecondaryNav }">
+    <ul
+      class="flex flex-col desktop-menu:flex-row"
+      :class="{ 'flex-col': isSecondaryNav }"
+    >
       <li
         v-for="item in navigation"
         :key="item.name"

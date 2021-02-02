@@ -67,6 +67,7 @@ export default Vue.extend({
 <style scoped lang="scss">
 .carousel {
   &__image {
+    width: 100%;
     pointer-events: none;
     @include breakpoint(only-phone) {
       min-height: 60vh;
