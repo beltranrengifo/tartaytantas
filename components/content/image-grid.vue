@@ -14,12 +14,16 @@
         :key="image + i"
         class="overflow-hidden"
       >
-        <img
-          class="w-full h-full object-cover"
-          :src="imageUrl(image.src)"
-          :alt="image.alt"
-          :class="[image.extraClasses]"
-        />
+        <picture>
+          <source type="image/webp" :srcset="imageUrlWebP(image.src)" />
+          <source type="image/jpeg" :srcset="imageUrl(image.src)" />
+          <img
+            class="w-full h-full object-cover"
+            :src="imageUrl(image.src)"
+            :alt="image.alt"
+            :class="[image.extraClasses]"
+          />
+        </picture>
       </figure>
     </div>
   </container>
