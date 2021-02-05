@@ -3,7 +3,7 @@
     <container
       tag="section"
       boxed
-      class="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1"
+      class="grid lg:grid-cols-3 sm:grid-cols-2 grid-cols-1"
     >
       <article>
         <h3 class="mb-6 text-xs">{{ footerInfoTitle }}</h3>
@@ -20,7 +20,7 @@
         </ul>
       </article>
 
-      <article class="hidden sm:block">
+      <article class="hidden lg:block">
         <figure>
           <img :src="getLogo" alt="Logo Tartaytantas" class="my-0 mx-auto" />
         </figure>

@@ -1,12 +1,13 @@
 <template>
   <container
     tag="article"
-    class="text-block flex justify-center items-center flex-shrink-0 flex-grow-0 w-full p-6 md:p-0"
+    class="text-block flex justify-center items-center flex-shrink-0 flex-grow-0 w-full p-6 lg:p-0"
     :class="[height, width, background]"
     fullwidth
   >
     <component
       :is="tag"
+      ref="text"
       v-sanitize.nothing="content"
       class="text-block__content relative font-serif text-lg"
       :class="[
@@ -14,7 +15,7 @@
         getColor,
         getDecoration,
         extraClasses,
-        isParagraph ? 'md:text-base' : 'md:text-2xl',
+        isParagraph ? 'lg:text-base' : 'lg:text-2xl',
       ]"
     />
   </container>
@@ -23,9 +24,12 @@
 <script lang="ts">
 import Vue from 'vue'
 import { TextBlock } from '@/types/index'
+import HandleNuxtLinksInWysiwyg from '@/mixins/handle-links'
 
 export default Vue.extend({
   name: 'TextBlock',
+
+  mixins: [HandleNuxtLinksInWysiwyg],
 
   props: {
     content: {
@@ -88,12 +92,15 @@ export default Vue.extend({
       )
     },
   },
+
+  mounted(): void {
+    ;(this as any).handleNuxtLinksInWysiwyg((this as any).$refs['text'])
+  },
 })
 </script>
 
 <style lang="scss" scoped>
 .text-block {
-  min-height: rem(400);
   &__content {
     max-width: 100%;
   }

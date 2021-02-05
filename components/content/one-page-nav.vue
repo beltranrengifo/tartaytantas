@@ -1,7 +1,7 @@
 <template>
   <transition name="fade">
     <nav
-      class="one-page-nav fixed w-full bg-primary opacity-0"
+      class="one-page-nav fixed w-full bg-primary opacity-0 hidden sm:block"
       :class="{ 'one-page-nav--visible': $state.stickyNav }"
     >
       <scrollactive class="flex justify-center items-center h-10" tag="ul">

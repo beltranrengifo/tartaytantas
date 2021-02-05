@@ -48,6 +48,8 @@ export default Vue.extend({
         this.scrollPosition > SHOW_MENU_SCROLL_THRESHOLD
       )
     }, 25)
+
+    this.$state.handleScreenSize()
   },
 })
 </script>

@@ -41,6 +41,12 @@ export default Vue.extend({
 
   mixins: [MetaData],
 
+  data() {
+    return {
+      home,
+    }
+  },
+
   asyncData(): object {
     return {
       home,

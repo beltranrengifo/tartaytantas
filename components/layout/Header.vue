@@ -1,10 +1,12 @@
 <template>
   <header
-    class="fixed w-full top-0 p-5 flex items-center flex-col sm:flex-row sm:justify-between flex-shrink-0 z-10"
+    class="fixed w-full top-0 p-5 flex items-center flex-col sm:flex-row sm:justify-between flex-shrink-0 z-20"
   >
     <Logo class="self-center sm:self-auto mb-4 sm:m-0" />
-    <Navigation class="self-center sm:self-auto mb-4 sm:m-0" />
-    <hamburguer-icon @hamburguerClick="handleHamburguerClick" />
+    <Navigation
+      class="hidden desktop-menu:flex self-center sm:self-auto mb-4 sm:m-0"
+    />
+    <hamburguer-menu class="desktop-menu:hidden" />
   </header>
 </template>
 
@@ -13,17 +15,5 @@ import Vue from 'vue'
 
 export default Vue.extend({
   name: 'Header',
-
-  data() {
-    return {
-      menuIsVisible: false,
-    }
-  },
-
-  methods: {
-    handleHamburguerClick(value: boolean): void {
-      this.menuIsVisible = value
-    },
-  },
 })
 </script>
