@@ -56,8 +56,8 @@
           </p>
           <ul v-if="item.listInfo">
             <li
-              v-for="listItem in listInfoAsArray(item.listInfo)"
-              :key="listItem"
+              v-for="(listItem, index) in listInfoAsArray(item.listInfo)"
+              :key="`${listItem}-${index}`"
               class="font-serif italic leading-6 mb-1"
             >
               {{ listItem }}
