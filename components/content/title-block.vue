@@ -6,12 +6,14 @@
   >
     <div class="flex flex-col justify-center h-full px-4 sm:px-0">
       <component
+        ref="title"
         :is="titleTag"
         v-sanitize.nothing="title"
         class="text-lg mb-6"
         :class="[font, transform, extraClasses]"
       />
       <component
+        ref="subtitle"
         :is="subtitleTag"
         v-if="subtitle"
         v-sanitize.nothing="subtitle"
@@ -25,8 +27,13 @@
 <script lang="ts">
 import Vue from 'vue'
 import { TitleBlock } from '@/types/index'
+import HandleNuxtLinksInWysiwyg from '@/mixins/handle-links'
+
 export default Vue.extend({
   name: 'TitleBlock',
+
+  mixins: [HandleNuxtLinksInWysiwyg],
+
   props: {
     title: {
       type: String as () => TitleBlock['title'],
@@ -101,6 +108,11 @@ export default Vue.extend({
     getHeight() {
       return this.height || 'auto'
     },
+  },
+
+  mounted(): void {
+    ;(this as any).handleNuxtLinksInWysiwyg((this as any).$refs['title'])
+    ;(this as any).handleNuxtLinksInWysiwyg((this as any).$refs['subtitle'])
   },
 })
 </script>

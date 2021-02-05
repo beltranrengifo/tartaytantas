@@ -7,6 +7,7 @@
   >
     <component
       :is="tag"
+      ref="text"
       v-sanitize.nothing="content"
       class="text-block__content relative font-serif text-lg"
       :class="[
@@ -23,9 +24,12 @@
 <script lang="ts">
 import Vue from 'vue'
 import { TextBlock } from '@/types/index'
+import HandleNuxtLinksInWysiwyg from '@/mixins/handle-links'
 
 export default Vue.extend({
   name: 'TextBlock',
+
+  mixins: [HandleNuxtLinksInWysiwyg],
 
   props: {
     content: {
@@ -87,6 +91,10 @@ export default Vue.extend({
         null
       )
     },
+  },
+
+  mounted(): void {
+    ;(this as any).handleNuxtLinksInWysiwyg((this as any).$refs['text'])
   },
 })
 </script>
