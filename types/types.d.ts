@@ -6,3 +6,5 @@ declare module '*.txt' {
 }
 
 declare module 'vue-parallax'
+
+declare module 'body-scroll-lock'

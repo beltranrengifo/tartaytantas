@@ -74,9 +74,6 @@ export default {
   // Modules (https://go.nuxtjs.dev/config-modules)
   modules: ['v-sanitize/nuxt'],
 
-  // Content module configuration (https://go.nuxtjs.dev/config-content)
-  content: {},
-
   // Build Configuration (https://go.nuxtjs.dev/config-build)
   build: {
     babel: {

@@ -1,13 +1,10 @@
 <template>
   <nav
     role="navigation"
-    class="flex items-center md:items-end opacity-0 desktop-menu:opacity-100"
-    :class="[isSecondaryNav ? 'sm:justify-end' : 'justify-between']"
+    class="navigation flex items-center"
+    :class="[getNavClasses, { 'navigation--is-mobile': isMobile }]"
   >
-    <ul
-      class="flex flex-col desktop-menu:flex-row"
-      :class="{ 'flex-col': isSecondaryNav }"
-    >
+    <ul class="navigation__list flex" :class="{ 'flex-col': isSecondaryNav }">
       <li
         v-for="item in navigation"
         :key="item.name"
@@ -42,6 +39,10 @@ export default Vue.extend({
       type: Boolean,
       default: false,
     },
+    isMobile: {
+      type: Boolean,
+      default: false,
+    },
   },
 
   data() {
@@ -68,6 +69,12 @@ export default Vue.extend({
               target,
             }
       }
+    },
+
+    getNavClasses(): string {
+      if (this.isSecondaryNav) return 'sm:justify-end'
+      if (this.isMobile) return 'justify-center items-center'
+      return 'justify-between'
     },
   },
 })
@@ -129,6 +136,24 @@ export default Vue.extend({
         &::after {
           background-color: var(--color-brand);
         }
+      }
+    }
+  }
+}
+.navigation {
+  $--self: &;
+
+  &--is-mobile {
+    #{$--self}__list {
+      flex-direction: column;
+    }
+
+    .navigation-item {
+      &__inner {
+        font-size: rem(18);
+        color: var(--color-dark);
+        @apply mb-6;
+        @apply block;
       }
     }
   }
