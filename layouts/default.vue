@@ -53,13 +53,12 @@ export default Vue.extend({
   },
 
   head() {
-    const openGraphImage = require('@/assets/images/nosotros.jpg')
     return {
       meta: [
         {
           hid: 'og:image',
           property: 'og:image',
-          content: `${(this as any).baseUrl}/${openGraphImage}`,
+          content: require('@/assets/images/nosotros.jpg'),
         },
       ],
     }
