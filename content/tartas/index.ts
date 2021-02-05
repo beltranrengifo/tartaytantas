@@ -108,7 +108,7 @@ export default [
               image: 'queso.jpg',
               title: 'TARTA DE QUESO',
               description:
-                'Tarta de queso fría con cobertura de dulce de leche o mermelada de frambuesa. Base de galleta y matequilla.',
+                'Tarta de queso fría con cobertura de dulce de leche o mermelada de frambuesa. Base de galleta y mantequilla.',
             },
             {
               image: 'beltran.jpg',
