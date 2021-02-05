@@ -1,7 +1,7 @@
 <template>
   <component
     :is="tag"
-    class="content-container mx-auto md:flex-row flex-col"
+    class="content-container mx-auto md:flex-row flex-col flex-wrap"
     :class="[
       {
         'content-container--boxed': boxed,

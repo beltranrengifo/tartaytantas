@@ -1,7 +1,7 @@
 <template>
   <container
     tag="article"
-    class="text-block flex justify-center items-center flex-shrink-0 flex-grow-0 w-full p-6 md:p-0"
+    class="text-block flex justify-center items-center flex-shrink-0 flex-grow-0 w-full p-6 lg:p-0"
     :class="[height, width, background]"
     fullwidth
   >
@@ -15,7 +15,7 @@
         getColor,
         getDecoration,
         extraClasses,
-        isParagraph ? 'md:text-base' : 'md:text-2xl',
+        isParagraph ? 'lg:text-base' : 'lg:text-2xl',
       ]"
     />
   </container>
@@ -101,7 +101,6 @@ export default Vue.extend({
 
 <style lang="scss" scoped>
 .text-block {
-  min-height: rem(400);
   &__content {
     max-width: 100%;
   }

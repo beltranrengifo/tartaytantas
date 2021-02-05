@@ -1,8 +1,10 @@
 <template>
-  <container boxed>
+  <container boxed class="call-to-action">
     <nav v-if="buttons.length" class="py-32">
-      <ul class="flex justify-evenly">
-        <li v-for="button in buttons" :key="button.link">
+      <ul
+        class="flex flex-col md:flex-row md:justify-evenly items-start w-text-block-md md:w-auto my-0 mx-auto pl-8 sm:pl-0"
+      >
+        <li v-for="button in buttons" :key="button.link" class="mb-20 md:mb-0">
           <interactive-tag :link="button.link" :link-target="button.target">
             {{ button.text }}
           </interactive-tag>
