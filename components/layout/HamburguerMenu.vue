@@ -8,23 +8,21 @@
     >
       <span v-for="index in 3" :key="index" class="hamburguer-menu__stick" />
     </div>
-    <Navigation
-      v-show="$state.showMobileNav"
-      ref="mobile-nav"
-      :is-mobile="$state.isMobileNav"
-      class="hamburguer-menu__nav"
-    />
+    <transition name="slide-fade">
+      <Navigation
+        v-show="$state.showMobileNav"
+        ref="mobile-nav"
+        :is-mobile="$state.isMobileNav"
+        class="hamburguer-menu__nav"
+        @handleLinkClick="handleMobileNavigation"
+      />
+    </transition>
   </div>
 </template>
 
 <script lang="ts">
 import Vue from 'vue'
 import { handleBodyScroll } from '@/plugins/body-scroll'
-
-interface HandleMobileNavigationParamsI {
-  showMobileNav: boolean
-  shouldLockScroll: boolean
-}
 
 export default Vue.extend({
   name: 'HamburguerMenu',
@@ -33,18 +31,6 @@ export default Vue.extend({
     return {
       navigationIsVisible: false,
     }
-  },
-
-  watch: {
-    $route: {
-      deep: true,
-      handler() {
-        this.handleMobileNavigation({
-          showMobileNav: false,
-          shouldLockScroll: false,
-        })
-      },
-    },
   },
 
   beforeDestroy(): void {
@@ -56,18 +42,14 @@ export default Vue.extend({
   },
 
   methods: {
-    async handleMobileNavigation({
-      showMobileNav,
-      shouldLockScroll,
-    }: HandleMobileNavigationParamsI): Promise<void> {
+    async handleMobileNavigation(): Promise<void> {
       await (this as any).$state.mutate(
         'showMobileNav',
-        showMobileNav ?? !(this as any).$state.showMobileNav
+        !(this as any).$state.showMobileNav
       )
 
       handleBodyScroll({
-        shouldLockScroll:
-          shouldLockScroll ?? (this as any).$state.showMobileNav,
+        shouldLockScroll: (this as any).$state.showMobileNav,
         shouldClear: false,
         ref: (this as any).$refs['mobile-nav'],
       })

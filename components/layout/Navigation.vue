@@ -13,6 +13,7 @@
           'navigation-item--is-sticky': $state.stickyNav,
           'navigation-item--is-secondary': isSecondaryNav,
         }"
+        @click="handleLinkClick"
       >
         <component
           :is="getLinkTag(item)"
@@ -75,6 +76,12 @@ export default Vue.extend({
       if (this.isSecondaryNav) return 'sm:justify-end'
       if (this.isMobile) return 'justify-center items-center'
       return 'justify-between'
+    },
+  },
+
+  methods: {
+    handleLinkClick(): void {
+      this.$emit('handleLinkClick')
     },
   },
 })
