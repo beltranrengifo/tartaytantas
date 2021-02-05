@@ -1,6 +1,10 @@
 import home from '@/content/home/home.txt'
+import carousel from '@/content/home/carousel.txt'
 
 const homeContents = home.split(/---/g)
+const carouselContents = carousel
+  .split('\n')
+  .filter((e) => e && !e.includes('#'))
 
 export default [
   /* hero */
@@ -15,8 +19,8 @@ export default [
         options: {
           slides: [
             {
-              image: 'tartaytantas-carousel-image-1.jpg',
-              imageAlt: 'Tartaytantas Obrador de tartas en Madrid',
+              image: carouselContents[0],
+              imageAlt: carouselContents[1],
               content: '',
               button: {
                 text: '',
@@ -25,8 +29,8 @@ export default [
               },
             },
             {
-              image: 'tartaytantas-carousel-image-2.jpg',
-              imageAlt: 'Tartaytantas Obrador de tartas en Madrid',
+              image: carouselContents[2],
+              imageAlt: carouselContents[3],
               content: '',
               button: {
                 text: '',
@@ -35,8 +39,8 @@ export default [
               },
             },
             {
-              image: 'tartaytantas-carousel-image-3.jpg',
-              imageAlt: 'Tartaytantas Obrador de tartas en Madrid',
+              image: carouselContents[4],
+              imageAlt: carouselContents[5],
               content: '',
               button: {
                 text: '',
@@ -45,8 +49,8 @@ export default [
               },
             },
           ],
-          logo: 'tartaytantas.svg',
-          logoAlt: 'Tartaytantas Logo',
+          logo: carouselContents[6],
+          logoAlt: carouselContents[7],
         },
       },
     ],

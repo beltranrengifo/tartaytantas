@@ -1,0 +1,13 @@
+#carousel
+
+tartaytantas-carousel-image-1.jpg
+Tartaytantas Obrador de tartas en Madrid
+tartaytantas-carousel-image-2.jpg
+Tartaytantas Obrador de tartas en Madrid
+tartaytantas-carousel-image-3.jpg
+Tartaytantas Obrador de tartas en Madrid
+
+#carousel logo
+
+tartaytantas.svg
+Tartaytantas Logo

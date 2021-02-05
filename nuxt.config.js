@@ -24,6 +24,11 @@ export default {
     ],
   },
 
+  /* Page Transitions */
+  pageTransition: {
+    name: 'page-transition',
+  },
+
   // Global CSS (https://go.nuxtjs.dev/config-css)
   css: [
     './assets/scss/main.scss',
