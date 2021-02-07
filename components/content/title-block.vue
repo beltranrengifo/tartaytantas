@@ -9,7 +9,7 @@
         ref="title"
         :is="titleTag"
         v-sanitize.nothing="title"
-        class="text-lg mb-6"
+        class="text-xl mb-6 tracking-wider"
         :class="[font, transform, extraClasses]"
       />
       <component
@@ -17,7 +17,7 @@
         :is="subtitleTag"
         v-if="subtitle"
         v-sanitize.nothing="subtitle"
-        class="text-sm"
+        class="font-serif text-lg leading-8"
         :class="[extraClasses]"
       />
     </div>

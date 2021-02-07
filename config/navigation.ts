@@ -8,5 +8,5 @@ export default [
     path: SHOP_URL,
     target: '_blank',
   },
-  { name: 'Nosotros', path: '/nosotros', target: '_self' },
+  { name: 'Nosotras', path: '/nosotros', target: '_self' },
 ]

@@ -1,4 +1,4 @@
-<p class="mb-4">Todo comenzó en casa de Ainhoa, Ingeniera de Minas quien se vió obligada a dejar su trabajo en una cementera a causa de la crisis de 2008.</p>
-<p class="mb-4">Comenzó entonces a hacer tartas para familiares y amigos. Siempre había admirado la maestría en la cocina de Mamá Amelia, su abuela. A veces piensa que de ahí le viene todo.</p>
+<p class="mb-4">Todo empezó en casa de Ainhoa, Ingeniera de Minas quien se vió obligada a dejar su trabajo en una cementera a causa de la crisis de 2008.</p>
+<p class="mb-4">Comienza entonces a hacer tartas para familiares y amigos. Siempre había admirado la maestría en la cocina de Mamá Amelia, su abuela. A veces piensa que de ahí le viene todo.</p>
 <p class="mb-4">Porción a porción se fue ganando la confianza de particulares y restaurantes hasta que en 2014, abrió su propio obrador.</p>
 <p class="mb-4">Allí, a día de hoy, continúa elaborando y distribuyendo, junto a Beatriz, sus tartas a todo aquel que tenga algo que celebrar, o simplemente le apetezca darse el gusto.</p>

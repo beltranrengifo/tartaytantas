@@ -19,7 +19,7 @@ export default Vue.extend({
     },
     logo: {
       type: String,
-      default: 'tartaytantas-logo-text.svg',
+      default: 'tartaytantas-v.svg',
     },
     altText: {
       type: String,
@@ -39,14 +39,14 @@ export default Vue.extend({
 .logo {
   $--self: &;
   &__image {
-    width: rem(136);
+    width: rem(124);
     max-width: 100%;
     transition: $--logo-t;
     opacity: 0;
   }
   &--is-sticky {
     #{$--self}__image {
-      width: rem(110);
+      width: rem(75);
       opacity: 1;
     }
   }

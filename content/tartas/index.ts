@@ -84,79 +84,116 @@ export default [
               image: 'idiazabal.jpg',
               title: 'CHEESECAKE IDIAZABAL',
               description:
-                'Tarta de queso al horno, con base de galleta y un toque de Idiazabal',
+                'Tarta de queso al horno, con base de galleta y un toque de Idiazábal.',
+              listInfo:
+                'Molde de 24 cm, 10/12 raciones. 28,00 €\nMolde de 20 cm. 6/8 raciones. 25,00 €',
             },
             {
               image: 'carrot.jpg',
               title: 'ZANAHORIA',
               description:
-                'Bizcocho de zanahoria, canela y nueces trituradas relleno de crema de queso y la misma cobertura',
+                'Bizcocho de zanahoria, canela y nueces trituradas con relleno y cobertura de crema de queso.',
+              listInfo:
+                'Molde de 24 cm, 10/12 raciones. 24,50 €\nMolde de 20 cm. 6/8 raciones. 22,50 €',
             },
             {
-              image: 'cheesecake.jpg',
-              title: 'NEW YORK CHEESECAKE',
+              image: 'red-velvet.jpg',
+              title: 'RED VELVET',
               description:
-                'Tarta de queso al horno, base galleta con cobertura de mermelada frambuesa, dulce de leche o chocolate',
+                'Tres pisos de bizcocho Red Velvet, con relleno y cobertura de crema de queso.',
             },
             {
               image: 'alejo.jpg',
               title: 'ALEJITO',
               description:
-                'Tarta de obelas con chocolate y nata montada manga pastelera copitos',
+                'Tarta milhojas de obleas y chocolate con cobertura de nata montada.',
+              listInfo: 'Molde de 24 cm, 10/12 raciones. 24,50 €',
             },
             {
               image: 'queso.jpg',
               title: 'TARTA DE QUESO',
               description:
-                'Tarta de queso fría con cobertura de dulce de leche o mermelada de frambuesa. Base de galleta y mantequilla.',
+                'Tarta de queso fría con base de galleta y cobertura de mermelada de frambuesa o dulce de leche.',
+              listInfo:
+                'Molde de 24 cm, 10/12 raciones. 24,50 €\nMolde de 20 cm. 6/8 raciones. 22,50 €',
             },
             {
               image: 'beltran.jpg',
               title: 'BELTRÁN',
               description:
-                'Bizcocho de vainilla con galletas Oreo troceadas, relleno y con cobertura de crema de queso y espolvoreada con galletas Oreo',
+                'Bizcocho de vainilla con galletas Oreo troceadas, con relleno de crema de queso y cobertura de galletas Oreo molidas.',
+              listInfo:
+                'Molde de 24 cm, 10/12 raciones. 26,50 €\nMolde de 20 cm. 6/8 raciones. 23,50 €',
             },
             {
               image: 'oreo.jpg',
               title: 'OREO',
               description:
-                'Tarta de queso fría con crema de nata, queso y oreo molida. Base de galleta Oreo y mantequilla, recubierta con oreo molida.',
+                'Tarta de crema de nata, queso y Oreo molida con base y cobertura de galleta Oreo.',
+              listInfo:
+                'Molde de 24 cm, 10/12 raciones. 26,50 €\nMolde de 20 cm. 6/8 raciones. 23,50 €',
             },
             {
               image: 'limon.jpg',
               title: 'LIMÓN Y MERENGUE',
               description:
-                'Base de galleta, con crema de limón y merengue italiano tostado con soplete.',
+                'Tarta de crema de limón, con base de galleta y merengue italiano tostado con soplete.',
+              listInfo:
+                'Molde de 24 cm, 10/12 raciones. 26,50 €\nMolde de 20 cm. 6/8 raciones. 24,50 €',
             },
             {
               image: 'abuela.jpg',
               title: 'DE LA ABUELA',
               description:
-                'Varios pisos de galletas en leche y mousse de chocolate con leche. Un clásico, a nuestra manera.',
+                'Tarta de galletas empapadas en leche y mousse de chocolate. Un clásico, a nuestra manera.',
             },
             {
               image: 'armina.jpg',
               title: 'ARMINA',
               description:
-                'Tres pisos de bizcocho de espinacas con un toque cítrico, relleno de crema de nata y queso con frambuesas. Cobertura de crema de queso decoradas  frambuesas',
+                'Tres pisos de bizcocho de espinacas con un toque cítrico,  relleno y cobertura de crema de nata y queso, coronada con frambuesas.',
+              listInfo:
+                'Molde de 20 cm, 10/12 raciones. 29,50 €\nMolde de 18 cm. 6/8 raciones. 27,50 €',
             },
             {
               image: 'cheesecake-white-choco.jpg',
               title: 'CHEESECAKE CHOCO BLANCO',
               description:
-                'Tarta de queso al horno con base de galleta y mantequilla y un toque de chocolate blanco.',
+                'Tarta de queso al horno con base de galleta y un toque de chocolate blanco.',
+              listInfo:
+                'Molde de 24 cm, 10/12 raciones. 28,00 €\nMolde de 20 cm. 6/8 raciones. 25,00 €',
             },
             {
               image: 'olmo.jpg',
               title: 'OLMO',
               description:
-                'Tarta de chocolate, nata y leche con un toque a malta y cubierta de Maltesers. Base de galleta y mantequilla.',
+                'Tarta de chocolate, nata y leche con un toque a malta, base de galleta y decorada con Maltesers.',
+              listInfo:
+                'Molde de 24 cm, 10/12 raciones. 25,00 €\nMolde de 20 cm. 6/8 raciones. 23,00 €',
             },
             {
               image: 'wendy.jpg',
               title: 'WENDY',
               description:
-                'Tres pisos de bizcoho chocolate, relleno de dulce de leche y cobertura de chocolate con leche.',
+                'Tres pisos de bizcocho de chocolate, relleno de dulce de leche y cobertura de chocolate con leche.',
+              listInfo:
+                'Molde de 24 cm, 10/12 raciones. 24,50 €\nMolde de 20 cm. 6/8 raciones. 22,50 €',
+            },
+            {
+              image: 'mama-amelia.jpg',
+              title: 'MAMÁ AMELIA',
+              description: 'La tarta de almendra de mi abuela.',
+            },
+            {
+              image: 'choco-guiness.jpg',
+              title: 'CHOCO Y GUINNES',
+              description:
+                'Bizcocho de chocolate y cerveza negra Guinnes con cobertura de crema queso',
+            },
+            {
+              image: 'pavlova.jpg',
+              title: 'PAVLOVA',
+              description: 'Merengue crujiente con nata y frambuesas.',
             },
             {
               image: 'bosco.jpg',
@@ -165,10 +202,36 @@ export default [
                 'Tres pisos de bizcoho chocolate, relleno y con cobertura de crema de choco con leche.',
             },
             {
-              image: 'choco-guiness.jpg',
-              title: 'CHOCO Y GUINNES',
+              image: 'cumpleanos.jpg',
+              title: 'CUMPLEAÑOS',
               description:
-                'Bizcocho de chocolate y cerveza negra Guinnes con cobertura de crema queso',
+                'Bizcocho de vainilla con relleno de crema de chocolate y nata montada, con cobertura de chocolate con leche.',
+              listInfo:
+                'Molde de 24 cm, 10/12 raciones. 26,50 €\nMolde de 20 cm. 6/8 raciones. 24,50 €',
+            },
+            {
+              image: 'banofee.jpg',
+              title: 'BANOFFEE',
+              description:
+                'Plátano, dulce de leche y nata montada con base de galleta.',
+              listInfo:
+                'Molde de 24 cm, 10/12 raciones. 24,50 €\nMolde de 20 cm. 6/8 raciones. 22,50 €',
+            },
+            {
+              image: '3-chocolates.jpg',
+              title: 'TRES CHOCOLATES',
+              description:
+                'Tarta fría de chocolate blanco, con leche y negro, con base de galleta.',
+              listInfo:
+                'Molde de 24 cm, 10/12 raciones. 24,50 €\nMolde de 20 cm. 6/8 raciones. 22,50 €',
+            },
+            {
+              image: 'new-york-cheesecake.jpg',
+              title: 'NEW YORK CHEESECAKE',
+              description:
+                'Tarta de queso al horno, con base de galleta y cobertura de mermelada de frambuesa, dulce de leche o chocolate.',
+              listInfo:
+                'Molde de 24 cm, 10/12 raciones. 26,50 €\nMolde de 20 cm. 6/8 raciones. 23,50 €',
             },
           ],
         },
@@ -190,28 +253,28 @@ export default [
           hoverSuffix: '-hover',
           items: [
             {
+              image: 'seminaked-chocolate.jpg',
+              title: 'SEMINAKED CHOCOLATE',
+              description:
+                'Cuatro pisos de bizcocho de chocolate relleno de chocolate con leche o negro. Coronada con rosas de chocolate y trozitos de almendra caramelizada.',
+              listInfo:
+                'Molde de 18x10 cm, 10 raciones. 44,00 €\nMolde de 20x10 cm. 15 raciones. 60,00 €\nMolde de 24x10 cm. 25 raciones. 95,00 €',
+            },
+            {
               image: 'seminaked-red-velvet.jpg',
               title: 'SEMINAKED RED VELVET',
               description:
-                'Cuatro pisos de bizcocho de red velvet relleno de crema de merengue italiano, de dulce de leche o de chocolate. Cobertura crema de merengue italiano.',
+                'Cuatro pisos de bizcocho de Red Velvet relleno de crema de queso, coronada con frutos rojos y trozitos de almendra caramelizada. Disponible también decorada con crema de queso.',
               listInfo:
-                'Molde de 18x10 cm, 10 raciones. 44 €\nMolde de 20x10 cm. 15 raciones. 60 €\nMolde de 24x10 cm. 25 raciones. 95 €',
+                'Molde de 18x10 cm, 10 raciones. 44,00 €\nMolde de 20x10 cm. 15 raciones. 60,00 €\nMolde de 24x10 cm. 25 raciones. 95,00 €',
             },
             {
               image: 'seminaked-vainilla.jpg',
               title: 'SEMINAKED VAINILLA',
               description:
-                'Cuatro pisos de bizcocho de vainilla relleno de crema de merengue italiano, de dulce de leche o de chocolate. Cobertura crema de merengue italiano.',
+                'Cuatro pisos de bizcocho de vainilla relleno de crema de chocolate blanco, coronada con rosas de chocolate blanco y trocitos de frambuesa liofilizada.',
               listInfo:
-                'Molde de 18x10 cm, 10 raciones. 44 €\nMolde de 20x10 cm. 15 raciones. 60 €\nMolde de 24x10 cm. 25 raciones. 95 €',
-            },
-            {
-              image: 'seminaked-chocolate.jpg',
-              title: 'SEMINAKED CHOCOLATE',
-              description:
-                'Cuatro pisos de bizcocho de chocolate relleno de crema de merengue italiano, de dulce de leche o de chocolate. Cobertura crema de merengue italiano.',
-              listInfo:
-                'Molde de 18x10 cm, 10 raciones. 44 €\nMolde de 20x10 cm. 15 raciones. 60 €\nMolde de 24x10 cm. 25 raciones. 95 €',
+                'Molde de 18x10 cm, 10 raciones. 44,00 €\nMolde de 20x10 cm. 15 raciones. 60,00 €\nMolde de 24x10 cm. 25 raciones. 95,00 €',
             },
           ],
         },
@@ -234,20 +297,23 @@ export default [
             {
               image: 'muffins.jpg',
               title: 'MUFFINS',
-              listInfo:
-                'Vainilla\nZanahoria\nOreo\nRed Velvet\nChocolate\nRed Velvet',
+              description:
+                'La versión muffin de nuestras tartas, con el mismo relleno y cobertura. 2,00 €',
+              listInfo: 'Zanahoria\nBeltrán\nWendy\nBosco\nRed Velvet',
             },
             {
               image: 'bizcochos.jpg',
               title: 'BIZCOCHOS',
+              description: '600 g / 10,00 €',
               listInfo:
-                'Vainilla\nZanahoria\nOreo\nRed Velvet\nChocolate\nRed Velvet',
+                'Zanahoria\nVainilla\nOreo\nChocolate\nRed Velvet\nYogur\nCebra (vainilla y chocolate)',
             },
             {
               image: 'galletas-cookies.jpg',
-              title: 'GALLETAS Y COOKIES',
+              title: 'COOKIES',
+              description: 'Aprox 25 g /0,50 €',
               listInfo:
-                'Pepitas de chocolate\nDoble chocolate\nLacasitos\nCacahuete\nMantequilla\nLimón\nNata y frambuesa\nAvena\nChocolate blanco\nNueces',
+                '\nDe avena y canela\nCon lacasitos\nCon pepitas de chocolate\nDoble chocolate\nCon chocolate blanco y nuez\nRed Velvet con pepitas de chocolate blanco\nDe limón\nDe mantequilla\nDe cacahuete\nDe jengibre\nSin azúcar aptas para intolerantes al gluten y a la lactosa (con o sin pepitas de chocolate)',
             },
           ],
         },

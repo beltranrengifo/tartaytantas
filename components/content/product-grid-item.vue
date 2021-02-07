@@ -54,7 +54,10 @@
           >
             {{ item.description }}
           </p>
-          <ul v-if="item.listInfo">
+          <ul
+            v-if="item.listInfo"
+            class="w-80 max-w-full mx-auto pl-4 text-left"
+          >
             <li
               v-for="(listItem, index) in listInfoAsArray(item.listInfo)"
               :key="`${listItem}-${index}`"
