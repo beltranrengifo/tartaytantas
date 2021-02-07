@@ -1,19 +1,5 @@
 <template>
-  <container v-if="home" tag="div" fullwidth class="bg-tertiary">
-    <container
-      v-for="section in home"
-      :id="section.name"
-      :key="section.name"
-      v-bind="section.options"
-    >
-      <component
-        :is="component.name"
-        v-for="(component, i) in section.components"
-        :key="`${section.name}-${component.name}-${i}`"
-        v-bind="component.options"
-      />
-    </container>
-  </container>
+  <section-renderer :sections="home" />
 </template>
 
 <script lang="ts">
@@ -22,22 +8,8 @@ import MetaData from '@/mixins/meta-data'
 
 import { home } from '@/content'
 
-import Hero from '@/components/content/Hero.vue'
-import TextBlock from '@/components/content/text-block.vue'
-import ImageBlock from '@/components/content/image-block.vue'
-import TitleBlock from '@/components/content/title-block.vue'
-import ImageGrid from '@/components/content/image-grid.vue'
-
 export default Vue.extend({
   name: 'Home',
-
-  components: {
-    Hero,
-    TextBlock,
-    ImageBlock,
-    TitleBlock,
-    ImageGrid,
-  },
 
   mixins: [MetaData],
 
