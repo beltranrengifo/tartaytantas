@@ -1,12 +1,12 @@
+import favicons from './config/favicons'
+
 export default {
-  // Target (https://go.nuxtjs.dev/config-target)
   target: 'static',
 
   publicRuntimeConfig: {
     baseUrl: process.env.BASE_URL,
   },
 
-  // Global page headers (https://go.nuxtjs.dev/config-head)
   head: {
     title: 'Tartaytantas | Obrador',
     meta: [
@@ -17,9 +17,15 @@ export default {
         name: 'description',
         content: 'Obrador de tartas en Madrid, Aravaca',
       },
+      { name: 'msapplication-TileColor', content: '#ffffff' },
+      {
+        name: 'msapplication-TileImage',
+        content: '/favicon/ms-icon-144x144.png',
+      },
+      { name: 'theme-color', content: '#ffffff' },
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      ...favicons,
       {
         rel: 'stylesheet',
         href:
@@ -28,12 +34,10 @@ export default {
     ],
   },
 
-  /* Page Transitions */
   pageTransition: {
     name: 'page-transition',
   },
 
-  // Global CSS (https://go.nuxtjs.dev/config-css)
   css: [
     './assets/scss/main.scss',
     'vue-slick-carousel/dist/vue-slick-carousel.css',
@@ -49,7 +53,6 @@ export default {
     ],
   },
 
-  // Plugins to run before rendering page (https://go.nuxtjs.dev/config-plugins)
   plugins: [
     '@/plugins/slick.js',
     '@/plugins/sanitize.client.js',
@@ -57,14 +60,10 @@ export default {
     '@/plugins/state.js',
   ],
 
-  // Auto import components (https://go.nuxtjs.dev/config-components)
   components: true,
 
-  // Modules for dev and build (recommended) (https://go.nuxtjs.dev/config-modules)
   buildModules: [
-    // https://go.nuxtjs.dev/typescript
     '@nuxt/typescript-build',
-    // https://go.nuxtjs.dev/tailwindcss
     '@nuxtjs/tailwindcss',
     '@nuxtjs/style-resources',
     [
@@ -80,10 +79,8 @@ export default {
     ],
   ],
 
-  // Modules (https://go.nuxtjs.dev/config-modules)
   modules: ['v-sanitize/nuxt'],
 
-  // Build Configuration (https://go.nuxtjs.dev/config-build)
   build: {
     babel: {
       plugins: ['@babel/plugin-proposal-optional-chaining'],
