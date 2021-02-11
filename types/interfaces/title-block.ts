@@ -16,4 +16,5 @@ export interface TitleBlock {
   height?: string
   vAlign?: string
   extraClasses?: string
+  useDecoration?: boolean
 }

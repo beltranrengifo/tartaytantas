@@ -1,5 +1,10 @@
 <template>
-  <container tag="section" boxed class="product-grid relative pt-36 pb-20">
+  <container
+    tag="section"
+    boxed
+    class="product-grid relative"
+    :class="[containerTailwind]"
+  >
     <div class="grid gap-0 lg:grid-cols-3 md:grid-cols-2 grid-cols-1">
       <product-grid-item
         v-for="item in items"
@@ -20,6 +25,10 @@ export default Vue.extend({
   name: 'ProductGrid',
 
   props: {
+    containerTailwind: {
+      type: String as () => ProductGrid['containerTailwind'],
+      default: '',
+    },
     imageDir: {
       type: String as () => ProductGrid['imageDir'],
       default: '',

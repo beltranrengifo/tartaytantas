@@ -97,6 +97,9 @@ module.exports = {
       padding: {
         36: '9rem',
       },
+      fontSize: {
+        'big-title': '3.75rem',
+      },
     },
   },
   variants: {},
