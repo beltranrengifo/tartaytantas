@@ -9,4 +9,5 @@ export interface ProductGrid {
   items: Array<ProductItem>
   imageDir?: string
   hoverSuffix?: string
+  containerTailwind?: string
 }
