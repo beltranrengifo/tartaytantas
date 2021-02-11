@@ -73,7 +73,9 @@ export default Vue.extend({
   height: $--header-h;
   &--shrink {
     height: $--header-h-shrink;
-    background-color: var(--color-tertiary);
+    @include breakpoint(sm) {
+      background-color: var(--color-tertiary);
+    }
   }
 }
 </style>
