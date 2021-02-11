@@ -70,6 +70,28 @@ export default [
       },
     ],
   },
+  /* page title */
+  {
+    name: 'page-title',
+    options: {
+      boxed: true,
+    },
+    components: [
+      {
+        name: 'title-block',
+        options: {
+          title: 'Todas nuestras tartas',
+          titleTag: 'h1',
+          font: 'font-serif',
+          align: 'text-center',
+          paddingTop: 'pt-10',
+          paddingBottom: '',
+          extraClasses: 'text-3xl md:text-big-title text-secondary font-medium',
+          useDecoration: true,
+        },
+      },
+    ],
+  },
   /* cakes grid */
   {
     name: 'tartas',
@@ -77,6 +99,7 @@ export default [
       {
         name: 'product-grid',
         options: {
+          containerTailwind: 'pt-16 pb-20',
           imageDir: 'cakes-grid',
           hoverSuffix: '-hover',
           items: [
@@ -233,6 +256,13 @@ export default [
               listInfo:
                 'Molde de 24 cm, 10/12 raciones. 26,50 €\nMolde de 20 cm. 6/8 raciones. 23,50 €',
             },
+            {
+              image: 'brownie.jpg',
+              title: 'BROWNIE',
+              description:
+                'Brownie de chocolate y avellanas. Un clásico de la repostería americana, a nuestra manera.',
+              listInfo: 'Molde de 21 x 21cm, 9 raciones. 17,00 €',
+            },
           ],
         },
       },
@@ -249,6 +279,7 @@ export default [
       {
         name: 'product-grid',
         options: {
+          containerTailwind: 'pt-36 pb-20',
           imageDir: 'naked-grid',
           hoverSuffix: '-hover',
           items: [
@@ -291,6 +322,7 @@ export default [
       {
         name: 'product-grid',
         options: {
+          containerTailwind: 'pt-36 pb-20',
           imageDir: 'more-grid',
           hoverSuffix: '-hover',
           items: [

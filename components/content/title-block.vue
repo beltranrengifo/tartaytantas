@@ -4,13 +4,18 @@
     class="w-full"
     :class="[paddingTop, paddingBottom, align, width, height]"
   >
-    <div class="flex flex-col justify-center h-full px-4 sm:px-0">
+    <div class="title-block flex flex-col justify-center h-full px-4 sm:px-0">
       <component
         ref="title"
         :is="titleTag"
         v-sanitize.nothing="title"
-        class="text-xl mb-6 tracking-wider"
-        :class="[font, transform, extraClasses]"
+        class="title-block__title text-xl mb-6 tracking-normal"
+        :class="[
+          font,
+          transform,
+          extraClasses,
+          { 'title-block__title--is-decorated': useDecoration },
+        ]"
       />
       <component
         ref="subtitle"
@@ -102,6 +107,10 @@ export default Vue.extend({
       type: String as () => TitleBlock['extraClasses'],
       default: '',
     },
+    useDecoration: {
+      type: Boolean as () => TitleBlock['useDecoration'],
+      default: false,
+    },
   },
 
   computed: {
@@ -116,3 +125,24 @@ export default Vue.extend({
   },
 })
 </script>
+
+<style lang="scss" scoped>
+.title-block {
+  &__title {
+    &--is-decorated {
+      position: relative;
+      &::after {
+        content: '';
+        height: 2px;
+        width: rem(300);
+        max-width: 100%;
+        background-color: var(--color-primary);
+        position: absolute;
+        bottom: rem(-24);
+        left: 50%;
+        transform: translateX(-50%);
+      }
+    }
+  }
+}
+</style>
