@@ -48,7 +48,7 @@ export default Vue.extend({
 
   li {
     &::marker {
-      display: none;
+      content: none;
     }
   }
 
