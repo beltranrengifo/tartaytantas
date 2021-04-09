@@ -46,6 +46,12 @@ export default Vue.extend({
     @apply opacity-100;
   }
 
+  li {
+    &::marker {
+      display: none;
+    }
+  }
+
   &__link {
     position: relative;
     &.is-active {
