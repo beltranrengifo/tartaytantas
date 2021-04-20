@@ -22,7 +22,7 @@
     "nuxt": "^2.14.6",
     "nuxt-compress": "^4.1.0",
     "object-fit-images": "^3.2.4",
-    "sass": "^1.30.0",
+    "sass": "^1.32.11",
     "sass-loader": "^10.1.0",
     "v-sanitize": "^0.0.4",
     "vue-scrollactive": "^0.9.3",
