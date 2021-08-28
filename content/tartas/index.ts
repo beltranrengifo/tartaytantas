@@ -109,7 +109,7 @@ export default [
               description:
                 'Tarta de queso al horno, con base de galleta y un toque de Idiazábal.',
               listInfo:
-                'Molde de 24 cm, 10/12 raciones. 28,00 €\nMolde de 20 cm. 6/8 raciones. 25,00 €',
+                'Molde de 24 cm, 10/12 raciones. 29,00 €\nMolde de 20 cm. 6/8 raciones. 26,00 €',
             },
             {
               image: 'carrot.jpg',
