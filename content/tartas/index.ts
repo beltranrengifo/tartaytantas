@@ -109,7 +109,7 @@ export default [
               description:
                 'Tarta de queso al horno, con base de galleta y un toque de Idiazábal.',
               listInfo:
-                'Molde de 24 cm, 10/12 raciones. 29,00 €\nMolde de 20 cm. 6/8 raciones. 26,00 €',
+                'Molde de 24 cm, 10/12 raciones. 30,80 €\nMolde de 20 cm. 6/8 raciones. 27,00 €',
             },
             {
               image: 'carrot.jpg',
@@ -117,7 +117,7 @@ export default [
               description:
                 'Bizcocho de zanahoria, canela y nueces trituradas con relleno y cobertura de crema de queso.',
               listInfo:
-                'Molde de 24 cm, 10/12 raciones. 24,50 €\nMolde de 20 cm. 6/8 raciones. 22,50 €',
+                'Molde de 24 cm, 10/12 raciones. 26,50 €\nMolde de 20 cm. 6/8 raciones. 24,30 €',
             },
             {
               image: 'red-velvet.jpg',
@@ -125,14 +125,14 @@ export default [
               description:
                 'Tres pisos de bizcocho Red Velvet, con relleno y cobertura de crema de queso.',
               listInfo:
-                'Molde de 24 cm, 10/12 raciones. 27,50 €\nMolde de 20 cm. 6/8 raciones. 25,50 €',
+                'Molde de 24 cm, 10/12 raciones. 29,50 €\nMolde de 20 cm. 6/8 raciones. 27,00 €',
             },
             {
               image: 'alejo.jpg',
               title: 'ALEJITO',
               description:
                 'Tarta milhojas de obleas y chocolate con cobertura de nata montada.',
-              listInfo: 'Molde de 24 cm, 10/12 raciones. 24,50 €',
+              listInfo: 'Molde de 24 cm, 10/12 raciones. 26,50 €',
             },
             {
               image: 'queso.jpg',
@@ -140,7 +140,7 @@ export default [
               description:
                 'Tarta de queso fría con base de galleta y cobertura de mermelada de frambuesa o dulce de leche.',
               listInfo:
-                'Molde de 24 cm, 10/12 raciones. 24,50 €\nMolde de 20 cm. 6/8 raciones. 22,50 €',
+                'Molde de 24 cm, 10/12 raciones. 27,50 €\nMolde de 20 cm. 6/8 raciones. 24,00 €',
             },
             {
               image: 'beltran.jpg',
@@ -148,7 +148,7 @@ export default [
               description:
                 'Bizcocho de vainilla con galletas Oreo troceadas, con relleno de crema de queso y cobertura de galletas Oreo molidas.',
               listInfo:
-                'Molde de 24 cm, 10/12 raciones. 26,50 €\nMolde de 20 cm. 6/8 raciones. 23,50 €',
+                'Molde de 24 cm, 10/12 raciones. 28,50 €\nMolde de 20 cm. 6/8 raciones. 25,00 €',
             },
             {
               image: 'armina.jpg',
@@ -156,7 +156,7 @@ export default [
               description:
                 'Tres pisos de bizcocho de espinacas con un toque cítrico,  relleno y cobertura de crema de nata y queso, coronada con frambuesas.',
               listInfo:
-                'Molde de 20 cm, 10/12 raciones. 29,50 €\nMolde de 18 cm. 6/8 raciones. 27,50 €',
+                'Molde de 20 cm, 10/12 raciones. 36,50 €\nMolde de 18 cm. 6/8 raciones. 31,00 €',
             },
             {
               image: 'choco-guiness.jpg',
@@ -170,7 +170,7 @@ export default [
               description:
                 'Tarta de galletas empapadas en leche y mousse de chocolate. Un clásico, a nuestra manera.',
               listInfo:
-                'Molde de 24 cm, 10/12 raciones. 24,50 €\nMolde de 20 cm. 6/8 raciones. 22,50 €',
+                'Molde de 24 cm, 10/12 raciones. 26,50 €\nMolde de 20 cm. 6/8 raciones. 24,30 €',
             },
             {
               image: 'olmo.jpg',
@@ -178,7 +178,7 @@ export default [
               description:
                 'Tarta de chocolate, nata y leche con un toque a malta, base de galleta y decorada con Maltesers.',
               listInfo:
-                'Molde de 24 cm, 10/12 raciones. 25,00 €\nMolde de 20 cm. 6/8 raciones. 23,00 €',
+                'Molde de 24 cm, 10/12 raciones. 27,50 €\nMolde de 20 cm. 6/8 raciones. 24,80 €',
             },
             {
               image: 'new-york-cheesecake.jpg',
@@ -186,7 +186,7 @@ export default [
               description:
                 'Tarta de queso al horno, con base de galleta y cobertura de mermelada de frambuesa, dulce de leche o chocolate.',
               listInfo:
-                'Molde de 24 cm, 10/12 raciones. 26,50 €\nMolde de 20 cm. 6/8 raciones. 23,50 €',
+                'Molde de 24 cm, 10/12 raciones. 28,50 €\nMolde de 20 cm. 6/8 raciones. 25,50 €',
             },
             {
               image: 'limon.jpg',
@@ -194,7 +194,7 @@ export default [
               description:
                 'Tarta de crema de limón, con base de galleta y merengue italiano tostado con soplete.',
               listInfo:
-                'Molde de 24 cm, 10/12 raciones. 26,50 €\nMolde de 20 cm. 6/8 raciones. 24,50 €',
+                'Molde de 24 cm, 10/12 raciones. 28,50 €\nMolde de 20 cm. 6/8 raciones. 25,50 €',
             },
             {
               image: 'pavlova.jpg',
@@ -212,7 +212,7 @@ export default [
               image: 'mama-amelia.jpg',
               title: 'MAMÁ AMELIA',
               description: 'La tarta de almendra de mi abuela.',
-              listInfo: 'Molde de 24 cm, 10/12 raciones. 21,00 €',
+              listInfo: 'Molde de 24 cm, 10/12 raciones. 23,10 €',
             },
             {
               image: 'oreo.jpg',
@@ -220,7 +220,7 @@ export default [
               description:
                 'Tarta de crema de nata, queso y Oreo molida con base y cobertura de galleta Oreo.',
               listInfo:
-                'Molde de 24 cm, 10/12 raciones. 26,50 €\nMolde de 20 cm. 6/8 raciones. 23,50 €',
+                'Molde de 24 cm, 10/12 raciones. 28,00 €\nMolde de 20 cm. 6/8 raciones. 24,80 €',
             },
             {
               image: 'banofee.jpg',
@@ -228,7 +228,7 @@ export default [
               description:
                 'Plátano, dulce de leche y nata montada con base de galleta.',
               listInfo:
-                'Molde de 24 cm, 10/12 raciones. 24,50 €\nMolde de 20 cm. 6/8 raciones. 22,50 €',
+                'Molde de 24 cm, 10/12 raciones. 26,50 €\nMolde de 20 cm. 6/8 raciones. 24,30 €',
             },
             {
               image: 'wendy.jpg',
@@ -236,7 +236,7 @@ export default [
               description:
                 'Tres pisos de bizcocho de chocolate, relleno de dulce de leche y cobertura de chocolate con leche.',
               listInfo:
-                'Molde de 24 cm, 10/12 raciones. 24,50 €\nMolde de 20 cm. 6/8 raciones. 22,50 €',
+                'Molde de 24 cm, 10/12 raciones. 26,50 €\nMolde de 20 cm. 6/8 raciones. 24,30 €',
             },
             {
               image: 'cheesecake-white-choco.jpg',
@@ -244,7 +244,7 @@ export default [
               description:
                 'Tarta de queso al horno con base de galleta y un toque de chocolate blanco.',
               listInfo:
-                'Molde de 24 cm, 10/12 raciones. 28,00 €\nMolde de 20 cm. 6/8 raciones. 25,00 €',
+                'Molde de 24 cm, 10/12 raciones. 30,00 €\nMolde de 20 cm. 6/8 raciones. 27,00 €',
             },
             {
               image: '3-chocolates.jpg',
@@ -252,14 +252,14 @@ export default [
               description:
                 'Tarta fría de chocolate blanco, con leche y negro, con base de galleta.',
               listInfo:
-                'Molde de 24 cm, 10/12 raciones. 24,50 €\nMolde de 20 cm. 6/8 raciones. 22,50 €',
+                'Molde de 24 cm, 10/12 raciones. 26,95 €\nMolde de 20 cm. 6/8 raciones. 24,30 €',
             },
             {
               image: 'brownie.jpg',
               title: 'BROWNIE',
               description:
                 'Brownie de chocolate y avellanas. Un clásico de la repostería americana, a nuestra manera.',
-              listInfo: 'Molde de 21 x 21cm, 9 raciones. 17,00 €',
+              listInfo: 'Molde de 21 x 21cm, 9 raciones. 18,70 €',
             },
             {
               image: 'cumpleanos.jpg',
@@ -267,7 +267,7 @@ export default [
               description:
                 'Bizcocho de vainilla con relleno de crema de chocolate y nata montada, con cobertura de chocolate con leche.',
               listInfo:
-                'Molde de 24 cm, 10/12 raciones. 26,50 €\nMolde de 20 cm. 6/8 raciones. 24,50 €',
+                'Molde de 24 cm, 10/12 raciones. 29,00 €\nMolde de 20 cm. 6/8 raciones. 26,00 €',
             },
           ],
         },
