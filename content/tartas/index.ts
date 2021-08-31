@@ -157,13 +157,7 @@ export default [
                 'Tres pisos de bizcocho de espinacas con un toque cítrico,  relleno y cobertura de crema de nata y queso, coronada con frambuesas.',
               listInfo:
                 'Molde de 20 cm, 10/12 raciones. 36,50 €\nMolde de 18 cm. 6/8 raciones. 31,00 €',
-            },
-            {
-              image: 'choco-guiness.jpg',
-              title: 'CHOCO Y GUINNES',
-              description:
-                'Bizcocho de chocolate y cerveza negra Guinnes con cobertura de crema queso',
-            },
+             },
             {
               image: 'abuela.jpg',
               title: 'DE LA ABUELA',
@@ -207,6 +201,8 @@ export default [
               title: 'BOSCO',
               description:
                 'Tres pisos de bizcocho de chocolate,  con relleno y cobertura de chocolate con leche.',
+               listInfo:
+                'Molde de 24 cm, 10/12 raciones. 26,50 €\nMolde de 20 cm. 6/8 raciones. 25,00 €',
             },
             {
               image: 'mama-amelia.jpg',
