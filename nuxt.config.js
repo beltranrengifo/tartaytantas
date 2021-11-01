@@ -28,8 +28,13 @@ export default {
       ...favicons,
       {
         rel: 'stylesheet',
-        href:
-          'https://fonts.googleapis.com/css2?family=Duru+Sans&family=Playfair+Display:wght@400;500&display=swap',
+        href: 'https://fonts.googleapis.com/css2?family=Duru+Sans&family=Playfair+Display:wght@400;500&display=swap',
+      },
+    ],
+    script: [
+      {
+        src: 'https://www.googletagmanager.com/gtag/js?id=G-13Y327VN7S',
+        async: true,
       },
     ],
   },
@@ -58,6 +63,7 @@ export default {
     '@/plugins/sanitize.client.js',
     '@/plugins/scroll.client.js',
     '@/plugins/state.js',
+    '@/plugins/gtag',
   ],
 
   components: true,
