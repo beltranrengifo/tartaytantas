@@ -25,6 +25,7 @@
     "sass": "^1.30.0",
     "sass-loader": "^10.1.0",
     "v-sanitize": "^0.0.4",
+    "vue-gtag": "^1.16.1",
     "vue-scrollactive": "^0.9.3",
     "vue-slick-carousel": "^1.0.6"
   },
