@@ -167,7 +167,7 @@ export default [
                 'Molde de 24 cm, 10/12 raciones. 26,50 €\nMolde de 20 cm. 6/8 raciones. 24,30 €',
             },
             {
-              image: 'olmo600.jpg',
+              image: 'olmo1600.jpg',
               title: 'OLMO',
               description:
                 'Tarta de chocolate, nata y leche con un toque a malta, base de galleta y decorada con Maltesers.',
