@@ -159,7 +159,7 @@ export default [
                 'Molde de 20 cm, 10/12 raciones. 36,50 €\nMolde de 18 cm. 6/8 raciones. 31,00 €',
              },
             {
-              image: 'abuela.jpg',
+              image: 'abuela600.jpg',
               title: 'DE LA ABUELA',
               description:
                 'Tarta de galletas empapadas en leche y mousse de chocolate. Un clásico, a nuestra manera.',
