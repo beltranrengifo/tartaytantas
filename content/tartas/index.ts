@@ -310,7 +310,7 @@ export default [
                 'Molde de 18x10 cm, 10 raciones. 44,00 €\nMolde de 20x10 cm. 15 raciones. 60,00 €\nMolde de 24x10 cm. 25 raciones. 95,00 €',
             },
             {
-              image: 'seminaked-vainilla.jpg',
+              image: 'seminakedvaini600.jpg',
               title: 'SEMINAKED VAINILLA',
               description:
                 'Cuatro pisos de bizcocho de vainilla relleno de crema de chocolate blanco, coronada con rosas de chocolate blanco y trocitos de frambuesa liofilizada.',
