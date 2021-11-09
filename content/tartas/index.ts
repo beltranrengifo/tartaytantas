@@ -205,7 +205,7 @@ export default [
                 'Molde de 24 cm, 10/12 raciones. 26,50 €\nMolde de 20 cm. 6/8 raciones. 25,00 €',
             },
             {
-              image: 'mama-amelia.jpg',
+              image: 'mamaamelia600.jpg',
               title: 'MAMÁ AMELIA',
               description: 'La tarta de almendra de mi abuela.',
               listInfo: 'Molde de 24 cm, 10/12 raciones. 23,10 €',
