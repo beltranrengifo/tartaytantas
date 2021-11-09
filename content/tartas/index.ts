@@ -191,7 +191,7 @@ export default [
                 'Molde de 24 cm, 10/12 raciones. 28,50 €\nMolde de 20 cm. 6/8 raciones. 25,50 €',
             },
             {
-              image: 'pavlova.jpg',
+              image: 'pavlova600.jpg',
               title: 'PAVLOVA',
               description: 'Merengue crujiente con nata y frambuesas.',
               listInfo: 'Molde de 24 cm, 10/12 raciones. 36,00 €',
