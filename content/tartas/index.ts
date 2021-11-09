@@ -211,7 +211,7 @@ export default [
               listInfo: 'Molde de 24 cm, 10/12 raciones. 23,10 €',
             },
             {
-              image: 'oreo.jpg',
+              image: 'oreocheese600.jpg',
               title: 'OREO',
               description:
                 'Tarta de crema de nata, queso y Oreo molida con base y cobertura de galleta Oreo.',
