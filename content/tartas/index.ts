@@ -289,7 +289,7 @@ export default [
               image: 'seminaked-red-velvet.jpg',
               title: 'SEMINAKED RED VELVET',
               description:
-                'Cuatro pisos de bizcocho de Red Velvet relleno de crema de queso, coronada con frutos rojos y trozitos de almendra caramelizada. Disponible también decorada con crema de queso.',
+                'Cuatro pisos de bizcocho de Red Velvet relleno de crema de queso, coronada con frutos rojos y trozitos de almendra caramelizada o simplemente con trocitos de frambuesa liofilizada. Disponible también decorada con crema de queso.',
               listInfo:
                 'Molde de 18x10 cm, 10 raciones. 44,00 €\nMolde de 20x10 cm. 15 raciones. 60,00 €\nMolde de 24x10 cm. 25 raciones. 95,00 €',
             },
