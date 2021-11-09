@@ -273,6 +273,14 @@ export default [
               listInfo:
                 'Molde de 24 cm, 10/12 raciones. 29,00 €\nMolde de 20 cm. 6/8 raciones. 26,00 €',
             },
+            {
+              image: 'vasitos600.jpg',
+              title: 'INDIVIDUALES',
+              description:
+                'Algunas de nuestras tartas en formato individual. De la abuela, oreo, banoffee y vasito de mango y crema de queso. ',
+              listInfo:
+                'Vasito individual 4€',
+            },
           ],
         },
       },
