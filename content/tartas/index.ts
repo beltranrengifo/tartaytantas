@@ -235,10 +235,18 @@ export default [
                 'Molde de 24 cm, 10/12 raciones. 26,50 €\nMolde de 20 cm. 6/8 raciones. 24,30 €',
             },
             {
-              image: 'cheesechoco600.jpg',
+              image: 'cheeseblanco600.jpg',
               title: 'CHEESECAKE CHOCO BLANCO',
               description:
                 'Tarta de queso al horno con base de galleta y un toque de chocolate blanco.',
+              listInfo:
+                'Molde de 24 cm, 10/12 raciones. 30,00 €\nMolde de 20 cm. 6/8 raciones. 27,00 €',
+            },
+            {
+              image: 'cheesechoco600.jpg',
+              title: 'CHEESECAKE CHOCOLATE',
+              description:
+                'Tarta tierna de queso y chocolate al horno con base de galleta.',
               listInfo:
                 'Molde de 24 cm, 10/12 raciones. 30,00 €\nMolde de 20 cm. 6/8 raciones. 27,00 €',
             },
