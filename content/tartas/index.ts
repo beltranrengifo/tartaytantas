@@ -175,7 +175,7 @@ export default [
                 'Molde de 24 cm, 10/12 raciones. 27,50 €\nMolde de 20 cm. 6/8 raciones. 24,80 €',
             },
             {
-              image: 'new-york-cheesecake.jpg',
+              image: 'ny600.jpg',
               title: 'NEW YORK CHEESECAKE',
               description:
                 'Tarta de queso al horno, con base de galleta y cobertura de mermelada de frambuesa, dulce de leche o chocolate.',
@@ -197,7 +197,7 @@ export default [
               listInfo: 'Molde de 24 cm, 10/12 raciones. 36,00 €',
             },
             {
-              image: 'bosco.jpg',
+              image: 'bosco600.jpg',
               title: 'BOSCO',
               description:
                 'Tres pisos de bizcocho de chocolate,  con relleno y cobertura de chocolate con leche.',
@@ -235,7 +235,7 @@ export default [
                 'Molde de 24 cm, 10/12 raciones. 26,50 €\nMolde de 20 cm. 6/8 raciones. 24,30 €',
             },
             {
-              image: 'cheesecake-white-choco.jpg',
+              image: 'cheesechoco600.jpg',
               title: 'CHEESECAKE CHOCO BLANCO',
               description:
                 'Tarta de queso al horno con base de galleta y un toque de chocolate blanco.',
@@ -251,7 +251,7 @@ export default [
                 'Molde de 24 cm, 10/12 raciones. 26,95 €\nMolde de 20 cm. 6/8 raciones. 24,30 €',
             },
             {
-              image: 'brownie.jpg',
+              image: 'brownie600.jpg',
               title: 'BROWNIE',
               description:
                 'Brownie de chocolate y avellanas. Un clásico de la repostería americana, a nuestra manera.',
