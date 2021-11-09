@@ -294,7 +294,7 @@ export default [
                 'Molde de 18x10 cm, 10 raciones. 44,00 €\nMolde de 20x10 cm. 15 raciones. 60,00 €\nMolde de 24x10 cm. 25 raciones. 95,00 €',
             },
             {
-              image: 'seminaked-chocolate.jpg',
+              image: 'nakedchoco600.jpg',
               title: 'SEMINAKED CHOCOLATE',
               description:
                 'Cuatro pisos de bizcocho de chocolate relleno de chocolate con leche o negro. Coronada con rosas de chocolate y trocitos de almendra caramelizada.',
