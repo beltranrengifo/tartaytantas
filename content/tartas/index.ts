@@ -183,7 +183,7 @@ export default [
                 'Molde de 24 cm, 10/12 raciones. 28,50 €\nMolde de 20 cm. 6/8 raciones. 25,50 €',
             },
             {
-              image: 'limon.jpg',
+              image: 'limon600.jpg',
               title: 'LIMÓN Y MERENGUE',
               description:
                 'Tarta de crema de limón, con base de galleta y merengue italiano tostado con soplete.',
