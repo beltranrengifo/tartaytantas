@@ -219,7 +219,7 @@ export default [
                 'Molde de 24 cm, 10/12 raciones. 28,00 €\nMolde de 20 cm. 6/8 raciones. 24,80 €',
             },
             {
-              image: 'banoffee.jpg',
+              image: 'banoffee600.jpg',
               title: 'BANOFFEE',
               description:
                 'Plátano, dulce de leche y nata montada con base de galleta.',
