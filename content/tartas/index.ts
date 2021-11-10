@@ -266,7 +266,7 @@ export default [
               listInfo: 'Molde de 21 x 21cm, 9 raciones. 18,70 €',
             },
             {
-              image: 'cumpleanos.jpg',
+              image: 'cumple600.jpg',
               title: 'CUMPLEAÑOS',
               description:
                 'Bizcocho de vainilla con relleno de crema de chocolate y nata montada, con cobertura de chocolate con leche.',
