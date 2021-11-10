@@ -359,7 +359,7 @@ export default [
                 'Zanahoria\nVainilla\nOreo\nChocolate\nRed Velvet\nYogur\nCebra (vainilla y chocolate)',
             },
             {
-              image: 'galletas-cookies.jpg',
+              image: 'galletas600.jpg',
               title: 'COOKIES',
               description: 'Aprox 25 g /0,50 €',
               listInfo:
