@@ -365,6 +365,13 @@ export default [
               listInfo:
                 '\nDe avena y canela\nCon lacasitos\nCon pepitas de chocolate\nDoble chocolate\nCon chocolate blanco y nuez\nRed Velvet con pepitas de chocolate blanco\nDe limón\nDe mantequilla\nDe cacahuete\nDe jengibre\nSin azúcar aptas para intolerantes al gluten y a la lactosa (con o sin pepitas de chocolate)',
             },
+            {
+              image: 'supercookies600.jpg',
+              title: 'SUPERCOOKIES',
+              description: 'Super cookies blanditas por el centro y con relleno y crujientes en el borde',
+              listInfo:
+                '\nDe pepitas de chocolate y nutella\nDe kinder bueno blanco\nDe Red Velvet con pepitas de chocolate y nutella blanca',
+            },
           ],
         },
       },
