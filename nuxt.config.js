@@ -62,8 +62,9 @@ export default {
     '@/plugins/slick.js',
     '@/plugins/sanitize.client.js',
     '@/plugins/scroll.client.js',
+    '@/plugins/cookie-law.client.js',
     '@/plugins/state.js',
-    '@/plugins/gtag',
+    '@/plugins/gtag.client.js',
   ],
 
   components: true,

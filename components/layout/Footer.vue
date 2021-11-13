@@ -30,6 +30,8 @@
         <Navigation is-secondary-nav />
       </article>
     </container>
+
+    <cookie-law theme="dark-lime" />
   </footer>
 </template>
 
