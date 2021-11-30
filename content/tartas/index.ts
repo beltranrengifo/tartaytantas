@@ -368,7 +368,7 @@ export default [
             {
               image: 'supercookies600.jpg',
               title: 'SUPERCOOKIES',
-              description: 'Super cookies blanditas por el centro y con relleno y crujientes en el borde.3,00€',
+              description: 'Super cookies blanditas por el centro y con relleno y crujientes en el borde. 3,00€',
               listInfo:
                 '\nDe pepitas de chocolate y nutella\nDe kinder bueno blanco\nDe Red Velvet con pepitas de chocolate y nutella blanca',
             },
