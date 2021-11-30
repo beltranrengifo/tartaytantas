@@ -61,6 +61,10 @@ export default Vue.extend({
           property: 'og:image',
           content: this.$config.baseUrl + openGraphImage,
         },
+        {
+          name: 'facebook-domain-verification',
+          content: '4ufv34jltv1cuzb0vd6lii1vrpg20m',
+        },
       ],
     }
   },
