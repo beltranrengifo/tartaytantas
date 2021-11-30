@@ -30,6 +30,14 @@
         <Navigation is-secondary-nav />
       </article>
     </container>
+
+    <cookie-law
+      buttonText="No hay problema"
+      :buttonLink="{ path: 'legal' }"
+      buttonLinkText="Saber más"
+      theme="base"
+      message="Usamos cookies para mejorar la experiencia web"
+    />
   </footer>
 </template>
 
