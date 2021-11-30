@@ -1,7 +1,16 @@
 <template>
   <container
     tag="article"
-    class="text-block flex justify-center items-center flex-shrink-0 flex-grow-0 w-full p-6 lg:p-0"
+    class="
+      text-block
+      flex
+      justify-center
+      items-center
+      flex-shrink-0 flex-grow-0
+      w-full
+      p-6
+      lg:p-0
+    "
     :class="[height, width, background]"
     fullwidth
   >
@@ -55,7 +64,7 @@ export default Vue.extend({
       type: String as () => TextBlock['contentWidth'],
       default: 'w-text-block-md',
       validator: (val: string): boolean =>
-        ['w-text-block-sm', 'w-text-block-md'].includes(val),
+        ['w-text-block-sm', 'w-text-block-md', 'w-full'].includes(val),
     },
     width: {
       type: String as () => TextBlock['width'],
