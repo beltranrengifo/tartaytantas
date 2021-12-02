@@ -188,7 +188,7 @@ export default [
               description:
                 'Tarta de crema de limón, con base de galleta y merengue italiano tostado con soplete.',
               listInfo:
-                'Molde de 24 cm, 10/12 raciones. 28,50 €\nMolde de 20 cm. 6/8 raciones. 25,50 €',
+                'Molde de 24 cm, 10/12 raciones. 28,50 €\nMolde de 20 cm',
             },
             {
               image: 'pavlova600.jpg',
