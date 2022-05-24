@@ -232,7 +232,7 @@ export default [
               description:
                 'Tres pisos de bizcocho de chocolate, relleno de dulce de leche y cobertura de chocolate con leche.',
               listInfo:
-                'Molde de 24 cm, 10/12 raciones. 27,800 €\nMolde de 20 cm. 6/8 raciones. 25,50 €',
+                'Molde de 24 cm, 10/12 raciones. 27,80 €\nMolde de 20 cm. 6/8 raciones. 25,50 €',
             },
             {
               image: 'cheeseblanco600.jpg',
