@@ -1,6 +1,6 @@
 <template>
   <div class="logo" :class="{ 'logo--is-sticky': $state.stickyNav }">
-    <n-link :to="link">
+    <n-link :to="link" class="no-decoration">
       <img :src="getLogoImage" :alt="altText" class="logo__image" />
     </n-link>
   </div>
