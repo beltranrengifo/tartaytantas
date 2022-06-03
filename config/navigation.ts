@@ -1,4 +1,4 @@
-import { SHOP_URL } from '@/config/constants'
+import { SHOP_URL, SHOP_URL_APANYMANTEL } from '@/config/constants'
 
 export default [
   { name: 'Inicio', path: '/', target: '_self' },
@@ -6,6 +6,11 @@ export default [
   {
     name: 'Tienda',
     path: SHOP_URL,
+    target: '_blank',
+  },
+  {
+    name: 'Tienda Apanymantel',
+    path: SHOP_URL_APANYMANTEL,
     target: '_blank',
   },
   { name: 'Nosotras', path: '/nosotros', target: '_self' },
