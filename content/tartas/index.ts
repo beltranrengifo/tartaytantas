@@ -180,7 +180,7 @@ export default [
               description:
                 'Tarta de queso al horno, con base de galleta y cobertura de mermelada de frambuesa, dulce de leche o chocolate.',
               listInfo:
-                'Molde de 24 cm, 10/12 raciones. 31,00 €\nMolde de 20 cm. 6/8 raciones. 27,00 €',
+                'Molde de 24 cm, 10/12 raciones. 31,50 €\nMolde de 20 cm. 6/8 raciones. 27,00 €',
             },
             {
               image: 'limon600.jpg',
