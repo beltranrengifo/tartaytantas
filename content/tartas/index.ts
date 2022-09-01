@@ -132,7 +132,7 @@ export default [
               title: 'ALEJITO',
               description:
                 'Tarta milhojas de obleas y chocolate con cobertura de nata montada.',
-              listInfo: 'Molde de 24 cm, 10/12 raciones. 29,10 €',
+              listInfo: 'Molde de 24 cm, 10/12 raciones. 28,90 €',
             },
             {
               image: 'queso.jpg',
@@ -202,7 +202,7 @@ export default [
               description:
                 'Tres pisos de bizcocho de chocolate,  con relleno y cobertura de chocolate con leche.',
                listInfo:
-                'Molde de 24 cm, 10/12 raciones. 29,90 €\nMolde de 20 cm. 6/8 raciones. 26,20 €',
+                'Molde de 24 cm, 10/12 raciones. 29,90 €\nMolde de 20 cm. 6/8 raciones. 27,00 €',
             },
             {
               image: 'mamaamelia600.jpg',
@@ -224,7 +224,7 @@ export default [
               description:
                 'Plátano, dulce de leche y nata montada con base de galleta.',
               listInfo:
-                'Molde de 24 cm, 10/12 raciones. 29,90 €\nMolde de 20 cm. 6/8 raciones. 26,50 €',
+                'Molde de 24 cm, 10/12 raciones. 28,50 €\nMolde de 20 cm. 6/8 raciones. 26,50 €',
             },
             {
               image: 'wendy.jpg',
