@@ -61,5 +61,8 @@
     "ts-jest": "^26.4.1",
     "vue-jest": "^3.0.4",
     "vue-parallax": "^1.1.1"
+  },
+  "engines": {
+    "node": "16.x"
   }
 }
