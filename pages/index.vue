@@ -26,11 +26,14 @@ export default Vue.extend({
   },
 
   head(): object {
-    return (this as any).getMetadata({
-      title: 'Tartaytantas | Obrador de tartas en Aravaca, Madrid',
-      description:
-        'Somos un pequeño obrador de tartas inspiradas en recetas clásicas, con referencias a la pastelería americana de mediados del S XX.',
-    })
+    return {
+      ...(this as any).getMetadata({
+        title: 'Tartaytantas | Obrador de tartas en Aravaca, Madrid',
+        description:
+          'Somos un pequeño obrador de tartas inspiradas en recetas clásicas, con referencias a la pastelería americana de mediados del S XX.',
+      }),
+      ...(this as any).getMetaPixel(),
+    }
   },
 })
 </script>
