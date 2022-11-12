@@ -302,7 +302,7 @@ export default [
           hoverSuffix: '-hover',
           items: [
             {
-              image: 'nakedredvelvet600.jpg',
+              image: 'NakedRed.jpg',
               title: 'SEMINAKED RED VELVET',
               description:
                 'Cuatro pisos de bizcocho de Red Velvet relleno de crema de queso, coronada con frutos rojos y trozitos de almendra caramelizada o simplemente con trocitos de frambuesa liofilizada. Disponible también decorada con crema de queso.',
