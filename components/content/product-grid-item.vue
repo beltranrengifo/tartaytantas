@@ -37,16 +37,34 @@
     </figure>
     <div
       class="product-grid-item__content text-center py-12 overflow-hidden"
-      :class="[showDescription ? 'max-h-160' : 'max-h-32']"
+      :class="[showDescription ? 'max-h-160' : 'max-h-66']"
     >
       <h2
-        class="cursor-pointer relative mb-10"
-        :class="{ 'product-grid-item__title--active': showDescription }"
+        class="cursor-pointer relative mb-2"
+        :class="{
+          'product-grid-item__title--active': showDescription,
+          'mb-10': showDescription,
+          'mb-2': !showDescription,
+        }"
         @click="handleClick"
       >
         {{ item.title }}
       </h2>
-      <transition name="slide-fade">
+      <transition name="slide-fade" mode="out-in">
+        <ul
+          v-if="item.listInfo && !showDescription"
+          class="w-80 max-w-full mx-auto pl-4 text-left"
+        >
+          <li
+            v-for="(listItem, index) in listInfoAsArray(item.listInfo)"
+            :key="`${listItem}-${index}`"
+            class="font-serif italic leading-6 mb-1"
+          >
+            {{ listItem }}
+          </li>
+        </ul>
+      </transition>
+      <transition name="slide-fade" mode="out-in">
         <div v-show="showDescription">
           <p
             v-if="item.description"
