@@ -1,5 +1,9 @@
 <template>
-  <component :is="getTag" v-bind="getTagProps">
+  <component
+    :is="getTag"
+    v-bind="getTagProps"
+    :class="{ 'interactive-tag__as-button no-decoration': renderUiAsButton }"
+  >
     <slot />
   </component>
 </template>
@@ -25,6 +29,10 @@ export default Vue.extend({
     linkTarget: {
       type: String as () => InteractiveTag['linkTarget'],
       default: '_self',
+    },
+    renderUiAsButton: {
+      type: Boolean,
+      default: false,
     },
   },
 
@@ -62,3 +70,20 @@ export default Vue.extend({
   },
 })
 </script>
+
+<style lang="scss" scoped>
+.interactive-tag {
+  &__as-button {
+    padding: 12px;
+    display: inline-block;
+    border: 2px solid var(--color-primary);
+    text-decoration: none;
+    margin-top: 16px;
+    transition: background-color 0.2s;
+
+    &:hover {
+      background-color: var(--color-white);
+    }
+  }
+}
+</style>
