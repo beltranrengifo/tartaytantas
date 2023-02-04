@@ -21,7 +21,7 @@
           <title-block
             v-if="!!slide.content"
             :title="slide.content"
-            titleTag="p"
+            :titleTag="slide.contentTag"
             font="font-serif"
             align="text-center"
             extraClasses="absolute carousel__lead md:text-big-title text-white font-medium"
