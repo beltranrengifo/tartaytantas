@@ -1,4 +1,5 @@
 export interface ImageBlock {
+  containerTailwind?: string
   image: string
   imageAlt?: string
   width?: string

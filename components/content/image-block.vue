@@ -3,7 +3,11 @@
     :fullwidth="fullwidth"
     :boxed="boxed"
     class="image-block flex justify-center items-center flex-shrink-0 flex-grow-0 w-full"
-    :class="[`${height || 'h-auto'}`, `${width || 'md:w-1/4'}`]"
+    :class="[
+      `${height || 'h-auto'}`,
+      `${width || 'md:w-1/4'}`,
+      containerTailwind,
+    ]"
   >
     <figure class="image-block__figure w-full h-full">
       <picture>
@@ -34,6 +38,10 @@ export default Vue.extend({
   name: 'ImageBlock',
 
   props: {
+    containerTailwind: {
+      type: String as () => ImageBlock['containerTailwind'],
+      default: '',
+    },
     image: {
       type: String as () => ImageBlock['image'],
       required: true,
