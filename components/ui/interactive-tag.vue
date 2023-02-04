@@ -2,7 +2,10 @@
   <component
     :is="getTag"
     v-bind="getTagProps"
-    :class="{ 'interactive-tag__as-button no-decoration': renderUiAsButton }"
+    :class="{
+      'interactive-tag__as-button no-decoration': renderUiAsButton,
+      'interactive-tag__as-button--primary': primary,
+    }"
   >
     <slot />
   </component>
@@ -31,7 +34,11 @@ export default Vue.extend({
       default: '_self',
     },
     renderUiAsButton: {
-      type: Boolean,
+      type: Boolean as () => InteractiveTag['renderUiAsButton'],
+      default: false,
+    },
+    primary: {
+      type: Boolean as () => InteractiveTag['primary'],
       default: false,
     },
   },
@@ -74,7 +81,7 @@ export default Vue.extend({
 <style lang="scss" scoped>
 .interactive-tag {
   &__as-button {
-    padding: 12px;
+    padding: 12px 24px;
     display: inline-block;
     border: 2px solid var(--color-primary);
     text-decoration: none;
@@ -83,6 +90,20 @@ export default Vue.extend({
 
     &:hover {
       background-color: var(--color-white);
+    }
+
+    &--primary {
+      background-color: var(--color-white);
+      transition: all 0.2s ease-out;
+      font-weight: 600;
+      border: 2px solid var(--color-primary);
+      color: var(--color-primary);
+
+      &:hover {
+        background-color: var(--color-primary);
+        border: 2px solid var(--color-white);
+        color: var(--color-white);
+      }
     }
   }
 }
