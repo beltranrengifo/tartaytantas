@@ -17,6 +17,7 @@
         />
       </picture>
     </figure>
+    {{ title }}
   </container>
 </template>
 
@@ -52,6 +53,14 @@ export default Vue.extend({
       type: String as () => ImageBlock['extraClasses'],
       default: '',
     },
+    title: {
+      type: String as () => ImageBlock['title'],
+      default: '',
+    },
+    titleTag: {
+      type: String as () => ImageBlock['titleTag'],
+      default: '',
+    },
   },
 
   computed: {
@@ -77,6 +86,7 @@ export default Vue.extend({
 <style lang="scss" scoped>
 .image-block {
   min-height: $--section-min-h;
+
   &__figure {
     img {
       @include breakpoint(only-phone) {
