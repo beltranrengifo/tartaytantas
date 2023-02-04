@@ -8,6 +8,7 @@ export interface Slide {
   image: string
   imageAlt: string
   content?: string
+  contentTag?: string
   button?: SlideButton
 }
 
