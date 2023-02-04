@@ -1,3 +1,8 @@
+interface ImageBlockAction {
+  label: string
+  url: string
+  target?: string
+}
 export interface ImageBlock {
   containerTailwind?: string
   image: string
@@ -10,4 +15,5 @@ export interface ImageBlock {
   extraClasses?: string
   title?: string
   titleTag?: string
+  action?: ImageBlockAction
 }
