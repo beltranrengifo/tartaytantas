@@ -104,9 +104,33 @@ export default [
   },
   /* cta */
   {
-    name: 'cta',
+    name: 'cta-1',
     options: {
-      fullwidth: true,
+      fullwidth: false,
+      boxed: true,
+      flex: true,
+    },
+    components: [
+      {
+        name: 'image-block',
+        options: {
+          containerTailwind: 'mt-36 mb-20',
+          image: 'tartaytantas-carousel-tartas-1.webp',
+          imageAlt: 'Composición de tartas inspirada en Wayne Thiebaud.',
+          width: 'md:w-1/1',
+          height: 'h-1/2-screen',
+          align: 'object-bottom',
+          extraClasses: 'reveal zoom-out',
+          title: 'VER MÁS OPCIONES',
+          titleTag: 'h2',
+        },
+      },
+    ],
+  },
+  /* cta */
+  {
+    name: 'cta-2',
+    options: {
       flex: true,
     },
     components: [
