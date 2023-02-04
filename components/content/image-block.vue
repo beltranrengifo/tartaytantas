@@ -1,6 +1,7 @@
 <template>
   <container
-    fullwidth
+    :fullwidth="fullwidth"
+    :boxed="boxed"
     class="image-block flex justify-center items-center flex-shrink-0 flex-grow-0 w-full"
     :class="[`${height || 'h-auto'}`, `${width || 'md:w-1/4'}`]"
   >
@@ -17,7 +18,11 @@
         />
       </picture>
     </figure>
-    {{ title }}
+    <component
+      class="image-block__title md:text-big-title text-white font-medium text-center font-serif"
+      :is="titleTag"
+      >{{ title }}</component
+    >
   </container>
 </template>
 
@@ -40,6 +45,14 @@ export default Vue.extend({
     width: {
       type: String as () => ImageBlock['width'],
       default: '1/4',
+    },
+    fullwidth: {
+      type: Boolean as () => ImageBlock['fullwidth'],
+      default: true,
+    },
+    boxed: {
+      type: Boolean as () => ImageBlock['boxed'],
+      default: false,
     },
     height: {
       type: String as () => ImageBlock['height'],
@@ -86,6 +99,7 @@ export default Vue.extend({
 <style lang="scss" scoped>
 .image-block {
   min-height: $--section-min-h;
+  position: relative;
 
   &__figure {
     img {
@@ -94,6 +108,13 @@ export default Vue.extend({
         object-fit: cover;
       }
     }
+  }
+
+  &__title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
   }
 }
 </style>
