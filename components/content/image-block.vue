@@ -22,11 +22,25 @@
         />
       </picture>
     </figure>
-    <component
-      class="image-block__title md:text-big-title text-white font-medium text-center font-serif"
-      :is="titleTag"
-      >{{ title }}</component
-    >
+    <div class="image-block__title-wrapper">
+      <component
+        class="image-block__title md:text-big-title text-white font-medium text-center font-serif"
+        :is="titleTag"
+      >
+        {{ title }}
+      </component>
+      <div class="text-center">
+        <interactive-tag
+          v-if="action"
+          :link="action.url"
+          :linkTarget="action.target"
+          renderUiAsButton
+          primary
+        >
+          {{ action.label }}
+        </interactive-tag>
+      </div>
+    </div>
   </container>
 </template>
 
@@ -82,6 +96,10 @@ export default Vue.extend({
       type: String as () => ImageBlock['titleTag'],
       default: '',
     },
+    action: {
+      type: Object as () => ImageBlock['action'],
+      default: null,
+    },
   },
 
   computed: {
@@ -118,7 +136,7 @@ export default Vue.extend({
     }
   }
 
-  &__title {
+  &__title-wrapper {
     position: absolute;
     top: 50%;
     left: 50%;
