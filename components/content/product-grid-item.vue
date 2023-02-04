@@ -35,10 +35,7 @@
         />
       </picture>
     </figure>
-    <div
-      class="product-grid-item__content text-center py-12 overflow-hidden"
-      :class="[showDescription ? 'max-h-160' : 'max-h-66']"
-    >
+    <div class="product-grid-item__content text-center py-12 overflow-hidden">
       <h2
         class="cursor-pointer relative mb-2"
         :class="{
@@ -50,11 +47,14 @@
       >
         {{ item.title }}
       </h2>
-      <transition name="slide-fade" mode="out-in">
-        <ul
-          v-if="item.listInfo && !showDescription"
-          class="w-80 max-w-full mx-auto pl-4 text-left"
+      <div>
+        <p
+          v-show="showDescription"
+          class="product-grid-item__description w-80 max-w-full mb-6 mx-auto pl-4 text-left font-serif leading-7"
         >
+          {{ item.description }}
+        </p>
+        <ul v-if="item.listInfo" class="w-80 max-w-full mx-auto pl-4 text-left">
           <li
             v-for="(listItem, index) in listInfoAsArray(item.listInfo)"
             :key="`${listItem}-${index}`"
@@ -63,29 +63,15 @@
             {{ listItem }}
           </li>
         </ul>
-      </transition>
-      <transition name="slide-fade" mode="out-in">
-        <div v-show="showDescription">
-          <p
-            v-if="item.description"
-            class="product-grid-item__description w-80 max-w-full mb-6 mx-auto pl-4 text-left font-serif leading-7"
-          >
-            {{ item.description }}
-          </p>
-          <ul
-            v-if="item.listInfo"
-            class="w-80 max-w-full mx-auto pl-4 text-left"
-          >
-            <li
-              v-for="(listItem, index) in listInfoAsArray(item.listInfo)"
-              :key="`${listItem}-${index}`"
-              class="font-serif italic leading-6 mb-1"
-            >
-              {{ listItem }}
-            </li>
-          </ul>
-        </div>
-      </transition>
+        <interactive-tag
+          v-if="item.action"
+          :link="item.action.url"
+          linkTarget="_blank"
+          renderUiAsButton
+        >
+          {{ item.action.label }}
+        </interactive-tag>
+      </div>
     </div>
   </article>
 </template>
@@ -93,6 +79,7 @@
 <script lang="ts">
 import Vue from 'vue'
 import { ProductItem, ProductGrid } from '@/types'
+import { SHOP_URL } from '@/config/constants'
 
 interface getImageSrcParams {
   useSecondary?: boolean
@@ -121,6 +108,7 @@ export default Vue.extend({
     return {
       showDescription: false,
       showAltImage: false,
+      SHOP_URL,
     }
   },
 
