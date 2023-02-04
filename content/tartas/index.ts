@@ -155,9 +155,8 @@ export default [
               title: 'ARMINA',
               description:
                 'Tres pisos de bizcocho de espinacas con un toque cítrico,  relleno y cobertura de crema de nata y queso, coronada con frambuesas.',
-              listInfo:
-                'Molde de 20 cm, 10/12 raciones. 41,50 €',
-             },
+              listInfo: 'Molde de 20 cm, 10/12 raciones. 41,50 €',
+            },
             {
               image: 'abuela600.jpg',
               title: 'DE LA ABUELA',
@@ -187,8 +186,7 @@ export default [
               title: 'LIMÓN Y MERENGUE',
               description:
                 'Tarta de crema de limón, con base de galleta y merengue italiano tostado con soplete.',
-              listInfo:
-                'Molde de 24 cm, 10/12 raciones. 31,00 €',
+              listInfo: 'Molde de 24 cm, 10/12 raciones. 31,00 €',
             },
             {
               image: 'pavlova600.jpg',
@@ -201,7 +199,7 @@ export default [
               title: 'BOSCO',
               description:
                 'Tres pisos de bizcocho de chocolate,  con relleno y cobertura de chocolate con leche.',
-               listInfo:
+              listInfo:
                 'Molde de 24 cm, 10/12 raciones. 29,90 €\nMolde de 20 cm. 6/8 raciones. 27,00 €',
             },
             {
@@ -278,8 +276,7 @@ export default [
               title: 'INDIVIDUALES',
               description:
                 'Algunas de nuestras tartas en formato individual. De la abuela, oreo, banoffee y vasito de mango y crema de queso. ',
-              listInfo:
-                'Vasito individual 4€',
+              listInfo: 'Vasito individual 4€',
             },
           ],
         },
@@ -350,6 +347,7 @@ export default [
               description:
                 'La versión muffin de nuestras tartas, con el mismo relleno y cobertura. Mínimo 6u de cada tipo para encargo. 2,00 €',
               listInfo: 'Zanahoria\nBeltrán\nWendy\nBosco\nRed Velvet',
+              hideListInfo: true,
             },
             {
               image: 'bizcochos.jpg',
@@ -357,6 +355,7 @@ export default [
               description: '600 g / 10,00 €',
               listInfo:
                 'Zanahoria\nVainilla\nOreo\nChocolate\nRed Velvet\nYogur\nCebra (vainilla y chocolate)',
+              hideListInfo: true,
             },
             {
               image: 'galletas600.jpg',
@@ -364,13 +363,16 @@ export default [
               description: 'Aprox 25 g /consultar precio en tienda',
               listInfo:
                 '\nDe avena y canela\nCon lacasitos\nCon pepitas de chocolate\nDoble chocolate\nCon chocolate blanco y nuez\nRed Velvet con pepitas de chocolate blanco\nDe limón\nDe mantequilla\nDe cacahuete\nDe jengibre\nSin azúcar aptas para intolerantes al gluten y a la lactosa (con o sin pepitas de chocolate)',
+              hideListInfo: true,
             },
             {
               image: 'supercookies600.jpg',
               title: 'SUPERCOOKIES',
-              description: 'Super cookies blanditas por el centro y con relleno y crujientes en el borde. 3,00€',
+              description:
+                'Super cookies blanditas por el centro y con relleno y crujientes en el borde. 3,00€',
               listInfo:
                 '\nDe pepitas de chocolate y nutella\nDe kinder bueno blanco\nDe Red Velvet con pepitas de chocolate y nutella blanca',
+              hideListInfo: true,
             },
           ],
         },
