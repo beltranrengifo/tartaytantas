@@ -5,4 +5,6 @@ export interface ImageBlock {
   height?: string
   align?: string
   extraClasses?: string
+  title?: string
+  titleTag?: string
 }
