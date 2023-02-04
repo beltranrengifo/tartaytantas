@@ -18,6 +18,16 @@
               />
             </picture>
           </figure>
+          <title-block
+            v-if="!!slide.content"
+            :title="slide.content"
+            titleTag="p"
+            font="font-serif"
+            align="text-center"
+            extraClasses="absolute carousel__lead md:text-big-title text-white font-medium"
+            paddingTop=""
+            paddingBottom=""
+          />
         </article>
       </template>
       <template #customPaging>
@@ -31,7 +41,7 @@
 
 <script lang="ts">
 import Vue from 'vue'
-import { Slides, Slide } from '@/types'
+import { Slide } from '@/types'
 import ImageUrl from '@/mixins/image-url'
 
 export default Vue.extend({
@@ -41,7 +51,7 @@ export default Vue.extend({
 
   props: {
     slides: {
-      type: (Array as unknown) as () => Slides,
+      type: Array as unknown as () => Slide[],
       required: true,
     },
   },
@@ -92,6 +102,11 @@ export default Vue.extend({
     &.slick-current {
       transform: scale(1);
     }
+  }
+  &__lead {
+    top: 50%;
+    left: 50%;
+    transform: translateY(-50%) translateX(-50%);
   }
 }
 </style>
