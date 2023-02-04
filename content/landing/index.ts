@@ -1,4 +1,4 @@
-import { SHOP_URL } from '~/config/constants'
+import { SHOP_URL, WHATSAPP_URL } from '~/config/constants'
 
 export default [
   /* hero */
@@ -16,6 +16,7 @@ export default [
               image: 'tartaytantas-carousel-tartas-4.jpg',
               imageAlt: 'Tartaytantas Obrador de tartas en Madrid',
               content: 'Nuestras tartas más famosas',
+              contentTag: 'h1',
               button: {
                 text: '',
                 link: '',
@@ -26,6 +27,7 @@ export default [
               image: 'tartaytantas-carousel-tartas-1.jpg',
               imageAlt: 'Tartaytantas Obrador de tartas en Madrid',
               content: 'Nuestras tartas más famosas',
+              contentTag: 'h1',
               button: {
                 text: '',
                 link: '',
@@ -36,6 +38,7 @@ export default [
               image: 'tartaytantas-carousel-tartas-2.jpg',
               imageAlt: 'Tartaytantas Obrador de tartas en Madrid',
               content: 'Nuestras tartas más famosas',
+              contentTag: 'h1',
               button: {
                 text: '',
                 link: '',
@@ -114,15 +117,20 @@ export default [
       {
         name: 'image-block',
         options: {
-          containerTailwind: 'mt-36 mb-20',
+          containerTailwind: 'mt-36 mb-40',
           image: 'tartaytantas-carousel-tartas-1.webp',
           imageAlt: 'Composición de tartas inspirada en Wayne Thiebaud.',
           width: 'md:w-1/1',
           height: 'h-1/2-screen',
           align: 'object-bottom',
           extraClasses: 'reveal zoom-out',
-          title: 'VER MÁS OPCIONES',
+          title: 'Ver más opciones',
           titleTag: 'h2',
+          action: {
+            label: 'Comprar',
+            url: SHOP_URL,
+            target: '_blank',
+          },
         },
       },
     ],
@@ -143,8 +151,13 @@ export default [
           height: 'h-1/2-screen',
           align: 'object-top',
           extraClasses: 'reveal zoom-out',
-          title: '¿TIENES UN EVENTO O CELEBRACIÓN ESPECIAL?\nPREGÚNTANOS',
+          title: '¿Tienes un evento o una celebración especial?',
           titleTag: 'h2',
+          action: {
+            label: 'Escríbenos por WhatsApp!',
+            url: WHATSAPP_URL,
+            target: '_blank',
+          },
         },
       },
     ],
