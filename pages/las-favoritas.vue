@@ -1,7 +1,7 @@
 <template>
   <section>
     <section-renderer :sections="landing" />
-    <!-- <floating-action :link="WHATSAPP_URL" :position="{ bottom: '48px' }">
+    <floating-action :link="WHATSAPP_URL" :position="{ bottom: '48px' }">
       <svg
         class="w-4 inline"
         xmlns="http://www.w3.org/2000/svg"
@@ -32,7 +32,7 @@
           fill="#fafafa"
         />
       </svg>
-    </floating-action> -->
+    </floating-action>
   </section>
 </template>
 

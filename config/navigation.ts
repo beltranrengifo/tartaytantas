@@ -9,4 +9,5 @@ export default [
     target: '_blank',
   },
   { name: 'Nosotras', path: '/nosotros', target: '_self' },
+  { name: 'Las favoritas', path: '/las-favoritas', target: '_self' },
 ]
