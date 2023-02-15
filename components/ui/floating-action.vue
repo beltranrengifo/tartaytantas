@@ -29,9 +29,10 @@ export default Vue.extend({
   },
 
   computed: {
-    getStyles() {
+    getStyles(): FloatingAction['position'] {
       return {
-        position: this.position,
+        right: this.position?.right || '',
+        bottom: this.position?.bottom || '',
       }
     },
   },
@@ -44,6 +45,8 @@ export default Vue.extend({
   bottom: 24px;
   right: 24px;
   cursor: pointer;
+  border-radius: 8px;
+  overflow: hidden;
 
   ::v-deep svg {
     width: 2.5rem !important;

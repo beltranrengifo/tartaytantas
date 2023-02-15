@@ -4,6 +4,6 @@ export interface FloatingAction {
 }
 
 interface FloatingActionPosition {
-  right?: string
-  bottom?: string
+  right: string
+  bottom: string
 }
