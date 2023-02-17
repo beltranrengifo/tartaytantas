@@ -106,7 +106,7 @@ import Vue from 'vue'
 import { WHATSAPP_URL, PHONE_CALL_URL } from '@/config/constants'
 
 export default Vue.extend({
-  name: 'FloatingActions',
+  name: 'LandingFloatingActions',
 
   data() {
     return {

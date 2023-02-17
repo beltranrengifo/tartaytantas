@@ -1,7 +1,7 @@
 <template>
   <section>
     <section-renderer :sections="landing" />
-    <floating-actions />
+    <landing-floating-actions />
   </section>
 </template>
 

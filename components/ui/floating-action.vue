@@ -47,10 +47,15 @@ export default Vue.extend({
   cursor: pointer;
   border-radius: 8px;
   overflow: hidden;
+  transition: $--a-t;
 
   ::v-deep svg {
     width: 2.5rem !important;
     height: 2.5rem;
+  }
+
+  &:hover {
+    transform: scale(1.06);
   }
 }
 </style>
