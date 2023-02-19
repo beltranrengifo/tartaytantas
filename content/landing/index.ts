@@ -1,4 +1,5 @@
 import { SHOP_URL, WHATSAPP_URL } from '~/config/constants'
+import { getGridItemsFromCakes } from './getGridItems'
 
 export default [
   /* hero */
@@ -63,44 +64,7 @@ export default [
           containerTailwind: 'pt-36 pb-20',
           imageDir: 'cakes-grid',
           hoverSuffix: '-hover',
-          items: [
-            {
-              image: 'ny600.jpg',
-              title: 'NEW YORK CHEESECAKE',
-              description:
-                'Tarta de queso al horno, con base de galleta y cobertura de mermelada de frambuesa, dulce de leche o chocolate.',
-              listInfo:
-                'Molde de 24 cm, 10/12 raciones. 31,50 €\nMolde de 20 cm. 6/8 raciones. 27,00 €',
-              action: {
-                label: 'Comprar',
-                url: SHOP_URL,
-              },
-            },
-            {
-              image: 'carrot.jpg',
-              title: 'ZANAHORIA',
-              description:
-                'Bizcocho de zanahoria, canela y nueces trituradas con relleno y cobertura de crema de queso.',
-              listInfo:
-                'Molde de 24 cm, 10/12 raciones. 29,80 €\nMolde de 20 cm. 6/8 raciones. 27,00 €',
-              action: {
-                label: 'Comprar',
-                url: SHOP_URL,
-              },
-            },
-            {
-              image: 'bosco600.jpg',
-              title: 'BOSCO',
-              description:
-                'Tres pisos de bizcocho de chocolate,  con relleno y cobertura de chocolate con leche.',
-              listInfo:
-                'Molde de 24 cm, 10/12 raciones. 29,90 €\nMolde de 20 cm. 6/8 raciones. 27,00 €',
-              action: {
-                label: 'Comprar',
-                url: SHOP_URL,
-              },
-            },
-          ],
+          items: [...getGridItemsFromCakes()],
         },
       },
     ],
