@@ -82,7 +82,7 @@ export default [
               description:
                 'Bizcocho de zanahoria, canela y nueces trituradas con relleno y cobertura de crema de queso.',
               listInfo:
-                'Molde de 24 cm, 10/12 raciones. 29,80 €\nMolde de 20 cm. 6/8 raciones. 27,00 €',
+                'Molde de 24 cm, 10/12 raciones. 30,90 €\nMolde de 20 cm. 6/8 raciones. 28,00 €',
               action: {
                 label: 'Comprar',
                 url: SHOP_URL,
@@ -94,7 +94,7 @@ export default [
               description:
                 'Tres pisos de bizcocho de chocolate,  con relleno y cobertura de chocolate con leche.',
               listInfo:
-                'Molde de 24 cm, 10/12 raciones. 29,90 €\nMolde de 20 cm. 6/8 raciones. 27,00 €',
+                'Molde de 24 cm, 10/12 raciones. 30,90 €\nMolde de 20 cm. 6/8 raciones. 27,70 €',
               action: {
                 label: 'Comprar',
                 url: SHOP_URL,
