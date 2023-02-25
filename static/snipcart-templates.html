@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-    <head><title>Templates</title></head>
+    <head><title>Snipcart Templates</title></head>
 
     <body>
         <div id="snipcart-templates">
@@ -17,23 +17,27 @@
           <billing section="bottom">
             <fieldset class="snipcart-form__set">
                 <div class="snipcart-form__field">
-                    <snipcart-label for="customerType" class="snipcart__font--tiny" for="customerType">
-                        Selecciona la hora de recogida
+                    <snipcart-label class="snipcart__font--tiny" for="dia-de-recogida">
+                        Selecciona el día de recogida o entrega
                     </snipcart-label>
-                    <snipcart-select name="customerType" class="snipcart-form__select  snipcart__font--secondary snipcart__font--bold">
-                        <option value="Corporate">De lunes a viernes </option>
-                        <option value="Personal">Personal</option>
-                        <option value="NonProfit">Non-profit</option>
-                    </snipcart-select>
+                    <snipcart-input
+                      type="date"
+                      name="dia-de-recogida"
+                      placeholder="Elige el día de recogida o entrega"
+                      id="dia-de-recogida"
+                    />
                 </div>
+                <div class="snipcart-form__field">
+                  <snipcart-label for="tramo-de-entrega" class="snipcart__font--tiny" >
+                      Selecciona el tramo horario de entrega o recogida
+                  </snipcart-label>
+                  <snipcart-select name="tramo-de-entrega" class="snipcart-form__select  snipcart__font--secondary snipcart__font--bold" @load>
+                      <option value="Corporate">De lunes a sábado, de 10 a 14 horas</option>
+                      <option value="Corporate">De lunes a viernes, de 16 a 19 horas</option>
+                  </snipcart-select>
+              </div>
             </fieldset>
         </billing>
         </div>
     </body>
-    <script>
-      console.log('raw');
-      Snipcart.subscribe('page.validating', function(ev, data) {
-          console.log('page.validating');
-      });
-    </script>
 </html>

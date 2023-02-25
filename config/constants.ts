@@ -8,6 +8,6 @@ export const SNIPCART_PUBLIC_API_KEY: string =
 
 export const getDomain = () => {
   return process.env.NODE_ENV !== 'production'
-    ? 'https://c9de-139-47-82-16.eu.ngrok.io'
+    ? 'https://73ec-139-47-82-16.eu.ngrok.io'
     : 'https://tartaytantas.es'
 }
