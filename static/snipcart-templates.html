@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head><title>Templates</title></head>
+
+    <body>
+        <div id="snipcart-templates">
+            <!-- Insert template overrides here -->
+            <address-fields section="top">
+              <div>
+                  <snipcart-label for="phone">
+                      Teléfono
+                  </snipcart-label>
+                  <snipcart-input name="phone" required>
+                  </snipcart-input>
+              </div>
+          </address-fields>
+          <billing section="bottom">
+            <fieldset class="snipcart-form__set">
+                <div class="snipcart-form__field">
+                    <snipcart-label for="customerType" class="snipcart__font--tiny" for="customerType">
+                        Selecciona la hora de recogida
+                    </snipcart-label>
+                    <snipcart-select name="customerType" class="snipcart-form__select  snipcart__font--secondary snipcart__font--bold">
+                        <option value="Corporate">De lunes a viernes </option>
+                        <option value="Personal">Personal</option>
+                        <option value="NonProfit">Non-profit</option>
+                    </snipcart-select>
+                </div>
+            </fieldset>
+        </billing>
+        </div>
+    </body>
+    <script>
+      console.log('raw');
+      Snipcart.subscribe('page.validating', function(ev, data) {
+          console.log('page.validating');
+      });
+    </script>
+</html>

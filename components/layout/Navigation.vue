@@ -23,6 +23,34 @@
           {{ item.name }}
         </component>
       </li>
+      <li
+        class="navigation-item sm:mx-6"
+        :class="{
+          'navigation-item--is-sticky': $state.stickyNav,
+          'navigation-item--is-secondary': isSecondaryNav,
+        }"
+      >
+        <span
+          class="navigation-item__inner text-navigation snipcart-checkout cursor-pointer"
+        >
+          Cesta
+          <span class="snipcart-items-count"></span>
+          <span class="snipcart-total-price"></span>
+        </span>
+      </li>
+      <li
+        class="navigation-item sm:mx-6"
+        :class="{
+          'navigation-item--is-sticky': $state.stickyNav,
+          'navigation-item--is-secondary': isSecondaryNav,
+        }"
+      >
+        <button
+          class="navigation-item__inner text-navigation snipcart-checkout cursor-pointer snipcart-customer-signin"
+        >
+          Mi cuenta
+        </button>
+      </li>
     </ul>
   </nav>
 </template>
