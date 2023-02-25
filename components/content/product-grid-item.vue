@@ -68,8 +68,8 @@
           v-bind="{
             ...getBasicProductMetadata({ item, image: getImageSrc() }),
             ...item.buyButton,
+            class: 'product-grid-item__buy-button',
           }"
-          class="product-grid-item__buy-button"
         >
           Añadir a la cesta
         </button>
