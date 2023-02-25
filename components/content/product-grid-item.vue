@@ -63,6 +63,12 @@
             {{ listItem }}
           </li>
         </ul>
+        <button
+          v-if="item.buyButton && Object.keys(item.buyButton).length"
+          v-bind="item.buyButton"
+        >
+          {{ item.buyButton.label }}
+        </button>
         <interactive-tag
           v-if="item.action"
           :link="item.action.url"
