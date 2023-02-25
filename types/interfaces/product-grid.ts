@@ -5,6 +5,12 @@ export interface ProductItem {
   listInfo?: string
   hideListInfo?: boolean
   action: ItemAction
+  buyButton?: BuyButton
+}
+
+interface BuyButton {
+  classes?: string
+  label?: string
 }
 
 interface ItemAction {

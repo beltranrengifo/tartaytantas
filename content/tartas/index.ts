@@ -1,3 +1,5 @@
+import { getDomain } from '~/config/constants'
+
 export default [
   /* page nav */
   {
@@ -110,6 +112,20 @@ export default [
                 'Tarta de queso al horno, con base de galleta y un toque de Idiazábal.',
               listInfo:
                 'Molde de 24 cm, 10/12 raciones. 35,00 €\nMolde de 20 cm. 6/8 raciones. 29,00 €',
+              buyButton: {
+                class: 'snipcart-add-item',
+                label: 'Comprar',
+                'data-item-id': 'idiazabal',
+                'data-item-name': 'CHEESECAKE IDIAZABAL',
+                'data-item-price': '29.00',
+                'data-item-url': `${getDomain()}/tartas`,
+                'data-item-custom1-name': 'Tamaño',
+                'data-item-custom1-options':
+                  'Molde de 20 cm. 6/8 raciones|Molde de 24 cm. 10/12 raciones[+6.00]',
+                'data-item-description':
+                  'Tarta de queso al horno, con base de galleta y un toque de Idiazábal.',
+                'data-item-image': require('../../assets/images/cakes-grid/idiazabal.jpg'),
+              },
             },
             {
               image: 'carrot.jpg',
