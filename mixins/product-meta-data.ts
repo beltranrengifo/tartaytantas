@@ -12,7 +12,7 @@ export default Vue.extend({
       image: string
     }) {
       return {
-        class: 'snipcart-add-item',
+        class: 'snipcart-add-item buy-button',
         'data-item-id': this.getIdFromTitle(item.title),
         'data-item-name': item.title,
         'data-item-url': `${getDomain()}/tartas`,

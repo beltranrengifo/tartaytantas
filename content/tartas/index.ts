@@ -491,6 +491,15 @@ export default [
                 'La versión muffin de nuestras tartas, con el mismo relleno y cobertura. Mínimo 6u de cada tipo para encargo. 2,25 €',
               listInfo: 'Zanahoria\nBeltrán\nWendy\nBosco\nRed Velvet',
               hideListInfo: true,
+              buyButton: {
+                'data-item-price': '2.00',
+                'data-item-min-quantity': 6,
+                'data-item-custom1-name': 'Tipo',
+                'data-item-custom1-options':
+                  'Zanahoria|Beltrán|Wendy|Bosco|Red Velvet',
+                'data-item-quantity-step': 6,
+                'data-item-stackable': 'never',
+              },
             },
             {
               image: 'bizcochos.jpg',
@@ -499,6 +508,13 @@ export default [
               listInfo:
                 'Zanahoria\nVainilla\nOreo\nChocolate\nRed Velvet\nYogur\nCebra (vainilla y chocolate)\nVainilla sin azúcar\nChocolate sin azúcar\nCebra sin azúcar',
               hideListInfo: true,
+              buyButton: {
+                'data-item-price': '10.00',
+                'data-item-custom1-name': 'Tipo',
+                'data-item-custom1-options':
+                  'Zanahoria|Vainilla|Oreo|Chocolate|Red Velvet|Yogur|Cebra (vainilla y chocolate)',
+                'data-item-stackable': 'never',
+              },
             },
             {
               image: 'galletas600.jpg',
@@ -516,6 +532,13 @@ export default [
               listInfo:
                 '\nDe kinder bueno blanco\nDe kinder bueno blanco',
               hideListInfo: true,
+              buyButton: {
+                'data-item-price': '3.00',
+                'data-item-custom1-name': 'Tipo',
+                'data-item-custom1-options':
+                  'De pepitas de chocolate y nutella|De kinder bueno blanco|De Red Velvet con pepitas de chocolate y nutella blanca',
+                'data-item-stackable': 'never',
+              },
             },
           ],
         },

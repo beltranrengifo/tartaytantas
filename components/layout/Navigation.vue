@@ -34,8 +34,8 @@
           class="navigation-item__inner text-navigation snipcart-checkout cursor-pointer"
         >
           Cesta
-          <span class="snipcart-items-count"></span>
-          <span class="snipcart-total-price"></span>
+          <span v-show="cartCount" class="snipcart-items-count"></span>
+          <span v-show="cartCount" class="snipcart-total-price"></span>
         </span>
       </li>
       <li
@@ -46,9 +46,12 @@
         }"
       >
         <button
-          class="navigation-item__inner text-navigation snipcart-checkout cursor-pointer snipcart-customer-signin"
+          class="navigation-item__inner text-navigation snipcart-checkout cursor-pointer snipcart-customer-signin navigation-item__account"
         >
-          Mi cuenta
+          <img
+            :src="require('@/assets/images/user-profile-account-person.svg')"
+            alt="Mi cuenta"
+          />
         </button>
       </li>
     </ul>
@@ -77,7 +80,18 @@ export default Vue.extend({
   data() {
     return {
       navigation,
+      cartCount: 0,
     }
+  },
+
+  created() {
+    if (!process.client) return
+    document.addEventListener('snipcart.ready', () => {
+      Snipcart.store.subscribe(() => {
+        this.cartCount = Snipcart.store.getState().cart.items.count
+        console.log(this.cartCount)
+      })
+    })
   },
 
   computed: {
@@ -118,6 +132,24 @@ export default Vue.extend({
 <style lang="scss" scoped>
 .navigation-item {
   $--self: &;
+
+  .snipcart-total-price,
+  .snipcart-items-count {
+    background-color: var(--color-primary);
+    text-align: center;
+    color: var(--color-dark);
+    font-size: 12px;
+  }
+  .snipcart-total-price {
+    border-radius: 8px;
+    padding: 2px 4px;
+  }
+  .snipcart-items-count {
+    display: inline-block;
+    border-radius: 50%;
+    width: 18px;
+    height: 18px;
+  }
 
   transition: $--nav-item-t;
   &__inner {
@@ -177,6 +209,14 @@ export default Vue.extend({
 }
 .navigation {
   $--self: &;
+
+  .navigation-item {
+    &__account {
+      img {
+        width: 26px;
+      }
+    }
+  }
 
   &--is-mobile {
     #{$--self}__list {
