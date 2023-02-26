@@ -89,7 +89,6 @@ export default Vue.extend({
     document.addEventListener('snipcart.ready', () => {
       Snipcart.store.subscribe(() => {
         this.cartCount = Snipcart.store.getState().cart.items.count
-        console.log(this.cartCount)
       })
     })
   },
