@@ -63,16 +63,7 @@
             {{ listItem }}
           </li>
         </ul>
-        <button
-          v-if="item.buyButton"
-          v-bind="{
-            ...getBasicProductMetadata({ item, image: getImageSrc() }),
-            ...item.buyButton,
-            class: 'product-grid-item__buy-button',
-          }"
-        >
-          Añadir a la cesta
-        </button>
+        <buy-button v-if="item.buyButton" :item="item" :image="getImageSrc()" />
         <interactive-tag
           v-if="item.action"
           :link="item.action.url"
@@ -90,7 +81,6 @@
 import Vue from 'vue'
 import { ProductItem, ProductGrid } from '@/types'
 import { SHOP_URL } from '@/config/constants'
-import ProductMetaData from '@/mixins/product-meta-data'
 
 interface getImageSrcParams {
   useSecondary?: boolean
@@ -99,8 +89,6 @@ interface getImageSrcParams {
 
 export default Vue.extend({
   name: 'ProductGridItem',
-
-  mixins: [ProductMetaData],
 
   props: {
     item: {
@@ -170,11 +158,6 @@ export default Vue.extend({
 
 <style lang="scss" scoped>
 .product-grid-item {
-  &__buy-button {
-    padding: 8px;
-    background: white;
-    border: 2px solid var(--color-primary);
-  }
   &__content {
     transition: max-height 0.4s ease-out;
   }
