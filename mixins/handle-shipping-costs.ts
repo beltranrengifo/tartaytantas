@@ -104,7 +104,7 @@ export default Vue.extend({
             const alert = document.createElement('div')
             alert.classList.add('tt-snipcart-alert')
             alert.innerHTML = `
-              Según nuestros cálculos, el punto de entrega está a más de 10 km de distancia de nuestro obrador.<br/>
+              Según nuestros cálculos, el punto de entrega está a más de 10 km de distancia de nuestro obrador (${distance} m).<br/>
               Sentimos comunicarte que aún no tenemos disponible la entrega para esta distancia.
               Ven al obrador a recoger tu pedido o, si no te es posible, llámanos por teléfono o escríbenos un Whatsapp al
               <a href="https://wa.me/34663398161?text=Quiero una tarta! :D" target="_blank">663398161</a> y vemos cómo ayudarte.
