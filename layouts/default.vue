@@ -20,12 +20,15 @@ import Vue from 'vue'
 import { debounce } from 'lodash'
 
 import Parallax from '@/mixins/parallax.vue'
+import HandleShippingCosts from '~/mixins/handle-shipping-costs'
 import { layout } from '@/content'
 
 import { SHOW_MENU_SCROLL_THRESHOLD } from '@/config'
 
+declare const Snipcart: any
+
 export default Vue.extend({
-  mixins: [Parallax],
+  mixins: [Parallax, HandleShippingCosts],
 
   fetch(): void {
     const { footer } = layout
@@ -50,6 +53,21 @@ export default Vue.extend({
     }, 25)
 
     this.$state.handleScreenSize()
+  },
+  created() {
+    if (!process.client) return
+
+    document.addEventListener(
+      'snipcart.ready',
+      () => {
+        Snipcart.events.on('shipping.selected', () => {
+          this.handleShippingCosts({
+            snipcartStoreState: Snipcart.store.getState(),
+          })
+        })
+      },
+      { once: true }
+    )
   },
 
   head() {

@@ -4,9 +4,9 @@
 
     <body>
         <div id="snipcart-templates">
-            <!-- Insert template overrides here -->
+            <!-- add phone to billing -->
             <address-fields section="top">
-              <div>
+              <div class="snipcart-form__field snipcart-form__cell--large">
                   <snipcart-label for="phone">
                       Teléfono
                   </snipcart-label>
@@ -14,30 +14,127 @@
                   </snipcart-input>
               </div>
           </address-fields>
-          <billing section="bottom">
-            <fieldset class="snipcart-form__set">
-                <div class="snipcart-form__field">
-                    <snipcart-label class="snipcart__font--tiny" for="dia-de-recogida">
-                        Selecciona el día de recogida o entrega
-                    </snipcart-label>
-                    <snipcart-input
-                      type="date"
-                      name="dia-de-recogida"
-                      placeholder="Elige el día de recogida o entrega"
-                      id="dia-de-recogida"
-                    />
+          <!-- custom shipping fields -->
+          <shipping-method>
+            <div>
+                <div class="snipcart__box">
+                    <div class="snipcart__box--header">
+                        <div class="snipcart__box--title">
+                            <div class="snipcart__box--badge snipcart__box--badge snipcart__box--badge-highlight snipcart__font--bold snipcart__font--secondary">{{ number }}</div>
+                            <h1 class="snipcart__font--subtitle">{{ $localize("shipping.title") }}</h1>
+                        </div>
+                        <button-link label="actions.edit" @click="editAddress"></button-link>
+                    </div>
+
+                    <snipcart-form-error></snipcart-form-error>
+
+                    <div
+                      v-if="Snipcart.store.getState().cart.shippingDetails.method === 'Envío estandar'"
+                      class="snipcart-shipping-address--readonly"
+                    >
+                        <div class="snipcart-shipping-address__header--readonly">
+                            <h3 class="snipcart-shipping-address__subtitle">{{ $localize("shipping.shipping_to") }}</h3>
+                        </div>
+                        <div class="snipcart-shipping-address__address-field snipcart-shipping-address__content snipcart-shipping-address__content--readonly snipcart__font--std">
+                            <strong class="snipcart__notice--with-icon snipcart__font--secondary snipcart__font--bold">
+                                <icon
+                                    name="location"
+                                    class="snipcart__notice__icon"
+                                ></icon>{{ shippingAddress | fullAddress }}
+                            </strong>
+                        </div>
+                    </div>
+                    <loading-component
+                        message="shippingRates.loading"
+                        :is-loading="ratesAreLoading"
+                    >
+                        <overridable
+                            name="shipping-method"
+                            section="top"
+                        ></overridable>
+                        <shipping-rates-list item-template="shipping-rates-list-item"></shipping-rates-list>
+                        <overridable
+                            name="shipping-method"
+                            section="bottom"
+                        ></overridable>
+                        <fieldset class="snipcart-form__set">
+                          <div class="snipcart-form__field">
+                              <snipcart-label class="snipcart__font--tiny" for="dia-de-recogida">
+                                  Selecciona el día de recogida o entrega
+                              </snipcart-label>
+                              <snipcart-input
+                                type="date"
+                                name="dia-de-recogida"
+                                placeholder="Elige el día de recogida o entrega"
+                                id="dia-de-recogida"
+                              />
+                          </div>
+                          <div class="snipcart-form__field">
+                            <snipcart-label for="tramo-de-entrega" class="snipcart__font--tiny" >
+                                Selecciona el tramo horario de recogida o entrega
+                            </snipcart-label>
+                            <snipcart-select name="tramo-de-entrega" class="snipcart-form__select  snipcart__font--secondary snipcart__font--bold" @load>
+                                <option value="de 10 a 14 horas">De lunes a sábado, de 10 a 14 horas</option>
+                                <option value="de 16 a 19 horas">De lunes a viernes, de 16 a 19 horas</option>
+                            </snipcart-select>
+                        </div>
+                      </fieldset>
+                        <div class="snipcart-form__footer">
+                            <snipcart-submit
+                                label="payment.continue_to_payment"
+                                :state="submitState"
+                            ></snipcart-submit>
+                        </div>
+                    </loading-component>
                 </div>
-                <div class="snipcart-form__field">
-                  <snipcart-label for="tramo-de-entrega" class="snipcart__font--tiny" >
-                      Selecciona el tramo horario de entrega o recogida
-                  </snipcart-label>
-                  <snipcart-select name="tramo-de-entrega" class="snipcart-form__select  snipcart__font--secondary snipcart__font--bold" @load>
-                      <option value="Corporate">De lunes a sábado, de 10 a 14 horas</option>
-                      <option value="Corporate">De lunes a viernes, de 16 a 19 horas</option>
-                  </snipcart-select>
+            </div>
+          </shipping-method>
+          <!-- shipping resume -->
+          <shipping-completed>
+            <div class="snipcart__box snipcart-shipping-completed">
+              <div class="snipcart-shipping-completed__header snipcart__box--header">
+                  <div class="snipcart__box--title">
+                      <div class="snipcart__box--badge snipcart__font--bold snipcart__font--secondary" v-if="checkout">
+                          <icon name="checkmark" class="snipcart__icon"></icon>
+                      </div>
+                      <h1 class="snipcart-shipping-completed__title snipcart__font--subtitle">
+                          <icon name="box" class="snipcart__icon--left" v-if="!checkout"></icon>
+                          {{ $localize('shipping.title') }}
+                      </h1>
+                  </div>
+                  <button-link
+                      v-if="checkout"
+                      label="actions.edit"
+                      @click="edit"
+                  ></button-link>
               </div>
-            </fieldset>
-        </billing>
+
+              <div class="snipcart-checkout-step__cols snipcart__font--std">
+                  <div
+                    v-if="Snipcart.store.getState().cart.shippingDetails.method === 'Envío estandar'"
+                    class="snipcart-checkout-step__col"
+                  >
+                      <div class="snipcart-checkout-step__icon snipcart-shipping-completed__step-icon">
+                          <icon name="location"></icon>
+                      </div>
+                      <div class="snipcart__address__display">
+                          <h3 class="snipcart-checkout-step__title snipcart-shipping-completed__step-title snipcart__font--secondary snipcart__font--bold">{{ $localize('shipping.address') }}</h3>
+                          <span class="snipcart-shipping-completed__information snipcart__font--std">{{ cart.shippingAddress | fullAddress }}</span>
+                      </div>
+                  </div>
+
+                  <div class="snipcart-checkout-step__col">
+                      <div class="snipcart-checkout-step__icon snipcart-shipping-completed__step-icon">
+                          <icon name="box"></icon>
+                      </div>
+                      <div>
+                          <h3 class="snipcart-checkout-step__title snipcart-shipping-completed__step-title snipcart__font--secondary snipcart__font--bold">{{ $localize('shipping.method') }}</h3>
+                          <span class="snipcart-shipping-completed__information">{{ methodName }}</span>
+                      </div>
+                  </div>
+              </div>
+            </div>
+          </shipping-completed>
         </div>
     </body>
 </html>
