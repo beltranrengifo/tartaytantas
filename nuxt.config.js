@@ -1,4 +1,5 @@
 import favicons from './config/favicons'
+import { GOOGLE_API_KEY } from './config/constants'
 
 export default {
   target: 'static',
@@ -35,6 +36,11 @@ export default {
       {
         src: 'https://www.googletagmanager.com/gtag/js?id=G-13Y327VN7S',
         async: true,
+      },
+      {
+        hid: 'maps-routes-api',
+        src: `https://maps.googleapis.com/maps/api/js?key=${GOOGLE_API_KEY}&libraries=directions`,
+        defer: true,
       },
     ],
   },

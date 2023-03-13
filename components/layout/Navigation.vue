@@ -63,6 +63,8 @@ import Vue from 'vue'
 import { navigation } from '@/config'
 import { NavigationItem } from '@/types/index'
 
+declare const Snipcart: any
+
 export default Vue.extend({
   name: 'Navigation',
 
