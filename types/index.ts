@@ -13,6 +13,8 @@ import { OnePageNav } from './interfaces/one-page-nav'
 import { CallToAction, CtaButton } from './interfaces/call-to-action'
 import { FloatingAction } from './interfaces/floating-action'
 
+type SnipcartStoreState = any
+
 export {
   NavigationItem,
   Hero,
@@ -31,4 +33,5 @@ export {
   CallToAction,
   CtaButton,
   FloatingAction,
+  SnipcartStoreState,
 }
