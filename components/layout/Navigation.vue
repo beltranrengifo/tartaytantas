@@ -31,10 +31,10 @@
         }"
       >
         <span
-          class="navigation-item__inner text-navigation snipcart-checkout cursor-pointer"
+          class="navigation-item__inner text-navigation snipcart-checkout cursor-pointer relative snipcart-items-info"
         >
-          Cesta
           <span v-show="cartCount" class="snipcart-items-count"></span>
+          Cesta
           <span v-show="cartCount" class="snipcart-total-price"></span>
         </span>
       </li>
@@ -134,22 +134,30 @@ export default Vue.extend({
 .navigation-item {
   $--self: &;
 
+  .snipcart-items-info {
+    padding-right: 24px;
+  }
+
   .snipcart-total-price,
   .snipcart-items-count {
     background-color: var(--color-primary);
     text-align: center;
     color: var(--color-dark);
     font-size: 12px;
+    position: absolute;
+    height: 18px;
+    display: inline-block;
   }
   .snipcart-total-price {
     border-radius: 8px;
-    padding: 2px 4px;
+    padding: 1px 6px;
+    right: -34px;
+    top: -5px;
   }
   .snipcart-items-count {
-    display: inline-block;
     border-radius: 50%;
     width: 18px;
-    height: 18px;
+    left: -20px;
   }
 
   transition: $--nav-item-t;
