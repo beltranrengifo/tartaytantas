@@ -8,6 +8,58 @@
   --color-brand-secondary: #e4e1d9;
   --color-dark: #463737;
   --color-white: #fff;
+
+  /* =============
+  Snipcart theming
+  =============== */
+  /* primary button */
+  --color-buttonPrimary: var(--color-base);
+  --borderColor-buttonPrimary: var(--color-primary);
+  --bgColor-buttonPrimary: var(--color-white);
+  /* primary button hover */
+  --color-buttonPrimary-hover: var(--color-base);
+  --borderColor-buttonPrimary-hover: var(--color-primary);
+  --bgColor-buttonPrimary-hover: var(--color-tertiary);
+  --shadow-buttonPrimary-hover: none;
+  /* secondary button */
+  --bgColor-buttonSecondary: var(--color-white);
+  --color-buttonSecondary: var(--color-base);
+  /* secondary button hover */
+  --bgColor-buttonSecondary-hover: var(--color-primary);
+  --color-buttonSecondary-hover: var(--color-white);
+  /* Disabled button and also loading state*/
+  --color-buttonPrimary-disabled: var(--color-brand-secondary);
+  --borderColor-buttonPrimary-disabled: var(--color-secondary);
+  --bgColor-buttonPrimary-disabled: var(--color-secondary);
+  /* primary link */
+  --color-link: var(--color-base);
+  --borderColor-link: var(--color-primary);
+  /* primary link hover */
+  --color-link-hover: var(--color-base);
+  --borderColor-link-hover: var(--color-primary);
+  /* Badge default (completed) */
+  --color-badge: var(--color-primary);
+  --borderColor-badge: var(--color-primary);
+  --bgColor-badge: var(--color-white);
+  /* Badge active */
+  --color-badge-active: var(--color-secondary);
+  --borderColor-badge-active: var(--color-secondary);
+  --bgColor-badge-active: var(--color-white);
+  /* Badge disabled */
+  --color-badge-disabled: var(--color-brand-secondary);
+  --borderColor-badge-disabled: var(--color-brand-secondary);
+  --bgColor-badge-disabled: var(--color-white);
+  /* Input hover */
+  --borderColor-input-hover: var(--color-primary);
+  /* Input focus */
+  --borderColor-input-focus: var(--color-primary);
+  --shadow-input-focus: 0 5px 10px -3px rgb(249 186 19 / 24%);
+  /* Checkboxes */
+  --color-input-checked: var(--color-white);
+  --borderColor-input-checked: var(--color-primary);
+  --bgColor-input-checked: var(--color-primary);
+  /* Icon */
+  --color-icon: var(--color-primary);
 }
 
 /**
