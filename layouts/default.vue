@@ -62,7 +62,14 @@ export default Vue.extend({
     document.addEventListener(
       'snipcart.ready',
       () => {
-        document.addEventListener('click', this.handleDeliveryDate)
+        Snipcart.events.on(
+          'theme.routechanged',
+          (routesChange: { from: string; to: string }) => {
+            if (routesChange.to.includes('checkout')) {
+              document.addEventListener('click', this.handleDeliveryDate)
+            }
+          }
+        )
 
         Snipcart.events.on('shipping.selected', () => {
           this.handleShippingCosts({
