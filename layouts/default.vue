@@ -21,6 +21,7 @@ import { debounce } from 'lodash'
 
 import Parallax from '@/mixins/parallax.vue'
 import HandleShippingCosts from '~/mixins/handle-shipping-costs'
+import HandleDeliveryDate from '~/mixins/handle-delivery-date'
 import { layout } from '@/content'
 
 import { SHOW_MENU_SCROLL_THRESHOLD } from '@/config'
@@ -28,7 +29,7 @@ import { SHOW_MENU_SCROLL_THRESHOLD } from '@/config'
 declare const Snipcart: any
 
 export default Vue.extend({
-  mixins: [Parallax, HandleShippingCosts],
+  mixins: [Parallax, HandleShippingCosts, HandleDeliveryDate],
 
   fetch(): void {
     const { footer } = layout
@@ -54,15 +55,18 @@ export default Vue.extend({
 
     this.$state.handleScreenSize()
   },
+
   created() {
     if (!process.client) return
 
     document.addEventListener(
       'snipcart.ready',
       () => {
+        document.addEventListener('click', this.handleDeliveryDate)
+
         Snipcart.events.on('shipping.selected', () => {
           this.handleShippingCosts({
-            snipcartStoreState: Snipcart.store.getState(),
+            snipcartStore: Snipcart.store,
           })
         })
       },

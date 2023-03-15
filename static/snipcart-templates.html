@@ -63,6 +63,7 @@
                                   Selecciona el día de recogida o entrega
                               </snipcart-label>
                               <snipcart-input
+                                required
                                 type="date"
                                 name="dia-de-recogida"
                                 placeholder="Elige el día de recogida o entrega"
@@ -73,9 +74,10 @@
                             <snipcart-label for="tramo-de-entrega" class="snipcart__font--tiny" >
                                 Selecciona el tramo horario de recogida o entrega
                             </snipcart-label>
-                            <snipcart-select name="tramo-de-entrega" class="snipcart-form__select  snipcart__font--secondary snipcart__font--bold" @load>
-                                <option value="de 10 a 14 horas">De lunes a sábado, de 10 a 14 horas</option>
-                                <option value="de 16 a 19 horas">De lunes a viernes, de 16 a 19 horas</option>
+                            <snipcart-select required id="tramo-de-entrega" name="tramo-de-entrega" class="snipcart-form__select  snipcart__font--secondary snipcart__font--bold" @load>
+                                <option value="" disabled selected>Selecciona tramo horario</option>
+                                <option value="de 10 a 14 horas" id="tramo-de-entrega-manana">De 10 a 14 horas</option>
+                                <option value="de 16 a 19 horas" id="tramo-de-entrega-tarde">De 16 a 19 horas</option>
                             </snipcart-select>
                         </div>
                       </fieldset>
@@ -129,7 +131,7 @@
                       </div>
                       <div>
                           <h3 class="snipcart-checkout-step__title snipcart-shipping-completed__step-title snipcart__font--secondary snipcart__font--bold">{{ $localize('shipping.method') }}</h3>
-                          <span class="snipcart-shipping-completed__information">{{ methodName }}</span>
+                          <span class="snipcart-shipping-completed__information">{{ Snipcart.store.getState().cart.shippingDetails.method }}</span>
                       </div>
                   </div>
               </div>

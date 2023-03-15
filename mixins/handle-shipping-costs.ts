@@ -3,17 +3,22 @@ import {
   GOOGLE_ROUTES_API_KEY,
   TARTAYTANTAS_LAT_LONG,
 } from '~/config/constants'
-import { SnipcartStoreState } from '~/types'
+import { SnipcartStore } from '~/types'
 
 declare const Snipcart: any
 
 export default Vue.extend({
   methods: {
-    async getDistance(geocodeAddressUrl: string): Promise<number> {
+    async getDistance(geocodeAddressUrl: string): Promise<number | undefined> {
       const geocodingResponse = await fetch(
         `https://maps.googleapis.com/maps/api/geocode/json?address=${geocodeAddressUrl}&key=${GOOGLE_ROUTES_API_KEY}`
       )
+
+      if (!geocodingResponse) return
+
       const geocodingData = await geocodingResponse.json()
+
+      if (!geocodingData) return
 
       const routeResponse = await fetch(
         'https://routes.googleapis.com/directions/v2:computeRoutes',
@@ -37,8 +42,8 @@ export default Vue.extend({
             destination: {
               location: {
                 latLng: {
-                  latitude: geocodingData.results[0].geometry.location.lat,
-                  longitude: geocodingData.results[0].geometry.location.lng,
+                  latitude: geocodingData?.results[0]?.geometry.location.lat,
+                  longitude: geocodingData?.results[0]?.geometry.location.lng,
                 },
               },
             },
@@ -61,10 +66,11 @@ export default Vue.extend({
     },
 
     async handleShippingCosts({
-      snipcartStoreState,
+      snipcartStore,
     }: {
-      snipcartStoreState: SnipcartStoreState
+      snipcartStore: SnipcartStore
     }): Promise<void> {
+      const snipcartStoreState = snipcartStore.getState()
       const shippingAddress = snipcartStoreState.cart.shippingAddress
 
       if (!shippingAddress) return
@@ -75,6 +81,7 @@ export default Vue.extend({
         const distance = await this.getDistance(geocodeAddressUrl)
 
         if (
+          distance &&
           distance > 10000 &&
           snipcartStoreState.cart.shippingDetails.method === 'Envío estandar'
         ) {
@@ -86,15 +93,16 @@ export default Vue.extend({
           )
 
           if (selectShippingButton) {
-            // @ts-expect-error
-            selectShippingButton.style.opacity = 0.3
-            // @ts-expect-error
-            selectShippingButton.style.pointerEvents = 'none'
-
             await Snipcart.api.cart.setShippingInformation({
               method: 'Recogida en tienda',
               cost: 0,
             })
+
+            const existingAlert = document.getElementById('tt-distance-alert')
+
+            if (existingAlert) {
+              return
+            }
 
             const titleNode = document.querySelector(
               '#snipcart-checkout-step-shipping h1.snipcart__font--subtitle'
@@ -103,7 +111,9 @@ export default Vue.extend({
 
             const alert = document.createElement('div')
             alert.classList.add('tt-snipcart-alert')
+            alert.setAttribute('id', 'tt-distance-alert')
             alert.innerHTML = `
+              <h4>El envío no está disponible.</h4>
               Según nuestros cálculos, el punto de entrega está a más de 10 km de distancia de nuestro obrador (${distance} m).<br/>
               Sentimos comunicarte que aún no tenemos disponible la entrega para esta distancia.
               Ven al obrador a recoger tu pedido o, si no te es posible, llámanos por teléfono o escríbenos un Whatsapp al
