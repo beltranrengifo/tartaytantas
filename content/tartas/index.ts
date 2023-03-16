@@ -404,10 +404,16 @@ export default [
               description:
                 'Algunas de nuestras tartas en formato individual. De la abuela, oreo, banoffee y vasito de mango y crema de queso. ',
               listInfo: 'Vasito individual 4€',
-              buyButton: getBuyButtonStandardCakeSpecificInfo({
-                basePrice: '4.00',
-                useCustomSizeString: 'Vasito individual',
-              }),
+              buyButton: {
+                ...getBuyButtonStandardCakeSpecificInfo({
+                  basePrice: '4.00',
+                  useCustomSizeString: 'Vasito individual',
+                }),
+                'data-item-min-quantity': 6,
+                'data-item-custom1-name': 'Tipo',
+                'data-item-custom1-options':
+                  'De la abuela|Oreo|Banoffee|Mango y crema de queso',
+              },
             },
           ],
         },
@@ -497,7 +503,6 @@ export default [
                 'data-item-custom1-name': 'Tipo',
                 'data-item-custom1-options':
                   'Zanahoria|Beltrán|Wendy|Bosco|Red Velvet',
-                'data-item-quantity-step': 6,
                 'data-item-stackable': 'never',
               },
             },
@@ -533,6 +538,7 @@ export default [
                 '\nDe pepitas de chocolate y nutella\nDe kinder bueno blanco\nDe Red Velvet con pepitas de chocolate y nutella blanca',
               hideListInfo: true,
               buyButton: {
+                'data-item-min-quantity': 3,
                 'data-item-price': '3.00',
                 'data-item-custom1-name': 'Tipo',
                 'data-item-custom1-options':
