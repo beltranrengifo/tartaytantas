@@ -527,7 +527,8 @@ export default [
             {
               image: 'galletas600.jpg',
               title: 'COOKIES',
-              description: 'Aprox 25 g /0,60€ unidad, consultar disponibilidad en tienda',
+              description:
+                'Aprox 25 g /0,60€ unidad, consultar disponibilidad en tienda',
               listInfo:
                 '\nCon lacasitos\nCon pepitas de chocolate\nDoble chocolate\nCon chocolate blanco y nuez\nRed Velvet con pepitas de chocolate blanco\nDe limón\nDe mantequilla\nDe cacahuete\nDe jengibre',
               hideListInfo: true,
@@ -537,8 +538,7 @@ export default [
               title: 'SUPERCOOKIES',
               description:
                 'Super cookies blanditas por el centro y con relleno y crujientes en el borde. 3,00€, mínimo 3u de cada tipo',
-              listInfo:
-                '\nDe kinder bueno blanco\nDe kinder bueno blanco',
+              listInfo: '\nDe kinder bueno blanco\nDe kinder bueno blanco',
               hideListInfo: true,
               buyButton: {
                 'data-item-min-quantity': 3,
