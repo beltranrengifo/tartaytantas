@@ -138,7 +138,7 @@ export default Vue.extend({
   .snipcart-items-count {
     background-color: var(--color-primary);
     text-align: center;
-    color: var(--color-dark);
+    color: var(--color-white);
     font-size: 12px;
     position: relative;
     top: -3px;
