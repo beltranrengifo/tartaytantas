@@ -1,4 +1,5 @@
 import Vue from 'vue'
+import { vacations } from '~/config'
 
 export default Vue.extend({
   methods: {
@@ -52,9 +53,11 @@ export default Vue.extend({
     showWeAreClosedAlert({
       input,
       hide = false,
+      message,
     }: {
       input: Element
       hide?: boolean
+      message: string
     }) {
       if (hide) {
         const alertToRemove = document.querySelector('.tt-snipcart-alert')
@@ -74,10 +77,14 @@ export default Vue.extend({
 
       alert.classList.add('tt-snipcart-alert')
       alert.setAttribute('id', 'tt-shop-closed-alert')
-      alert.innerHTML = `
-        No tenemos disponible la entrega para los domingos, por favor selecciona otro día. Disculpa las molestias.
-      `
+      alert.innerHTML = message
       wrapper?.after(alert)
+    },
+
+    resetDate(input: HTMLInputElement) {
+      input.value = ''
+      input.valueAsDate = null
+      input.dispatchEvent(new Event('input'))
     },
 
     handleDeliveryDate() {
@@ -98,7 +105,12 @@ export default Vue.extend({
         const selectedDay = new Date(selectedDayStringValue).getDay()
 
         if (!isNaN(selectedDay) && selectedDay !== 0) {
-          this.showWeAreClosedAlert({ input, hide: true })
+          this.showWeAreClosedAlert({
+            input,
+            hide: true,
+            message:
+              'No tenemos disponible la entrega para los domingos, por favor selecciona otro día. Disculpa las molestias.',
+          })
         }
 
         if (!isNaN(selectedDay)) {
@@ -112,15 +124,30 @@ export default Vue.extend({
           })
         }
 
-        if (selectedDay === 6) {
-          this.disablePickUpOption({ selectorId: 'tramo-de-entrega-tarde' })
-        } else if (selectedDay === 0) {
-          input.value = ''
-          input.valueAsDate = null
-          input.dispatchEvent(new Event('input'))
+        if (vacations.includes(selectedDayStringValue)) {
+          this.resetDate(input)
+
           this.disablePickUpOption({ selectorId: 'tramo-de-entrega-manana' })
           this.disablePickUpOption({ selectorId: 'tramo-de-entrega-tarde' })
-          this.showWeAreClosedAlert({ input })
+
+          this.showWeAreClosedAlert({
+            input,
+            message:
+              'Vaya, el día que has seleccionado estamos de vacaciones 💃🏻, por favor elige otra fecha y disculpa las molestias.',
+          })
+        } else if (selectedDay === 6) {
+          this.disablePickUpOption({ selectorId: 'tramo-de-entrega-tarde' })
+        } else if (selectedDay === 0) {
+          this.resetDate(input)
+
+          this.disablePickUpOption({ selectorId: 'tramo-de-entrega-manana' })
+          this.disablePickUpOption({ selectorId: 'tramo-de-entrega-tarde' })
+
+          this.showWeAreClosedAlert({
+            input,
+            message:
+              'No tenemos disponible la entrega para los domingos, por favor selecciona otro día. Disculpa las molestias.',
+          })
         }
       })
     },
