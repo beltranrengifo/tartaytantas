@@ -43,6 +43,9 @@ export default [
   /* page nav */
   {
     name: 'page-nav',
+    options: {
+      fullwidth: true,
+    },
     components: [
       {
         name: 'one-page-nav',
