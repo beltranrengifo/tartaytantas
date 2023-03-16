@@ -134,30 +134,24 @@ export default Vue.extend({
 .navigation-item {
   $--self: &;
 
-  .snipcart-items-info {
-    padding-right: 24px;
-  }
-
   .snipcart-total-price,
   .snipcart-items-count {
     background-color: var(--color-primary);
     text-align: center;
     color: var(--color-dark);
     font-size: 12px;
-    position: absolute;
+    position: relative;
+    top: -3px;
     height: 18px;
     display: inline-block;
   }
   .snipcart-total-price {
     border-radius: 8px;
     padding: 1px 6px;
-    right: -34px;
-    top: -5px;
   }
   .snipcart-items-count {
     border-radius: 50%;
     width: 18px;
-    left: -20px;
   }
 
   transition: $--nav-item-t;
