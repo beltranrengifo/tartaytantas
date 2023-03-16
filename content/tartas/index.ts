@@ -405,7 +405,7 @@ export default [
               image: 'vasitos600.jpg',
               title: 'INDIVIDUALES',
               description:
-                'Algunas de nuestras tartas en formato individual. De la abuela, oreo, banoffee y vasito de mango y crema de queso. ',
+                'Algunas de nuestras tartas en formato individual. De la abuela, oreo, banoffee y mango y crema de queso. Mínimo 6 unidades de cada tipo para encargo.',
               listInfo: 'Vasito individual 4€',
               buyButton: {
                 ...getBuyButtonStandardCakeSpecificInfo({
@@ -536,7 +536,7 @@ export default [
               image: 'supercookies600.jpg',
               title: 'SUPERCOOKIES',
               description:
-                'Super cookies blanditas por el centro y con relleno y crujientes en el borde. 3,00€',
+                'Super cookies blanditas por el centro y con relleno y crujientes en el borde. Mínimo 3 unidades de cada tipo para encargo. 3,00€',
               listInfo:
                 '\nDe pepitas de chocolate y nutella\nDe kinder bueno blanco\nDe Red Velvet con pepitas de chocolate y nutella blanca',
               hideListInfo: true,
