@@ -50,7 +50,7 @@ export default Vue.extend({
       option?.setAttribute('disabled', 'true')
     },
 
-    showWeAreClosedAlert({
+    handleWeAreClosedAlert({
       input,
       hide = false,
       message,
@@ -105,7 +105,7 @@ export default Vue.extend({
         const selectedDay = new Date(selectedDayStringValue).getDay()
 
         if (!isNaN(selectedDay) && selectedDay !== 0) {
-          this.showWeAreClosedAlert({
+          this.handleWeAreClosedAlert({
             input,
             hide: true,
             message:
@@ -137,7 +137,7 @@ export default Vue.extend({
             this.disablePickUpOption({ selectorId: 'tramo-de-entrega-manana' })
             this.disablePickUpOption({ selectorId: 'tramo-de-entrega-tarde' })
 
-            this.showWeAreClosedAlert({
+            this.handleWeAreClosedAlert({
               input,
               message:
                 'Vaya, el día que has seleccionado estamos de vacaciones 💃🏻, por favor elige otra fecha y disculpa las molestias.',
@@ -151,7 +151,7 @@ export default Vue.extend({
           this.disablePickUpOption({ selectorId: 'tramo-de-entrega-manana' })
           this.disablePickUpOption({ selectorId: 'tramo-de-entrega-tarde' })
 
-          this.showWeAreClosedAlert({
+          this.handleWeAreClosedAlert({
             input,
             message:
               'No tenemos disponible la entrega para los domingos, por favor selecciona otro día. Disculpa las molestias.',
