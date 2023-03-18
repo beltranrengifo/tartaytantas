@@ -27,7 +27,7 @@ export default Vue.extend({
       return this.addDays(sumDays).toISOString().split('T')[0]
     },
 
-    disablePickUpOption({
+    handlePickUpOption({
       selectorId,
       enable,
     }: {
@@ -114,11 +114,11 @@ export default Vue.extend({
         }
 
         if (!isNaN(selectedDay)) {
-          this.disablePickUpOption({
+          this.handlePickUpOption({
             selectorId: 'tramo-de-entrega-tarde',
             enable: true,
           })
-          this.disablePickUpOption({
+          this.handlePickUpOption({
             selectorId: 'tramo-de-entrega-manana',
             enable: true,
           })
@@ -134,8 +134,8 @@ export default Vue.extend({
           if (vacationsDayDate.toString() === currentDayDate.toString()) {
             this.resetDate(input)
 
-            this.disablePickUpOption({ selectorId: 'tramo-de-entrega-manana' })
-            this.disablePickUpOption({ selectorId: 'tramo-de-entrega-tarde' })
+            this.handlePickUpOption({ selectorId: 'tramo-de-entrega-manana' })
+            this.handlePickUpOption({ selectorId: 'tramo-de-entrega-tarde' })
 
             this.handleWeAreClosedAlert({
               input,
@@ -144,12 +144,12 @@ export default Vue.extend({
             })
           }
         } else if (selectedDay === 6) {
-          this.disablePickUpOption({ selectorId: 'tramo-de-entrega-tarde' })
+          this.handlePickUpOption({ selectorId: 'tramo-de-entrega-tarde' })
         } else if (selectedDay === 0) {
           this.resetDate(input)
 
-          this.disablePickUpOption({ selectorId: 'tramo-de-entrega-manana' })
-          this.disablePickUpOption({ selectorId: 'tramo-de-entrega-tarde' })
+          this.handlePickUpOption({ selectorId: 'tramo-de-entrega-manana' })
+          this.handlePickUpOption({ selectorId: 'tramo-de-entrega-tarde' })
 
           this.handleWeAreClosedAlert({
             input,
