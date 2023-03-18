@@ -125,16 +125,24 @@ export default Vue.extend({
         }
 
         if (vacations.includes(selectedDayStringValue)) {
-          this.resetDate(input)
+          const vacationDateIndex = vacations.findIndex(
+            (date) => date === selectedDayStringValue
+          )
+          const vacationsDayDate = new Date(vacations[vacationDateIndex])
+          const currentDayDate = new Date(selectedDayStringValue)
+          /* double check in case the datepicker format eventually changes */
+          if (vacationsDayDate.toString() === currentDayDate.toString()) {
+            this.resetDate(input)
 
-          this.disablePickUpOption({ selectorId: 'tramo-de-entrega-manana' })
-          this.disablePickUpOption({ selectorId: 'tramo-de-entrega-tarde' })
+            this.disablePickUpOption({ selectorId: 'tramo-de-entrega-manana' })
+            this.disablePickUpOption({ selectorId: 'tramo-de-entrega-tarde' })
 
-          this.showWeAreClosedAlert({
-            input,
-            message:
-              'Vaya, el día que has seleccionado estamos de vacaciones 💃🏻, por favor elige otra fecha y disculpa las molestias.',
-          })
+            this.showWeAreClosedAlert({
+              input,
+              message:
+                'Vaya, el día que has seleccionado estamos de vacaciones 💃🏻, por favor elige otra fecha y disculpa las molestias.',
+            })
+          }
         } else if (selectedDay === 6) {
           this.disablePickUpOption({ selectorId: 'tramo-de-entrega-tarde' })
         } else if (selectedDay === 0) {
