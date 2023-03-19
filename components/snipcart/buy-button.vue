@@ -43,13 +43,14 @@ export default Vue.extend({
 <style lang="scss" scoped>
 .buy-button {
   padding: 8px;
-  background-color: white;
-  border: 2px solid var(--color-primary);
+  background-color: transparent;
+  border: 2px solid var(--color-brand-secondary);
   margin-top: rem(24);
-  transition: background-color 0.2s ease-out;
+  transition: background-color, border-color 0.2s ease-out;
 
   &:hover {
-    background-color: var(--color-tertiary);
+    background-color: var(--color-white);
+    border-color: var(--color-primary);
   }
 
   &__inner {
