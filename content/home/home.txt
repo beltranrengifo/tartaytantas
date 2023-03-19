@@ -2,7 +2,7 @@ Tartaytantas somos un pequeño obrador de tartas inspiradas en recetas clásicas
 ---
 Apostamos por la calidad en la materia prima y el diseño de pasteles con un aspecto sencillo pero cuidado.
 ---
-Nuestra identidad gráfica, es un homenaje a la obra de Wayne Thiebaud. Su delicioso trabajo, nos inspira. Puedes conocer más haciendo <a target="_blank" href="https://g.co/kgs/KiAHeH">click aquí.</a>
+Nuestra identidad gráfica, es un homenaje a la obra de Wayne Thiebaud. Su delicioso trabajo nos inspira. Puedes conocer más haciendo <a target="_blank" href="https://g.co/kgs/KiAHeH">click aquí.</a>
 ---
 <span class="block mb-6">Y no sólo tartas. También ofrecemos bizcochos, brownies, galletas, tartaletas <span class="text-primary">y tantas</span> otras recetas.</span> <span class="block mb-6">No dudes en preguntarnos.</span>
 ---
