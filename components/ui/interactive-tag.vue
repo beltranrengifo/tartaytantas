@@ -41,6 +41,10 @@ export default Vue.extend({
       type: Boolean as () => InteractiveTag['primary'],
       default: false,
     },
+    useSpaNavigation: {
+      type: Boolean as () => InteractiveTag['useSpaNavigation'],
+      default: false,
+    },
   },
 
   computed: {
@@ -49,8 +53,7 @@ export default Vue.extend({
       if (!this.link) return tag
 
       switch (Boolean(this.link)) {
-        case typeof this.link === 'string' &&
-          this.link?.includes(this.$config.baseUrl):
+        case typeof this.link === 'string' && this.useSpaNavigation:
           tag = 'n-link'
           break
         default:
@@ -62,16 +65,19 @@ export default Vue.extend({
     getTagProps(): object | null {
       if (!this.link) return null
       let props = {}
-      if (this.getTag === 'a') {
+
+      if (this.useSpaNavigation) {
+        props = {
+          to: (this as any).removeDomain(this.link),
+        }
+        console.log(props)
+      } else if (this.getTag === 'a') {
         props = {
           href: this.link,
           target: '_blank',
         }
-      } else if (this.getTag === 'n-link') {
-        props = {
-          to: (this as any).removeDomain(this.link),
-        }
       }
+
       return props
     },
   },

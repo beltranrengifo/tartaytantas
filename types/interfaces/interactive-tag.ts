@@ -3,4 +3,5 @@ export interface InteractiveTag {
   linkTarget?: string | boolean
   renderUiAsButton?: boolean
   primary?: boolean
+  useSpaNavigation?: boolean
 }

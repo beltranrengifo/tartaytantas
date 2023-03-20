@@ -2,6 +2,7 @@ interface ImageBlockAction {
   label: string
   url: string
   target?: string
+  useSpaNavigation?: boolean
 }
 export interface ImageBlock {
   containerTailwind?: string
