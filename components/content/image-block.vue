@@ -36,6 +36,7 @@
           :linkTarget="action.target"
           renderUiAsButton
           primary
+          :useSpaNavigation="action.useSpaNavigation"
         >
           {{ action.label }}
         </interactive-tag>

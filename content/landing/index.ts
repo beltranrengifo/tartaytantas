@@ -91,9 +91,9 @@ export default [
           title: 'Ver más opciones',
           titleTag: 'h2',
           action: {
-            label: 'Comprar',
-            url: SHOP_URL,
-            target: '_blank',
+            label: 'Ir a la tienda',
+            url: '/tartas',
+            useSpaNavigation: true,
           },
         },
       },
