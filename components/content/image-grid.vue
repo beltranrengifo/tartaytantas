@@ -11,7 +11,7 @@
     >
       <figure
         v-for="(image, i) in images"
-        :key="image + i"
+        :key="image + '-' + i"
         class="overflow-hidden"
       >
         <picture>
@@ -69,12 +69,3 @@ export default Vue.extend({
   },
 })
 </script>
-
-<style lang="scss" scoped>
-.image-grid {
-  .grid {
-    @include breakpoint(only-phone) {
-    }
-  }
-}
-</style>
