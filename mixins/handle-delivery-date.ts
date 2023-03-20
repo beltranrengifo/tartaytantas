@@ -9,22 +9,24 @@ export default Vue.extend({
       return result
     },
 
-    getMinDate({
+    getMinDateForDelivery({
       currentDay,
       currentHour,
     }: {
       currentDay: number
       currentHour: number
     }) {
-      let sumDays = 2
+      let MIN_DAYS_FOR_DELIVERY = 2
 
       if (currentDay === 5) {
-        sumDays = currentHour < 15 ? 3 : 4
+        // Fridays
+        MIN_DAYS_FOR_DELIVERY = currentHour < 15 ? 3 : 4
       } else if (currentDay === 6) {
-        sumDays = 3
+        // Saturdays
+        MIN_DAYS_FOR_DELIVERY = 3
       }
 
-      return this.addDays(sumDays).toISOString().split('T')[0]
+      return this.addDays(MIN_DAYS_FOR_DELIVERY).toISOString().split('T')[0]
     },
 
     handlePickUpOption({
@@ -98,7 +100,10 @@ export default Vue.extend({
       const currentDay = currentDate.getDay()
       const currentHour = currentDate.getHours()
 
-      input.setAttribute('min', this.getMinDate({ currentDay, currentHour }))
+      input.setAttribute(
+        'min',
+        this.getMinDateForDelivery({ currentDay, currentHour })
+      )
 
       input.addEventListener('change', (event) => {
         let selectedDayStringValue = (event.target as HTMLInputElement)?.value
