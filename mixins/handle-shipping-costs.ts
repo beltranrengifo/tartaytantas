@@ -10,59 +10,63 @@ declare const Snipcart: any
 export default Vue.extend({
   methods: {
     async getDistance(geocodeAddressUrl: string): Promise<number | undefined> {
-      const geocodingResponse = await fetch(
-        `https://maps.googleapis.com/maps/api/geocode/json?address=${geocodeAddressUrl}&key=${GOOGLE_ROUTES_API_KEY}`
-      )
+      try {
+        const geocodingResponse = await fetch(
+          `https://maps.googleapis.com/maps/api/geocode/json?address=${geocodeAddressUrl}&key=${GOOGLE_ROUTES_API_KEY}`
+        )
 
-      if (!geocodingResponse) return
+        if (!geocodingResponse) return
 
-      const geocodingData = await geocodingResponse.json()
+        const geocodingData = await geocodingResponse.json()
 
-      if (!geocodingData) return
+        if (!geocodingData) return
 
-      const routeResponse = await fetch(
-        'https://routes.googleapis.com/directions/v2:computeRoutes',
-        {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-            'X-Goog-Api-Key': GOOGLE_ROUTES_API_KEY,
-            'X-Goog-FieldMask':
-              'routes.duration,routes.distanceMeters,routes.polyline.encodedPolyline',
-          },
-          body: JSON.stringify({
-            origin: {
-              location: {
-                latLng: {
-                  latitude: TARTAYTANTAS_LAT_LONG.lat,
-                  longitude: TARTAYTANTAS_LAT_LONG.long,
+        const routeResponse = await fetch(
+          'https://routes.googleapis.com/directions/v2:computeRoutes',
+          {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+              'X-Goog-Api-Key': GOOGLE_ROUTES_API_KEY,
+              'X-Goog-FieldMask':
+                'routes.duration,routes.distanceMeters,routes.polyline.encodedPolyline',
+            },
+            body: JSON.stringify({
+              origin: {
+                location: {
+                  latLng: {
+                    latitude: TARTAYTANTAS_LAT_LONG.lat,
+                    longitude: TARTAYTANTAS_LAT_LONG.long,
+                  },
                 },
               },
-            },
-            destination: {
-              location: {
-                latLng: {
-                  latitude: geocodingData?.results[0]?.geometry.location.lat,
-                  longitude: geocodingData?.results[0]?.geometry.location.lng,
+              destination: {
+                location: {
+                  latLng: {
+                    latitude: geocodingData?.results[0]?.geometry.location.lat,
+                    longitude: geocodingData?.results[0]?.geometry.location.lng,
+                  },
                 },
               },
-            },
-            travelMode: 'DRIVE',
-            routingPreference: 'TRAFFIC_AWARE',
-            computeAlternativeRoutes: false,
-            routeModifiers: {
-              avoidTolls: true,
-              avoidHighways: false,
-              avoidFerries: false,
-            },
-            languageCode: 'es-ES',
-            units: 'IMPERIAL',
-          }),
-        }
-      )
+              travelMode: 'DRIVE',
+              routingPreference: 'TRAFFIC_AWARE',
+              computeAlternativeRoutes: false,
+              routeModifiers: {
+                avoidTolls: true,
+                avoidHighways: false,
+                avoidFerries: false,
+              },
+              languageCode: 'es-ES',
+              units: 'IMPERIAL',
+            }),
+          }
+        )
 
-      const routeData = await routeResponse.json()
-      return routeData.routes[0].distanceMeters
+        const routeData = await routeResponse.json()
+        return routeData.routes[0].distanceMeters
+      } catch (error) {
+        console.error(error)
+      }
     },
 
     async handleShippingCosts({
