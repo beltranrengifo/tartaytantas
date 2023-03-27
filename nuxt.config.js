@@ -4,8 +4,11 @@ import { GOOGLE_API_KEY } from './config/constants'
 export default {
   target: 'static',
 
-  publicRuntimeConfig: {
+  env: {
     baseUrl: process.env.BASE_URL,
+    googleRoutesApiKey:
+      process.env.GOOGLE_ROUTES_API_KEY ||
+      'AIzaSyA_xHqlPu6sNVUzmaWOoyuSUOS1t95Vxf4',
   },
 
   head: {
