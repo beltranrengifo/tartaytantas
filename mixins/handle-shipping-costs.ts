@@ -1,8 +1,5 @@
 import Vue from 'vue'
-import {
-  GOOGLE_ROUTES_API_KEY,
-  TARTAYTANTAS_LAT_LONG,
-} from '~/config/constants'
+import { TARTAYTANTAS_LAT_LONG } from '~/config/constants'
 import { SnipcartStore } from '~/types'
 
 declare const Snipcart: any
@@ -12,12 +9,14 @@ export default Vue.extend({
     async getDistance(geocodeAddressUrl: string): Promise<number | undefined> {
       try {
         const geocodingResponse = await fetch(
-          `https://maps.googleapis.com/maps/api/geocode/json?address=${geocodeAddressUrl}&key=${GOOGLE_ROUTES_API_KEY}`
+          `https://maps.googleapis.com/maps/api/geocode/json?address=${geocodeAddressUrl}&key=${process.env.googleRoutesApiKey}`
         )
 
         if (!geocodingResponse) return
 
         const geocodingData = await geocodingResponse.json()
+        console.log(geocodingData)
+        console.log(process.env.googleRoutesApiKey)
 
         if (!geocodingData) return
 
@@ -27,7 +26,7 @@ export default Vue.extend({
             method: 'POST',
             headers: {
               'Content-Type': 'application/json',
-              'X-Goog-Api-Key': GOOGLE_ROUTES_API_KEY,
+              'X-Goog-Api-Key': process.env.googleRoutesApiKey as string,
               'X-Goog-FieldMask':
                 'routes.duration,routes.distanceMeters,routes.polyline.encodedPolyline',
             },
@@ -63,7 +62,7 @@ export default Vue.extend({
         )
 
         const routeData = await routeResponse.json()
-        return routeData.routes[0].distanceMeters
+        return routeData.routes[0]?.distanceMeters
       } catch (error) {
         console.error(error)
       }
