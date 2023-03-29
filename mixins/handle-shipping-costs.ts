@@ -15,8 +15,6 @@ export default Vue.extend({
         if (!geocodingResponse) return
 
         const geocodingData = await geocodingResponse.json()
-        console.log(geocodingData)
-        console.log(process.env.googleRoutesApiKey)
 
         if (!geocodingData) return
 
@@ -126,7 +124,7 @@ export default Vue.extend({
           }
         }
       } catch (error) {
-        console.log(error)
+        console.error(error)
       }
     },
   },
