@@ -70,7 +70,6 @@ export default Vue.extend({
         props = {
           to: (this as any).removeDomain(this.link),
         }
-        console.log(props)
       } else if (this.getTag === 'a') {
         props = {
           href: this.link,
