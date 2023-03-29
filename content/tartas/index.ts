@@ -275,7 +275,7 @@ export default [
               image: 'vasitos600.jpg',
               title: 'INDIVIDUALES',
               description:
-                'Algunas de nuestras tartas en formato individual. De la abuela, oreo, banoffee y vasito de mango y crema de queso. ',
+                'Algunas de nuestras tartas en formato individual. De la abuela, oreo, banoffee y vasito de mango y crema de queso, en vaso de plástico o de cristal con fianza y devolución. Mínimo 6 unidades de cada tipo. ',
               listInfo: 'Vasito individual 4€',
             },
           ],
@@ -345,7 +345,7 @@ export default [
               image: 'muffins.jpg',
               title: 'MUFFINS',
               description:
-                'La versión muffin de nuestras tartas, con el mismo relleno y cobertura. Mínimo 6u de cada tipo para encargo. 2,00 €',
+                'La versión muffin de nuestras tartas, con el mismo relleno y cobertura. Mínimo 6u de cada tipo para encargo. 2,25 €',
               listInfo: 'Zanahoria\nBeltrán\nWendy\nBosco\nRed Velvet',
               hideListInfo: true,
             },
@@ -354,24 +354,24 @@ export default [
               title: 'BIZCOCHOS',
               description: '600 g / 10,00 €',
               listInfo:
-                'Zanahoria\nVainilla\nOreo\nChocolate\nRed Velvet\nYogur\nCebra (vainilla y chocolate)',
+                'Zanahoria\nVainilla\nOreo\nChocolate\nRed Velvet\nYogur\nCebra (vainilla y chocolate)\nVainilla sin azúcar\nChocolate sin azúcar\nCebra sin azúcar',
               hideListInfo: true,
             },
             {
               image: 'galletas600.jpg',
               title: 'COOKIES',
-              description: 'Aprox 25 g /consultar precio en tienda',
+              description: 'Aprox 25 g /0,60€ unidad, consultar disponibilidad en tienda',
               listInfo:
-                '\nDe avena y canela\nCon lacasitos\nCon pepitas de chocolate\nDoble chocolate\nCon chocolate blanco y nuez\nRed Velvet con pepitas de chocolate blanco\nDe limón\nDe mantequilla\nDe cacahuete\nDe jengibre\nSin azúcar aptas para intolerantes al gluten y a la lactosa (con o sin pepitas de chocolate)',
+                '\nCon lacasitos\nCon pepitas de chocolate\nDoble chocolate\nCon chocolate blanco y nuez\nRed Velvet con pepitas de chocolate blanco\nDe limón\nDe mantequilla\nDe cacahuete\nDe jengibre',
               hideListInfo: true,
             },
             {
               image: 'supercookies600.jpg',
               title: 'SUPERCOOKIES',
               description:
-                'Super cookies blanditas por el centro y con relleno y crujientes en el borde. 3,00€',
+                'Super cookies blanditas por el centro y con relleno y crujientes en el borde. 3,00€, mínimo 3u de cada tipo',
               listInfo:
-                '\nDe pepitas de chocolate y nutella\nDe kinder bueno blanco\nDe Red Velvet con pepitas de chocolate y nutella blanca',
+                '\nDe kinder bueno blanco\nDe kinder bueno blanco',
               hideListInfo: true,
             },
           ],
