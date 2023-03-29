@@ -275,7 +275,7 @@ export default [
               image: 'vasitos600.jpg',
               title: 'INDIVIDUALES',
               description:
-                'Algunas de nuestras tartas en formato individual. De la abuela, oreo, banoffee y vasito de mango y crema de queso, en vaso de plástico o de cristal con fianza y devolución. Mínimo 6 unidades de cada tipo. ',
+                'Algunas de nuestras tartas en formato individual. De la abuela, oreo, banoffee y vasito de mango y crema de queso, en vaso de plástico o de cristal (con fianza que se recupera con la devolución). Mínimo 6 unidades de cada tipo. ',
               listInfo: 'Vasito individual 4€',
             },
           ],
