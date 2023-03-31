@@ -1,4 +1,4 @@
-import { SHOP_URL, WHATSAPP_URL } from '~/config/constants'
+import { WHATSAPP_URL } from '~/config/constants'
 import { getGridItemsFromCakes } from './getGridItems'
 
 export default [

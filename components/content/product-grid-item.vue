@@ -80,7 +80,6 @@
 <script lang="ts">
 import Vue from 'vue'
 import { ProductItem, ProductGrid } from '@/types'
-import { SHOP_URL } from '@/config/constants'
 
 interface getImageSrcParams {
   useSecondary?: boolean
@@ -109,7 +108,6 @@ export default Vue.extend({
     return {
       showDescription: false,
       showAltImage: false,
-      SHOP_URL,
     }
   },
 
