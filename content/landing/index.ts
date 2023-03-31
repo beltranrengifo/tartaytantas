@@ -1,4 +1,4 @@
-import { SHOP_URL, WHATSAPP_URL } from '~/config/constants'
+import { WHATSAPP_URL } from '~/config/constants'
 import { getGridItemsFromCakes } from './getGridItems'
 
 export default [
@@ -92,8 +92,6 @@ export default [
           titleTag: 'h2',
           action: {
             label: 'Comprar',
-            url: SHOP_URL,
-            target: '_blank',
           },
         },
       },

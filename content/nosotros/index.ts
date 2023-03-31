@@ -1,4 +1,4 @@
-import { SHOP_URL, GOOGLE_PAGE } from '@/config/constants'
+import { GOOGLE_PAGE } from '@/config/constants'
 import nosotros from '@/content/nosotros/nosotros.txt'
 
 export default [
@@ -51,7 +51,6 @@ export default [
           buttons: [
             {
               text: 'ENCARGA TU TARTA AQUÍ',
-              link: SHOP_URL,
               target: '_blank',
             },
             {
