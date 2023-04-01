@@ -1,14 +1,11 @@
 import favicons from './config/favicons'
-import { GOOGLE_API_KEY } from './config/constants'
 
 export default {
   target: 'static',
 
   env: {
     baseUrl: process.env.BASE_URL,
-    googleRoutesApiKey:
-      process.env.GOOGLE_ROUTES_API_KEY ||
-      'AIzaSyA_xHqlPu6sNVUzmaWOoyuSUOS1t95Vxf4',
+    googleRoutesApiKey: process.env.GOOGLE_ROUTES_API_KEY,
   },
 
   head: {
@@ -42,7 +39,7 @@ export default {
       },
       {
         hid: 'maps-routes-api',
-        src: `https://maps.googleapis.com/maps/api/js?key=${GOOGLE_API_KEY}&libraries=directions`,
+        src: `https://maps.googleapis.com/maps/api/js?key=${process.env.GOOGLE_ROUTES_API_KEY}&libraries=directions`,
         defer: true,
       },
     ],

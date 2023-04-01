@@ -6,7 +6,7 @@ export const PHONE_CALL_URL: string = 'tel:34663398161'
 
 export const getDomain = () => {
   return process.env.NODE_ENV !== 'production'
-    ? 'https://7bf1-139-47-82-16.eu.ngrok.io'
+    ? 'https://969a-139-47-82-16.eu.ngrok.io'
     : 'https://tartaytantas.es'
 }
 
