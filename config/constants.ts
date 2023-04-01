@@ -7,8 +7,7 @@ export const PHONE_CALL_URL: string = 'tel:34663398161'
 export const getDomain = () => {
   return process.env.NODE_ENV !== 'production'
     ? 'https://7bf1-139-47-82-16.eu.ngrok.io'
-    : 'https://tartaytantas-git-ecommerce-belt.vercel.app'
-  // : 'https://tartaytantas.es'
+    : 'https://tartaytantas.es'
 }
 
 export const TARTAYTANTAS_LAT_LONG = {
