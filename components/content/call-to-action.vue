@@ -5,7 +5,11 @@
         class="flex flex-col md:flex-row md:justify-evenly items-start w-text-block-md md:w-auto my-0 mx-auto pl-8 sm:pl-0"
       >
         <li v-for="button in buttons" :key="button.link" class="mb-20 md:mb-0">
-          <interactive-tag :link="button.link" :link-target="button.target">
+          <interactive-tag
+            :link="button.link"
+            :link-target="button.target"
+            :useSpaNavigation="button.target === '_self'"
+          >
             {{ button.text }}
           </interactive-tag>
         </li>

@@ -51,7 +51,8 @@ export default [
           buttons: [
             {
               text: 'ENCARGA TU TARTA AQUÍ',
-              target: '_blank',
+              target: '_self',
+              link: '/tartas',
             },
             {
               text: 'DÓNDE ESTAMOS',
