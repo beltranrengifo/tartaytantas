@@ -336,7 +336,7 @@ export default [
               description:
                 'Tres pisos de bizcocho de chocolate, relleno de dulce de leche y cobertura de chocolate con leche.',
               listInfo:
-                'Molde de 24 cm, 10/12 raciones. 31,000 €\nMolde de 20 cm. 6/8 raciones. 28,00 €',
+                'Molde de 24 cm, 10/12 raciones. 31,00 €\nMolde de 20 cm. 6/8 raciones. 28,00 €',
               buyButton: getBuyButtonStandardCakeSpecificInfo({
                 basePrice: '28.00',
                 basePriceIncrement: '3.00',
@@ -402,6 +402,16 @@ export default [
               }),
             },
             {
+              image: 'celia600.jpg',
+              title: 'CELIA',
+              description:
+                'Tres pisos de bizcocho Red Velvet,  relleno y cobertura de crema de nata y queso, coronada con fresas, frambuesas y suspiros de merengue.',
+              listInfo: 'Molde de 20 cm, 10/12 raciones. 42,00 €',
+              buyButton: getBuyButtonStandardCakeSpecificInfo({
+                basePrice: '42,00',
+              }),
+            },
+            {
               image: '3leches600.jpg',
               title: 'TRES LECHES',
               description:
@@ -409,8 +419,7 @@ export default [
               listInfo:
                 'Molde de 24 cm, 10/12 raciones. 32,00 €',
               buyButton: getBuyButtonStandardCakeSpecificInfo({
-                basePrice: '28.00',
-                basePriceIncrement: '3.50',
+                basePrice: '32.00',
               }),
             },
             {
