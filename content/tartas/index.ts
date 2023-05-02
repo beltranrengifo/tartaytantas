@@ -402,6 +402,18 @@ export default [
               }),
             },
             {
+              image: '3leches600.jpg',
+              title: 'TRES LECHES',
+              description:
+                'Bizcocho genovés empapado en tres leches, con dulce de leche y merengue tostado.',
+              listInfo:
+                'Molde de 24 cm, 10/12 raciones. 32,00 €',
+              buyButton: getBuyButtonStandardCakeSpecificInfo({
+                basePrice: '28.00',
+                basePriceIncrement: '3.50',
+              }),
+            },
+            {
               image: 'vasitos600.jpg',
               title: 'INDIVIDUALES',
               description:
