@@ -1,11 +1,17 @@
 export interface ProductItem {
+  [x: string]: string | undefined
   image: string
   title: string
-  description?: string
   listInfo?: string
   hideListInfo?: boolean
-  action: ItemAction
+  action?: ItemAction
   buyButton?: BuyButton
+  details?: ItemDetails
+}
+
+interface ItemDetails {
+  singlePageNavigationLink?: string
+  description?: string
 }
 
 interface BuyButton {

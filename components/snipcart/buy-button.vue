@@ -45,7 +45,7 @@ export default Vue.extend({
   padding: 8px;
   background-color: transparent;
   border: 2px solid var(--color-brand-secondary);
-  margin-top: rem(24);
+  margin-top: rem(8);
   transition: background-color, border-color 0.2s ease-out;
 
   &:hover {

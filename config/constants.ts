@@ -14,3 +14,5 @@ export const TARTAYTANTAS_LAT_LONG = {
   lat: 40.4498699,
   long: -3.7729428,
 }
+
+export const TARTAS_SINGLE_PAGE_SLUG = 'tarta'

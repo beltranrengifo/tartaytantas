@@ -1,3 +1,5 @@
+import { TARTAS_SINGLE_PAGE_SLUG } from '~/config/constants'
+
 const getBuyButtonStandardCakeSpecificInfo = ({
   basePrice,
   basePriceIncrement,
@@ -150,14 +152,17 @@ export default [
             {
               image: 'idiazabal.jpg',
               title: 'CHEESECAKE IDIAZABAL',
-              description:
-                'Tarta de queso al horno, con base de galleta y un toque de Idiazábal.',
-              listInfo:
-                'Molde de 24 cm, 10/12 raciones. 35,00 €\nMolde de 20 cm. 6/8 raciones. 29,00 €',
               buyButton: getBuyButtonStandardCakeSpecificInfo({
                 basePrice: '29.00',
                 basePriceIncrement: '6.00',
               }),
+              listInfo:
+                'Molde de 24 cm, 10/12 raciones. 35,00 €\nMolde de 20 cm. 6/8 raciones. 29,00 €',
+              details: {
+                singlePageNavigationLink: `${TARTAS_SINGLE_PAGE_SLUG}/cheesecake-idiazabal`,
+                description:
+                  'Tarta de queso al horno, con base de galleta y un toque de Idiazábal.',
+              },
             },
             {
               image: 'carrot.jpg',

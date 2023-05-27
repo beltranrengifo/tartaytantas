@@ -35,7 +35,9 @@
         />
       </picture>
     </figure>
-    <div class="product-grid-item__content text-center py-12 overflow-hidden">
+    <div
+      class="product-grid-item__content text-center pb-12 pt-6 overflow-hidden"
+    >
       <h2
         class="cursor-pointer relative mb-2"
         :class="{
@@ -147,9 +149,19 @@ export default Vue.extend({
   },
 
   methods: {
-    handleClick(): void {
-      this.showDescription = !this.showDescription
-      this.showAltImage = this.showDescription
+    async handleClick(): Promise<void> {
+      if (this.item.details?.singlePageNavigationLink) {
+        this.$router.push({
+          path: this.item.details.singlePageNavigationLink,
+        })
+        /*
+         * leftovers from initial version where details were shown in an accordion in the same page
+         * all this eventually can be deleted
+         * */
+      } else {
+        this.showDescription = !this.showDescription
+        this.showAltImage = this.showDescription
+      }
     },
   },
 })
