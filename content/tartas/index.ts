@@ -243,7 +243,7 @@ export default [
               image: 'olmo1600.jpg',
               title: 'OLMO',
               description:
-                'Tarta de chocolate, nata y leche con un toque a malta, base de galleta y decorada con Maltesers.',
+                'Tarta de chocolate con un toque a malta, base de galleta y decorada con Maltesers.',
               listInfo:
                 'Molde de 24 cm, 10/12 raciones. 31,50 €\nMolde de 20 cm. 6/8 raciones. 27,50 €',
               buyButton: getBuyButtonStandardCakeSpecificInfo({
