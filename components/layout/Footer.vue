@@ -14,6 +14,7 @@
             v-sanitize.nothing="item"
             class="mb-3 text-xs"
           />
+          <li class="mb-3 text-xs"><n-link to="/legal">Legal</n-link></li>
           <li class="text-xs mt-8">
             {{ copy }}
           </li>
