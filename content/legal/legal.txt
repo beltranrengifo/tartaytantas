@@ -452,3 +452,225 @@
   demás las condiciones.</p>
 <p>Las presentes condiciones generales se regirán por la legislación española. Las partes se someten para la resolución
   de los conflictos y con renuncia a cualquier otro fuero, a los juzgados y tribunales de Madrid.</p>
+<hr class="my-16">
+<h1 class="text-4xl mb-12">Política de cookies</h1>
+<h2 class="text-3xl my-4">Política de cookies</h2>
+<p>En cumplimiento con el deber de información recogido en el apartado 2º del artículo 22 de la Ley 34/2002, de 11 de
+  Julio, de Servicios de la Sociedad de la Información y del Comercio Electrónico, la presente política de cookies tiene
+  por finalidad informarle de manera clara y precisa sobre las cookies que se utilizan en la página web de AINHOA
+  ARANZADI CARRERAS.</p>
+<h2 class="text-3xl my-4">¿Qué son las cookies?</h2>
+<p>Una cookie es un fichero de pequeño tamaño que los sitios web envían al navegador y se descargan en su ordenador. Las
+  cookies permiten que la página web almacene y recupere la información sobre su visita, como su idioma preferido y
+  otras opciones, con el fin de mejorar los servicios que se ofrecen y contribuir a tener una mejor experiencia de
+  navegación para el usuario.</p>
+<h2 class="text-3xl my-4">Tipos de cookies</h2>
+<p>En función de quién gestione el dominio desde donde se envían las cookies y se traten los datos, se distinguirá entre
+  cookies propias y cookies de terceros.</p>
+
+<p>Las cookies también pueden clasificarse según el plazo de tiempo que permanezcan almacenadas en el navegador del
+  usuario, distinguiéndose entre cookies de sesión o cookies persistentes.
+</p>
+<p>Finalmente, en función de la finalidad para la que se trate la información recopilada, las cookies se pueden
+  clasificar en las siguientes categorías:</p>
+<ul class="list-disc my-2">
+  <li>Cookies técnicas: permiten al usuario navegar por un sitio web y utilizar algunos de los servicios ofrecidos por
+    el mismo (como por ejemplo, las que sirven para recordar los elementos integrantes de un carrito de compra).</li>
+  <li>Cookies de personalización: permiten que el usuario acceda al sitio web con unas características determinadas,
+    como puede ser el idioma.</li>
+  <li>Cookies de seguridad: sirven para impedir o dificultar los ataques contra el sitio web.</li>
+  <li>Cookies de complemento para intercambiar contenidos sociales: los llamados plug-in, que permiten compartir
+    contenidos en redes sociales.</li>
+  <li>Cookies de análisis: permiten al responsable el seguimiento del comportamiento del usuario.</li>
+  <li>Cookies publicitarias: permiten gestionar los espacios de publicidad del sitio web.</li>
+  <li>Cookies de publicidad comportamental: como las anteriores, sirven para gestionar los espacios de publicidad del
+    sitio web en función de la información recogida sobre el comportamiento del usuario y sus hábitos, adaptando la
+    publicidad al perfil del usuario. Cookies de geolocalización: utilizadas para averiguar el país dónde se encuentra
+    el usuario.</li>
+</ul>
+<h2 class="text-3xl my-4">Autorización para el uso de cookies</h2>
+<p>De conformidad con el aviso de cookies que aparece en el sitio web, el usuario puede consentir expresamente el uso de
+  cookies que requieran consentimiento; sin embargo, el uso de cookies técnicas o necesarias no requiere de
+  consentimiento. Sin perjuicio de todo ello, el usuario puede modificar la configuración de su navegador para rechazar
+  el uso de las cookies.</p>
+<h2 class="text-3xl my-4">Cómo modificar la configuración de las cookies</h2>
+<p>Usted puede restringir, bloquear o borrar las cookies de AINHOA ARANZADI CARRERAS o cualquier otra página web
+  utilizando su navegador. En cada navegador la operativa es diferente, puede encontrar cómo hacerlo en el menú de ayuda
+  de su navegador dónde se establece el procedimiento para su eliminación. Para más información:</p>
+<ul class="list-disc my-2">
+  <li>Google Chrome: https://support.google.com/chrome/answer/95647?co=GENIE.Platform%3DDesktop&hl=es</li>
+  <li>Mozilla Firefox:
+    https://support.mozilla.org/es/kb/habilitar-y-deshabilitar-cookies-sitios-web-rastrear-preferencias</li>
+  <li>Safari: https://support.apple.com/es-es/guide/safari/sfri11471/mac</li>
+  <li>Internet Explorer: https://support.microsoft.com/es-es/help/278835/how-to-delete-cookie-files-in-internet-explorer
+  </li>
+</ul>
+<p>Es posible que al deshabilitar las cookies la página web no funcione correctamente o no pueda acceder a determinadas
+  funciones de la misma.</p>
+<h2 class="text-3xl my-4">
+  Cookies utilizadas en la web
+</h2>
+<p>En el portal web se utilizan diferentes tipos de cookies con distintas finalidades, a continuación se enumeran las
+  cookies empleadas:</p>
+<ul class="list-disc my-2">
+  <li>cookies para el traking de <a target="_blank"
+      href="https://www.facebook.com/business/help/471978536642445?id=1205376682832142">Facebook e Instagram</a></li>
+</ul>
+<h2 class="text-3xl my-4">Modificación de las condiciones</h2>
+<p>AINHOA ARANZADI CARRERAS se reserva expresamente el derecho a modificar unilateralmente, total o parcialmente, sin
+  necesidad de previo aviso, la presente Política de Cookies. El usuario reconoce y acepta que es su responsabilidad
+  revisar la presente Política de Cookies.</p>
+<hr class="my-16">
+<h1 class="text-4xl mb-12">Términos y condiciones</h1>
+<p>En cumplimiento con el deber de información recogido en artículo 10 de la Ley 34/2002, de 11 de Julio, de Servicios
+  de la Sociedad de la Información y del Comercio Electrónico, le informamos que el Sitio Web www.tartaytantas.es (en
+  adelante, la “Web”) es titularidad de AINHOA ARANZADI CARRERAS, con domicilio social en SEIS DE DICIEMBRE, 26, Madrid,
+  con NIF 03463270E.
+</p>
+<h2 class="text-3xl my-4">Condiciones de uso</h2>
+<p>Las presentes Condiciones describen los términos aplicables a los servicios y contenidos ofrecidos a través del sitio
+  web ____________ y regulan las relaciones
+
+  jurídicas entre AINHOA ARANZADI CARRERAS y el cliente.
+
+  El acceso a la web es de carácter libre y gratuito, la utilización de la Web supone la aceptación sin reservas de la
+  totalidad de las Condiciones de Uso. Si no estuvieras de acuerdo con estas condiciones debes abstenerte de utilizar
+  esta página.
+
+  La visita al sitio eCommerce por parte del usuario deberá hacerse de forma responsable y de conformidad a la legalidad
+  vigente, la buena fe, las presentes Condiciones y respetando los derechos de propiedad intelectual e industrial de
+  titularidad de AINHOA ARANZADI CARRERAS o cualquier otras personas físicas o jurídicas.
+
+  El uso de cualquiera de los contenidos del sitio Web con finalidades que sean o pudieran ser ilícitas queda totalmente
+  prohibido, así como la realización de cualquier acción que cause o pueda causar daños o alteraciones de cualquier tipo
+  no consentidas por AINHOA ARANZADI CARRERAS, al sitio eCommerce o a sus contenidos.
+
+  El sitio Web y los productos y servicios ofrecidos por AINHOA ARANZADI CARRERAS está dirigido a mayores de edad con la
+  capacidad jurídica suficiente para poder quedar vinculado por las presentes Condiciones de Uso. Es posible que la
+  utilización de ciertos servicios o la contratación de algunos bienes o servicios esté sujeto a condiciones especiales
+  complementaries que requerirán el consentimiento expreso y que prevalecerán en todo caso sobre las presentes
+  condiciones generales.
+</p>
+<h2 class="text-3xl my-4">Registro de los usuarios</h2>
+<p>La utilización de los servicios prestados por AINHOA ARANZADI CARRERAS y la compra en la Web requiere el registro
+  como usuario en la Web. Con la finalidad de completar el registro se deberán aportar una serie de datos personales que
+  deberán ser veraces y exactos. Puedes consultar nuestra política de privacidad en el siguiente enlace:
+  https://tartaytantas.es/legal
+
+  Asimismo, debes tener en cuenta que en todo momento puedes modificar tus datos personales, así como ejercer los
+  derechos de acceso, rectificación, supresión, limitación y de oposición de conformidad con la LO 3/2018, de 5 de
+  diciembre, de Protección de Datos y de Garantía de los Derechos Digitales (LOPDGDD) y con el Reglamento (UE) 2016/679,
+  del Parlamento Europeo y del Consejo, de 27 de abril de 2016, relativo a la protección de las personas físicas en lo
+  que respecta al tratamiento de datos personales y a la libre circulación de estos datos (RGPD).
+</p>
+<h2 class="text-3xl my-4">Pedidos</h2>
+<p>Una vez realizado un pedido, te llegará un mensaje confirmando la recepción del mismo así como con información sobre
+  el envío y la facturación del pedido realizado.</p>
+<h2 class="text-3xl my-4">Forma de pago</h2>
+<p>La adquisición de servicios o productos a través de Tartaytantas permite las siguientes formas de pago:</p>
+<ul class="list-disc my-2">
+  <li>Pago mediante tarjeta de débito o crédito a través de un TPV virtual </li>
+</ul>
+<h2 class="text-3xl my-4">Precios</h2>
+<p>Los precios de los productos son los indicados en la descripción que se les adjunta. Todos los precios indicados en
+  la descripción de producto se expresan en la moneda Euro (€) e incluyen el Impuesto sobre el Valor Añadido (I.V.A.).
+</p>
+<h2 class="text-3xl my-4">
+  Condiciones de envío
+</h2>
+<p>Tartaytantas únicamente envía sus productos en un radio de 10km del obrador situado en la C/ Seis de Diciembre, 26,
+  local 26, 28023 Madrid.</p>
+<p>La compra está sujeta al pago de gastos de envío, a cuenta del comprador. Los gastos de envío dependerán del destino
+  y del importe total del pedido, los gastos se detallarán a lo largo del proceso de compra y podrás revisar a cuanto
+  ascienden los gastos de envío antes de finalizar la compra.
+  Tartaytantas no se hará responsable de la demora en la entrega de los pedidos por causas no imputables a la misma, así
+  como por casos fortuitos o de fuerza
+
+  mayor.
+</p>
+<p>El envío se realizará mediante la empresa de transporte Reevolt en horario de 10 a 14h o de 16 a 19h, no pudiendo
+  asegurar una hora determinada de entrega. Ahora bien, si hubiera alguna incidencia en el plazo de entrega,
+  Tartaytantas informaría de forma inmediata al Cliente. </p>
+<p>Dispones de las siguientes opciones de entrega:</p>
+<ul class="list-disc my-2">
+  <li>Recogida en tienda: Los productos cuya compra haya sido realizada a través del Sitio Web de Tartaytantas
+    solicitados para retirarse en el local ubicado en Calle Seis de Diciembre, estarán disponibles únicamente en el día
+    seleccionado por el cliente en el sitio web. Si los productos no han sido recogidos en la fecha señalada, estos
+    retornarán al Obrador. En el caso de que el pedido no sea recogido en un plazo máximo de 2 días, incluyendo
+    festivos, desde la fecha programada, no se realizará reembolso del producto.</li>
+  <li>Envío a domicilio: será en la dirección indicada por el Cliente en el procedimiento de compra no pudiendo la misma
+    corresponder a un apartado de correos o lugares públicos, tales como la vía pública, plazas, estaciones, aeropuertos
+    u otros similares y en el plazo previsto en la Web que indique el propio Cliente. Tartaytantas no será responsable
+    de los errores que se puedan producir en la entrega de los productos en el supuesto que el Cliente no haya
+    cumplimentado correctamente los formularios de la Web. En caso de no encontrarse en el destino en el momento de
+    entrega del pedido, se avisará por teléfono al cliente. Si en el momento de la entrega de los productos, el Cliente
+    se halla ausente del lugar de entrega comunicado a Tartaytantas, se entenderá que el Cliente desiste unilateralmente
+    del pedido. En el caso de que el pedido no sea entregado por no encontrarse el cliente en su domicilio en el día y
+    fecha acordados, no se realizará reembolso del producto.</li>
+</ul>
+<h2 class="text-3xl my-4">Política de devoluciones, cambios y cancelaciones.</h2>
+<p>Los riesgos de los productos serán a cargo del Cliente desde el momento que adquiera su posesión material y, en el
+  caso de su devolución, continuarán siendo a cargo del Cliente hasta la entrega de los mismos a Tartaytantas. Todos los
+  pedidos de compra de los productos están sujetos a la disponibilidad de los mismos. En caso de falta de disponibilidad
+  del producto comprado, Tartaytantas informará de ello al Cliente y le podrá ofrecer un producto o un descuento de
+  características similares de igual o superior importe, si bien el Cliente, alternativamente, podrá cancelar su
+  solicitud de compra y recuperar el importe pagado. </p>
+<p>El Cliente en caso de recibir el producto en mal estado o recibir un producto que no se corresponde con lo pedido,
+  debe escribirnos a info@tartaytantas.es en las próximas 24 horas tras la recepción del producto adjuntando una foto
+  del producto recibido. Evaluaremos el caso para proceder a realizar una devolución íntegra o parcial del pedido, o un
+  descuento para futuras compras. En caso de devolución íntegra, el cliente podrá elegir entre reembolso del pedido o
+  solicitar un nuevo envío. En ambos casos, la empresa se reserva el derecho de solicitar una recogida del producto
+  defectuoso.
+  La devolución se efectuará a través del mismo medio con el que se abonó el pedido.
+
+  No hacemos devoluciones por razones comerciales ni por retrasos en las entregas que están fuera del control de la
+  empresa. Si por cualquier razón no estas satisfecho/a con el producto puedes contactarnos a través de
+  info@tartaytantas.es explicando la razón de dicho descontento. Estaremos encantados de escucharte y, en caso de ser
+  posible, ofrecer una solución.
+
+  No aceptaremos cambios o devoluciones si previamente no hemos recibido notificación del número de pedido.
+
+  En el caso de que haya algún error y éste sea totalmente imputable a Tartaytantas, el Cliente podrá presentar una
+  reclamación escribiendo a info@tartaytantas.es solicitando la correcta entrega del producto solicitado o,
+  alternativamente, podrá cancelar su pedido y recuperar el importe pagado. No obstante lo anterior, no se hará ningún
+  reembolso si el producto ha sido manipulado más allá de la apertura del mismo.
+</p>
+<h2 class="text-3xl my-4">
+  Cambios y cancelaciones:
+</h2>
+<p>
+  El plazo máximo para cambiar un pedido es de 48 horas antes de la fecha de entrega. No aceptamos cancelaciones por
+  motivos comerciales, ni si previamente no hemos recibido notificación del número de pedido.
+</p>
+<h2 class="text-3xl my-4">
+  Garantía de bienes de consumo
+</h2>
+<p>Como cliente, tienes la consideración de consumidor de conformidad con el Real Decreto Legislativo 1/2007, de 16 de
+  noviembre, por el que se aprueba el texto refundido de la Ley General para la Defensa de los Consumidores y Usuarios y
+  otras leyes complementarias (en adelante, "TRLGDCU").
+
+  En consecuencia, cuentas con el derecho de desistimiento que consiste en que puedas dejar sin efecto el contrato
+  celebrado sin necesidad de justificar tu decisión durante los catorce (14) días naturales desde que se reciba el bien
+  adquirido o desde la celebración del contrato si se trata de una prestación de servicios.
+
+  Deberás manifestar tu intención de desistir en el plazo indicado y proceder a la devolución del producto,
+  reembolsándote el precio abonado.
+
+  En caso de tener problemas con productos o servicios adquiridos en esta Web puedes presentar una reclamación mediante
+  la plataforma de resolución de litigios de la Unión Europea aquí . AINHOA ARANZADI CARRERAS se reserva la potestad de
+  negarse a aceptar la reclamación presentada a través de la plataforma.
+</p>
+<h2 class="text-3xl my-4">
+  Nulidad e ineficacia de las cláusulas
+</h2>
+<p>
+  Si cualquier cláusula incluida en las presentes Condiciones fuese declarada total o parcialmente, nula o ineficaz, tal
+  nulidad o ineficacia tan sólo afectará a dicha disposición, subsistiendo las presentes Condiciones Generales en todo
+  lo demás, teniéndose tal disposición por no incluida.
+</p>
+<h2 class="text-3xl my-4">
+  Legislación aplicable y jurisdicción competente
+</h2>
+<p>Las presentes condiciones se rigen de conformidad con la legislación española. AINHOA ARANZADI CARRERAS y el usuario
+  acuerdan someter las controversias que pudieran surgir en relación a la contratación de productos o servicios objeto
+  de estas Condiciones Generales, a los Juzgados y Tribunales del domicilio del Usuario.</p>
