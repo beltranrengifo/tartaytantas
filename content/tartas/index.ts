@@ -408,7 +408,7 @@ export default [
                 'Tres pisos de bizcocho Red Velvet,  relleno y cobertura de crema de nata y queso, coronada con fresas, frambuesas y suspiros de merengue.',
               listInfo: 'Molde de 20 cm, 10/12 raciones. 42,00 €',
               buyButton: getBuyButtonStandardCakeSpecificInfo({
-                basePrice: '42,00',
+                basePrice: '42.00',
               }),
             },
             {
@@ -416,8 +416,7 @@ export default [
               title: 'TRES LECHES',
               description:
                 'Bizcocho genovés empapado en tres leches, con dulce de leche y merengue tostado.',
-              listInfo:
-                'Molde de 24 cm, 10/12 raciones. 33,50 €',
+              listInfo: 'Molde de 24 cm, 10/12 raciones. 33,50 €',
               buyButton: getBuyButtonStandardCakeSpecificInfo({
                 basePrice: '33.50',
               }),
