@@ -172,18 +172,6 @@ export default [
               }),
             },
             {
-              image: 'redvelvet600.jpg',
-              title: 'RED VELVET',
-              description:
-                'Tres pisos de bizcocho Red Velvet, con relleno y cobertura de crema de queso.',
-              listInfo:
-                'Molde de 24 cm, 10/12 raciones. 32,90 €\nMolde de 20 cm. 6/8 raciones. 29,90 €',
-              buyButton: getBuyButtonStandardCakeSpecificInfo({
-                basePrice: '29.90',
-                basePriceIncrement: '3.00',
-              }),
-            },
-            {
               image: 'alejo.jpg',
               title: 'ALEJITO',
               description:
