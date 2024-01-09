@@ -104,9 +104,14 @@
 <script lang="ts">
 import Vue from 'vue'
 import { WHATSAPP_URL, PHONE_CALL_URL } from '@/config/constants'
+import FloatingAction from '@/components/ui/floating-action.vue'
 
 export default Vue.extend({
   name: 'LandingFloatingActions',
+
+  components: {
+    FloatingAction,
+  },
 
   data() {
     return {

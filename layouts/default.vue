@@ -23,6 +23,8 @@ import Parallax from '@/mixins/parallax.vue'
 import HandleShippingCosts from '~/mixins/handle-shipping-costs'
 import HandleDeliveryDate from '~/mixins/handle-delivery-date'
 import { layout } from '@/content'
+import Header from '@/components/layout/Header.vue'
+import Footer from '@/components/layout/Footer.vue'
 
 import { SHOW_MENU_SCROLL_THRESHOLD } from '@/config'
 
@@ -30,6 +32,11 @@ declare const Snipcart: any
 
 export default Vue.extend({
   mixins: [Parallax, HandleShippingCosts, HandleDeliveryDate],
+
+  components: {
+    Header,
+    Footer,
+  },
 
   fetch(): void {
     const { footer } = layout

@@ -7,9 +7,14 @@ import Vue from 'vue'
 import MetaData from '@/mixins/meta-data'
 
 import { tartas } from '@/content'
+import SectionRenderer from '@/components/content/section-renderer.vue'
 
 export default Vue.extend({
   name: 'Tartas',
+
+  components: {
+    SectionRenderer,
+  },
 
   mixins: [MetaData],
 

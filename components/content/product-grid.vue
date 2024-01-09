@@ -20,9 +20,16 @@
 <script lang="ts">
 import Vue from 'vue'
 import { ProductGrid } from '@/types'
+import Container from '@/components/layout/container.vue'
+import ProductGridItem from '@/components/content/product-grid-item.vue'
 
 export default Vue.extend({
   name: 'ProductGrid',
+
+  components: {
+    Container,
+    ProductGridItem,
+  },
 
   props: {
     containerTailwind: {

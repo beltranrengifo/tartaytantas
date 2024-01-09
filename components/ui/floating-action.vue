@@ -14,6 +14,10 @@ import InteractiveTag from './interactive-tag.vue'
 export default Vue.extend({
   name: 'FloatingAction',
 
+  components: {
+    InteractiveTag,
+  },
+
   props: {
     link: {
       type: String as () => FloatingAction['link'],

@@ -21,9 +21,16 @@
 <script lang="ts">
 import Vue from 'vue'
 import { CallToAction } from '@/types'
+import Container from '@/components/layout/container.vue'
+import InteractiveTag from '@/components/ui/interactive-tag.vue'
 
 export default Vue.extend({
   name: 'CallToAction',
+
+  components: {
+    Container,
+    InteractiveTag,
+  },
 
   props: {
     buttons: {

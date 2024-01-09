@@ -5,11 +5,16 @@
 <script lang="ts">
 import Vue from 'vue'
 import MetaData from '@/mixins/meta-data'
+import SectionRenderer from '@/components/content/section-renderer.vue'
 
 import { nosotros } from '@/content'
 
 export default Vue.extend({
   name: 'Nosotros',
+
+  components: {
+    SectionRenderer,
+  },
 
   mixins: [MetaData],
 

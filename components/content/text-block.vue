@@ -1,16 +1,7 @@
 <template>
   <container
     tag="article"
-    class="
-      text-block
-      flex
-      justify-center
-      items-center
-      flex-shrink-0 flex-grow-0
-      w-full
-      p-6
-      lg:p-0
-    "
+    class="text-block flex justify-center items-center flex-shrink-0 flex-grow-0 w-full p-6 lg:p-0"
     :class="[height, width, background]"
     fullwidth
   >
@@ -34,11 +25,16 @@
 import Vue from 'vue'
 import { TextBlock } from '@/types/index'
 import HandleNuxtLinksInWysiwyg from '@/mixins/handle-links'
+import Container from '@/components/layout/container.vue'
 
 export default Vue.extend({
   name: 'TextBlock',
 
   mixins: [HandleNuxtLinksInWysiwyg],
+
+  components: {
+    Container,
+  },
 
   props: {
     content: {

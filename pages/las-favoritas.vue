@@ -9,9 +9,15 @@
 import Vue from 'vue'
 import MetaData from '@/mixins/meta-data'
 import { landing } from '@/content'
+import SectionRenderer from '@/components/content/section-renderer.vue'
+import LandingFloatingActions from '@/components/layout/landing-floating-actions.vue'
 
 export default Vue.extend({
   name: 'Landing',
+  components: {
+    SectionRenderer,
+    LandingFloatingActions,
+  },
   mixins: [MetaData],
   data() {
     return {

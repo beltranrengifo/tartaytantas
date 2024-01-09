@@ -27,6 +27,7 @@ import ImageGrid from '@/components/content/image-grid.vue'
 import CallToAction from '@/components/content/call-to-action.vue'
 import ProductGrid from '@/components/content/product-grid.vue'
 import OnePageNav from '@/components/content/one-page-nav.vue'
+import Container from '@/components/layout/container.vue'
 
 export default Vue.extend({
   name: 'SectionRenderer',
@@ -40,6 +41,7 @@ export default Vue.extend({
     CallToAction,
     OnePageNav,
     ProductGrid,
+    Container,
   },
 
   props: {

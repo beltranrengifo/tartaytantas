@@ -23,9 +23,14 @@
 <script lang="ts">
 import Vue from 'vue'
 import { handleBodyScroll } from '@/plugins/body-scroll'
+import Navigation from '@/components/layout/Navigation.vue'
 
 export default Vue.extend({
   name: 'HamburguerMenu',
+
+  components: {
+    Navigation,
+  },
 
   data() {
     return {

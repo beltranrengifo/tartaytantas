@@ -9,7 +9,7 @@
         ref="title"
         :is="titleTag"
         v-sanitize.nothing="title"
-        class="title-block__title text-xl mb-6 tracking-normal"
+        class="title-block__title text-xl mb-6 tracking-normal pb-8"
         :class="[
           font,
           transform,
@@ -33,11 +33,16 @@
 import Vue from 'vue'
 import { TitleBlock } from '@/types/index'
 import HandleNuxtLinksInWysiwyg from '@/mixins/handle-links'
+import Container from '@/components/layout/container.vue'
 
 export default Vue.extend({
   name: 'TitleBlock',
 
   mixins: [HandleNuxtLinksInWysiwyg],
+
+  components: {
+    Container,
+  },
 
   props: {
     title: {
