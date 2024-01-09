@@ -12,8 +12,16 @@
 
 <script lang="ts">
 import Vue from 'vue'
+import Logo from '@/components/common/logo.vue'
+import Navigation from '@/components/layout/Navigation.vue'
+import HamburguerMenu from '@/components/layout/HamburguerMenu.vue'
 
 export default Vue.extend({
   name: 'Header',
+  components: {
+    Logo,
+    Navigation,
+    HamburguerMenu,
+  },
 })
 </script>

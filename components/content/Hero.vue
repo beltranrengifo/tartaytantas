@@ -12,9 +12,15 @@
 <script lang="ts">
 import Vue from 'vue'
 import { Hero } from '@/types/index'
+import Container from '@/components/layout/container.vue'
+import Carousel from '@/components/ui/carousel.vue'
 
 export default Vue.extend({
   name: 'Hero',
+  components: {
+    Container,
+    Carousel,
+  },
 
   props: {
     slides: {

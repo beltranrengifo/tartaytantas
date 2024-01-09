@@ -37,7 +37,7 @@
     </figure>
     <div class="product-grid-item__content text-center py-12 overflow-hidden">
       <h2
-        class="cursor-pointer relative mb-2"
+        class="cursor-pointer relative"
         :class="{
           'product-grid-item__title--active': showDescription,
           'mb-10': showDescription,
@@ -81,6 +81,7 @@
 import Vue from 'vue'
 import { ProductItem, ProductGrid } from '@/types'
 import ProductMetaData from '@/mixins/product-meta-data'
+import BuyButton from '@/components/snipcart/buy-button.vue'
 
 interface getImageSrcParams {
   useSecondary?: boolean
@@ -89,6 +90,10 @@ interface getImageSrcParams {
 
 export default Vue.extend({
   name: 'ProductGridItem',
+
+  components: {
+    BuyButton,
+  },
 
   props: {
     item: {

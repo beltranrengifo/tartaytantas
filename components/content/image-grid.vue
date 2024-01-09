@@ -33,10 +33,14 @@
 import Vue from 'vue'
 import { ImageGrid } from '@/types'
 import ImageUrl from '@/mixins/image-url'
+import Container from '@/components/layout/container.vue'
 
 export default Vue.extend({
   name: 'ImageGrid',
   mixins: [ImageUrl],
+  components: {
+    Container,
+  },
   props: {
     images: {
       type: Array as () => ImageGrid['images'],

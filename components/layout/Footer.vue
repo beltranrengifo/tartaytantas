@@ -44,9 +44,15 @@
 
 <script lang="ts">
 import Vue from 'vue'
+import Container from '@/components/layout/container.vue'
+import Navigation from '@/components/layout/Navigation.vue'
 
 export default Vue.extend({
   name: 'Footer',
+  components: {
+    Container,
+    Navigation,
+  },
 
   props: {
     content: {

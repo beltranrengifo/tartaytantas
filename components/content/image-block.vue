@@ -48,9 +48,16 @@
 <script lang="ts">
 import Vue from 'vue'
 import { ImageBlock } from '@/types/index'
+import Container from '@/components/layout/container.vue'
+import InteractiveTag from '@/components/ui/interactive-tag.vue'
 
 export default Vue.extend({
   name: 'ImageBlock',
+
+  components: {
+    Container,
+    InteractiveTag,
+  },
 
   props: {
     containerTailwind: {

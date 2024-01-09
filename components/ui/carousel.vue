@@ -43,15 +43,22 @@
 import Vue from 'vue'
 import { Slide } from '@/types'
 import ImageUrl from '@/mixins/image-url'
+import Container from '@/components/layout/container.vue'
+import titleBlock from '@/components/content/title-block.vue'
 
 export default Vue.extend({
   name: 'Carousel',
 
   mixins: [ImageUrl],
 
+  components: {
+    Container,
+    titleBlock,
+  },
+
   props: {
     slides: {
-      type: Array as unknown as () => Slide[],
+      type: (Array as unknown) as () => Slide[],
       required: true,
     },
   },
