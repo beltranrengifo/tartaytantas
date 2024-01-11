@@ -60,8 +60,14 @@
 
 <script lang="ts">
 import Vue from 'vue'
-import { navigation } from '@/config'
 import { NavigationItem } from '@/types/index'
+
+const NAVIGATION = [
+  { name: 'Inicio', path: '/', target: '_self' },
+  { name: 'Tartas', path: '/tartas', target: '_self' },
+  { name: 'Las favoritas', path: '/las-favoritas', target: '_self' },
+  { name: 'Nosotras', path: '/nosotros', target: '_self' },
+] as const
 
 declare const Snipcart: any
 
@@ -81,7 +87,7 @@ export default Vue.extend({
 
   data() {
     return {
-      navigation,
+      navigation: NAVIGATION,
       cartCount: 0,
     }
   },
