@@ -5,7 +5,7 @@ const currentYear = new Date().getFullYear()
  * for each date use this format: MM-DD
  */
 
-const nationalHolidays: string[] = [
+const NATIONAL_HOLIDAYS: string[] = [
   '01-01',
   '01-06',
   '05-01',
@@ -30,7 +30,7 @@ const currentYearRegionalHolidays: string[] = [
 const tartaytantasVacations: string[] = []
 
 export const vacations = [
-  ...nationalHolidays,
+  ...NATIONAL_HOLIDAYS,
   ...currentYearRegionalHolidays,
   ...tartaytantasVacations,
 ].map((date) => `${currentYear}-${date}`)
