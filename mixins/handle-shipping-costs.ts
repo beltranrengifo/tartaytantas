@@ -2,8 +2,6 @@ import Vue from 'vue'
 import { TARTAYTANTAS_LAT_LONG } from '~/config/constants'
 import { SnipcartStore } from '~/types'
 
-declare const Snipcart: any
-
 export default Vue.extend({
   methods: {
     async getDistance(geocodeAddressUrl: string): Promise<number | undefined> {

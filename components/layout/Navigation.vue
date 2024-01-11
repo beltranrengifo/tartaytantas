@@ -69,8 +69,6 @@ const NAVIGATION = [
   { name: 'Nosotras', path: '/nosotros', target: '_self' },
 ] as const
 
-declare const Snipcart: any
-
 export default Vue.extend({
   name: 'Navigation',
 
