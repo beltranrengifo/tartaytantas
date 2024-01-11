@@ -28,8 +28,6 @@ import Footer from '@/components/layout/Footer.vue'
 
 import { SHOW_MENU_SCROLL_THRESHOLD } from '@/config'
 
-declare const Snipcart: any
-
 export default Vue.extend({
   mixins: [Parallax, HandleShippingCosts, HandleDeliveryDate],
 

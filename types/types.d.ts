@@ -10,3 +10,5 @@ declare module 'vue-parallax'
 declare module 'body-scroll-lock'
 
 declare module 'vue-cookie-law'
+
+declare const Snipcart: any
