@@ -1,4 +1,4 @@
-export default [
+export const favicons = [
   {
     rel: 'apple-touch-icon',
     sizes: '57x57',
