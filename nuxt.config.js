@@ -1,4 +1,4 @@
-import favicons from './config/favicons'
+import { favicons } from './config'
 
 export default {
   target: 'static',
@@ -29,7 +29,8 @@ export default {
       ...favicons,
       {
         rel: 'stylesheet',
-        href: 'https://fonts.googleapis.com/css2?family=Duru+Sans&family=Playfair+Display:wght@400;500&display=swap',
+        href:
+          'https://fonts.googleapis.com/css2?family=Duru+Sans&family=Playfair+Display:wght@400;500&display=swap',
       },
     ],
     script: [
