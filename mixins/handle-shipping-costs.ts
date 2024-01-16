@@ -1,6 +1,10 @@
 import Vue from 'vue'
-import { TARTAYTANTAS_LAT_LONG } from '~/config/constants'
 import { SnipcartStore } from '~/types'
+
+const TARTAYTANTAS_LAT_LONG = {
+  lat: 40.4498699,
+  long: -3.7729428,
+}
 
 export default Vue.extend({
   methods: {

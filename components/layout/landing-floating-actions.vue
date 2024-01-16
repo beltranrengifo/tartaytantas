@@ -103,8 +103,10 @@
 
 <script lang="ts">
 import Vue from 'vue'
-import { WHATSAPP_URL, PHONE_CALL_URL } from '@/config/constants'
 import FloatingAction from '@/components/ui/floating-action.vue'
+import { WHATSAPP_URL } from '@/content/landing'
+
+const PHONE_CALL_URL: string = 'tel:34663398161'
 
 export default Vue.extend({
   name: 'LandingFloatingActions',

@@ -1,6 +1,11 @@
 import Vue from 'vue'
 import { ProductItem } from '~/types'
-import { getDomain } from '~/config/constants'
+
+const getDomain = () => {
+  return process.env.NODE_ENV !== 'production'
+    ? 'https://969a-139-47-82-16.eu.ngrok.io'
+    : 'https://tartaytantas.es'
+}
 
 export default Vue.extend({
   methods: {
