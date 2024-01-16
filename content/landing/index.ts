@@ -1,5 +1,7 @@
-import { WHATSAPP_URL } from '~/config/constants'
 import { getGridItemsFromCakes } from './getGridItems'
+
+export const WHATSAPP_URL: string =
+  'https://wa.me/34663398161?text=Quiero una tarta! :D'
 
 export default [
   /* hero */

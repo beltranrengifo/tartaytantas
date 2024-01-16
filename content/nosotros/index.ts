@@ -1,5 +1,6 @@
-import { GOOGLE_PAGE } from '@/config/constants'
 import nosotros from '@/content/nosotros/nosotros.txt'
+
+const GOOGLE_PAGE: string = 'https://g.page/tartaytantas'
 
 export default [
   /* nosotros */

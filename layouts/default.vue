@@ -26,7 +26,7 @@ import { layout } from '@/content'
 import Header from '@/components/layout/Header.vue'
 import Footer from '@/components/layout/Footer.vue'
 
-import { SHOW_MENU_SCROLL_THRESHOLD } from '@/config'
+const SHOW_MENU_SCROLL_THRESHOLD: number = 50
 
 export default Vue.extend({
   mixins: [Parallax, HandleShippingCosts, HandleDeliveryDate],
