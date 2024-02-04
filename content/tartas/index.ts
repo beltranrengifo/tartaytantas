@@ -231,7 +231,7 @@ export default [
               image: 'olmo1600.jpg',
               title: 'OLMO',
               description:
-                'Tarta de chocolate con un toque a malta, base de galleta y decorada con Maltesers.',
+                'Tarta de chocolate con un toque a malta, base de galleta y decorada con bolas de chocolate y cereales.',
               listInfo:
                 'Molde de 24 cm, 10/12 raciones. 33,00 €\nMolde de 20 cm. 6/8 raciones. 28,90 €',
               buyButton: getBuyButtonStandardCakeSpecificInfo({
@@ -300,10 +300,10 @@ export default [
               description:
                 'Tarta de crema de nata, queso y Oreo molida con base y cobertura de galleta Oreo.',
               listInfo:
-                'Molde de 24 cm, 10/12 raciones. 35,00 €\nMolde de 20 cm. 6/8 raciones. 31,00 €',
+                'Molde de 24 cm, 10/12 raciones. 32,50 €\nMolde de 20 cm. 6/8 raciones. 28,40 €',
               buyButton: getBuyButtonStandardCakeSpecificInfo({
-                basePrice: '31.00',
-                basePriceIncrement: '4.00',
+                basePrice: '28.40',
+                basePriceIncrement: '4.10',
               }),
             },
             {
