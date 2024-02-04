@@ -509,7 +509,7 @@ export default [
               listInfo: 'Zanahoria\nBeltrán\nWendy\nBosco\nRed Velvet',
               hideListInfo: true,
               buyButton: {
-                'data-item-price': '2.00',
+                'data-item-price': '2.25',
                 'data-item-min-quantity': 6,
                 'data-item-custom1-name': 'Tipo',
                 'data-item-custom1-options':
@@ -536,7 +536,7 @@ export default [
               image: 'galletas600.jpg',
               title: 'COOKIES',
               description:
-                'Aprox 25 g /0,60€ unidad, consultar disponibilidad en tienda',
+                'Aprox 25 g /0,75€ unidad, consultar disponibilidad en tienda',
               listInfo:
                 '\nCon lacasitos\nCon pepitas de chocolate\nDoble chocolate\nCon chocolate blanco y nuez\nRed Velvet con pepitas de chocolate blanco\nDe limón\nDe mantequilla\nDe cacahuete\nDe jengibre',
               hideListInfo: true,
@@ -545,15 +545,15 @@ export default [
               image: 'supercookies600.jpg',
               title: 'SUPERCOOKIES',
               description:
-                'Super cookies blanditas por el centro y con relleno y crujientes en el borde. 3,00€, mínimo 3u de cada tipo',
-              listInfo: '\nDe kinder bueno blanco\nDe kinder bueno blanco',
+                'Super cookies blanditas por el centro, rellenas y crujientes en el borde. 2,50€, mínimo 3u de cada tipo',
+              listInfo: '\nrellenas de crema de avellanas\nrellenas de crema de chocolate y avellanas',
               hideListInfo: true,
               buyButton: {
                 'data-item-min-quantity': 3,
-                'data-item-price': '3.00',
+                'data-item-price': '2.50',
                 'data-item-custom1-name': 'Tipo',
                 'data-item-custom1-options':
-                  'De pepitas de chocolate y nutella|De kinder bueno blanco|De Red Velvet con pepitas de chocolate y nutella blanca',
+                  'De crema de avellanas|De crema de avellanas y chocolate|De Red Velvet con pepitas de chocolate y crema de avellanas',
                 'data-item-stackable': 'never',
               },
             },
