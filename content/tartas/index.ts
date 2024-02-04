@@ -546,14 +546,14 @@ export default [
               title: 'SUPERCOOKIES',
               description:
                 'Super cookies blanditas por el centro, rellenas y crujientes en el borde. 2,50€, mínimo 3u de cada tipo',
-              listInfo: '\nrellenas de crema de avellanas\nrellenas de crema de chocolate y avellanas',
+              listInfo: '\nRellenas de crema de avellanas\nRellenas de crema de chocolate y avellanas\nRed Velvet con crema de avellanas',
               hideListInfo: true,
               buyButton: {
                 'data-item-min-quantity': 3,
                 'data-item-price': '2.50',
                 'data-item-custom1-name': 'Tipo',
                 'data-item-custom1-options':
-                  'De crema de avellanas|De crema de avellanas y chocolate|De Red Velvet con pepitas de chocolate y crema de avellanas',
+                  'De crema de avellanas|De crema de avellanas y chocolate|De Red Velvet y crema de avellanas',
                 'data-item-stackable': 'never',
               },
             },
