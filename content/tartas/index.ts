@@ -155,7 +155,7 @@ export default [
               listInfo:
                 'Molde de 24 cm, 10/12 raciones. 35,00 €\nMolde de 20 cm. 6/8 raciones. 31,00 €',
               buyButton: getBuyButtonStandardCakeSpecificInfo({
-                basePrice: '21.00',
+                basePrice: '31.00',
                 basePriceIncrement: '4.00',
               }),
             },
@@ -165,10 +165,10 @@ export default [
               description:
                 'Bizcocho de zanahoria, canela y nueces trituradas con relleno y cobertura de crema de queso.',
               listInfo:
-                'Molde de 24 cm, 10/12 raciones. 32,00 €\nMolde de 20 cm. 6/8 raciones. 28,00 €',
+                'Molde de 24 cm, 10/12 raciones. 33,60 €\nMolde de 20 cm. 6/8 raciones. 29,30 €',
               buyButton: getBuyButtonStandardCakeSpecificInfo({
-                basePrice: '28.00',
-                basePriceIncrement: '4.00',
+                basePrice: '29.30',
+                basePriceIncrement: '4.30',
               }),
             },
             {
@@ -176,9 +176,9 @@ export default [
               title: 'ALEJITO',
               description:
                 'Tarta milhojas de obleas y chocolate con cobertura de nata montada.',
-              listInfo: 'Molde de 24 cm, 10/12 raciones. 30,90 €',
+              listInfo: 'Molde de 24 cm, 10/12 raciones. 32,50 €',
               buyButton: getBuyButtonStandardCakeSpecificInfo({
-                basePrice: '30.90',
+                basePrice: '32.50',
               }),
             },
             {
@@ -187,10 +187,10 @@ export default [
               description:
                 'Tarta de queso fría con base de galleta y cobertura de mermelada de frambuesa o dulce de leche.',
               listInfo:
-                'Molde de 24 cm, 10/12 raciones. 31,20 €\nMolde de 20 cm. 6/8 raciones. 27,20 €',
+                'Molde de 24 cm, 10/12 raciones. 32,80 €\nMolde de 20 cm. 6/8 raciones. 28,60 €',
               buyButton: getBuyButtonStandardCakeSpecificInfo({
-                basePrice: '27.20',
-                basePriceIncrement: '4.00',
+                basePrice: '28.60',
+                basePriceIncrement: '4.20',
               }),
             },
             {
@@ -199,10 +199,10 @@ export default [
               description:
                 'Bizcocho de vainilla con galletas Oreo troceadas, con relleno de crema de queso y cobertura de galletas Oreo molidas.',
               listInfo:
-                'Molde de 24 cm, 10/12 raciones. 31,50 €\nMolde de 20 cm. 6/8 raciones. 27,50 €',
+                'Molde de 24 cm, 10/12 raciones. 33,00 €\nMolde de 20 cm. 6/8 raciones. 28,90 €',
               buyButton: getBuyButtonStandardCakeSpecificInfo({
-                basePrice: '27.50',
-                basePriceIncrement: '4.00',
+                basePrice: '28.90',
+                basePriceIncrement: '4.10',
               }),
             },
             {
@@ -221,10 +221,10 @@ export default [
               description:
                 'Tarta de galletas empapadas en leche y mousse de chocolate. Un clásico, a nuestra manera.',
               listInfo:
-                'Molde de 24 cm, 10/12 raciones. 32,50 €\nMolde de 20 cm. 6/8 raciones. 29,50 €',
+                'Molde de 24 cm, 10/12 raciones. 34,10 €\nMolde de 20 cm. 6/8 raciones. 30,80 €',
               buyButton: getBuyButtonStandardCakeSpecificInfo({
-                basePrice: '29.50',
-                basePriceIncrement: '3.00',
+                basePrice: '30.80',
+                basePriceIncrement: '3.30',
               }),
             },
             {
@@ -233,10 +233,10 @@ export default [
               description:
                 'Tarta de chocolate con un toque a malta, base de galleta y decorada con Maltesers.',
               listInfo:
-                'Molde de 24 cm, 10/12 raciones. 31,50 €\nMolde de 20 cm. 6/8 raciones. 27,50 €',
+                'Molde de 24 cm, 10/12 raciones. 33,00 €\nMolde de 20 cm. 6/8 raciones. 28,90 €',
               buyButton: getBuyButtonStandardCakeSpecificInfo({
-                basePrice: '27.50',
-                basePriceIncrement: '4.00',
+                basePrice: '28.90',
+                basePriceIncrement: '4.10',
               }),
             },
             {
@@ -245,10 +245,10 @@ export default [
               description:
                 'Tarta de queso al horno, con base de galleta y cobertura de mermelada de frambuesa, dulce de leche o chocolate.',
               listInfo:
-                'Molde de 24 cm, 10/12 raciones. 32,50 €\nMolde de 20 cm. 6/8 raciones. 28,50 €',
+                'Molde de 24 cm, 10/12 raciones. 34,00 €\nMolde de 20 cm. 6/8 raciones. 29,90 €',
               buyButton: getBuyButtonStandardCakeSpecificInfo({
-                basePrice: '28.50',
-                basePriceIncrement: '4.00',
+                basePrice: '29.90',
+                basePriceIncrement: '4.10',
               }),
             },
             {
@@ -256,9 +256,9 @@ export default [
               title: 'LIMÓN Y MERENGUE',
               description:
                 'Tarta de crema de limón, con base de galleta y merengue italiano tostado con soplete.',
-              listInfo: 'Molde de 24 cm, 10/12 raciones. 32,50 €',
+              listInfo: 'Molde de 24 cm, 10/12 raciones. 34,00 €',
               buyButton: getBuyButtonStandardCakeSpecificInfo({
-                basePrice: '32.50',
+                basePrice: '34.00',
                 onlyBigSize: true,
               }),
             },
@@ -266,9 +266,9 @@ export default [
               image: 'pavlova600.jpg',
               title: 'PAVLOVA',
               description: 'Merengue crujiente con nata y frambuesas.',
-              listInfo: 'Molde de 24 cm, 10/12 raciones. 37,80 €',
+              listInfo: 'Molde de 24 cm, 10/12 raciones. 39,00 €',
               buyButton: getBuyButtonStandardCakeSpecificInfo({
-                basePrice: '37.80',
+                basePrice: '39.00',
                 onlyBigSize: true,
               }),
             },
@@ -278,19 +278,19 @@ export default [
               description:
                 'Tres pisos de bizcocho de chocolate con relleno y cobertura de chocolate con leche.',
               listInfo:
-                'Molde de 24 cm, 10/12 raciones. 31,90 €\nMolde de 20 cm. 6/8 raciones. 27,90 €',
+                'Molde de 24 cm, 10/12 raciones. 33,50 €\nMolde de 20 cm. 6/8 raciones. 29,20 €',
               buyButton: getBuyButtonStandardCakeSpecificInfo({
-                basePrice: '27.90',
-                basePriceIncrement: '4.00',
+                basePrice: '29.20',
+                basePriceIncrement: '4.30',
               }),
             },
             {
               image: 'mamaamelia600.jpg',
               title: 'MAMÁ AMELIA',
               description: 'La tarta de almendra de mi abuela.',
-              listInfo: 'Molde de 24 cm, 10/12 raciones. 29,50 €',
+              listInfo: 'Molde de 24 cm, 10/12 raciones. 30,90 €',
               buyButton: getBuyButtonStandardCakeSpecificInfo({
-                basePrice: '29.50',
+                basePrice: '30.90',
                 onlyBigSize: true,
               }),
             },
@@ -300,9 +300,9 @@ export default [
               description:
                 'Tarta de crema de nata, queso y Oreo molida con base y cobertura de galleta Oreo.',
               listInfo:
-                'Molde de 24 cm, 10/12 raciones. 31,00 €\nMolde de 20 cm. 6/8 raciones. 27,00 €',
+                'Molde de 24 cm, 10/12 raciones. 35,00 €\nMolde de 20 cm. 6/8 raciones. 31,00 €',
               buyButton: getBuyButtonStandardCakeSpecificInfo({
-                basePrice: '27.00',
+                basePrice: '31.00',
                 basePriceIncrement: '4.00',
               }),
             },
@@ -312,10 +312,10 @@ export default [
               description:
                 'Plátano, dulce de leche y nata montada con base de galleta.',
               listInfo:
-                'Molde de 24 cm, 10/12 raciones. 30,90 €\nMolde de 20 cm. 6/8 raciones. 26,90 €',
+                'Molde de 24 cm, 10/12 raciones. 32,40 €\nMolde de 20 cm. 6/8 raciones. 28,30 €',
               buyButton: getBuyButtonStandardCakeSpecificInfo({
-                basePrice: '26.90',
-                basePriceIncrement: '4.00',
+                basePrice: '28.30',
+                basePriceIncrement: '4.10',
               }),
             },
             {
@@ -324,10 +324,10 @@ export default [
               description:
                 'Tres pisos de bizcocho de chocolate, relleno de dulce de leche y cobertura de chocolate con leche.',
               listInfo:
-                'Molde de 24 cm, 10/12 raciones. 32,00 €\nMolde de 20 cm. 6/8 raciones. 28,00 €',
+                'Molde de 24 cm, 10/12 raciones. 33,60 €\nMolde de 20 cm. 6/8 raciones. 29,30 €',
               buyButton: getBuyButtonStandardCakeSpecificInfo({
-                basePrice: '28.00',
-                basePriceIncrement: '4.00',
+                basePrice: '29.30',
+                basePriceIncrement: '4.30',
               }),
             },
             {
@@ -360,10 +360,10 @@ export default [
               description:
                 'Tarta fría de chocolate blanco, con leche y negro, con base de galleta.',
               listInfo:
-                'Molde de 24 cm, 10/12 raciones. 31,00 €\nMolde de 20 cm. 6/8 raciones. 27,00 €',
+                'Molde de 24 cm, 10/12 raciones. 32,50 €\nMolde de 20 cm. 6/8 raciones. 28,30 €',
               buyButton: getBuyButtonStandardCakeSpecificInfo({
-                basePrice: '27.00',
-                basePriceIncrement: '4.00',
+                basePrice: '28.30',
+                basePriceIncrement: '4.20',
               }),
             },
             {
@@ -373,7 +373,7 @@ export default [
                 'Brownie de chocolate y avellanas. Un clásico de la repostería americana, a nuestra manera.',
               listInfo: 'Molde de 21cm x 21cm, 9 raciones. 20,00 €',
               buyButton: getBuyButtonStandardCakeSpecificInfo({
-                basePrice: '20.00',
+                basePrice: '21.00',
                 useCustomSizeString: 'Molde de 21cm x 21cm, 9 raciones.',
               }),
             },
@@ -383,10 +383,10 @@ export default [
               description:
                 'Bizcocho de vainilla con relleno de crema de chocolate y nata montada, con cobertura de chocolate con leche.',
               listInfo:
-                'Molde de 24 cm, 10/12 raciones. 32,50 €\nMolde de 20 cm. 6/8 raciones. 29,50 €',
+                'Molde de 24 cm, 10/12 raciones. 34,10 €\nMolde de 20 cm. 6/8 raciones. 30,80 €',
               buyButton: getBuyButtonStandardCakeSpecificInfo({
-                basePrice: '29.50',
-                basePriceIncrement: '3.00',
+                basePrice: '30.80',
+                basePriceIncrement: '3.30',
               }),
             },
             {
@@ -404,9 +404,9 @@ export default [
               title: 'TRES LECHES',
               description:
                 'Bizcocho genovés empapado en tres leches, con dulce de leche y merengue tostado.',
-              listInfo: 'Molde de 24 cm, 10/12 raciones. 33,50 €',
+              listInfo: 'Molde de 24 cm, 10/12 raciones. 34,50 €',
               buyButton: getBuyButtonStandardCakeSpecificInfo({
-                basePrice: '33.50',
+                basePrice: '34.50',
               }),
             },
             {
