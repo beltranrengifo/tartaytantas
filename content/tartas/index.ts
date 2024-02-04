@@ -371,7 +371,7 @@ export default [
               title: 'BROWNIE',
               description:
                 'Brownie de chocolate y avellanas. Un clásico de la repostería americana, a nuestra manera.',
-              listInfo: 'Molde de 21cm x 21cm, 9 raciones. 20,00 €',
+              listInfo: 'Molde de 21cm x 21cm, 9 raciones. 21,00 €',
               buyButton: getBuyButtonStandardCakeSpecificInfo({
                 basePrice: '21.00',
                 useCustomSizeString: 'Molde de 21cm x 21cm, 9 raciones.',
