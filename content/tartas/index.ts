@@ -450,7 +450,7 @@ export default [
               image: 'nakedred600.jpg',
               title: 'SEMINAKED RED VELVET',
               description:
-                'Cuatro pisos de bizcocho de Red Velvet relleno de crema de queso, coronada con frutos rojos y trozitos de almendra caramelizada o simplemente con trocitos de frambuesa liofilizada. Disponible también decorada con crema de queso.',
+                'Tres pisos de bizcocho de Red Velvet relleno de crema de queso, coronada con frutos rojos y trozitos de almendra caramelizada o simplemente con trocitos de frambuesa liofilizada. Disponible también decorada con crema de queso.',
               listInfo:
                 'Molde de 18x10 cm, 10 raciones. 44,00 €\nMolde de 20x10 cm. 15 raciones. 60,00 €',
               buyButton: getBuyButtonNakedCakeSpecificInfo({
@@ -462,7 +462,7 @@ export default [
               image: 'nakedchoco600.jpg',
               title: 'SEMINAKED CHOCOLATE',
               description:
-                'Cuatro pisos de bizcocho de chocolate relleno de crema de chocolate. Coronada con rosas de chocolate y trocitos de almendra caramelizada.',
+                'Tres pisos de bizcocho de chocolate relleno de crema de chocolate. Coronada con rosas de chocolate y trocitos de almendra caramelizada.',
               listInfo:
                 'Molde de 18x10 cm, 10 raciones. 44,00 €\nMolde de 20x10 cm. 15 raciones. 60,00 €',
               buyButton: getBuyButtonNakedCakeSpecificInfo({
@@ -474,7 +474,7 @@ export default [
               image: 'seminakedvaini600.jpg',
               title: 'SEMINAKED VAINILLA',
               description:
-                'Cuatro pisos de bizcocho de vainilla relleno de crema de chocolate blanco, coronada con rosas de chocolate blanco y trocitos de frambuesa liofilizada.',
+                'Tres pisos de bizcocho de vainilla relleno de crema de chocolate blanco, coronada con rosas de chocolate blanco y trocitos de frambuesa liofilizada.',
               listInfo:
                 'Molde de 18x10 cm, 10 raciones. 44,00 €\nMolde de 20x10 cm. 15 raciones. 60,00 €',
               buyButton: getBuyButtonNakedCakeSpecificInfo({
@@ -505,12 +505,12 @@ export default [
               image: 'muffins.jpg',
               title: 'MUFFINS',
               description:
-                'La versión muffin de nuestras tartas, con el mismo relleno y cobertura. Mínimo 6u de cada tipo para encargo. 2,25 €',
+                'La versión muffin de nuestras tartas, con el mismo relleno y cobertura. Mínimo 12u de cada tipo para encargo. 2,25 €',
               listInfo: 'Zanahoria\nBeltrán\nWendy\nBosco\nRed Velvet',
               hideListInfo: true,
               buyButton: {
                 'data-item-price': '2.25',
-                'data-item-min-quantity': 6,
+                'data-item-min-quantity': 12,
                 'data-item-custom1-name': 'Tipo',
                 'data-item-custom1-options':
                   'Zanahoria|Beltrán|Wendy|Bosco|Red Velvet',
@@ -522,13 +522,13 @@ export default [
               title: 'BIZCOCHOS',
               description: '600 g / 10,00 €',
               listInfo:
-                'Zanahoria\nVainilla\nOreo\nChocolate\nRed Velvet\nYogur\nCebra (vainilla y chocolate)\nVainilla sin azúcar\nChocolate sin azúcar\nCebra sin azúcar',
+                'Zanahoria\nVainilla\nOreo\nChocolate\nRed Velvet\nYogur\nCebra (vainilla y chocolate)\nLimón\nVainilla sin azúcar\nChocolate sin azúcar\nCebra sin azúcar',
               hideListInfo: true,
               buyButton: {
                 'data-item-price': '10.00',
                 'data-item-custom1-name': 'Tipo',
                 'data-item-custom1-options':
-                  'Zanahoria|Vainilla|Oreo|Chocolate|Red Velvet|Yogur|Cebra (vainilla y chocolate)',
+                  'Zanahoria|Vainilla|Oreo|Chocolate|Red Velvet|Yogur|Limón|Cebra (vainilla y chocolate)',
                 'data-item-stackable': 'never',
               },
             },
@@ -545,15 +545,15 @@ export default [
               image: 'supercookies600.jpg',
               title: 'SUPERCOOKIES',
               description:
-                'Super cookies blanditas por el centro, rellenas y crujientes en el borde. 2,50€, mínimo 3u de cada tipo',
-              listInfo: '\nRellenas de crema de avellanas\nRellenas de crema de chocolate y avellanas\nRed Velvet con crema de avellanas',
+                'Super cookies blanditas por el centro, rellenas y crujientes en el borde. 2,50€, mínimo 3u',
+              listInfo: '\nRellenas de crema de avellanas y de chocolate',
               hideListInfo: true,
               buyButton: {
                 'data-item-min-quantity': 3,
                 'data-item-price': '2.50',
                 'data-item-custom1-name': 'Tipo',
                 'data-item-custom1-options':
-                  'De crema de avellanas|De crema de avellanas y chocolate|De Red Velvet y crema de avellanas',
+                  'De crema de avellanas y chocolate',
                 'data-item-stackable': 'never',
               },
             },
