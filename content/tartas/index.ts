@@ -149,9 +149,9 @@ export default [
           items: [
             {
               image: 'idiazabal.jpg',
-              title: 'CHEESECAKE IDIAZABAL (La podemos hacer sin harina de trigo) ',
+              title: 'CHEESECAKE IDIAZABAL',
               description:
-                'Tarta de queso al horno, con base de galleta y un toque de Idiazábal.',
+                'Tarta de queso al horno, con base de galleta y un toque de Idiazábal.Podemos hacerla sin harina de trigo, pero con trazas.',
               listInfo:
                 'Molde de 24 cm, 10/12 raciones. 35,00 €\nMolde de 20 cm. 6/8 raciones. 31,00 €',
               buyButton: getBuyButtonStandardCakeSpecificInfo({
@@ -163,7 +163,7 @@ export default [
               image: 'carrot.jpg',
               title: 'ZANAHORIA',
               description:
-                'Bizcocho de zanahoria, canela y nueces trituradas con relleno y cobertura de crema de queso.',
+                'Bizcocho de zanahoria, canela y nueces trituradas con relleno y cobertura de crema de queso.Podemos hacerla sin harina de trigo, pero con trazas.',
               listInfo:
                 'Molde de 24 cm, 10/12 raciones. 33,60 €\nMolde de 20 cm. 6/8 raciones. 29,30 €',
               buyButton: getBuyButtonStandardCakeSpecificInfo({
@@ -185,7 +185,7 @@ export default [
               image: 'queso.jpg',
               title: 'TARTA DE QUESO',
               description:
-                'Tarta de queso fría con base de galleta y cobertura de mermelada de frambuesa o dulce de leche.',
+                'Tarta de queso fría con base de galleta y cobertura de mermelada de frambuesa o dulce de leche.Podemos hacerla sin harina de trigo, pero con trazas.',
               listInfo:
                 'Molde de 24 cm, 10/12 raciones. 32,80 €\nMolde de 20 cm. 6/8 raciones. 28,60 €',
               buyButton: getBuyButtonStandardCakeSpecificInfo({
@@ -209,7 +209,7 @@ export default [
               image: 'armina.jpg',
               title: 'ARMINA',
               description:
-                'Tres pisos de bizcocho de espinacas con un toque cítrico,  relleno y cobertura de crema de nata y queso, coronada con frambuesas.',
+                'Tres pisos de bizcocho de espinacas con un toque cítrico,  relleno y cobertura de crema de nata y queso, coronada con frambuesas. Podemos hacerla sin harina de trigo, pero con trazas.',
               listInfo: 'Molde de 20 cm, 10/12 raciones. 41,50 €',
               buyButton: getBuyButtonStandardCakeSpecificInfo({
                 basePrice: '41.50',
@@ -287,7 +287,7 @@ export default [
             {
               image: 'mamaamelia600.jpg',
               title: 'MAMÁ AMELIA',
-              description: 'La tarta de almendra de mi abuela.',
+              description: 'La tarta de almendra de mi abuela. Sin harina de trigo.',
               listInfo: 'Molde de 24 cm, 10/12 raciones. 30,90 €',
               buyButton: getBuyButtonStandardCakeSpecificInfo({
                 basePrice: '30.90',
