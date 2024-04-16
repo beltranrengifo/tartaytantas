@@ -149,7 +149,7 @@ export default [
           items: [
             {
               image: 'idiazabal.jpg',
-              title: 'CHEESECAKE IDIAZABAL',
+              title: 'CHEESECAKE IDIAZABAL (La podemos hacer sin harina de trigo) ',
               description:
                 'Tarta de queso al horno, con base de galleta y un toque de Idiazábal.',
               listInfo:
