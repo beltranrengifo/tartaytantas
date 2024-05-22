@@ -152,7 +152,7 @@ export default [
               title: 'CHEESECAKE IDIAZABAL',
               description:
                 'Tarta de queso al horno, con base de galleta y un toque de Idiazábal.
-                Podemos hacerla sin harina de trigo, pero sí con trazas. Pregúntanos.',
+                Podemos hacerla sin harina de trigo, pero no podemos evitar con trazas. Consulta el precio..',
               listInfo:
                 'Molde de 24 cm, 10/12 raciones. 35,00 €\nMolde de 20 cm. 6/8 raciones. 31,00 €',
               buyButton: getBuyButtonStandardCakeSpecificInfo({
