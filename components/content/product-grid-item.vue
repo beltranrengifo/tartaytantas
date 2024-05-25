@@ -53,7 +53,13 @@
           class="product-grid-item__description w-80 max-w-full mb-6 mx-auto pl-4 text-left font-serif leading-7"
         >
           {{ item.description }}
+          <span
+            class="product-grid-item__description-helper text-xs block mt-2 leading-5 italic"
+          >
+            {{ item.descriptionHelper }}
+          </span>
         </p>
+
         <ul v-if="item.listInfo" class="w-80 max-w-full mx-auto pl-4 text-left">
           <li
             v-for="(listItem, index) in listInfoAsArray(item.listInfo)"
