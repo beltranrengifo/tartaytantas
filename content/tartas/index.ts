@@ -150,8 +150,10 @@ export default [
             {
               image: 'idiazabal.jpg',
               title: 'CHEESECAKE IDIAZABAL',
-              description: `Tarta de queso al horno, con base de galleta y un toque de Idiazábal.
-                Podemos hacerla sin harina de trigo, pero con trazas. Consulta el precio.`,
+              description:
+                'Tarta de queso al horno, con base de galleta y un toque de Idiazábal.',
+              descriptionHelper:
+                'Podemos hacerla sin harina de trigo, pero con trazas. Consulta el precio.',
               listInfo:
                 'Molde de 24 cm, 10/12 raciones. 35,00 €\nMolde de 20 cm. 6/8 raciones. 31,00 €',
               buyButton: getBuyButtonStandardCakeSpecificInfo({
@@ -162,8 +164,10 @@ export default [
             {
               image: 'carrot.jpg',
               title: 'ZANAHORIA',
-              description: `Bizcocho de zanahoria, canela y nueces trituradas con relleno y cobertura de crema de queso.
-                Podemos hacerla sin harina de trigo, pero con trazas. Consulta el precio.`,
+              description:
+                'Bizcocho de zanahoria, canela y nueces trituradas con relleno y cobertura de crema de queso.',
+              descriptionHelper:
+                'Podemos hacerla sin harina de trigo, pero con trazas. Consulta el precio.',
               listInfo:
                 'Molde de 24 cm, 10/12 raciones. 33,60 €\nMolde de 20 cm. 6/8 raciones. 29,30 €',
               buyButton: getBuyButtonStandardCakeSpecificInfo({
@@ -184,8 +188,10 @@ export default [
             {
               image: 'queso.jpg',
               title: 'TARTA DE QUESO',
-              description: `Tarta de queso fría con base de galleta y cobertura de mermelada de frambuesa o dulce de leche.
-                Podemos hacerla sin harina de trigo, pero sí con trazas. Pregúntanos.`,
+              description:
+                'Tarta de queso fría con base de galleta y cobertura de mermelada de frambuesa o dulce de leche.',
+              descriptionHelper:
+                'Podemos hacerla sin harina de trigo, pero con trazas. Consulta el precio.',
               listInfo:
                 'Molde de 24 cm, 10/12 raciones. 32,80 €\nMolde de 20 cm. 6/8 raciones. 28,60 €',
               buyButton: getBuyButtonStandardCakeSpecificInfo({
@@ -208,8 +214,10 @@ export default [
             {
               image: 'armina.jpg',
               title: 'ARMINA',
-              description: `Tres pisos de bizcocho de espinacas con un toque cítrico,  relleno y cobertura de crema de nata y queso, coronada con frambuesas.
-                Podemos hacerla sin harina de trigo, pero sí con trazas. Pregúntanos.`,
+              description:
+                'Tres pisos de bizcocho de espinacas con un toque cítrico,  relleno y cobertura de crema de nata y queso, coronada con frambuesas.',
+              descriptionHelper:
+                'Podemos hacerla sin harina de trigo, pero con trazas. Consulta el precio.',
               listInfo: 'Molde de 20 cm, 10/12 raciones. 41,50 €',
               buyButton: getBuyButtonStandardCakeSpecificInfo({
                 basePrice: '41.50',
@@ -218,8 +226,10 @@ export default [
             {
               image: 'abuela600.jpg',
               title: 'DE LA ABUELA',
-              description: `Tarta de galletas empapadas en leche y mousse de chocolate. Un clásico, a nuestra manera.
-                Podemos hacerla sin harina de trigo, pero sí con trazas. Pregúntanos.`,
+              description:
+                'Tarta de galletas empapadas en leche y mousse de chocolate. Un clásico, a nuestra manera.',
+              descriptionHelper:
+                'Podemos hacerla sin harina de trigo, pero con trazas. Consulta el precio.',
               listInfo:
                 'Molde de 24 cm, 10/12 raciones. 34,10 €\nMolde de 20 cm. 6/8 raciones. 30,80 €',
               buyButton: getBuyButtonStandardCakeSpecificInfo({
@@ -242,8 +252,10 @@ export default [
             {
               image: 'ny600.jpg',
               title: 'NEW YORK CHEESECAKE',
-              description: `Tarta de queso al horno, con base de galleta y cobertura de mermelada de frambuesa, dulce de leche o chocolate.
-                Podemos hacerla sin harina de trigo, pero sí con trazas. Pregúntanos.`,
+              description:
+                'Tarta de queso al horno, con base de galleta y cobertura de mermelada de frambuesa, dulce de leche o chocolate.',
+              descriptionHelper:
+                'Podemos hacerla sin harina de trigo, pero con trazas. Consulta el precio.',
               listInfo:
                 'Molde de 24 cm, 10/12 raciones. 34,00 €\nMolde de 20 cm. 6/8 raciones. 29,90 €',
               buyButton: getBuyButtonStandardCakeSpecificInfo({
@@ -276,8 +288,10 @@ export default [
             {
               image: 'bosco600.jpg',
               title: 'BOSCO',
-              description: `Tres pisos de bizcocho de chocolate con relleno y cobertura de chocolate con leche.
-                Podemos hacerla sin harina de trigo, pero sí con trazas. Pregúntanos.`,
+              description:
+                'Tres pisos de bizcocho de chocolate con relleno y cobertura de chocolate con leche.',
+              descriptionHelper:
+                'Podemos hacerla sin harina de trigo, pero con trazas. Consulta el precio.',
               listInfo:
                 'Molde de 24 cm, 10/12 raciones. 33,50 €\nMolde de 20 cm. 6/8 raciones. 29,20 €',
               buyButton: getBuyButtonStandardCakeSpecificInfo({
@@ -323,8 +337,10 @@ export default [
             {
               image: 'wendy.jpg',
               title: 'WENDY',
-              description: `Tres pisos de bizcocho de chocolate, relleno de dulce de leche y cobertura de chocolate con leche.
-                Podemos hacerla sin harina de trigo, pero sí con trazas. Pregúntanos.`,
+              description:
+                'Tres pisos de bizcocho de chocolate, relleno de dulce de leche y cobertura de chocolate con leche.',
+              descriptionHelper:
+                'Podemos hacerla sin harina de trigo, pero con trazas. Consulta el precio.',
               listInfo:
                 'Molde de 24 cm, 10/12 raciones. 33,60 €\nMolde de 20 cm. 6/8 raciones. 29,30 €',
               buyButton: getBuyButtonStandardCakeSpecificInfo({
@@ -335,8 +351,10 @@ export default [
             {
               image: 'cheeseblanco600.jpg',
               title: 'CHEESECAKE CHOCO BLANCO',
-              description: `Tarta de queso al horno con base de galleta y un toque de chocolate blanco.
-              Podemos hacerla sin harina de trigo, pero sí con trazas. Pregúntanos.`,
+              description:
+                'Tarta de queso al horno con base de galleta y un toque de chocolate blanco.',
+              descriptionHelper:
+                'Podemos hacerla sin harina de trigo, pero con trazas. Consulta el precio.',
               listInfo:
                 'Molde de 24 cm, 10/12 raciones. 35,00 €\nMolde de 20 cm. 6/8 raciones. 31,00 €',
               buyButton: getBuyButtonStandardCakeSpecificInfo({
@@ -347,8 +365,10 @@ export default [
             {
               image: 'cheesechoco600.jpg',
               title: 'CHEESECAKE CHOCOLATE',
-              description: `Tarta tierna de queso y chocolate al horno con base de galleta.
-                Podemos hacerla sin harina de trigo, pero sí con trazas. Pregúntanos.`,
+              description:
+                'Tarta tierna de queso y chocolate al horno con base de galleta.',
+              descriptionHelper:
+                'Podemos hacerla sin harina de trigo, pero con trazas. Consulta el precio.',
               listInfo:
                 'Molde de 24 cm, 10/12 raciones. 35,00 €\nMolde de 20 cm. 6/8 raciones. 31,00 €',
               buyButton: getBuyButtonStandardCakeSpecificInfo({
@@ -359,8 +379,10 @@ export default [
             {
               image: '3chocolates600.jpg',
               title: 'TRES CHOCOLATES',
-              description: `Tarta fría de chocolate blanco, con leche y negro, con base de galleta.
-                Podemos hacerla sin harina de trigo, pero sí con trazas. Pregúntanos.`,
+              description:
+                'Tarta fría de chocolate blanco, con leche y negro, con base de galleta.',
+              descriptionHelper:
+                'Podemos hacerla sin harina de trigo, pero con trazas. Consulta el precio.',
               listInfo:
                 'Molde de 24 cm, 10/12 raciones. 32,50 €\nMolde de 20 cm. 6/8 raciones. 28,30 €',
               buyButton: getBuyButtonStandardCakeSpecificInfo({
@@ -382,8 +404,10 @@ export default [
             {
               image: 'cumple600.jpg',
               title: 'CUMPLEAÑOS',
-              description: `Bizcocho de vainilla con relleno de crema de chocolate y nata montada, con cobertura de chocolate con leche.
-                Podemos hacerla sin harina de trigo, pero sí con trazas. Pregúntanos.`,
+              description:
+                'Bizcocho de vainilla con relleno de crema de chocolate y nata montada, con cobertura de chocolate con leche.',
+              descriptionHelper:
+                'Podemos hacerla sin harina de trigo, pero con trazas. Consulta el precio.',
               listInfo:
                 'Molde de 24 cm, 10/12 raciones. 34,10 €\nMolde de 20 cm. 6/8 raciones. 30,80 €',
               buyButton: getBuyButtonStandardCakeSpecificInfo({
@@ -394,8 +418,10 @@ export default [
             {
               image: 'celia600.jpg',
               title: 'CELIA',
-              description: `Tres pisos de bizcocho Red Velvet,  relleno y cobertura de crema de nata y queso, coronada con fresas, frambuesas y suspiros de merengue.
-                Podemos hacerla sin harina de trigo, pero sí con trazas. Pregúntanos.`,
+              description:
+                'Tres pisos de bizcocho Red Velvet,  relleno y cobertura de crema de nata y queso, coronada con fresas, frambuesas y suspiros de merengue.',
+              descriptionHelper:
+                'Podemos hacerla sin harina de trigo, pero con trazas. Consulta el precio.',
               listInfo: 'Molde de 20 cm, 10/12 raciones. 42,00 €',
               buyButton: getBuyButtonStandardCakeSpecificInfo({
                 basePrice: '42.00',

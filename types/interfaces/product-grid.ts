@@ -2,6 +2,7 @@ export interface ProductItem {
   image: string
   title: string
   description?: string
+  descriptionHelper?: string
   listInfo?: string
   hideListInfo?: boolean
   action: ItemAction
