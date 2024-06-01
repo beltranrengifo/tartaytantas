@@ -419,7 +419,7 @@ export default [
               image: 'celia600.jpg',
               title: 'CELIA',
               description:
-                'Tres pisos de bizcocho Red Velvet,  relleno y cobertura de crema de nata y queso, coronada con fresas, frambuesas y suspiros de merengue.',
+                'Tres pisos de bizcocho Red Velvet,  relleno y cobertura de crema de nata y queso, coronada con fresas, frambuesas y suspiros de merengue.(La decoración puede cambiar.',
               descriptionHelper:
                 'Podemos hacerla sin harina de trigo, pero con trazas. Consulta el precio.',
               listInfo: 'Molde de 20 cm, 10/12 raciones. 42,00 €',
