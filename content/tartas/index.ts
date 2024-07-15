@@ -550,7 +550,7 @@ export default [
               title: 'BIZCOCHOS',
               description: '600 g / 10,00 €',
               listInfo:
-                'Zanahoria\nVainilla\nOreo\nChocolate\nRed Velvet\nYogur\nLimón\nVainilla sin azúcar\nChocolate con edulcorante\nCebra con edulcorante\nCebra con edulcorante',
+                'Zanahoria\nVainilla\nOreo\nChocolate\nRed Velvet\nYogur\nLimón\nVainilla con edulcorante\nChocolate con edulcorante\nCebra con edulcorante',
               hideListInfo: true,
               buyButton: {
                 'data-item-price': '10.00',
