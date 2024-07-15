@@ -574,7 +574,7 @@ export default [
               title: 'SUPERCOOKIES',
               description:
                 'Super cookies blanditas por el centro, rellenas y crujientes en el borde. 2,50€, mínimo 3u',
-              listInfo: '\nRellenas de crema de avellanas y de chocolate',
+              listInfo: '\nRellenas de crema de chocolate y avellanas',
               hideListInfo: true,
               buyButton: {
                 'data-item-min-quantity': 3,
