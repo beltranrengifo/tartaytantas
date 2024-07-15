@@ -203,7 +203,7 @@ export default [
               image: 'beltran.jpg',
               title: 'BELTRÁN',
               description:
-                'Bizcocho de vainilla con galletas Oreo troceadas, con relleno de crema de queso y cobertura de galletas Oreo molidas.',
+                'Bizcocho de vainilla con galletas Oreo troceadas, con relleno y cobertura de crema de queso y terminada con galletas Oreo molidas.',
               listInfo:
                 'Molde de 24 cm, 10/12 raciones. 33,00 €\nMolde de 20 cm. 6/8 raciones. 28,90 €',
               buyButton: getBuyButtonStandardCakeSpecificInfo({
@@ -253,7 +253,7 @@ export default [
               image: 'ny600.jpg',
               title: 'NEW YORK CHEESECAKE',
               description:
-                'Tarta de queso al horno, con base de galleta y cobertura de mermelada de frambuesa, dulce de leche o chocolate.',
+                'Tarta de queso al horno, con base de galleta y cobertura de mermelada de frambuesa o de dulce de leche.',
               descriptionHelper:
                 'Podemos hacerla sin harina de trigo, pero con trazas. Consulta el precio.',
               listInfo:
@@ -303,7 +303,7 @@ export default [
               image: 'mamaamelia600.jpg',
               title: 'MAMÁ AMELIA',
               description:
-                'La tarta de almendra de mi abuela. Sin harina de trigo.',
+                'La tarta de almendra de mi abuela. Sin harina de trigo, apta para intolerantes al gluten.',
               listInfo: 'Molde de 24 cm, 10/12 raciones. 30,90 €',
               buyButton: getBuyButtonStandardCakeSpecificInfo({
                 basePrice: '30.90',
@@ -419,7 +419,7 @@ export default [
               image: 'celia600.jpg',
               title: 'CELIA',
               description:
-                'Tres pisos de bizcocho Red Velvet,  relleno y cobertura de crema de nata y queso, coronada con fresas, frambuesas y suspiros de merengue.(La decoración puede cambiar.',
+                'Tres pisos de bizcocho Red Velvet,  relleno y cobertura de crema de nata y queso, coronada con fresas, frambuesas y suspiros de merengue. La decoración puede cambiar.',
               descriptionHelper:
                 'Podemos hacerla sin harina de trigo, pero con trazas. Consulta el precio.',
               listInfo: 'Molde de 20 cm, 10/12 raciones. 42,00 €',
@@ -431,7 +431,7 @@ export default [
               image: '3leches600.jpg',
               title: 'TRES LECHES',
               description:
-                'Bizcocho genovés empapado en tres leches, con dulce de leche y merengue tostado.',
+                'Bizcocho genovés empapado en tres leches, cubierto con dulce de leche y merengue tostado.',
               listInfo: 'Molde de 24 cm, 10/12 raciones. 34,50 €',
               buyButton: getBuyButtonStandardCakeSpecificInfo({
                 basePrice: '34.50',
@@ -441,7 +441,7 @@ export default [
               image: 'vasitos600.jpg',
               title: 'INDIVIDUALES',
               description:
-                'Algunas de nuestras tartas en formato individual. De la abuela, oreo, banoffee y vasito de mango y crema de queso, en vaso de plástico o de cristal (con fianza que se recupera con la devolución). Mínimo 6 unidades de cada tipo. ',
+                'Algunas de nuestras tartas en formato individual. De la abuela, oreo, banoffee, zanahoria, Bosco, ..pregúntanos. En vaso de plástico o de cristal (con fianza que se recupera con la devolución). Mínimo 6 unidades de cada tipo. ',
               listInfo: 'Vasito individual 4€',
               buyButton: {
                 ...getBuyButtonStandardCakeSpecificInfo({
@@ -478,7 +478,7 @@ export default [
               image: 'nakedred600.jpg',
               title: 'SEMINAKED RED VELVET',
               description:
-                'Tres pisos de bizcocho de Red Velvet relleno de crema de queso, coronada con frutos rojos y trozitos de almendra caramelizada o simplemente con trocitos de frambuesa liofilizada. Disponible también decorada con crema de queso.',
+                'Tres pisos de bizcocho Red Velvet relleno de crema de queso, decorada con frutos rojos. La decoración puede cambiar.',
               listInfo:
                 'Molde de 18x10 cm, 10 raciones. 44,00 €\nMolde de 20x10 cm. 15 raciones. 60,00 €',
               buyButton: getBuyButtonNakedCakeSpecificInfo({
@@ -490,7 +490,7 @@ export default [
               image: 'nakedchoco600.jpg',
               title: 'SEMINAKED CHOCOLATE',
               description:
-                'Tres pisos de bizcocho de chocolate relleno de crema de chocolate. Coronada con rosas de chocolate y trocitos de almendra caramelizada.',
+                'Tres pisos de bizcocho de chocolate relleno de buttercream de chocolate con leche o negro. Coronada con rosas de buttercream.',
               listInfo:
                 'Molde de 18x10 cm, 10 raciones. 44,00 €\nMolde de 20x10 cm. 15 raciones. 60,00 €',
               buyButton: getBuyButtonNakedCakeSpecificInfo({
@@ -502,7 +502,7 @@ export default [
               image: 'seminakedvaini600.jpg',
               title: 'SEMINAKED VAINILLA',
               description:
-                'Tres pisos de bizcocho de vainilla relleno de crema de chocolate blanco, coronada con rosas de chocolate blanco y trocitos de frambuesa liofilizada.',
+                'Tres pisos de bizcocho de vainilla relleno de buttercream de chocolate blanco, coronada buttercream y bolas de cereales de colores. La decoración puede cambiar.',
               listInfo:
                 'Molde de 18x10 cm, 10 raciones. 44,00 €\nMolde de 20x10 cm. 15 raciones. 60,00 €',
               buyButton: getBuyButtonNakedCakeSpecificInfo({
@@ -533,7 +533,7 @@ export default [
               image: 'muffins.jpg',
               title: 'MUFFINS',
               description:
-                'La versión muffin de nuestras tartas, con el mismo relleno y cobertura. Mínimo 12u de cada tipo para encargo. 2,25 €',
+                'La versión muffin de nuestras tartas, con el mismo relleno y cobertura. Por encargo, mínimo 12u de cada tipo . 2,25 €',
               listInfo: 'Zanahoria\nBeltrán\nWendy\nBosco\nRed Velvet',
               hideListInfo: true,
               buyButton: {
@@ -550,7 +550,7 @@ export default [
               title: 'BIZCOCHOS',
               description: '600 g / 10,00 €',
               listInfo:
-                'Zanahoria\nVainilla\nOreo\nChocolate\nRed Velvet\nYogur\nCebra (vainilla y chocolate)\nLimón\nVainilla sin azúcar\nChocolate sin azúcar\nCebra sin azúcar',
+                'Zanahoria\nVainilla\nOreo\nChocolate\nRed Velvet\nYogur\nLimón\nVainilla sin azúcar\nChocolate con edulcorante\nCebra con edulcorante\nCebra con edulcorante',
               hideListInfo: true,
               buyButton: {
                 'data-item-price': '10.00',
@@ -566,7 +566,7 @@ export default [
               description:
                 'Aprox 25 g /0,75€ unidad, consultar disponibilidad en tienda',
               listInfo:
-                '\nCon lacasitos\nCon pepitas de chocolate\nDoble chocolate\nCon chocolate blanco y nuez\nRed Velvet con pepitas de chocolate blanco\nDe limón\nDe mantequilla\nDe cacahuete\nDe jengibre',
+                '\nCon lacasitos\nCon pepitas de chocolate\nDoble chocolate\nRed Velvet con pepitas de chocolate blanco\nDe limón\nDe mantequilla',
               hideListInfo: true,
             },
             {
