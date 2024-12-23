@@ -183,6 +183,7 @@ export default [
               listInfo: 'Molde de 24 cm, 10/12 raciones. 32,50 €',
               buyButton: getBuyButtonStandardCakeSpecificInfo({
                 basePrice: '32.50',
+                onlyBigSize: true,
               }),
             },
             {
@@ -435,6 +436,7 @@ export default [
               listInfo: 'Molde de 24 cm, 10/12 raciones. 34,50 €',
               buyButton: getBuyButtonStandardCakeSpecificInfo({
                 basePrice: '34.50',
+                onlyBigSize: true,
               }),
             },
             {
