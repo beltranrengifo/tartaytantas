@@ -151,14 +151,14 @@ export default [
               image: 'idiazabal.jpg',
               title: 'CHEESECAKE IDIAZABAL',
               description:
-                'Tarta de queso al horno, con base de galleta y un toque de Idiazábal.',
+                'Tarta de queso al horno, con base de galleta y un toque de queso Idiazábal.',
               descriptionHelper:
                 'Podemos hacerla sin harina de trigo, pero con trazas. Consulta el precio.',
               listInfo:
-                'Molde de 24 cm, 10/12 raciones. 35,00 €\nMolde de 20 cm. 6/8 raciones. 31,00 €',
+                'Molde de 24 cm, 10/12 raciones. 36,00 €\nMolde de 20 cm. 6/8 raciones. 31,50 €',
               buyButton: getBuyButtonStandardCakeSpecificInfo({
-                basePrice: '31.00',
-                basePriceIncrement: '4.00',
+                basePrice: '31.50',
+                basePriceIncrement: '4.50',
               }),
             },
             {
@@ -169,10 +169,10 @@ export default [
               descriptionHelper:
                 'Podemos hacerla sin harina de trigo, pero con trazas. Consulta el precio.',
               listInfo:
-                'Molde de 24 cm, 10/12 raciones. 33,60 €\nMolde de 20 cm. 6/8 raciones. 29,30 €',
+                'Molde de 24 cm, 10/12 raciones. 34,80 €\nMolde de 20 cm. 6/8 raciones. 30,30 €',
               buyButton: getBuyButtonStandardCakeSpecificInfo({
-                basePrice: '29.30',
-                basePriceIncrement: '4.30',
+                basePrice: '30.30',
+                basePriceIncrement: '4.50',
               }),
             },
             {
@@ -180,9 +180,9 @@ export default [
               title: 'ALEJITO',
               description:
                 'Tarta milhojas de obleas y chocolate con cobertura de nata montada.',
-              listInfo: 'Molde de 24 cm, 10/12 raciones. 32,50 €',
+              listInfo: 'Molde de 24 cm, 10/12 raciones. 33,00 €',
               buyButton: getBuyButtonStandardCakeSpecificInfo({
-                basePrice: '32.50',
+                basePrice: '33.00',
                 onlyBigSize: true,
               }),
             },
@@ -194,9 +194,9 @@ export default [
               descriptionHelper:
                 'Podemos hacerla sin harina de trigo, pero con trazas. Consulta el precio.',
               listInfo:
-                'Molde de 24 cm, 10/12 raciones. 32,80 €\nMolde de 20 cm. 6/8 raciones. 28,60 €',
+                'Molde de 24 cm, 10/12 raciones. 33,80 €\nMolde de 20 cm. 6/8 raciones. 29,60 €',
               buyButton: getBuyButtonStandardCakeSpecificInfo({
-                basePrice: '28.60',
+                basePrice: '29.60',
                 basePriceIncrement: '4.20',
               }),
             },
@@ -204,11 +204,11 @@ export default [
               image: 'beltran.jpg',
               title: 'BELTRÁN',
               description:
-                'Bizcocho de vainilla con galletas Oreo troceadas, con relleno y cobertura de crema de queso y terminada con galletas Oreo molidas.',
+                'Bizcocho de vainilla con galletas tipo Oreo troceadas, con relleno y cobertura de crema de queso y terminada con galletas tipo Oreo molidas.',
               listInfo:
-                'Molde de 24 cm, 10/12 raciones. 33,00 €\nMolde de 20 cm. 6/8 raciones. 28,90 €',
+                'Molde de 24 cm, 10/12 raciones. 34,00 €\nMolde de 20 cm. 6/8 raciones. 29,90 €',
               buyButton: getBuyButtonStandardCakeSpecificInfo({
-                basePrice: '28.90',
+                basePrice: '29.90',
                 basePriceIncrement: '4.10',
               }),
             },
@@ -219,9 +219,9 @@ export default [
                 'Tres pisos de bizcocho de espinacas con un toque cítrico,  relleno y cobertura de crema de nata y queso, coronada con frambuesas.',
               descriptionHelper:
                 'Podemos hacerla sin harina de trigo, pero con trazas. Consulta el precio.',
-              listInfo: 'Molde de 20 cm, 10/12 raciones. 41,50 €',
+              listInfo: 'Molde de 20 cm, 10/12 raciones. 42,00 €',
               buyButton: getBuyButtonStandardCakeSpecificInfo({
-                basePrice: '41.50',
+                basePrice: '42.00',
               }),
             },
             {
@@ -232,9 +232,9 @@ export default [
               descriptionHelper:
                 'Podemos hacerla sin harina de trigo, pero con trazas. Consulta el precio.',
               listInfo:
-                'Molde de 24 cm, 10/12 raciones. 34,10 €\nMolde de 20 cm. 6/8 raciones. 30,80 €',
+                'Molde de 24 cm, 10/12 raciones. 35,10 €\nMolde de 20 cm. 6/8 raciones. 31,80 €',
               buyButton: getBuyButtonStandardCakeSpecificInfo({
-                basePrice: '30.80',
+                basePrice: '31.80',
                 basePriceIncrement: '3.30',
               }),
             },
@@ -244,10 +244,10 @@ export default [
               description:
                 'Tarta de chocolate con un toque a malta, base de galleta y decorada con bolas de chocolate y cereales.',
               listInfo:
-                'Molde de 24 cm, 10/12 raciones. 33,00 €\nMolde de 20 cm. 6/8 raciones. 28,90 €',
+                'Molde de 24 cm, 10/12 raciones. 33,00 €\nMolde de 20 cm. 6/8 raciones. 29,00 €',
               buyButton: getBuyButtonStandardCakeSpecificInfo({
-                basePrice: '28.90',
-                basePriceIncrement: '4.10',
+                basePrice: '29.00',
+                basePriceIncrement: '4.00',
               }),
             },
             {
@@ -258,9 +258,9 @@ export default [
               descriptionHelper:
                 'Podemos hacerla sin harina de trigo, pero con trazas. Consulta el precio.',
               listInfo:
-                'Molde de 24 cm, 10/12 raciones. 34,00 €\nMolde de 20 cm. 6/8 raciones. 29,90 €',
+                'Molde de 24 cm, 10/12 raciones. 35,00 €\nMolde de 20 cm. 6/8 raciones. 30,90 €',
               buyButton: getBuyButtonStandardCakeSpecificInfo({
-                basePrice: '29.90',
+                basePrice: '30.90',
                 basePriceIncrement: '4.10',
               }),
             },
@@ -269,9 +269,9 @@ export default [
               title: 'LIMÓN Y MERENGUE',
               description:
                 'Tarta de crema de limón, con base de galleta y merengue italiano tostado con soplete.',
-              listInfo: 'Molde de 24 cm, 10/12 raciones. 34,00 €',
+              listInfo: 'Molde de 24 cm, 10/12 raciones. 34,50 €',
               buyButton: getBuyButtonStandardCakeSpecificInfo({
-                basePrice: '34.00',
+                basePrice: '34.50',
                 onlyBigSize: true,
               }),
             },
@@ -294,9 +294,9 @@ export default [
               descriptionHelper:
                 'Podemos hacerla sin harina de trigo, pero con trazas. Consulta el precio.',
               listInfo:
-                'Molde de 24 cm, 10/12 raciones. 33,50 €\nMolde de 20 cm. 6/8 raciones. 29,20 €',
+                'Molde de 24 cm, 10/12 raciones. 34,50 €\nMolde de 20 cm. 6/8 raciones. 30,20 €',
               buyButton: getBuyButtonStandardCakeSpecificInfo({
-                basePrice: '29.20',
+                basePrice: '30.20',
                 basePriceIncrement: '4.30',
               }),
             },
@@ -305,9 +305,9 @@ export default [
               title: 'MAMÁ AMELIA',
               description:
                 'La tarta de almendra de mi abuela. Sin harina de trigo, apta para intolerantes al gluten.',
-              listInfo: 'Molde de 24 cm, 10/12 raciones. 30,90 €',
+              listInfo: 'Molde de 24 cm, 10/12 raciones. 31,90 €',
               buyButton: getBuyButtonStandardCakeSpecificInfo({
-                basePrice: '30.90',
+                basePrice: '31.90',
                 onlyBigSize: true,
               }),
             },
@@ -315,11 +315,11 @@ export default [
               image: 'oreocheese600.jpg',
               title: 'OREO',
               description:
-                'Tarta de crema de nata, queso y Oreo molida con base y cobertura de galleta Oreo.',
+                'Tarta de crema de nata, queso y galleta tipo Oreo molida con base y cobertura de galleta tipo Oreo.',
               listInfo:
-                'Molde de 24 cm, 10/12 raciones. 32,50 €\nMolde de 20 cm. 6/8 raciones. 28,40 €',
+                'Molde de 24 cm, 10/12 raciones. 33,50 €\nMolde de 20 cm. 6/8 raciones. 29,40 €',
               buyButton: getBuyButtonStandardCakeSpecificInfo({
-                basePrice: '28.40',
+                basePrice: '29.40',
                 basePriceIncrement: '4.10',
               }),
             },
@@ -329,9 +329,9 @@ export default [
               description:
                 'Plátano, dulce de leche y nata montada con base de galleta.',
               listInfo:
-                'Molde de 24 cm, 10/12 raciones. 32,40 €\nMolde de 20 cm. 6/8 raciones. 28,30 €',
+                'Molde de 24 cm, 10/12 raciones. 33,40 €\nMolde de 20 cm. 6/8 raciones. 29,30 €',
               buyButton: getBuyButtonStandardCakeSpecificInfo({
-                basePrice: '28.30',
+                basePrice: '29.30',
                 basePriceIncrement: '4.10',
               }),
             },
@@ -343,37 +343,37 @@ export default [
               descriptionHelper:
                 'Podemos hacerla sin harina de trigo, pero con trazas. Consulta el precio.',
               listInfo:
-                'Molde de 24 cm, 10/12 raciones. 33,60 €\nMolde de 20 cm. 6/8 raciones. 29,30 €',
+                'Molde de 24 cm, 10/12 raciones. 35,00 €\nMolde de 20 cm. 6/8 raciones. 30,30 €',
               buyButton: getBuyButtonStandardCakeSpecificInfo({
-                basePrice: '29.30',
-                basePriceIncrement: '4.30',
+                basePrice: '30.30',
+                basePriceIncrement: '4.70',
               }),
             },
             {
               image: 'cheeseblanco600.jpg',
-              title: 'CHEESECAKE CHOCO BLANCO',
+              title: 'CHEESECAKE CHOCOLATE BLANCO',
               description:
-                'Tarta de queso al horno con base de galleta y un toque de chocolate blanco.',
+                'Tarta de queso y chocolate blanco al horno con base de galleta .',
               descriptionHelper:
                 'Podemos hacerla sin harina de trigo, pero con trazas. Consulta el precio.',
               listInfo:
-                'Molde de 24 cm, 10/12 raciones. 35,00 €\nMolde de 20 cm. 6/8 raciones. 31,00 €',
+                'Molde de 24 cm, 10/12 raciones. 36,00 €\nMolde de 20 cm. 6/8 raciones. 32,00 €',
               buyButton: getBuyButtonStandardCakeSpecificInfo({
-                basePrice: '31.00',
+                basePrice: '32.00',
                 basePriceIncrement: '4.00',
               }),
             },
             {
               image: 'cheesechoco600.jpg',
-              title: 'CHEESECAKE CHOCOLATE',
+              title: 'CHEESECAKE CHOCOLATE NEGRO',
               description:
-                'Tarta tierna de queso y chocolate al horno con base de galleta.',
+                'Tarta de queso y chocolate negro al horno con base de galleta.',
               descriptionHelper:
                 'Podemos hacerla sin harina de trigo, pero con trazas. Consulta el precio.',
               listInfo:
-                'Molde de 24 cm, 10/12 raciones. 35,00 €\nMolde de 20 cm. 6/8 raciones. 31,00 €',
+                'Molde de 24 cm, 10/12 raciones. 36,00 €\nMolde de 20 cm. 6/8 raciones. 32,00 €',
               buyButton: getBuyButtonStandardCakeSpecificInfo({
-                basePrice: '31.00',
+                basePrice: '32.00',
                 basePriceIncrement: '4.00',
               }),
             },
@@ -385,20 +385,20 @@ export default [
               descriptionHelper:
                 'Podemos hacerla sin harina de trigo, pero con trazas. Consulta el precio.',
               listInfo:
-                'Molde de 24 cm, 10/12 raciones. 32,50 €\nMolde de 20 cm. 6/8 raciones. 28,30 €',
+                'Molde de 24 cm, 10/12 raciones. 33,50 €\nMolde de 20 cm. 6/8 raciones. 29,30 €',
               buyButton: getBuyButtonStandardCakeSpecificInfo({
-                basePrice: '28.30',
+                basePrice: '29.30',
                 basePriceIncrement: '4.20',
               }),
             },
             {
               image: 'brownie600.jpg',
-              title: 'BROWNIE',
+              title: 'BROWNIE DE AVELLANAS',
               description:
                 'Brownie de chocolate y avellanas. Un clásico de la repostería americana, a nuestra manera.',
-              listInfo: 'Molde de 21cm x 21cm, 9 raciones. 21,00 €',
+              listInfo: 'Molde de 21cm x 21cm, 9 raciones. 22,00 €',
               buyButton: getBuyButtonStandardCakeSpecificInfo({
-                basePrice: '21.00',
+                basePrice: '22.00',
                 useCustomSizeString: 'Molde de 21cm x 21cm, 9 raciones.',
               }),
             },
@@ -410,10 +410,10 @@ export default [
               descriptionHelper:
                 'Podemos hacerla sin harina de trigo, pero con trazas. Consulta el precio.',
               listInfo:
-                'Molde de 24 cm, 10/12 raciones. 34,10 €\nMolde de 20 cm. 6/8 raciones. 30,80 €',
+                'Molde de 24 cm, 10/12 raciones. 35,00 €\nMolde de 20 cm. 6/8 raciones. 31,80 €',
               buyButton: getBuyButtonStandardCakeSpecificInfo({
-                basePrice: '30.80',
-                basePriceIncrement: '3.30',
+                basePrice: '31.80',
+                basePriceIncrement: '3.20',
               }),
             },
             {
@@ -433,9 +433,9 @@ export default [
               title: 'TRES LECHES',
               description:
                 'Bizcocho genovés empapado en tres leches, cubierto con dulce de leche y merengue tostado.',
-              listInfo: 'Molde de 24 cm, 10/12 raciones. 34,50 €',
+              listInfo: 'Molde de 24 cm, 10/12 raciones. 35,50 €',
               buyButton: getBuyButtonStandardCakeSpecificInfo({
-                basePrice: '34.50',
+                basePrice: '35.50',
                 onlyBigSize: true,
               }),
             },
@@ -550,7 +550,7 @@ export default [
             {
               image: 'bizcochos.jpg',
               title: 'BIZCOCHOS',
-              description: '600 g / 10,00 €',
+              description: '550 g / 10,00 €',
               listInfo:
                 'Zanahoria\nVainilla\nOreo\nChocolate\nRed Velvet\nYogur\nLimón\nVainilla con edulcorante\nChocolate con edulcorante\nCebra con edulcorante',
               hideListInfo: true,
@@ -558,7 +558,7 @@ export default [
                 'data-item-price': '10.00',
                 'data-item-custom1-name': 'Tipo',
                 'data-item-custom1-options':
-                  'Zanahoria|Vainilla|Oreo|Chocolate|Red Velvet|Yogur|Limón|Cebra (vainilla y chocolate)',
+                  'Zanahoria\|Yogur|Limón|Vainilla|Oreo|Chocolate|Red Velvet|Vainilla con edulcorante|Chocolate con edulcorante|Cebra (vainilla y chocolate)',
                 'data-item-stackable': 'never',
               },
             },
@@ -566,24 +566,24 @@ export default [
               image: 'galletas600.jpg',
               title: 'COOKIES',
               description:
-                'Aprox 25 g /0,75€ unidad, consultar disponibilidad en tienda',
+                'Bolsas de 8 unidades, consultar disponibilidad en tienda',
               listInfo:
                 '\nCon lacasitos\nCon pepitas de chocolate\nDoble chocolate\nRed Velvet con pepitas de chocolate blanco\nDe limón\nDe mantequilla',
               hideListInfo: true,
             },
             {
               image: 'supercookies600.jpg',
-              title: 'SUPERCOOKIES',
+              title: 'NY COOKIES',
               description:
-                'Super cookies blanditas por el centro, rellenas y crujientes en el borde. 2,50€, mínimo 3u',
-              listInfo: '\nRellenas de crema de chocolate y avellanas',
+                'Galletas tipo NY, blanditas por el centro y crujientes en el borde. 3,50€, mínimo 3u',
+              listInfo: '\nDe pepitas de chocolate y nuez\nDe avellanas, Nutella y rellenas de Nutella\nCon lacasitos\nDe galletas tipo Oreo\nRed Velvet con pepitas de chocolate blanco\nRellenas de Nutella',
               hideListInfo: true,
               buyButton: {
                 'data-item-min-quantity': 3,
-                'data-item-price': '2.50',
+                'data-item-price': '3.50',
                 'data-item-custom1-name': 'Tipo',
                 'data-item-custom1-options':
-                  'De crema de avellanas y chocolate',
+                  'De pepitas|De Nutella|De lacasitos|De Oreo|De Red Velvet',
                 'data-item-stackable': 'never',
               },
             },
