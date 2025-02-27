@@ -251,20 +251,6 @@ export default [
               }),
             },
             {
-              image: 'ny600.jpg',
-              title: 'NEW YORK CHEESECAKE',
-              description:
-                'Tarta de queso al horno, con base de galleta y cobertura de mermelada de frambuesa o de dulce de leche.',
-              descriptionHelper:
-                'Podemos hacerla sin harina de trigo, pero con trazas. Consulta el precio.',
-              listInfo:
-                'Molde de 24 cm, 10/12 raciones. 35,00 €\nMolde de 20 cm. 6/8 raciones. 30,90 €',
-              buyButton: getBuyButtonStandardCakeSpecificInfo({
-                basePrice: '30.90',
-                basePriceIncrement: '4.10',
-              }),
-            },
-            {
               image: 'limon600.jpg',
               title: 'LIMÓN Y MERENGUE',
               description:
@@ -298,6 +284,20 @@ export default [
               buyButton: getBuyButtonStandardCakeSpecificInfo({
                 basePrice: '30.20',
                 basePriceIncrement: '4.30',
+              }),
+            },
+            {
+              image: 'wendy.jpg',
+              title: 'WENDY',
+              description:
+                'Tres pisos de bizcocho de chocolate, relleno de dulce de leche y cobertura de chocolate con leche.',
+              descriptionHelper:
+                'Podemos hacerla sin harina de trigo, pero con trazas. Consulta el precio.',
+              listInfo:
+                'Molde de 24 cm, 10/12 raciones. 35,00 €\nMolde de 20 cm. 6/8 raciones. 30,30 €',
+              buyButton: getBuyButtonStandardCakeSpecificInfo({
+                basePrice: '30.30',
+                basePriceIncrement: '4.70',
               }),
             },
             {
@@ -336,17 +336,17 @@ export default [
               }),
             },
             {
-              image: 'wendy.jpg',
-              title: 'WENDY',
+              image: 'ny600.jpg',
+              title: 'NEW YORK CHEESECAKE',
               description:
-                'Tres pisos de bizcocho de chocolate, relleno de dulce de leche y cobertura de chocolate con leche.',
+                'Tarta de queso al horno, con base de galleta y cobertura de mermelada de frambuesa o de dulce de leche.',
               descriptionHelper:
                 'Podemos hacerla sin harina de trigo, pero con trazas. Consulta el precio.',
               listInfo:
-                'Molde de 24 cm, 10/12 raciones. 35,00 €\nMolde de 20 cm. 6/8 raciones. 30,30 €',
+                'Molde de 24 cm, 10/12 raciones. 35,00 €\nMolde de 20 cm. 6/8 raciones. 30,90 €',
               buyButton: getBuyButtonStandardCakeSpecificInfo({
-                basePrice: '30.30',
-                basePriceIncrement: '4.70',
+                basePrice: '30.90',
+                basePriceIncrement: '4.10',
               }),
             },
             {
