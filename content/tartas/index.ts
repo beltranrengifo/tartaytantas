@@ -378,6 +378,19 @@ export default [
               }),
             },
             {
+              image: 'cheeseoreo600.jpg',
+              title: 'CHEESECAKE CON OREO',
+              description:
+                'Tarta de queso al horno con trozos y base de galleta tipo Oreo.',
+              listInfo:
+                'Molde de 24 cm, 10/12 raciones. 36,00 €',
+              buyButton: getBuyButtonStandardCakeSpecificInfo({
+                basePrice: '32.00',
+                basePriceIncrement: '4.00',
+                onlyBigSize: true,
+              }),
+            },
+            {
               image: '3chocolates600.jpg',
               title: 'TRES CHOCOLATES',
               description:
