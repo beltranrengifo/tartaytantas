@@ -402,6 +402,17 @@ export default [
                 useCustomSizeString: 'Molde de 21cm x 21cm, 9 raciones.',
               }),
             },
+             {
+              image: 'BrownieNutella600.jpg',
+              title: 'BROWNIE DE NUTELLA',
+              description:
+                'Brownie de chocolate relleno de Nutella. Otra vuelta más al brownie.',
+              listInfo: 'Molde de 21cm x 21cm, 9 raciones. 22,00 €',
+              buyButton: getBuyButtonStandardCakeSpecificInfo({
+                basePrice: '25.00',
+                useCustomSizeString: 'Molde de 21cm x 21cm, 9 raciones.',
+              }),
+            },
             {
               image: 'cumple600.jpg',
               title: 'CUMPLEAÑOS',
