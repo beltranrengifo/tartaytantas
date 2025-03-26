@@ -19,12 +19,10 @@ const NATIONAL_HOLIDAYS: string[] = [
 ]
 
 const currentYearRegionalHolidays: string[] = [
-  '03-28',
-  '03-29',
-  '03-30',
-  '05-15',
-  '07-25',
-  '11-09',
+  '04-16',
+  '04-17',
+  '04-18',
+  '04-19',
 ]
 
 const tartaytantasVacations: string[] = [
