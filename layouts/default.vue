@@ -46,6 +46,7 @@ export default Vue.extend({
     return {
       scrollPosition,
       footer: '',
+      processedElements: new WeakSet(), // Track processed elements to prevent timing issues
     }
   },
 
@@ -70,59 +71,24 @@ export default Vue.extend({
         Snipcart.events.on(
           'theme.routechanged',
           (routesChange: { from: string; to: string }) => {
+            // Clean up observer when leaving checkout
+            if (
+              routesChange.from.includes('checkout') &&
+              !routesChange.to.includes('checkout')
+            ) {
+              if (this.$snipcartFormObserver) {
+                this.$snipcartFormObserver.disconnect()
+                this.$snipcartFormObserver = null
+              }
+              // Clear processed elements when leaving checkout
+              this.processedElements = new WeakSet()
+            }
+
             if (routesChange.to.includes('checkout')) {
               document.addEventListener('click', this.handleDeliveryDate)
 
-              // Add form submission listener as additional safety net
-              setTimeout(() => {
-                const checkoutForms = document.querySelectorAll(
-                  '#snipcart form, form[class*="snipcart"]'
-                )
-                checkoutForms.forEach((form) => {
-                  // Prevent duplicate listeners
-                  if (!form.hasAttribute('data-delivery-date-listener-added')) {
-                    form.addEventListener('submit', (e) => {
-                      const input = document.querySelector(
-                        '#dia-de-recogida > input.snipcart-input__input'
-                      ) as HTMLInputElement
-                      if (input && input.value) {
-                        const currentDate = new Date()
-                        const newMinDate = this.getMinDateForDelivery({
-                          currentDay: currentDate.getDay(),
-                          currentHour: currentDate.getHours(),
-                        })
-
-                        // Convert to Date objects for reliable comparison
-                        const selectedDate = new Date(input.value)
-                        const minDate = new Date(newMinDate)
-
-                        if (selectedDate < minDate) {
-                          // Block form submission
-                          e.preventDefault()
-                          e.stopPropagation()
-
-                          this.handleWeAreClosedAlert({
-                            input,
-                            message: `¡Ups! 😅 La fecha seleccionada (${this.formatDateForUser(
-                              input.value
-                            )}) no nos deja tiempo suficiente para preparar tu pedido. Necesitamos al menos 48 horas para poder entregarte algo perfecto 🎂<br><br>Por favor, elige una nueva fecha.`,
-                          })
-
-                          input.setAttribute('min', newMinDate)
-                          input.value = ''
-                          input.dispatchEvent(new Event('input'))
-
-                          return false
-                        }
-                      }
-                    })
-                    form.setAttribute(
-                      'data-delivery-date-listener-added',
-                      'true'
-                    )
-                  }
-                })
-              }, 1000) // Delay to ensure Snipcart forms are rendered
+              // Use MutationObserver to reliably detect when Snipcart forms are rendered
+              this.observeForSnipcartForms()
             }
             if (routesChange.to.includes('payment')) {
               const input = document.querySelector(
@@ -188,6 +154,133 @@ export default Vue.extend({
         return dateString
       }
     },
+
+    observeForSnipcartForms() {
+      // Clean up any existing observer first
+      if (this.$snipcartFormObserver) {
+        this.$snipcartFormObserver.disconnect()
+      }
+
+      // Create a MutationObserver to watch for any Snipcart elements
+      const observer = new MutationObserver((mutations) => {
+        mutations.forEach((mutation) => {
+          mutation.addedNodes.forEach((node) => {
+            if (node.nodeType === Node.ELEMENT_NODE) {
+              const element = node as Element
+
+              // Look for any form elements or Snipcart components that might handle submission
+              let elements: Element[] = Array.from(
+                element.querySelectorAll?.('form, [class*="snipcart"]') || []
+              )
+
+              // Check if the element itself is a form or Snipcart component
+              if (element.matches?.('form, [class*="snipcart"]')) {
+                elements.push(element)
+              }
+
+              // Add event listeners to relevant elements
+              elements.forEach((el: Element) => {
+                this.addSubmissionListener(el as HTMLElement)
+              })
+            }
+          })
+        })
+      })
+
+      // Only observe the Snipcart container
+      const snipcartContainer = document.getElementById('snipcart')
+      if (snipcartContainer) {
+        observer.observe(snipcartContainer, {
+          childList: true,
+          subtree: true,
+        })
+
+        // Store observer reference
+        this.$snipcartFormObserver = observer
+
+        // Also check for existing elements immediately
+        const existingElements = Array.from(
+          snipcartContainer.querySelectorAll('form, [class*="snipcart"]')
+        )
+        existingElements.forEach((el) => {
+          this.addSubmissionListener(el as HTMLElement)
+        })
+      }
+    },
+
+    addSubmissionListener(element: HTMLElement) {
+      // Use WeakSet for robust duplicate prevention (survives DOM changes)
+      if (this.processedElements.has(element)) {
+        return
+      }
+
+      // Mark as processed immediately to prevent race conditions
+      this.processedElements.add(element)
+
+      // Also set data attribute for visual debugging
+      element.setAttribute('data-delivery-date-listener-added', 'true')
+
+      // Handle both form submission and click events (for Snipcart components)
+      const handleValidation = (e: Event) => {
+        // Only validate if this seems to be a submission attempt
+        const isSubmission =
+          e.type === 'submit' ||
+          (e.type === 'click' &&
+            (element.textContent?.toLowerCase().includes('payment') ||
+              element.textContent?.toLowerCase().includes('continuar') ||
+              element.getAttribute('label')?.includes('payment')))
+
+        if (!isSubmission) return
+
+        const input = document.querySelector(
+          '#dia-de-recogida > input.snipcart-input__input'
+        ) as HTMLInputElement
+
+        // Only validate if we actually have a delivery date input with a value
+        if (input && input.value) {
+          const currentDate = new Date()
+          const newMinDate = this.getMinDateForDelivery({
+            currentDay: currentDate.getDay(),
+            currentHour: currentDate.getHours(),
+          })
+
+          // Convert to Date objects for reliable comparison
+          const selectedDate = new Date(input.value)
+          const minDate = new Date(newMinDate)
+
+          if (selectedDate < minDate) {
+            // Only prevent submission if date is actually invalid
+            e.preventDefault()
+            e.stopPropagation()
+
+            this.handleWeAreClosedAlert({
+              input,
+              message: `¡Ups! 😅 La fecha seleccionada (${this.formatDateForUser(
+                input.value
+              )}) no nos deja tiempo suficiente para preparar tu pedido. Necesitamos al menos 48 horas para poder entregarte algo perfecto 🎂<br><br>Por favor, elige una nueva fecha.`,
+            })
+
+            input.setAttribute('min', newMinDate)
+            input.value = ''
+            input.dispatchEvent(new Event('input'))
+
+            return false
+          }
+        }
+      }
+
+      // Add both form submit and click listeners
+      element.addEventListener('submit', handleValidation)
+      element.addEventListener('click', handleValidation)
+    },
+  },
+
+  beforeDestroy() {
+    // Clean up MutationObserver if it exists
+    if (this.$snipcartFormObserver) {
+      this.$snipcartFormObserver.disconnect()
+      this.$snipcartFormObserver = null
+    }
   },
 
   head() {
