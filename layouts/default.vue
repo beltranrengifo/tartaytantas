@@ -72,6 +72,74 @@ export default Vue.extend({
           (routesChange: { from: string; to: string }) => {
             if (routesChange.to.includes('checkout')) {
               document.addEventListener('click', this.handleDeliveryDate)
+
+              // Add form submission listener as additional safety net
+              setTimeout(() => {
+                const checkoutForms = document.querySelectorAll(
+                  '#snipcart form, form[class*="snipcart"]'
+                )
+                checkoutForms.forEach((form) => {
+                  form.addEventListener('submit', (e) => {
+                    const input = document.querySelector(
+                      '#dia-de-recogida > input.snipcart-input__input'
+                    ) as HTMLInputElement
+                    if (input && input.value) {
+                      const currentDate = new Date()
+                      const newMinDate = this.getMinDateForDelivery({
+                        currentDay: currentDate.getDay(),
+                        currentHour: currentDate.getHours(),
+                      })
+
+                      if (input.value < newMinDate) {
+                        // Block form submission
+                        e.preventDefault()
+                        e.stopPropagation()
+
+                        this.handleWeAreClosedAlert({
+                          input,
+                          message: `¡Ups! 😅 La fecha seleccionada (${this.formatDateForUser(
+                            input.value
+                          )}) no nos deja tiempo suficiente para preparar tu pedido. Necesitamos al menos 48 horas para poder entregarte algo perfecto 🎂<br><br>Por favor, elige una nueva fecha.`,
+                        })
+
+                        input.setAttribute('min', newMinDate)
+                        input.value = ''
+                        input.dispatchEvent(new Event('input'))
+
+                        return false
+                      }
+                    }
+                  })
+                })
+              }, 1000) // Delay to ensure Snipcart forms are rendered
+            }
+            if (routesChange.to.includes('payment')) {
+              const input = document.querySelector(
+                '#dia-de-recogida > input.snipcart-input__input'
+              ) as HTMLInputElement
+              if (input && input.value) {
+                const currentDate = new Date()
+                const currentDay = currentDate.getDay()
+                const currentHour = currentDate.getHours()
+                const newMinDate = this.getMinDateForDelivery({
+                  currentDay,
+                  currentHour,
+                })
+
+                if (input.value < newMinDate) {
+                  this.handleWeAreClosedAlert({
+                    input,
+                    message: `La fecha seleccionada (${this.formatDateForUser(
+                      input.value
+                    )}) no nos deja tiempo para preparar tu pedido correctamente. Necesitamos al menos 48 horas ⏰<br><br>Selecciona una nueva fecha`,
+                  })
+
+                  input.setAttribute('min', newMinDate)
+
+                  input.value = ''
+                  input.dispatchEvent(new Event('input'))
+                }
+              }
             }
           }
         )
@@ -84,6 +152,23 @@ export default Vue.extend({
       },
       { once: true }
     )
+  },
+
+  methods: {
+    formatDateForUser(dateString: string): string {
+      if (!dateString) return ''
+      try {
+        const date = new Date(dateString)
+        return date.toLocaleDateString('es-ES', {
+          weekday: 'long',
+          year: 'numeric',
+          month: 'long',
+          day: 'numeric',
+        })
+      } catch {
+        return dateString
+      }
+    },
   },
 
   head() {
