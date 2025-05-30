@@ -79,37 +79,48 @@ export default Vue.extend({
                   '#snipcart form, form[class*="snipcart"]'
                 )
                 checkoutForms.forEach((form) => {
-                  form.addEventListener('submit', (e) => {
-                    const input = document.querySelector(
-                      '#dia-de-recogida > input.snipcart-input__input'
-                    ) as HTMLInputElement
-                    if (input && input.value) {
-                      const currentDate = new Date()
-                      const newMinDate = this.getMinDateForDelivery({
-                        currentDay: currentDate.getDay(),
-                        currentHour: currentDate.getHours(),
-                      })
-
-                      if (input.value < newMinDate) {
-                        // Block form submission
-                        e.preventDefault()
-                        e.stopPropagation()
-
-                        this.handleWeAreClosedAlert({
-                          input,
-                          message: `¡Ups! 😅 La fecha seleccionada (${this.formatDateForUser(
-                            input.value
-                          )}) no nos deja tiempo suficiente para preparar tu pedido. Necesitamos al menos 48 horas para poder entregarte algo perfecto 🎂<br><br>Por favor, elige una nueva fecha.`,
+                  // Prevent duplicate listeners
+                  if (!form.hasAttribute('data-delivery-date-listener-added')) {
+                    form.addEventListener('submit', (e) => {
+                      const input = document.querySelector(
+                        '#dia-de-recogida > input.snipcart-input__input'
+                      ) as HTMLInputElement
+                      if (input && input.value) {
+                        const currentDate = new Date()
+                        const newMinDate = this.getMinDateForDelivery({
+                          currentDay: currentDate.getDay(),
+                          currentHour: currentDate.getHours(),
                         })
 
-                        input.setAttribute('min', newMinDate)
-                        input.value = ''
-                        input.dispatchEvent(new Event('input'))
+                        // Convert to Date objects for reliable comparison
+                        const selectedDate = new Date(input.value)
+                        const minDate = new Date(newMinDate)
 
-                        return false
+                        if (selectedDate < minDate) {
+                          // Block form submission
+                          e.preventDefault()
+                          e.stopPropagation()
+
+                          this.handleWeAreClosedAlert({
+                            input,
+                            message: `¡Ups! 😅 La fecha seleccionada (${this.formatDateForUser(
+                              input.value
+                            )}) no nos deja tiempo suficiente para preparar tu pedido. Necesitamos al menos 48 horas para poder entregarte algo perfecto 🎂<br><br>Por favor, elige una nueva fecha.`,
+                          })
+
+                          input.setAttribute('min', newMinDate)
+                          input.value = ''
+                          input.dispatchEvent(new Event('input'))
+
+                          return false
+                        }
                       }
-                    }
-                  })
+                    })
+                    form.setAttribute(
+                      'data-delivery-date-listener-added',
+                      'true'
+                    )
+                  }
                 })
               }, 1000) // Delay to ensure Snipcart forms are rendered
             }
@@ -126,7 +137,13 @@ export default Vue.extend({
                   currentHour,
                 })
 
-                if (input.value < newMinDate) {
+                // Convert to Date objects for reliable comparison
+                const selectedDate = new Date(input.value)
+                const minDate = new Date(newMinDate)
+
+                // Check if selected date is no longer valid (less than 48h from now)
+                if (selectedDate < minDate) {
+                  // Block payment and show clear explanation
                   this.handleWeAreClosedAlert({
                     input,
                     message: `La fecha seleccionada (${this.formatDateForUser(
@@ -134,8 +151,10 @@ export default Vue.extend({
                     )}) no nos deja tiempo para preparar tu pedido correctamente. Necesitamos al menos 48 horas ⏰<br><br>Selecciona una nueva fecha`,
                   })
 
+                  // Update the minimum date to show valid options
                   input.setAttribute('min', newMinDate)
 
+                  // Clear the invalid date so user must choose a new one
                   input.value = ''
                   input.dispatchEvent(new Event('input'))
                 }

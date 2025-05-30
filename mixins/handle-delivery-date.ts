@@ -101,8 +101,14 @@ export default Vue.extend({
 
       // If the current selected date is before the new minimum, reset it
       const selectedDate = input.value
-      if (selectedDate && selectedDate < newMinDate) {
-        this.resetDate(input)
+      if (selectedDate) {
+        // Convert to Date objects for reliable comparison
+        const selectedDateObj = new Date(selectedDate)
+        const minDateObj = new Date(newMinDate)
+
+        if (selectedDateObj < minDateObj) {
+          this.resetDate(input)
+        }
       }
     },
 
