@@ -36,8 +36,10 @@ export default Vue.extend({
       selectorId: string
       enable?: boolean
     }) {
-      const select: HTMLElement | HTMLSelectElement | null =
-        document.getElementById('tramo-de-entrega')
+      const select:
+        | HTMLElement
+        | HTMLSelectElement
+        | null = document.getElementById('tramo-de-entrega')
       // @ts-expect-error
       select?.value = ''
       select?.dispatchEvent(new Event('input'))
@@ -89,6 +91,21 @@ export default Vue.extend({
       input.dispatchEvent(new Event('input'))
     },
 
+    updateMinimumDeliveryDate(input: HTMLInputElement) {
+      const currentDate = new Date()
+      const currentDay = currentDate.getDay()
+      const currentHour = currentDate.getHours()
+
+      const newMinDate = this.getMinDateForDelivery({ currentDay, currentHour })
+      input.setAttribute('min', newMinDate)
+
+      // If the current selected date is before the new minimum, reset it
+      const selectedDate = input.value
+      if (selectedDate && selectedDate < newMinDate) {
+        this.resetDate(input)
+      }
+    },
+
     handleDeliveryDate() {
       const input = <HTMLInputElement>(
         document.querySelector('#dia-de-recogida > input.snipcart-input__input')
@@ -96,47 +113,66 @@ export default Vue.extend({
 
       if (!input) return
 
-      const currentDate = new Date()
-      const currentDay = currentDate.getDay()
-      const currentHour = currentDate.getHours()
+      // Set initial minimum date
+      this.updateMinimumDeliveryDate(input)
 
-      input.setAttribute(
-        'min',
-        this.getMinDateForDelivery({ currentDay, currentHour })
-      )
+      // Update minimum date whenever the input gets focus to prevent bypassing the 48h rule
+      // Only add the listener if it hasn't been added before
+      if (!input.hasAttribute('data-focus-listener-added')) {
+        input.addEventListener('focus', () => {
+          this.updateMinimumDeliveryDate(input)
+        })
+        input.setAttribute('data-focus-listener-added', 'true')
+      }
 
-      input.addEventListener('change', (event) => {
-        let selectedDayStringValue = (event.target as HTMLInputElement)?.value
-        const selectedDay = new Date(selectedDayStringValue).getDay()
+      // Only add change listener if it hasn't been added before
+      if (!input.hasAttribute('data-change-listener-added')) {
+        input.addEventListener('change', (event) => {
+          let selectedDayStringValue = (event.target as HTMLInputElement)?.value
+          const selectedDay = new Date(selectedDayStringValue).getDay()
 
-        if (!isNaN(selectedDay) && selectedDay !== 0) {
-          this.handleWeAreClosedAlert({
-            input,
-            hide: true,
-            message:
-              'No tenemos disponible la entrega para los domingos, por favor selecciona otro día. Disculpa las molestias.',
-          })
-        }
+          if (!isNaN(selectedDay) && selectedDay !== 0) {
+            this.handleWeAreClosedAlert({
+              input,
+              hide: true,
+              message:
+                'No tenemos disponible la entrega para los domingos, por favor selecciona otro día. Disculpa las molestias.',
+            })
+          }
 
-        if (!isNaN(selectedDay)) {
-          this.handlePickUpOption({
-            selectorId: 'tramo-de-entrega-tarde',
-            enable: true,
-          })
-          this.handlePickUpOption({
-            selectorId: 'tramo-de-entrega-manana',
-            enable: true,
-          })
-        }
+          if (!isNaN(selectedDay)) {
+            this.handlePickUpOption({
+              selectorId: 'tramo-de-entrega-tarde',
+              enable: true,
+            })
+            this.handlePickUpOption({
+              selectorId: 'tramo-de-entrega-manana',
+              enable: true,
+            })
+          }
 
-        if (vacations.includes(selectedDayStringValue)) {
-          const vacationDateIndex = vacations.findIndex(
-            (date) => date === selectedDayStringValue
-          )
-          const vacationsDayDate = new Date(vacations[vacationDateIndex])
-          const currentDayDate = new Date(selectedDayStringValue)
-          /* double check in case the datepicker format eventually changes */
-          if (vacationsDayDate.toString() === currentDayDate.toString()) {
+          if (vacations.includes(selectedDayStringValue)) {
+            const vacationDateIndex = vacations.findIndex(
+              (date) => date === selectedDayStringValue
+            )
+            const vacationsDayDate = new Date(vacations[vacationDateIndex])
+            const currentDayDate = new Date(selectedDayStringValue)
+            /* double check in case the datepicker format eventually changes */
+            if (vacationsDayDate.toString() === currentDayDate.toString()) {
+              this.resetDate(input)
+
+              this.handlePickUpOption({ selectorId: 'tramo-de-entrega-manana' })
+              this.handlePickUpOption({ selectorId: 'tramo-de-entrega-tarde' })
+
+              this.handleWeAreClosedAlert({
+                input,
+                message:
+                  'Vaya, el día que has seleccionado estamos de vacaciones 💃🏻, por favor elige otra fecha y disculpa las molestias.',
+              })
+            }
+          } else if (selectedDay === 6) {
+            this.handlePickUpOption({ selectorId: 'tramo-de-entrega-tarde' })
+          } else if (selectedDay === 0) {
             this.resetDate(input)
 
             this.handlePickUpOption({ selectorId: 'tramo-de-entrega-manana' })
@@ -145,24 +181,12 @@ export default Vue.extend({
             this.handleWeAreClosedAlert({
               input,
               message:
-                'Vaya, el día que has seleccionado estamos de vacaciones 💃🏻, por favor elige otra fecha y disculpa las molestias.',
+                'No tenemos disponible la entrega para los domingos, por favor selecciona otro día. Disculpa las molestias.',
             })
           }
-        } else if (selectedDay === 6) {
-          this.handlePickUpOption({ selectorId: 'tramo-de-entrega-tarde' })
-        } else if (selectedDay === 0) {
-          this.resetDate(input)
-
-          this.handlePickUpOption({ selectorId: 'tramo-de-entrega-manana' })
-          this.handlePickUpOption({ selectorId: 'tramo-de-entrega-tarde' })
-
-          this.handleWeAreClosedAlert({
-            input,
-            message:
-              'No tenemos disponible la entrega para los domingos, por favor selecciona otro día. Disculpa las molestias.',
-          })
-        }
-      })
+        })
+        input.setAttribute('data-change-listener-added', 'true')
+      }
     },
   },
 })
