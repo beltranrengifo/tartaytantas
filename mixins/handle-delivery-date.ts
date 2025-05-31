@@ -363,15 +363,17 @@ export default Vue.extend({
       // Update minimum date whenever the input gets focus to prevent bypassing the 48h rule
       // Only add the listener if it hasn't been added before
       if (!input.hasAttribute('data-focus-listener-added')) {
-        input.addEventListener('focus', () => {
+        const handleFocusValidation = () => {
           this.updateMinimumDeliveryDate(input)
-        })
+        }
+
+        input.addEventListener('focus', handleFocusValidation)
         input.setAttribute('data-focus-listener-added', 'true')
       }
 
       // Only add change listener if it hasn't been added before
       if (!input.hasAttribute('data-change-listener-added')) {
-        input.addEventListener('change', (event) => {
+        const handleDateChange = (event: Event) => {
           let selectedDayStringValue = (event.target as HTMLInputElement)?.value
           const selectedDay = new Date(selectedDayStringValue).getDay()
 
@@ -428,7 +430,9 @@ export default Vue.extend({
                 'No tenemos disponible la entrega para los domingos, por favor selecciona otro día. Disculpa las molestias.',
             })
           }
-        })
+        }
+
+        input.addEventListener('change', handleDateChange)
         input.setAttribute('data-change-listener-added', 'true')
       }
     },
