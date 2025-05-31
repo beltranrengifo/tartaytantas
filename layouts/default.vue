@@ -190,9 +190,6 @@ export default Vue.extend({
       // Mark as processed immediately to prevent race conditions
       this.processedElements.add(element)
 
-      // Also set data attribute for visual debugging
-      element.setAttribute('data-delivery-date-listener-added', 'true')
-
       // Handle both form submission and click events (for Snipcart components)
       const handleValidation = (e: Event) => {
         // Only validate if this seems to be a submission attempt
