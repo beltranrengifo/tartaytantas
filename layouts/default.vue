@@ -96,33 +96,46 @@ export default Vue.extend({
               ) as HTMLInputElement
               if (input && input.value) {
                 const currentDate = new Date()
-                const currentDay = currentDate.getDay()
-                const currentHour = currentDate.getHours()
                 const newMinDate = this.getMinDateForDelivery({
-                  currentDay,
-                  currentHour,
+                  currentDay: currentDate.getDay(),
+                  currentHour: currentDate.getHours(),
                 })
 
-                // Convert to Date objects for reliable comparison
-                const selectedDate = new Date(input.value)
-                const minDate = new Date(newMinDate)
+                try {
+                  // Convert to Date objects for reliable comparison with timezone consistency
+                  const selectedDate = new Date(input.value + 'T00:00:00')
+                  const minDate = new Date(newMinDate + 'T00:00:00')
 
-                // Check if selected date is no longer valid (less than 48h from now)
-                if (selectedDate < minDate) {
-                  // Block payment and show clear explanation
-                  this.handleWeAreClosedAlert({
-                    input,
-                    message: `La fecha seleccionada (${this.formatDateForUser(
-                      input.value
-                    )}) no nos deja tiempo para preparar tu pedido correctamente. Necesitamos al menos 48 horas ⏰<br><br>Selecciona una nueva fecha`,
-                  })
+                  // Check for invalid dates
+                  if (
+                    isNaN(selectedDate.getTime()) ||
+                    isNaN(minDate.getTime())
+                  ) {
+                    console.warn(
+                      'Invalid date detected in submission validation'
+                    )
+                    return // Don't block submission on invalid dates
+                  }
 
-                  // Update the minimum date to show valid options
-                  input.setAttribute('min', newMinDate)
+                  if (selectedDate < minDate) {
+                    // Show alert to user about invalid date
+                    this.handleWeAreClosedAlert({
+                      input,
+                      message: `¡Ups! 😅 La fecha seleccionada (${this.formatDateForUser(
+                        input.value
+                      )}) no nos deja tiempo suficiente para preparar tu pedido. Necesitamos al menos 48 horas para poder entregarte algo perfecto 🎂<br><br>Por favor, elige una nueva fecha.`,
+                    })
 
-                  // Clear the invalid date so user must choose a new one
-                  input.value = ''
-                  input.dispatchEvent(new Event('input'))
+                    // Update the minimum date to show valid options
+                    input.setAttribute('min', newMinDate)
+
+                    // Clear the invalid date so user must choose a new one
+                    input.value = ''
+                    input.dispatchEvent(new Event('input'))
+                  }
+                } catch (error) {
+                  console.warn('Error in submission date validation:', error)
+                  // Don't block submission on validation errors to preserve user experience
                 }
               }
             }
@@ -236,20 +249,34 @@ export default Vue.extend({
           '#dia-de-recogida > input.snipcart-input__input'
         ) as HTMLInputElement
 
-        // Only validate if we actually have a delivery date input with a value
-        if (input && input.value) {
-          const currentDate = new Date()
-          const newMinDate = this.getMinDateForDelivery({
-            currentDay: currentDate.getDay(),
-            currentHour: currentDate.getHours(),
-          })
+        // SAFETY: Only validate if we actually have a delivery date input with a value
+        // This ensures we never interfere with:
+        // - Pickup-only orders
+        // - Orders without delivery dates
+        // - Non-delivery product purchases
+        if (!input || !input.value || !input.value.trim()) {
+          return // No delivery date = no validation needed
+        }
 
-          // Convert to Date objects for reliable comparison
-          const selectedDate = new Date(input.value)
-          const minDate = new Date(newMinDate)
+        const currentDate = new Date()
+        const newMinDate = this.getMinDateForDelivery({
+          currentDay: currentDate.getDay(),
+          currentHour: currentDate.getHours(),
+        })
+
+        try {
+          // Convert to Date objects for reliable comparison with timezone consistency
+          const selectedDate = new Date(input.value + 'T00:00:00')
+          const minDate = new Date(newMinDate + 'T00:00:00')
+
+          // Check for invalid dates
+          if (isNaN(selectedDate.getTime()) || isNaN(minDate.getTime())) {
+            console.warn('Invalid date detected in submission validation')
+            return // Don't block submission on invalid dates
+          }
 
           if (selectedDate < minDate) {
-            // Only prevent submission if date is actually invalid
+            // Block payment and show clear explanation
             e.preventDefault()
             e.stopPropagation()
 
@@ -260,12 +287,18 @@ export default Vue.extend({
               )}) no nos deja tiempo suficiente para preparar tu pedido. Necesitamos al menos 48 horas para poder entregarte algo perfecto 🎂<br><br>Por favor, elige una nueva fecha.`,
             })
 
+            // Update the minimum date to show valid options
             input.setAttribute('min', newMinDate)
+
+            // Clear the invalid date so user must choose a new one
             input.value = ''
             input.dispatchEvent(new Event('input'))
 
             return false
           }
+        } catch (error) {
+          console.warn('Error in submission date validation:', error)
+          // Don't block submission on validation errors to preserve user experience
         }
       }
 
