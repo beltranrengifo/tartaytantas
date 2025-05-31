@@ -102,12 +102,23 @@ export default Vue.extend({
       // If the current selected date is before the new minimum, reset it
       const selectedDate = input.value
       if (selectedDate) {
-        // Convert to Date objects for reliable comparison
-        const selectedDateObj = new Date(selectedDate)
-        const minDateObj = new Date(newMinDate)
+        try {
+          // Convert to Date objects for reliable comparison
+          const selectedDateObj = new Date(selectedDate + 'T00:00:00') // Ensure timezone consistency
+          const minDateObj = new Date(newMinDate + 'T00:00:00')
 
-        if (selectedDateObj < minDateObj) {
-          this.resetDate(input)
+          // Check for invalid dates
+          if (isNaN(selectedDateObj.getTime()) || isNaN(minDateObj.getTime())) {
+            console.warn('Invalid date detected in delivery date validation')
+            return // Don't reset if dates are invalid
+          }
+
+          if (selectedDateObj < minDateObj) {
+            this.resetDate(input)
+          }
+        } catch (error) {
+          console.warn('Error in delivery date validation:', error)
+          // Don't reset on error to preserve user's selection
         }
       }
     },
