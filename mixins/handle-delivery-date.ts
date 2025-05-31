@@ -3,6 +3,72 @@ import { vacations } from '~/config'
 
 export default Vue.extend({
   methods: {
+    /**
+     * Creates a deterministic Date object from YYYY-MM-DD string using component parsing
+     *
+     * Avoids browser/timezone inconsistencies by manually parsing date components
+     * and creating the Date object in local timezone at midnight.
+     *
+     * @param {string} dateString - Date in YYYY-MM-DD format
+     * @returns {Date|null} Date object in local timezone or null if invalid
+     *
+     * @example
+     * this.parseDateFromString('2024-01-25') // Always January 25, 2024 at 00:00:00 local time
+     */
+    parseDateFromString(dateString: string): Date | null {
+      if (!dateString || typeof dateString !== 'string') {
+        return null
+      }
+
+      // Match YYYY-MM-DD format
+      const match = dateString.match(/^(\d{4})-(\d{2})-(\d{2})$/)
+      if (!match) {
+        return null
+      }
+
+      const [, yearStr, monthStr, dayStr] = match
+      const year = parseInt(yearStr, 10)
+      const month = parseInt(monthStr, 10) - 1 // Month is 0-indexed
+      const day = parseInt(dayStr, 10)
+
+      // Validate components
+      if (
+        year < 1000 ||
+        year > 9999 ||
+        month < 0 ||
+        month > 11 ||
+        day < 1 ||
+        day > 31
+      ) {
+        return null
+      }
+
+      // Create date in local timezone at midnight
+      const date = new Date(year, month, day, 0, 0, 0, 0)
+
+      // Verify the date components match (handles invalid dates like Feb 30)
+      if (
+        date.getFullYear() !== year ||
+        date.getMonth() !== month ||
+        date.getDate() !== day
+      ) {
+        return null
+      }
+
+      return date
+    },
+
+    /**
+     * Gets the day of week (0-6) from a YYYY-MM-DD date string deterministically
+     *
+     * @param {string} dateString - Date in YYYY-MM-DD format
+     * @returns {number} Day of week (0=Sunday, 1=Monday, ..., 6=Saturday) or NaN if invalid
+     */
+    getDayOfWeekFromString(dateString: string): number {
+      const date = this.parseDateFromString(dateString)
+      return date ? date.getDay() : NaN
+    },
+
     addDays(days: number): Date {
       const result = new Date()
       result.setDate(result.getDate() + days)
@@ -226,12 +292,12 @@ export default Vue.extend({
       const newMinDate = this.getMinDateForDelivery({ currentDay, currentHour })
 
       try {
-        // Convert to Date objects for reliable comparison
-        const selectedDateObj = new Date(input.value + 'T00:00:00')
-        const minDateObj = new Date(newMinDate + 'T00:00:00')
+        // Use deterministic date parsing to avoid timezone issues
+        const selectedDateObj = this.parseDateFromString(input.value)
+        const minDateObj = this.parseDateFromString(newMinDate)
 
         // Check for invalid dates
-        if (isNaN(selectedDateObj.getTime()) || isNaN(minDateObj.getTime())) {
+        if (!selectedDateObj || !minDateObj) {
           console.warn('Invalid date detected in delivery date validation')
           return { isValid: true, shouldReset: false } // Don't interfere if dates are invalid
         }
@@ -256,7 +322,9 @@ export default Vue.extend({
     formatDateForUser(dateString: string): string {
       if (!dateString) return ''
       try {
-        const date = new Date(dateString)
+        const date = this.parseDateFromString(dateString)
+        if (!date) return dateString
+
         return date.toLocaleDateString('es-ES', {
           weekday: 'long',
           year: 'numeric',
@@ -375,7 +443,9 @@ export default Vue.extend({
       if (!input.hasAttribute('data-change-listener-added')) {
         const handleDateChange = (event: Event) => {
           let selectedDayStringValue = (event.target as HTMLInputElement)?.value
-          const selectedDay = new Date(selectedDayStringValue).getDay()
+          const selectedDay = this.getDayOfWeekFromString(
+            selectedDayStringValue
+          )
 
           if (!isNaN(selectedDay) && selectedDay !== 0) {
             this.handleWeAreClosedAlert({
@@ -401,10 +471,19 @@ export default Vue.extend({
             const vacationDateIndex = vacations.findIndex(
               (date) => date === selectedDayStringValue
             )
-            const vacationsDayDate = new Date(vacations[vacationDateIndex])
-            const currentDayDate = new Date(selectedDayStringValue)
+            const vacationDate = this.parseDateFromString(
+              vacations[vacationDateIndex]
+            )
+            const selectedDate = this.parseDateFromString(
+              selectedDayStringValue
+            )
+
             /* double check in case the datepicker format eventually changes */
-            if (vacationsDayDate.toString() === currentDayDate.toString()) {
+            if (
+              vacationDate &&
+              selectedDate &&
+              vacationDate.getTime() === selectedDate.getTime()
+            ) {
               this.resetDate(input)
 
               this.handlePickUpOption({ selectorId: 'tramo-de-entrega-manana' })
