@@ -12,7 +12,7 @@ export default Vue.extend({
     /**
      * Calculates the minimum allowed delivery date based on current day and time
      *
-     * Core business logic implementing Tartaytantas' 48-hour minimum delivery policy
+     * Core business logic implementing the 48-hour minimum delivery policy
      * with special handling for weekends to account for bakery operating schedule.
      *
      * Business Rules:
