@@ -2,7 +2,47 @@ import Vue from 'vue'
 import { vacations } from '~/config'
 
 export default Vue.extend({
+  data() {
+    return {
+      // Store references to event handlers for proper cleanup
+      deliveryDateInput: null as HTMLInputElement | null,
+      focusHandler: null as (() => void) | null,
+      changeHandler: null as ((event: Event) => void) | null,
+    }
+  },
+
+  beforeDestroy() {
+    this.cleanupDeliveryDateListeners()
+  },
+
   methods: {
+    /**
+     * Removes event listeners from delivery date input to prevent memory leaks
+     *
+     * Called automatically in beforeDestroy lifecycle hook and can be called
+     * manually when switching between different date inputs.
+     *
+     * @example
+     * // Manual cleanup when switching contexts
+     * this.cleanupDeliveryDateListeners()
+     */
+    cleanupDeliveryDateListeners() {
+      if (this.deliveryDateInput && this.focusHandler) {
+        this.deliveryDateInput.removeEventListener('focus', this.focusHandler)
+        this.deliveryDateInput.removeAttribute('data-focus-listener-added')
+      }
+
+      if (this.deliveryDateInput && this.changeHandler) {
+        this.deliveryDateInput.removeEventListener('change', this.changeHandler)
+        this.deliveryDateInput.removeAttribute('data-change-listener-added')
+      }
+
+      // Reset references
+      this.deliveryDateInput = null
+      this.focusHandler = null
+      this.changeHandler = null
+    },
+
     /**
      * Creates a deterministic Date object from YYYY-MM-DD string using component parsing
      *
@@ -399,8 +439,10 @@ export default Vue.extend({
      * - 'focus': Updates minimum date to prevent Friday→Saturday bypass vulnerability
      * - 'change': Validates selection and manages time slots/alerts
      *
-     * Duplicate Prevention:
-     * Uses data attributes to ensure event listeners are only added once per input
+     * Memory Management:
+     * - Stores handler references for proper cleanup in beforeDestroy
+     * - Uses data attributes to ensure event listeners are only added once per input
+     * - Automatically cleans up previous listeners when switching inputs
      *
      * @example
      * // Called when entering Snipcart checkout
@@ -412,10 +454,12 @@ export default Vue.extend({
      * - May show/hide alerts based on date selection
      * - Enables/disables pickup time slot options
      * - May reset date input if invalid selection
+     * - Stores references in component data for cleanup
      *
      * @see updateMinimumDeliveryDate - For 48-hour enforcement
      * @see handleWeAreClosedAlert - For user messaging
      * @see handlePickUpOption - For time slot management
+     * @see cleanupDeliveryDateListeners - For memory management
      * @see ~/config/vacations - For vacation date list
      */
     handleDeliveryDate() {
@@ -425,23 +469,31 @@ export default Vue.extend({
 
       if (!input) return
 
+      // Clean up previous listeners if we're switching to a different input
+      if (this.deliveryDateInput && this.deliveryDateInput !== input) {
+        this.cleanupDeliveryDateListeners()
+      }
+
+      // Store reference for cleanup
+      this.deliveryDateInput = input
+
       // Set initial minimum date
       this.updateMinimumDeliveryDate(input)
 
       // Update minimum date whenever the input gets focus to prevent bypassing the 48h rule
       // Only add the listener if it hasn't been added before
       if (!input.hasAttribute('data-focus-listener-added')) {
-        const handleFocusValidation = () => {
+        this.focusHandler = () => {
           this.updateMinimumDeliveryDate(input)
         }
 
-        input.addEventListener('focus', handleFocusValidation)
+        input.addEventListener('focus', this.focusHandler)
         input.setAttribute('data-focus-listener-added', 'true')
       }
 
       // Only add change listener if it hasn't been added before
       if (!input.hasAttribute('data-change-listener-added')) {
-        const handleDateChange = (event: Event) => {
+        this.changeHandler = (event: Event) => {
           let selectedDayStringValue = (event.target as HTMLInputElement)?.value
           const selectedDay = this.getDayOfWeekFromString(
             selectedDayStringValue
@@ -511,7 +563,7 @@ export default Vue.extend({
           }
         }
 
-        input.addEventListener('change', handleDateChange)
+        input.addEventListener('change', this.changeHandler)
         input.setAttribute('data-change-listener-added', 'true')
       }
     },
