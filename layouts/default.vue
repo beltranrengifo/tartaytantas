@@ -82,6 +82,8 @@ export default Vue.extend({
               }
               // Clear processed elements when leaving checkout
               this.processedElements = new WeakSet()
+              // Remove document click listener to prevent memory leaks
+              document.removeEventListener('click', this.handleDeliveryDate)
             }
 
             if (routesChange.to.includes('checkout')) {
@@ -94,48 +96,21 @@ export default Vue.extend({
               const input = document.querySelector(
                 '#dia-de-recogida > input.snipcart-input__input'
               ) as HTMLInputElement
-              if (input && input.value) {
-                const currentDate = new Date()
-                const newMinDate = this.getMinDateForDelivery({
-                  currentDay: currentDate.getDay(),
-                  currentHour: currentDate.getHours(),
-                })
 
-                try {
-                  // Convert to Date objects for reliable comparison with timezone consistency
-                  const selectedDate = new Date(input.value + 'T00:00:00')
-                  const minDate = new Date(newMinDate + 'T00:00:00')
+              if (input) {
+                const validation = this.validateDeliveryDate(input)
+                if (
+                  !validation.isValid &&
+                  validation.shouldReset &&
+                  validation.message
+                ) {
+                  this.handleWeAreClosedAlert({
+                    input,
+                    message: validation.message,
+                  })
 
-                  // Check for invalid dates
-                  if (
-                    isNaN(selectedDate.getTime()) ||
-                    isNaN(minDate.getTime())
-                  ) {
-                    console.warn(
-                      'Invalid date detected in submission validation'
-                    )
-                    return // Don't block submission on invalid dates
-                  }
-
-                  if (selectedDate < minDate) {
-                    // Show alert to user about invalid date
-                    this.handleWeAreClosedAlert({
-                      input,
-                      message: `¡Ups! 😅 La fecha seleccionada (${this.formatDateForUser(
-                        input.value
-                      )}) no nos deja tiempo suficiente para preparar tu pedido. Necesitamos al menos 48 horas para poder entregarte algo perfecto 🎂<br><br>Por favor, elige una nueva fecha.`,
-                    })
-
-                    // Update the minimum date to show valid options
-                    input.setAttribute('min', newMinDate)
-
-                    // Clear the invalid date so user must choose a new one
-                    input.value = ''
-                    input.dispatchEvent(new Event('input'))
-                  }
-                } catch (error) {
-                  console.warn('Error in submission date validation:', error)
-                  // Don't block submission on validation errors to preserve user experience
+                  // Update the minimum date to show valid options
+                  this.updateMinimumDeliveryDate(input)
                 }
               }
             }
@@ -153,21 +128,6 @@ export default Vue.extend({
   },
 
   methods: {
-    formatDateForUser(dateString: string): string {
-      if (!dateString) return ''
-      try {
-        const date = new Date(dateString)
-        return date.toLocaleDateString('es-ES', {
-          weekday: 'long',
-          year: 'numeric',
-          month: 'long',
-          day: 'numeric',
-        })
-      } catch {
-        return dateString
-      }
-    },
-
     observeForSnipcartForms() {
       // Clean up any existing observer first
       if (this.$snipcartFormObserver) {
@@ -258,47 +218,23 @@ export default Vue.extend({
           return // No delivery date = no validation needed
         }
 
-        const currentDate = new Date()
-        const newMinDate = this.getMinDateForDelivery({
-          currentDay: currentDate.getDay(),
-          currentHour: currentDate.getHours(),
-        })
+        const validation = this.validateDeliveryDate(input)
+        if (
+          !validation.isValid &&
+          validation.shouldReset &&
+          validation.message
+        ) {
+          // Block payment and show clear explanation
+          e.preventDefault()
+          e.stopPropagation()
 
-        try {
-          // Convert to Date objects for reliable comparison with timezone consistency
-          const selectedDate = new Date(input.value + 'T00:00:00')
-          const minDate = new Date(newMinDate + 'T00:00:00')
+          this.handleWeAreClosedAlert({
+            input,
+            message: validation.message,
+          })
 
-          // Check for invalid dates
-          if (isNaN(selectedDate.getTime()) || isNaN(minDate.getTime())) {
-            console.warn('Invalid date detected in submission validation')
-            return // Don't block submission on invalid dates
-          }
-
-          if (selectedDate < minDate) {
-            // Block payment and show clear explanation
-            e.preventDefault()
-            e.stopPropagation()
-
-            this.handleWeAreClosedAlert({
-              input,
-              message: `¡Ups! 😅 La fecha seleccionada (${this.formatDateForUser(
-                input.value
-              )}) no nos deja tiempo suficiente para preparar tu pedido. Necesitamos al menos 48 horas para poder entregarte algo perfecto 🎂<br><br>Por favor, elige una nueva fecha.`,
-            })
-
-            // Update the minimum date to show valid options
-            input.setAttribute('min', newMinDate)
-
-            // Clear the invalid date so user must choose a new one
-            input.value = ''
-            input.dispatchEvent(new Event('input'))
-
-            return false
-          }
-        } catch (error) {
-          console.warn('Error in submission date validation:', error)
-          // Don't block submission on validation errors to preserve user experience
+          // Update the minimum date and reset invalid date
+          this.updateMinimumDeliveryDate(input)
         }
       }
 
