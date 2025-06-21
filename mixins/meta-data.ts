@@ -1,7 +1,6 @@
-import Vue from 'vue'
 import { MetaData } from '@/types'
 
-export default Vue.extend({
+export default {
   methods: {
     getMetadata(options: MetaData): object {
       return {
@@ -58,4 +57,4 @@ export default Vue.extend({
       }
     },
   },
-})
+}

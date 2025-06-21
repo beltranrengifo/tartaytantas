@@ -40,13 +40,12 @@
 </template>
 
 <script lang="ts">
-import Vue from 'vue'
 import { Slide } from '@/types'
 import ImageUrl from '@/mixins/image-url'
 import Container from '@/components/layout/container.vue'
 import titleBlock from '@/components/content/title-block.vue'
 
-export default Vue.extend({
+export default {
   name: 'Carousel',
 
   mixins: [ImageUrl],
@@ -82,7 +81,7 @@ export default Vue.extend({
       }
     },
   },
-})
+}
 </script>
 
 <style scoped lang="scss">
