@@ -16,10 +16,9 @@
 </template>
 
 <script lang="ts">
-import Vue from 'vue'
 import { Container } from '@/types/index'
 
-export default Vue.extend({
+export default {
   name: 'AppContainer',
   props: {
     tag: {
