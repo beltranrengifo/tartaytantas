@@ -1,5 +1,5 @@
 import Vue from 'vue'
-import { vacations } from '~/config'
+import { vacations, morningOnlyDates } from '~/config'
 
 export default Vue.extend({
   data() {
@@ -209,13 +209,12 @@ export default Vue.extend({
       selectorId: string
       enable?: boolean
     }) {
-      const select:
-        | HTMLElement
-        | HTMLSelectElement
-        | null = document.getElementById('tramo-de-entrega')
-      // @ts-expect-error
-      select?.value = ''
-      select?.dispatchEvent(new Event('input'))
+      const select = document.getElementById('tramo-de-entrega')
+
+      if (select && 'value' in select) {
+        select.value = ''
+        select.dispatchEvent(new Event('input'))
+      }
 
       const option = document.getElementById(selectorId)
 
@@ -467,7 +466,9 @@ export default Vue.extend({
         document.querySelector('#dia-de-recogida > input.snipcart-input__input')
       )
 
-      if (!input) return
+      if (!input) {
+        return
+      }
 
       // Clean up previous listeners if we're switching to a different input
       if (this.deliveryDateInput && this.deliveryDateInput !== input) {
@@ -491,6 +492,13 @@ export default Vue.extend({
         input.setAttribute('data-focus-listener-added', 'true')
       }
 
+      // Helper to create proper event for programmatic triggers
+      const createChangeEvent = (target: HTMLInputElement): Event => {
+        const event = new Event('change')
+        Object.defineProperty(event, 'target', { value: target })
+        return event
+      }
+
       // Only add change listener if it hasn't been added before
       if (!input.hasAttribute('data-change-listener-added')) {
         this.changeHandler = (event: Event) => {
@@ -509,14 +517,32 @@ export default Vue.extend({
           }
 
           if (!isNaN(selectedDay)) {
-            this.handlePickUpOption({
-              selectorId: 'tramo-de-entrega-tarde',
-              enable: true,
-            })
+            // Always enable morning slot for valid days
             this.handlePickUpOption({
               selectorId: 'tramo-de-entrega-manana',
               enable: true,
             })
+
+            // Enable afternoon slot unless it's a morning-only date or Saturday
+            const isMorningOnlyDate = morningOnlyDates.includes(
+              selectedDayStringValue
+            )
+            const isSaturday = selectedDay === 6
+            const isAfternoonDisabled = isMorningOnlyDate || isSaturday
+
+            this.handlePickUpOption({
+              selectorId: 'tramo-de-entrega-tarde',
+              enable: !isAfternoonDisabled,
+            })
+
+            // Show message for morning-only periods
+            if (morningOnlyDates.includes(selectedDayStringValue)) {
+              this.handleWeAreClosedAlert({
+                input,
+                message:
+                  '☀️ Durante este período solo tenemos disponible el horario de mañana (10-14h). ¡Gracias por tu comprensión!',
+              })
+            }
           }
 
           if (vacations.includes(selectedDayStringValue)) {
@@ -547,8 +573,6 @@ export default Vue.extend({
                   'Vaya, el día que has seleccionado estamos de vacaciones 💃🏻, por favor elige otra fecha y disculpa las molestias.',
               })
             }
-          } else if (selectedDay === 6) {
-            this.handlePickUpOption({ selectorId: 'tramo-de-entrega-tarde' })
           } else if (selectedDay === 0) {
             this.resetDate(input)
 
@@ -563,9 +587,82 @@ export default Vue.extend({
           }
         }
 
-        input.addEventListener('change', this.changeHandler)
+        // Add multiple event listeners to catch all possible date changes
+        const eventTypes = ['change', 'input', 'blur', 'keyup', 'click']
+        eventTypes.forEach((eventType) => {
+          if (this.changeHandler) {
+            input.addEventListener(eventType, this.changeHandler)
+          }
+        })
+
+        // Also add a MutationObserver to catch programmatic changes
+        const observer = new MutationObserver((mutations) => {
+          mutations.forEach((mutation) => {
+            if (
+              mutation.type === 'attributes' &&
+              mutation.attributeName === 'value'
+            ) {
+              if (this.changeHandler) {
+                this.changeHandler(createChangeEvent(input))
+              }
+            }
+          })
+        })
+        observer.observe(input, {
+          attributes: true,
+          attributeFilter: ['value'],
+        })
+
+        // Also check for changes periodically
+        const checkForChanges = () => {
+          const currentValue = input.value
+          if (currentValue && currentValue !== (input as any).lastKnownValue) {
+            ;(input as any).lastKnownValue = currentValue
+            if (this.changeHandler) {
+              this.changeHandler(createChangeEvent(input))
+            }
+          }
+        }
+
+        const intervalId = setInterval(checkForChanges, 1000)
+        // Store interval ID for cleanup
+        ;(input as any).intervalId = intervalId
+
         input.setAttribute('data-change-listener-added', 'true')
+
+        // Check if the input already has a value when we set up listeners
+        if (input.value && this.changeHandler) {
+          this.changeHandler(createChangeEvent(input))
+        }
+
+        // Also check after a delay to catch Snipcart's initial value setting
+        setTimeout(() => {
+          if (input.value && this.changeHandler) {
+            this.changeHandler(createChangeEvent(input))
+          }
+        }, 500)
+
+        // And another check after an even longer delay
+        setTimeout(() => {
+          if (input.value && this.changeHandler) {
+            this.changeHandler(createChangeEvent(input))
+          }
+        }, 2000)
       }
+
+      // Set up a global listener to watch for Snipcart events
+      const handleSnipcartEvent = () => {
+        // Re-run our logic after Snipcart updates
+        setTimeout(() => {
+          if (input && input.value && this.changeHandler) {
+            this.changeHandler(createChangeEvent(input))
+          }
+        }, 100)
+      }
+
+      // Listen for various Snipcart events that might update the form
+      document.addEventListener('change', handleSnipcartEvent)
+      document.addEventListener('input', handleSnipcartEvent)
     },
   },
 })
