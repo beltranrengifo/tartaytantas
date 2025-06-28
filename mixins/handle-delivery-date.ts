@@ -211,7 +211,7 @@ export default Vue.extend({
     }) {
       const select = document.getElementById('tramo-de-entrega')
 
-      if (select && 'value' in select) {
+      if (select && select instanceof HTMLSelectElement) {
         select.value = ''
         select.dispatchEvent(new Event('input'))
       }
