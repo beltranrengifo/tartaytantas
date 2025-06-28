@@ -57,6 +57,12 @@ const tartaytantasVacations: string[] = [
   '08-23',
   '08-24',
   '08-25',
+  '08-26',
+  '08-27',
+  '08-28',
+  '08-29',
+  '08-30',
+  '08-31',
 ]
 
 export const vacations = [
