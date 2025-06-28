@@ -384,7 +384,7 @@
   dirección en la cual el pedido puede ser entregado dentro del horario laboral habitual. Los portes derivados de los
   envíos de los productos quedarán reflejados en la nota final del pedido.</p>
 <p>En los pedidos para Madrid el plazo de entrega es de 48 horas máximo, de lunes a sábado (excepto festivos). El
-  horario de entrega es de 10h a 14h y de 16h a 19h. </p>
+  horario de entrega es de 10h a 14h y de 16h a 19h. Los tramos horarios podrán ser modificados sin previo aviso debido a periodos vacacionales, festivos o contingencias de la empresa y/o sus trabajadores.</p>
 <p>En caso de ausencia del destinatario en el momento de la entrega, el transportista intentará contactar contigo por
   vía telefónica. Si tampoco fuera posible establecer contacto por esta última vía, te enviaremos un email a la
   dirección que nos hayas facilitado en el proceso de compra indicándote como proceder. </p>
