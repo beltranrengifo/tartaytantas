@@ -57,10 +57,3 @@ export const vacations = [
   ...currentYearRegionalHolidays.map(formatHolidayDate),
   ...tartaytantasVacations,
 ]
-
-// Export individual arrays for flexibility
-export const nationalHolidays = NATIONAL_HOLIDAYS.map(formatHolidayDate)
-export const regionalHolidays = currentYearRegionalHolidays.map(
-  formatHolidayDate
-)
-export const summerVacations = tartaytantasVacations
