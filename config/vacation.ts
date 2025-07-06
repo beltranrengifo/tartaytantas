@@ -1,72 +1,66 @@
-const currentYear = new Date().getFullYear()
+import { generateDateRange, getCurrentYear } from './utils'
 
-/*
- * IMPORTANT
- * for each date use this format: MM-DD
+const currentYear = getCurrentYear()
+
+/**
+ * Fixed national holidays (same every year)
+ * Format: MM-DD
  */
-
 const NATIONAL_HOLIDAYS: string[] = [
-  '01-01',
-  '01-06',
-  '05-01',
-  '05-02',
-  '08-15',
-  '10-12',
-  '11-01',
-  '12-06',
-  '12-08',
-  '12-25',
+  '01-01', // New Year's Day
+  '01-06', // Epiphany
+  '05-01', // Labor Day
+  '05-02', // Madrid Day
+  '08-15', // Assumption of Mary
+  '10-12', // National Day
+  '11-01', // All Saints' Day
+  '12-06', // Constitution Day
+  '12-08', // Immaculate Conception
+  '12-25', // Christmas Day
 ]
 
+/**
+ * Regional holidays for current year
+ * These may change year to year - update as needed
+ */
 const currentYearRegionalHolidays: string[] = [
-  '04-16',
-  '04-17',
-  '04-18',
-  '04-19',
+  '04-16', // Easter Monday (example - adjust as needed)
+  '04-17', // Easter Tuesday (example - adjust as needed)
+  '04-18', // Easter Wednesday (example - adjust as needed)
+  '04-19', // Easter Thursday (example - adjust as needed)
 ]
 
-const tartaytantasVacations: string[] = [
-  '07-26',
-  '07-27',
-  '07-28',
-  '07-29',
-  '07-30',
-  '07-31',
-  '08-01',
-  '08-02',
-  '08-03',
-  '08-04',
-  '08-05',
-  '08-06',
-  '08-07',
-  '08-08',
-  '08-09',
-  '08-10',
-  '08-11',
-  '08-12',
-  '08-13',
-  '08-14',
-  '08-15',
-  '08-16',
-  '08-17',
-  '08-18',
-  '08-19',
-  '08-20',
-  '08-21',
-  '08-22',
-  '08-23',
-  '08-24',
-  '08-25',
-  '08-26',
-  '08-27',
-  '08-28',
-  '08-29',
-  '08-30',
-  '08-31',
-]
+/**
+ * Convert MM-DD format to YYYY-MM-DD for current year
+ */
+function formatHolidayDate(dateString: string): string {
+  return `${currentYear}-${dateString}`
+}
 
+/**
+ * TartayTantas summer vacation period
+ * July 26 - August 31
+ */
+const tartaytantasVacations = generateDateRange(
+  `${currentYear}-07-26`,
+  `${currentYear}-08-31`
+)
+
+/**
+ * All vacation dates including:
+ * - National holidays (fixed)
+ * - Regional holidays (year-specific)
+ * - TartayTantas summer vacation (generated)
+ */
 export const vacations = [
-  ...NATIONAL_HOLIDAYS,
-  ...currentYearRegionalHolidays,
+  ...NATIONAL_HOLIDAYS.map(formatHolidayDate),
+  ...currentYearRegionalHolidays.map(formatHolidayDate),
   ...tartaytantasVacations,
-].map((date) => `${currentYear}-${date}`)
+]
+
+// Export individual arrays for flexibility
+export const nationalHolidays = NATIONAL_HOLIDAYS.map(formatHolidayDate)
+export const regionalHolidays = currentYearRegionalHolidays.map(
+  formatHolidayDate
+)
+export const summerVacations = tartaytantasVacations
