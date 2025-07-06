@@ -9,7 +9,7 @@ export default Vue.extend({
       focusHandler: null as (() => void) | null,
       changeHandler: null as ((event: Event) => void) | null,
       lastProcessedDate: null as string | null,
-      debounceTimeout: null as NodeJS.Timeout | null,
+      debounceTimeout: null as ReturnType<typeof setTimeout> | null,
       mutationObserver: null as MutationObserver | null,
     }
   },
