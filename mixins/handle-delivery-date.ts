@@ -1,5 +1,5 @@
 import Vue from 'vue'
-import { vacations, morningOnlyDates } from '~/config'
+import { vacations, morningOnlyDates, TIME_SLOT_SELECTORS } from '~/config'
 
 export default Vue.extend({
   data() {
@@ -8,6 +8,8 @@ export default Vue.extend({
       deliveryDateInput: null as HTMLInputElement | null,
       focusHandler: null as (() => void) | null,
       changeHandler: null as ((event: Event) => void) | null,
+      lastProcessedDate: null as string | null,
+      debounceTimeout: null as NodeJS.Timeout | null,
     }
   },
 
@@ -187,13 +189,13 @@ export default Vue.extend({
      * @example
      * // Disable afternoon pickup for Saturday
      * this.handlePickUpOption({
-     *   selectorId: 'tramo-de-entrega-tarde',
+     *   selectorId: TIME_SLOT_SELECTORS.AFTERNOON,
      *   enable: false
      * })
      *
      * // Enable morning pickup
      * this.handlePickUpOption({
-     *   selectorId: 'tramo-de-entrega-manana',
+     *   selectorId: TIME_SLOT_SELECTORS.MORNING,
      *   enable: true
      * })
      *
@@ -209,13 +211,6 @@ export default Vue.extend({
       selectorId: string
       enable?: boolean
     }) {
-      const select = document.getElementById('tramo-de-entrega')
-
-      if (select && select instanceof HTMLSelectElement) {
-        select.value = ''
-        select.dispatchEvent(new Event('input'))
-      }
-
       const option = document.getElementById(selectorId)
 
       if (enable) {
@@ -223,6 +218,7 @@ export default Vue.extend({
         return
       }
 
+      // Disable the option
       option?.setAttribute('disabled', 'true')
     },
 
@@ -503,88 +499,116 @@ export default Vue.extend({
       if (!input.hasAttribute('data-change-listener-added')) {
         this.changeHandler = (event: Event) => {
           let selectedDayStringValue = (event.target as HTMLInputElement)?.value
-          const selectedDay = this.getDayOfWeekFromString(
-            selectedDayStringValue
-          )
 
-          if (!isNaN(selectedDay) && selectedDay !== 0) {
-            this.handleWeAreClosedAlert({
-              input,
-              hide: true,
-              message:
-                'No tenemos disponible la entrega para los domingos, por favor selecciona otro día. Disculpa las molestias.',
-            })
+          // Debounce to prevent multiple calls for the same date
+          if (this.lastProcessedDate === selectedDayStringValue) {
+            return
           }
 
-          if (!isNaN(selectedDay)) {
-            // Always enable morning slot for valid days
-            this.handlePickUpOption({
-              selectorId: 'tramo-de-entrega-manana',
-              enable: true,
-            })
+          // Clear any existing timeout
+          if (this.debounceTimeout) {
+            clearTimeout(this.debounceTimeout)
+          }
 
-            // Enable afternoon slot unless it's a morning-only date or Saturday
-            const isMorningOnlyDate = morningOnlyDates.includes(
+          // Set a timeout to actually process the change
+          this.debounceTimeout = setTimeout(() => {
+            this.lastProcessedDate = selectedDayStringValue
+
+            const selectedDay = this.getDayOfWeekFromString(
               selectedDayStringValue
             )
-            const isSaturday = selectedDay === 6
-            const isAfternoonDisabled = isMorningOnlyDate || isSaturday
 
-            this.handlePickUpOption({
-              selectorId: 'tramo-de-entrega-tarde',
-              enable: !isAfternoonDisabled,
-            })
-
-            // Show message for morning-only periods
-            if (morningOnlyDates.includes(selectedDayStringValue)) {
+            if (!isNaN(selectedDay) && selectedDay !== 0) {
               this.handleWeAreClosedAlert({
                 input,
+                hide: true,
                 message:
-                  '☀️ Durante este período solo tenemos disponible el horario de mañana (10-14h). ¡Gracias por tu comprensión!',
+                  'No tenemos disponible la entrega para los domingos, por favor selecciona otro día. Disculpa las molestias.',
               })
             }
-          }
 
-          if (vacations.includes(selectedDayStringValue)) {
-            const vacationDateIndex = vacations.findIndex(
-              (date) => date === selectedDayStringValue
-            )
-            const vacationDate = this.parseDateFromString(
-              vacations[vacationDateIndex]
-            )
-            const selectedDate = this.parseDateFromString(
-              selectedDayStringValue
-            )
+            if (!isNaN(selectedDay)) {
+              // Always enable morning slot for valid days
+              this.handlePickUpOption({
+                selectorId: TIME_SLOT_SELECTORS.MORNING,
+                enable: true,
+              })
 
-            /* double check in case the datepicker format eventually changes */
-            if (
-              vacationDate &&
-              selectedDate &&
-              vacationDate.getTime() === selectedDate.getTime()
-            ) {
+              // Enable afternoon slot unless it's a morning-only date or Saturday
+              const isMorningOnlyDate = morningOnlyDates.includes(
+                selectedDayStringValue
+              )
+              const isSaturday = selectedDay === 6
+              const isAfternoonDisabled = isMorningOnlyDate || isSaturday
+
+              this.handlePickUpOption({
+                selectorId: TIME_SLOT_SELECTORS.AFTERNOON,
+                enable: !isAfternoonDisabled,
+              })
+
+              // Show message for morning-only periods
+              if (morningOnlyDates.includes(selectedDayStringValue)) {
+                this.handleWeAreClosedAlert({
+                  input,
+                  message:
+                    '☀️ Durante este período solo tenemos disponible el horario de mañana (10-14h). ¡Gracias por tu comprensión!',
+                })
+              }
+            }
+
+            if (vacations.includes(selectedDayStringValue)) {
+              const vacationDateIndex = vacations.findIndex(
+                (date) => date === selectedDayStringValue
+              )
+              const vacationDate = this.parseDateFromString(
+                vacations[vacationDateIndex]
+              )
+              const selectedDate = this.parseDateFromString(
+                selectedDayStringValue
+              )
+
+              /* double check in case the datepicker format eventually changes */
+              if (
+                vacationDate &&
+                selectedDate &&
+                vacationDate.getTime() === selectedDate.getTime()
+              ) {
+                this.resetDate(input)
+
+                this.handlePickUpOption({
+                  selectorId: TIME_SLOT_SELECTORS.MORNING,
+                  enable: false,
+                })
+                this.handlePickUpOption({
+                  selectorId: TIME_SLOT_SELECTORS.AFTERNOON,
+                  enable: false,
+                })
+
+                this.handleWeAreClosedAlert({
+                  input,
+                  message:
+                    'Vaya, el día que has seleccionado estamos de vacaciones 💃🏻, por favor elige otra fecha y disculpa las molestias.',
+                })
+              }
+            } else if (selectedDay === 0) {
               this.resetDate(input)
 
-              this.handlePickUpOption({ selectorId: 'tramo-de-entrega-manana' })
-              this.handlePickUpOption({ selectorId: 'tramo-de-entrega-tarde' })
+              this.handlePickUpOption({
+                selectorId: TIME_SLOT_SELECTORS.MORNING,
+                enable: false,
+              })
+              this.handlePickUpOption({
+                selectorId: TIME_SLOT_SELECTORS.AFTERNOON,
+                enable: false,
+              })
 
               this.handleWeAreClosedAlert({
                 input,
                 message:
-                  'Vaya, el día que has seleccionado estamos de vacaciones 💃🏻, por favor elige otra fecha y disculpa las molestias.',
+                  'No tenemos disponible la entrega para los domingos, por favor selecciona otro día. Disculpa las molestias.',
               })
             }
-          } else if (selectedDay === 0) {
-            this.resetDate(input)
-
-            this.handlePickUpOption({ selectorId: 'tramo-de-entrega-manana' })
-            this.handlePickUpOption({ selectorId: 'tramo-de-entrega-tarde' })
-
-            this.handleWeAreClosedAlert({
-              input,
-              message:
-                'No tenemos disponible la entrega para los domingos, por favor selecciona otro día. Disculpa las molestias.',
-            })
-          }
+          }, 100) // Close the setTimeout function
         }
 
         // Add multiple event listeners to catch all possible date changes
