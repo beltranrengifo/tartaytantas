@@ -531,10 +531,11 @@ export default Vue.extend({
             clearTimeout(this.debounceTimeout)
           }
 
+          // Update lastProcessedDate immediately to prevent multiple timeouts for same value
+          this.lastProcessedDate = selectedDayStringValue
+
           // Set a timeout to actually process the change
           this.debounceTimeout = setTimeout(() => {
-            this.lastProcessedDate = selectedDayStringValue
-
             const selectedDay = this.getDayOfWeekFromString(
               selectedDayStringValue
             )
