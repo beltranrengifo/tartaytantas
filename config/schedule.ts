@@ -33,8 +33,15 @@ const MORNING_ONLY_DATES: string[] = [
   '07-23',
   '07-24',
   '07-25',
+  '07-26',
 ]
 
 export const morningOnlyDates = MORNING_ONLY_DATES.map(
   (date) => `${currentYear}-${date}`
 )
+
+// Time slot selector IDs used in Snipcart forms
+export const TIME_SLOT_SELECTORS = {
+  MORNING: 'tramo-de-entrega-manana',
+  AFTERNOON: 'tramo-de-entrega-tarde',
+} as const
