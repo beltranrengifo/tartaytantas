@@ -20,14 +20,14 @@ Contains holiday and vacation date configurations using the date range generator
 
 ### 1. Morning-Only Periods (Summer Schedule)
 
-**Current**: June 30 - July 26
+**Current**: June 30 - July 25
 
 To change the morning-only period, edit `config/schedule.ts`:
 
 ```typescript
 export const morningOnlyDates = generateDateRange(
   `${currentYear}-06-30`, // Start date
-  `${currentYear}-07-26` // End date
+  `${currentYear}-07-25` // End date
 )
 ```
 
