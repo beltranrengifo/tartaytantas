@@ -10,6 +10,7 @@ export default Vue.extend({
       changeHandler: null as ((event: Event) => void) | null,
       lastProcessedDate: null as string | null,
       debounceTimeout: null as NodeJS.Timeout | null,
+      mutationObserver: null as MutationObserver | null,
     }
   },
 
@@ -36,7 +37,20 @@ export default Vue.extend({
 
       if (this.deliveryDateInput && this.changeHandler) {
         this.deliveryDateInput.removeEventListener('change', this.changeHandler)
+        this.deliveryDateInput.removeEventListener('input', this.changeHandler)
         this.deliveryDateInput.removeAttribute('data-change-listener-added')
+      }
+
+      // Disconnect the MutationObserver to prevent memory leaks
+      if (this.mutationObserver) {
+        this.mutationObserver.disconnect()
+        this.mutationObserver = null
+      }
+
+      // Clear any pending debounce timeout
+      if (this.debounceTimeout) {
+        clearTimeout(this.debounceTimeout)
+        this.debounceTimeout = null
       }
 
       // Reset references
@@ -611,16 +625,14 @@ export default Vue.extend({
           }, 100) // Close the setTimeout function
         }
 
-        // Add multiple event listeners to catch all possible date changes
-        const eventTypes = ['change', 'input', 'blur', 'keyup', 'click']
-        eventTypes.forEach((eventType) => {
-          if (this.changeHandler) {
-            input.addEventListener(eventType, this.changeHandler)
-          }
-        })
+        // Add essential event listeners for date changes
+        if (this.changeHandler) {
+          input.addEventListener('change', this.changeHandler)
+          input.addEventListener('input', this.changeHandler)
+        }
 
-        // Also add a MutationObserver to catch programmatic changes
-        const observer = new MutationObserver((mutations) => {
+        // Add MutationObserver to catch programmatic changes (e.g., from Snipcart)
+        this.mutationObserver = new MutationObserver((mutations) => {
           mutations.forEach((mutation) => {
             if (
               mutation.type === 'attributes' &&
@@ -632,25 +644,10 @@ export default Vue.extend({
             }
           })
         })
-        observer.observe(input, {
+        this.mutationObserver.observe(input, {
           attributes: true,
           attributeFilter: ['value'],
         })
-
-        // Also check for changes periodically
-        const checkForChanges = () => {
-          const currentValue = input.value
-          if (currentValue && currentValue !== (input as any).lastKnownValue) {
-            ;(input as any).lastKnownValue = currentValue
-            if (this.changeHandler) {
-              this.changeHandler(createChangeEvent(input))
-            }
-          }
-        }
-
-        const intervalId = setInterval(checkForChanges, 1000)
-        // Store interval ID for cleanup
-        ;(input as any).intervalId = intervalId
 
         input.setAttribute('data-change-listener-added', 'true')
 
@@ -659,34 +656,13 @@ export default Vue.extend({
           this.changeHandler(createChangeEvent(input))
         }
 
-        // Also check after a delay to catch Snipcart's initial value setting
+        // Check after a delay to catch Snipcart's initial value setting
         setTimeout(() => {
           if (input.value && this.changeHandler) {
             this.changeHandler(createChangeEvent(input))
           }
         }, 500)
-
-        // And another check after an even longer delay
-        setTimeout(() => {
-          if (input.value && this.changeHandler) {
-            this.changeHandler(createChangeEvent(input))
-          }
-        }, 2000)
       }
-
-      // Set up a global listener to watch for Snipcart events
-      const handleSnipcartEvent = () => {
-        // Re-run our logic after Snipcart updates
-        setTimeout(() => {
-          if (input && input.value && this.changeHandler) {
-            this.changeHandler(createChangeEvent(input))
-          }
-        }, 100)
-      }
-
-      // Listen for various Snipcart events that might update the form
-      document.addEventListener('change', handleSnipcartEvent)
-      document.addEventListener('input', handleSnipcartEvent)
     },
   },
 })
