@@ -10,6 +10,7 @@ export default Vue.extend({
       changeHandler: null as ((event: Event) => void) | null,
       lastProcessedDate: null as string | null,
       debounceTimeout: null as ReturnType<typeof setTimeout> | null,
+      initialCheckTimeout: null as ReturnType<typeof setTimeout> | null,
       mutationObserver: null as MutationObserver | null,
     }
   },
@@ -51,6 +52,12 @@ export default Vue.extend({
       if (this.debounceTimeout) {
         clearTimeout(this.debounceTimeout)
         this.debounceTimeout = null
+      }
+
+      // Clear any pending initial check timeout
+      if (this.initialCheckTimeout) {
+        clearTimeout(this.initialCheckTimeout)
+        this.initialCheckTimeout = null
       }
 
       // Reset references
@@ -657,7 +664,7 @@ export default Vue.extend({
         }
 
         // Check after a delay to catch Snipcart's initial value setting
-        setTimeout(() => {
+        this.initialCheckTimeout = setTimeout(() => {
           if (input.value && this.changeHandler) {
             this.changeHandler(createChangeEvent(input))
           }
