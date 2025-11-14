@@ -63,6 +63,10 @@ export default [
               name: 'Bizcochos, muffins y cookies',
               link: '#mas',
             },
+            {
+              name: 'Velas y toppers',
+              link: '#velas-y-toppers',
+            },
           ],
         },
       },
