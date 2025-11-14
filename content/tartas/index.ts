@@ -63,6 +63,10 @@ export default [
               name: 'Bizcochos, muffins y cookies',
               link: '#mas',
             },
+            {
+              name: 'Velas y toppers',
+              link: '#velas-y-toppers',
+            },
           ],
         },
       },
@@ -382,8 +386,7 @@ export default [
               title: 'CHEESECAKE CON OREO',
               description:
                 'Tarta de queso al horno con trozos y base de galleta tipo Oreo.',
-              listInfo:
-                'Molde de 24 cm, 10/12 raciones. 36,00 €',
+              listInfo: 'Molde de 24 cm, 10/12 raciones. 36,00 €',
               buyButton: getBuyButtonStandardCakeSpecificInfo({
                 basePrice: '32.00',
                 basePriceIncrement: '4.00',
@@ -415,7 +418,7 @@ export default [
                 useCustomSizeString: 'Molde de 21cm x 21cm, 9 raciones.',
               }),
             },
-             {
+            {
               image: 'BrownieNutella600.jpg',
               title: 'BROWNIE DE NUTELLA',
               description:
@@ -582,7 +585,7 @@ export default [
                 'data-item-price': '10.00',
                 'data-item-custom1-name': 'Tipo',
                 'data-item-custom1-options':
-                  'Zanahoria\|Yogur|Limón|Vainilla|Oreo|Chocolate|Red Velvet|Vainilla con edulcorante|Chocolate con edulcorante|Cebra (vainilla y chocolate)',
+                  'Zanahoria|Yogur|Limón|Vainilla|Oreo|Chocolate|Red Velvet|Vainilla con edulcorante|Chocolate con edulcorante|Cebra (vainilla y chocolate)',
                 'data-item-stackable': 'never',
               },
             },
@@ -600,7 +603,8 @@ export default [
               title: 'NY COOKIES',
               description:
                 'Galletas tipo NY, blanditas por el centro y crujientes en el borde. 3,50€, mínimo 3u',
-              listInfo: '\nDe pepitas de chocolate y nuez\nDe avellanas, Nutella y rellenas de Nutella\nCon lacasitos\nDe galletas tipo Oreo\nRed Velvet con pepitas de chocolate blanco\nRellenas de Nutella',
+              listInfo:
+                '\nDe pepitas de chocolate y nuez\nDe avellanas, Nutella y rellenas de Nutella\nCon lacasitos\nDe galletas tipo Oreo\nRed Velvet con pepitas de chocolate blanco\nRellenas de Nutella',
               hideListInfo: true,
               buyButton: {
                 'data-item-min-quantity': 3,
@@ -608,6 +612,122 @@ export default [
                 'data-item-custom1-name': 'Tipo',
                 'data-item-custom1-options':
                   'De pepitas|De Nutella|De lacasitos|De Oreo|De Red Velvet',
+                'data-item-stackable': 'never',
+              },
+            },
+          ],
+        },
+      },
+    ],
+  },
+  /* velas y toppers */
+  {
+    name: 'velas-y-toppers',
+    options: {
+      classes: 'bg-brand-secondary',
+      fullwidth: true,
+    },
+    components: [
+      {
+        name: 'product-grid',
+        options: {
+          containerTailwind: 'pt-36 pb-20',
+          imageDir: 'other-grid',
+          hoverSuffix: '-hover',
+          items: [
+            {
+              image: 'vela_n_demo.jpg',
+              title: 'VELAS NÚMEROS (0-9)',
+              description:
+                'Velas decorativas con números del 0 al 9, perfectas para celebrar cualquier edad. Acabado metálico elegante. 2,50€',
+              listInfo: '\nPlata\nRosa metalizado',
+              hideListInfo: true,
+              buyButton: {
+                'data-item-price': '2.50',
+                'data-item-custom1-name': 'Número',
+                'data-item-custom1-options': '0|1|2|3|4|5|6|7|8|9',
+                'data-item-custom2-name': 'Color',
+                'data-item-custom2-options': 'Plata|Rosa metalizado',
+                'data-item-stackable': 'never',
+              },
+            },
+            {
+              image: 'vela_corazon.jpg',
+              title: 'VELA CORAZÓN',
+              description:
+                'Vela en forma de corazón, ideal para celebraciones románticas y especiales. 2,50€',
+              listInfo: '\nPlata\nRosa metalizado',
+              hideListInfo: true,
+              buyButton: {
+                'data-item-price': '2.50',
+                'data-item-custom1-name': 'Color',
+                'data-item-custom1-options': 'Plata|Rosa metalizado',
+                'data-item-stackable': 'never',
+              },
+            },
+            {
+              image: 'vela_interrogante.jpg',
+              title: 'VELA INTERROGACIÓN',
+              description:
+                'Vela interrogante, perfecta para fiestas sorpresa y revelaciones. Crea expectación con estilo. 2,50€',
+              listInfo: '\nPlata\nRosa metalizado',
+              hideListInfo: true,
+              buyButton: {
+                'data-item-price': '2.50',
+                'data-item-custom1-name': 'Color',
+                'data-item-custom1-options': 'Plata|Rosa metalizado',
+                'data-item-stackable': 'never',
+              },
+            },
+            {
+              image: 'topper-madera.jpg',
+              title: 'TOPPERS MADERA',
+              description:
+                'Toppers de madera personalizables con un toque natural y elegante. Desde 8,00€',
+              listInfo:
+                '\nGenéricos\nPersonalizados\nGrabado imagen\n15cm o 20cm',
+              hideListInfo: true,
+              buyButton: {
+                'data-item-price': '8.00',
+                'data-item-custom1-name': 'Tamaño',
+                'data-item-custom1-options': '15cm|20cm[+2.00]',
+                'data-item-custom2-name': 'Tipo',
+                'data-item-custom2-options':
+                  'Genéricos|Personalizados[+3.00]|Grabado imagen[+5.00]',
+                'data-item-stackable': 'never',
+              },
+            },
+            {
+              image: 'topper-acrilico.jpg',
+              title: 'TOPPERS ACRÍLICO',
+              description:
+                'Toppers de acrílico con acabado moderno y brillante. Ideales para darle un toque sofisticado a tu celebración. Desde 8,00€',
+              listInfo: '\nGenéricos\nPersonalizados\n15cm o 20cm',
+              hideListInfo: true,
+              buyButton: {
+                'data-item-price': '8.00',
+                'data-item-custom1-name': 'Tamaño',
+                'data-item-custom1-options': '15cm|20cm[+2.00]',
+                'data-item-custom2-name': 'Tipo',
+                'data-item-custom2-options': 'Genéricos|Personalizados[+3.00]',
+                'data-item-stackable': 'never',
+              },
+            },
+            {
+              image: 'mini-topper.jpg',
+              title: 'MINI TOPPERS 10cm',
+              description:
+                'Mini toppers de 10cm, perfectos para tartas pequeñas o cupcakes. Disponibles en madera o acrílico. Desde 5,00€',
+              listInfo:
+                '\nMadera - Genéricos\nMadera - Personalizados\nMadera - Grabado imagen\nAcrílico - Genéricos\nAcrílico - Personalizados',
+              hideListInfo: true,
+              buyButton: {
+                'data-item-price': '5.00',
+                'data-item-custom1-name': 'Material',
+                'data-item-custom1-options': 'Madera|Acrílico',
+                'data-item-custom2-name': 'Tipo',
+                'data-item-custom2-options':
+                  'Genéricos|Personalizados[+2.00]|Grabado imagen (solo madera)[+3.00]',
                 'data-item-stackable': 'never',
               },
             },
