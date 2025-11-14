@@ -680,7 +680,8 @@ export default [
               title: 'TOPPERS MADERA',
               description:
                 'Toppers de madera personalizables con un toque natural y elegante. Desde 8,00€',
-              listInfo: '\nGenéricos\nPersonalizados\nGrabado imagen\n15cm o 20cm',
+              listInfo:
+                '\nGenéricos\nPersonalizados\nGrabado imagen\n15cm o 20cm',
               hideListInfo: true,
               buyButton: {
                 'data-item-price': '8.00',
@@ -713,7 +714,8 @@ export default [
               title: 'MINI TOPPERS 10cm',
               description:
                 'Mini toppers de 10cm, perfectos para tartas pequeñas o cupcakes. Disponibles en madera o acrílico. Desde 5,00€',
-              listInfo: '\nMadera - Genéricos\nMadera - Personalizados\nMadera - Grabado imagen\nAcrílico - Genéricos\nAcrílico - Personalizados',
+              listInfo:
+                '\nMadera - Genéricos\nMadera - Personalizados\nMadera - Grabado imagen\nAcrílico - Genéricos\nAcrílico - Personalizados',
               hideListInfo: true,
               buyButton: {
                 'data-item-price': '5.00',
