@@ -382,8 +382,7 @@ export default [
               title: 'CHEESECAKE CON OREO',
               description:
                 'Tarta de queso al horno con trozos y base de galleta tipo Oreo.',
-              listInfo:
-                'Molde de 24 cm, 10/12 raciones. 36,00 €',
+              listInfo: 'Molde de 24 cm, 10/12 raciones. 36,00 €',
               buyButton: getBuyButtonStandardCakeSpecificInfo({
                 basePrice: '32.00',
                 basePriceIncrement: '4.00',
@@ -415,7 +414,7 @@ export default [
                 useCustomSizeString: 'Molde de 21cm x 21cm, 9 raciones.',
               }),
             },
-             {
+            {
               image: 'BrownieNutella600.jpg',
               title: 'BROWNIE DE NUTELLA',
               description:
@@ -582,7 +581,7 @@ export default [
                 'data-item-price': '10.00',
                 'data-item-custom1-name': 'Tipo',
                 'data-item-custom1-options':
-                  'Zanahoria\|Yogur|Limón|Vainilla|Oreo|Chocolate|Red Velvet|Vainilla con edulcorante|Chocolate con edulcorante|Cebra (vainilla y chocolate)',
+                  'Zanahoria|Yogur|Limón|Vainilla|Oreo|Chocolate|Red Velvet|Vainilla con edulcorante|Chocolate con edulcorante|Cebra (vainilla y chocolate)',
                 'data-item-stackable': 'never',
               },
             },
@@ -600,7 +599,8 @@ export default [
               title: 'NY COOKIES',
               description:
                 'Galletas tipo NY, blanditas por el centro y crujientes en el borde. 3,50€, mínimo 3u',
-              listInfo: '\nDe pepitas de chocolate y nuez\nDe avellanas, Nutella y rellenas de Nutella\nCon lacasitos\nDe galletas tipo Oreo\nRed Velvet con pepitas de chocolate blanco\nRellenas de Nutella',
+              listInfo:
+                '\nDe pepitas de chocolate y nuez\nDe avellanas, Nutella y rellenas de Nutella\nCon lacasitos\nDe galletas tipo Oreo\nRed Velvet con pepitas de chocolate blanco\nRellenas de Nutella',
               hideListInfo: true,
               buyButton: {
                 'data-item-min-quantity': 3,
