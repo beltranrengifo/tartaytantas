@@ -719,24 +719,6 @@ export default [
                 'data-item-custom1-required': 'true',
               },
             },
-            {
-              image: 'mini-topper.jpg',
-              title: 'MINI TOPPERS 10cm',
-              description:
-                'Mini toppers de 10cm, perfectos para tartas pequeñas o cupcakes. Disponibles en madera o acrílico. Desde 5,00€',
-              listInfo:
-                '\nMadera - Genéricos\nMadera - Personalizados\nMadera - Grabado imagen\nAcrílico - Genéricos\nAcrílico - Personalizados',
-              hideListInfo: true,
-              buyButton: {
-                'data-item-price': '5.00',
-                'data-item-custom1-name': 'Material',
-                'data-item-custom1-options': 'Madera|Acrílico',
-                'data-item-custom2-name': 'Tipo',
-                'data-item-custom2-options':
-                  'Genéricos|Personalizados[+2.00]|Grabado imagen (solo madera)[+3.00]',
-                'data-item-stackable': 'never',
-              },
-            },
           ],
         },
       },
