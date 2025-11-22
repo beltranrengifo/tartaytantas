@@ -706,19 +706,17 @@ export default [
               },
             },
             {
-              image: 'topper-acrilico.jpg',
-              title: 'TOPPERS ACRÍLICO',
+              image: 'topper-acrilico-personalizado.jpg',
+              title: 'TOPPER ACRÍLICO PERSONALIZADO',
               description:
-                'Toppers de acrílico con acabado moderno y brillante. Ideales para darle un toque sofisticado a tu celebración. Desde 8,00€',
-              listInfo: '\nGenéricos\nPersonalizados\n15cm o 20cm',
+                'Topper de acrílico personalizado. Escribe tu texto (máximo 25 caracteres). 20cm. 15,00€',
+              listInfo: 'Topper de acrílico personalizado, 20cm',
               hideListInfo: true,
               buyButton: {
-                'data-item-price': '8.00',
-                'data-item-custom1-name': 'Tamaño',
-                'data-item-custom1-options': '15cm|20cm[+2.00]',
-                'data-item-custom2-name': 'Tipo',
-                'data-item-custom2-options': 'Genéricos|Personalizados[+3.00]',
-                'data-item-stackable': 'never',
+                'data-item-price': '15.00',
+                'data-item-custom1-name':
+                  'Texto personalizado (máx 25 caracteres)',
+                'data-item-custom1-required': 'true',
               },
             },
             {
