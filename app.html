@@ -23,6 +23,18 @@
               title: "Envío o Recogida"
             }
         });
+
+        // Limitar longitud del campo de texto personalizado en toppers
+        Snipcart.events.on('item.adding', function(item) {
+          setTimeout(function() {
+            // Buscar el input que contiene "Texto-personalizado" en su name
+            const customInput = document.querySelector('input[name^="Texto-personalizado"]');
+            
+            if (customInput && !customInput.hasAttribute('maxlength')) {
+              customInput.setAttribute('maxlength', '25');
+            }
+          }, 200);
+        });
     });
   </script>
 </html>

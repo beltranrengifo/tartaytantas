@@ -680,21 +680,29 @@ export default [
               },
             },
             {
-              image: 'topper-madera.jpg',
-              title: 'TOPPERS MADERA',
-              description:
-                'Toppers de madera personalizables con un toque natural y elegante. Desde 8,00€',
-              listInfo:
-                '\nGenéricos\nPersonalizados\nGrabado imagen\n15cm o 20cm',
+              image: 'topper-feliz-cumpleanos.jpg',
+              title: 'TOPPER FELIZ CUMPLEAÑOS',
+              description: 'Topper de madera "Feliz Cumpleaños" 20cm.',
+              listInfo: 'Topper de madera, 20cm',
               hideListInfo: true,
               buyButton: {
-                'data-item-price': '8.00',
-                'data-item-custom1-name': 'Tamaño',
-                'data-item-custom1-options': '15cm|20cm[+2.00]',
-                'data-item-custom2-name': 'Tipo',
-                'data-item-custom2-options':
-                  'Genéricos|Personalizados[+3.00]|Grabado imagen[+5.00]',
-                'data-item-stackable': 'never',
+                'data-item-price': '6.00',
+                'data-item-custom1-name': '',
+                'data-item-custom1-options': '',
+              },
+            },
+            {
+              image: 'topper-madera-personalizado.jpg',
+              title: 'TOPPER MADERA PERSONALIZADO',
+              description:
+                'Topper de madera personalizado. Escribe tu texto (máximo 15 caracteres). 20cm. 7,00€',
+              listInfo: 'Topper de madera personalizado, 20cm',
+              hideListInfo: true,
+              buyButton: {
+                'data-item-price': '7.00',
+                'data-item-custom1-name':
+                  'Texto personalizado (máx 25 caracteres)',
+                'data-item-custom1-required': 'true',
               },
             },
             {
