@@ -17,6 +17,16 @@
   }
 }
 
+// Delivery disabled banner - hidden by default
+.tt-delivery-disabled-banner {
+  display: none;
+}
+
+// Show banner when delivery is disabled (body class added via JS)
+body.delivery-disabled .tt-delivery-disabled-banner {
+  display: block;
+}
+
 .snipcart-base-button {
   border-radius: 0;
   border-width: 2px;

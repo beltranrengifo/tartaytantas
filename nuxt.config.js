@@ -6,6 +6,8 @@ export default {
   env: {
     baseUrl: process.env.BASE_URL,
     googleRoutesApiKey: process.env.GOOGLE_ROUTES_API_KEY,
+    // Set to true to temporarily disable delivery (pickup only)
+    deliveryDisabled: true,
   },
 
   head: {
