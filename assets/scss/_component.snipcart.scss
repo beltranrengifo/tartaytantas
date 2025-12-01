@@ -27,6 +27,19 @@ body.delivery-disabled .tt-delivery-disabled-banner {
   display: block;
 }
 
+// Label switching based on delivery status
+.tt-label-pickup-only {
+  display: none;
+}
+
+body.delivery-disabled .tt-label-delivery {
+  display: none;
+}
+
+body.delivery-disabled .tt-label-pickup-only {
+  display: inline;
+}
+
 .snipcart-base-button {
   border-radius: 0;
   border-width: 2px;
