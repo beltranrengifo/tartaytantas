@@ -17,7 +17,7 @@
     "@nuxt/typescript-runtime": "^2.0.0",
     "body-scroll-lock": "^3.1.5",
     "core-js": "^3.6.5",
-    "jarallax": "^1.12.5",
+    "jarallax": "^2.2.1",
     "lodash": "^4.17.20",
     "nuxt": "^2.14.6",
     "object-fit-images": "^3.2.4",
