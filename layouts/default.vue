@@ -48,6 +48,7 @@ export default Vue.extend({
       scrollPosition,
       footer: '',
       processedElements: new WeakSet(), // Track processed elements to prevent timing issues
+      $snipcartFormObserver: null as MutationObserver | null,
     }
   },
 
