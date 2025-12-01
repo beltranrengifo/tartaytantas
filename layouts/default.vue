@@ -23,6 +23,7 @@ import Parallax from '@/mixins/parallax.vue'
 import HandleShippingCosts from '~/mixins/handle-shipping-costs'
 import HandleDeliveryDate from '~/mixins/handle-delivery-date'
 import { layout } from '@/content'
+import { isDeliveryDisabled } from '~/config'
 import Header from '@/components/layout/Header.vue'
 import Footer from '@/components/layout/Footer.vue'
 
@@ -60,6 +61,11 @@ export default Vue.extend({
     }, 25)
 
     this.$state.handleScreenSize()
+
+    // Add body class to show delivery disabled banner
+    if (isDeliveryDisabled()) {
+      document.body.classList.add('delivery-disabled')
+    }
   },
 
   created() {

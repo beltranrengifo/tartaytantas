@@ -1,5 +1,6 @@
 import Vue from 'vue'
 import { SnipcartStore } from '~/types'
+import { isDeliveryDisabled } from '~/config'
 
 const TARTAYTANTAS_LAT_LONG = {
   lat: 40.4498699,
@@ -77,6 +78,18 @@ export default Vue.extend({
       const shippingAddress = snipcartStoreState.cart.shippingAddress
 
       if (!shippingAddress) return
+
+      // If delivery is disabled, force pickup when user selects delivery
+      if (
+        isDeliveryDisabled() &&
+        snipcartStoreState.cart.shippingDetails.method === 'Envío estandar'
+      ) {
+        await Snipcart.api.cart.setShippingInformation({
+          method: 'Recogida en tienda',
+          cost: 0,
+        })
+        return
+      }
 
       const geocodeAddressUrl = `${shippingAddress.fullAddress} ${shippingAddress.postalCode} ${shippingAddress.province}`
 
