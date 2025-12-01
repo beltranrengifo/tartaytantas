@@ -80,22 +80,12 @@ export default {
     '@nuxt/typescript-build',
     '@nuxtjs/tailwindcss',
     '@nuxtjs/style-resources',
-    [
-      'nuxt-compress',
-      {
-        gzip: {
-          cache: true,
-        },
-        brotli: {
-          threshold: 10240,
-        },
-      },
-    ],
   ],
 
   modules: ['v-sanitize/nuxt'],
 
   build: {
+    transpile: ['sanitize-html', 'htmlparser2', 'domutils', 'domelementtype', 'dom-serializer'],
     babel: {
       plugins: ['@babel/plugin-proposal-optional-chaining'],
     },
