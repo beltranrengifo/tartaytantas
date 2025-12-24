@@ -114,6 +114,50 @@ export default [
       },
     ],
   },
+  /* roscon featured section */
+  {
+    name: 'roscon',
+    options: {
+      classes: 'bg-brand-secondary',
+      fullwidth: true,
+    },
+    components: [
+      {
+        name: 'product-grid',
+        options: {
+          containerTailwind: 'pt-16 pb-16',
+          imageDir: 'roscon',
+          hoverSuffix: '',
+          items: [
+            {
+              image: 'roscon-normal-tartaytantas.jpeg',
+              title: 'ROSCÓN DE REYES',
+              description:
+                'Roscón de Reyes artesanal, elaborado con ingredientes de primera calidad.',
+              listInfo:
+                'Medio kilo. 24,00 €\n1 kilo. 48,00 €',
+              buyButton: {
+                'data-item-price': '24.00',
+                'data-item-custom1-options': 'Medio kilo (24€)|1 kilo (48€)[+24]',
+              },
+            },
+            {
+              image: 'roscon-con-nata-tartaytantas.jpeg',
+              title: 'ROSCÓN DE REYES RELLENO DE NATA',
+              description:
+                'Roscón de Reyes artesanal relleno de nata montada, elaborado con ingredientes de primera calidad.',
+              listInfo:
+                'Medio kilo. 25,50 €\n1 kilo. 50,50 €',
+              buyButton: {
+                'data-item-price': '25.50',
+                'data-item-custom1-options': 'Medio kilo (25,50€)|1 kilo (50,50€)[+25]',
+              },
+            },
+          ],
+        },
+      },
+    ],
+  },
   /* page title */
   {
     name: 'page-title',
@@ -128,67 +172,10 @@ export default [
           titleTag: 'h1',
           font: 'font-serif',
           align: 'text-center',
-          paddingTop: 'pt-10',
+          paddingTop: 'pt-16',
           paddingBottom: '',
-          extraClasses: 'text-3xl md:text-big-title text-secondary font-medium',
+          extraClasses: 'text-3xl md:text-big-title text-secondary font-medium mt-8',
           useDecoration: true,
-        },
-      },
-    ],
-  },
-  /* roscon featured section */
-  {
-    name: 'roscon',
-    options: {
-      classes: 'bg-brand',
-      fullwidth: true,
-    },
-    components: [
-      {
-        name: 'title-block',
-        options: {
-          title: 'Roscón de Reyes',
-          titleTag: 'h2',
-          font: 'font-serif',
-          align: 'text-center',
-          paddingTop: 'pt-12',
-          paddingBottom: 'pb-4',
-          extraClasses: 'text-3xl md:text-big-title text-white font-medium',
-          useDecoration: false,
-        },
-      },
-      {
-        name: 'product-grid',
-        options: {
-          containerTailwind: 'pt-4 pb-12',
-          imageDir: 'roscon',
-          hoverSuffix: '',
-          items: [
-            {
-              image: 'roscon-tartaytantas.webp',
-              title: 'ROSCÓN DE REYES',
-              description:
-                'Roscón de Reyes artesanal, elaborado con ingredientes de primera calidad.',
-              listInfo:
-                'Medio kilo. 24,00 €\n1 kilo. 48,00 €',
-              buyButton: {
-                'data-item-price': '24.00',
-                'data-item-custom1-options': 'Medio kilo (24€)|1 kilo (48€)[+24]',
-              },
-            },
-            {
-              image: 'roscon-tartaytantas.webp',
-              title: 'ROSCÓN DE REYES RELLENO DE NATA',
-              description:
-                'Roscón de Reyes artesanal relleno de nata montada, elaborado con ingredientes de primera calidad.',
-              listInfo:
-                'Medio kilo. 24,00 €\n1 kilo. 48,00 €',
-              buyButton: {
-                'data-item-price': '24.00',
-                'data-item-custom1-options': 'Medio kilo (24€)|1 kilo (48€)[+24]',
-              },
-            },
-          ],
         },
       },
     ],

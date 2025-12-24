@@ -37,7 +37,7 @@
               data-item-custom1-name="Tamaño"
               data-item-custom1-options="Medio kilo (24€)|1 kilo (48€)[+24]"
               :data-item-description="'Roscón de Reyes artesanal'"
-              :data-item-image="rosconImage"
+              :data-item-image="rosconNormalImage"
               @click="closeModal"
             >
               <span class="buy-button__inner">
@@ -54,17 +54,17 @@
 
           <div class="roscon-promo__product">
             <h3 class="roscon-promo__product-title">Roscón relleno de nata</h3>
-            <p class="roscon-promo__product-price">Medio kilo 24€ / 1 kilo 48€</p>
+            <p class="roscon-promo__product-price">Medio kilo 25,50€ / 1 kilo 50,50€</p>
             <button
               class="snipcart-add-item buy-button"
               :data-item-id="'roscon-reyes-nata'"
               :data-item-name="'Roscón de Reyes relleno de nata'"
               :data-item-url="productUrl"
-              :data-item-price="24"
+              :data-item-price="25.50"
               data-item-custom1-name="Tamaño"
-              data-item-custom1-options="Medio kilo (24€)|1 kilo (48€)[+24]"
+              data-item-custom1-options="Medio kilo (25,50€)|1 kilo (50,50€)[+25]"
               :data-item-description="'Roscón de Reyes artesanal relleno de nata'"
-              :data-item-image="rosconImage"
+              :data-item-image="rosconNataImage"
               @click="closeModal"
             >
               <span class="buy-button__inner">
@@ -127,8 +127,11 @@ export default Vue.extend({
         ? 'https://969a-139-47-82-16.eu.ngrok.io/tartas'
         : 'https://tartaytantas.es/tartas'
     },
-    rosconImage(): string {
-      return require('@/assets/images/roscon/roscon-tartaytantas.webp')
+    rosconNormalImage(): string {
+      return require('@/assets/images/roscon/roscon-normal-tartaytantas.jpeg')
+    },
+    rosconNataImage(): string {
+      return require('@/assets/images/roscon/roscon-con-nata-tartaytantas.jpeg')
     },
   },
 
