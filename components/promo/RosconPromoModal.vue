@@ -1,5 +1,6 @@
 <template>
   <BaseModal
+    ref="modal"
     storage-key="roscon-promo-dismissed"
     :expiry-ms="expiryMs"
     aria-labelledby="roscon-promo-title"
@@ -37,6 +38,7 @@
               data-item-custom1-options="Medio kilo (24€)|1 kilo (48€)[+24]"
               :data-item-description="'Roscón de Reyes artesanal'"
               :data-item-image="rosconImage"
+              @click="closeModal"
             >
               <span class="buy-button__inner">
                 <img
@@ -63,6 +65,7 @@
               data-item-custom1-options="Medio kilo (24€)|1 kilo (48€)[+24]"
               :data-item-description="'Roscón de Reyes artesanal relleno de nata'"
               :data-item-image="rosconImage"
+              @click="closeModal"
             >
               <span class="buy-button__inner">
                 <img
@@ -126,6 +129,12 @@ export default Vue.extend({
     },
     rosconImage(): string {
       return require('@/assets/images/roscon/roscon-tartaytantas.webp')
+    },
+  },
+
+  methods: {
+    closeModal(): void {
+      (this.$refs.modal as any)?.close()
     },
   },
 })
