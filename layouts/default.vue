@@ -12,6 +12,7 @@
       <Nuxt />
     </main>
     <Footer class="flex-shrink-0" :content="footer" />
+    <RosconPromoModal />
   </section>
 </template>
 
@@ -27,6 +28,7 @@ import { layout } from '@/content'
 import { isDeliveryDisabled } from '~/config'
 import Header from '@/components/layout/Header.vue'
 import Footer from '@/components/layout/Footer.vue'
+import RosconPromoModal from '@/components/promo/RosconPromoModal.vue'
 
 const SHOW_MENU_SCROLL_THRESHOLD: number = 50
 
@@ -36,6 +38,7 @@ export default Vue.extend({
   components: {
     Header,
     Footer,
+    RosconPromoModal,
   },
 
   fetch(): void {
