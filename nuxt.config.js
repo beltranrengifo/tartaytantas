@@ -8,6 +8,8 @@ export default {
     googleRoutesApiKey: process.env.GOOGLE_ROUTES_API_KEY,
     // Set to true to temporarily disable delivery (pickup only)
     deliveryDisabled: false,
+    // Set to true to enable the promo modal (e.g., Roscón de Reyes)
+    promoModalEnabled: false,
   },
 
   head: {
