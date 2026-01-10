@@ -12,7 +12,7 @@
       <Nuxt />
     </main>
     <Footer class="flex-shrink-0" :content="footer" />
-    <RosconPromoModal />
+    <RosconPromoModal v-if="isPromoModalEnabled" />
   </section>
 </template>
 
@@ -54,6 +54,12 @@ export default Vue.extend({
       processedElements: new WeakSet(), // Track processed elements to prevent timing issues
       $snipcartFormObserver: null as MutationObserver | null,
     }
+  },
+
+  computed: {
+    isPromoModalEnabled(): boolean {
+      return process.env.promoModalEnabled === true
+    },
   },
 
   mounted() {
