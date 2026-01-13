@@ -10,6 +10,8 @@ export default {
     deliveryDisabled: false,
     // Set to true to enable the promo modal (e.g., Roscón de Reyes)
     promoModalEnabled: false,
+    // Set to true to enable the roscon section on the tartas page
+    rosconSectionEnabled: false,
   },
 
   head: {
