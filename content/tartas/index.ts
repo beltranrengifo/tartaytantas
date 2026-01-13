@@ -1,3 +1,5 @@
+import { isRosconSectionEnabled } from '~/config'
+
 const getBuyButtonStandardCakeSpecificInfo = ({
   basePrice,
   basePriceIncrement,
@@ -115,7 +117,7 @@ export default [
     ],
   },
   /* roscon featured section - controlled by rosconSectionEnabled env flag */
-  ...((process.env.rosconSectionEnabled === true || process.env.rosconSectionEnabled === 'true') ? [{
+  ...(isRosconSectionEnabled() ? [{
     name: 'roscon',
     options: {
       classes: 'bg-brand-secondary',
