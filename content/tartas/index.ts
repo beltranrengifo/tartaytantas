@@ -115,7 +115,10 @@ export default [
     ],
   },
   /* roscon featured section - controlled by rosconSectionEnabled env flag */
-  ...(process.env.rosconSectionEnabled === 'true' ? [{
+  ...(((): boolean => {
+    const value = process.env.rosconSectionEnabled as unknown
+    return value === true || value === 'true' || value === '1'
+  })() ? [{
     name: 'roscon',
     options: {
       classes: 'bg-brand-secondary',
