@@ -115,7 +115,7 @@ export default [
     ],
   },
   /* roscon featured section - controlled by rosconSectionEnabled env flag */
-  ...(process.env.rosconSectionEnabled === 'true' ? [{
+  ...((process.env.rosconSectionEnabled === true || process.env.rosconSectionEnabled === 'true') ? [{
     name: 'roscon',
     options: {
       classes: 'bg-brand-secondary',
