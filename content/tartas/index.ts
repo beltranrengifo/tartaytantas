@@ -657,6 +657,40 @@ export default [
                   'De pepitas|De pistacho|De lacasitos|De Oreo|De Red Velvet|De Nutella',
                 'data-item-stackable': 'never',
               },
+              {
+              image: 'toppersmadera600.jpg',
+              title: 'CAKE TOPPER MADERA',
+              description:
+                'Decora tu tarta con un topper de madera de 15/20 cm.',
+              descriptionHelper:
+                'Si quieres personalizar el texto mándanos un mensaje.Precio topper personalizado 10 €',
+              listInfo: '\nHappy Birthday\nFeliz cumple\nSuperpapá\nSupermamá',
+              hideListInfo: true,
+              buyButton: {
+                'data-item-min-quantity': 1,
+                'data-item-price': '9.00',
+                'data-item-custom1-name': 'Tipo',
+                'data-item-custom1-options':
+                  'Happy Birthday|Feliz Cumple|Supermamá|Superpapá',
+                'data-item-stackable': 'never',
+              },
+               {
+              image: 'toppersacrilico600.jpg',
+              title: 'CAKE TOPPER ACRILICO',
+              description:
+                'Decora tu tarta con un topper acrílico de 15/20cm.',
+              descriptionHelper:
+                'Si quieres personalizar el texto mándanos un mensaje.Precio topper personalizado 18 €',
+              listInfo: '\nHappy Birthday\nFeliz cumple\nSuperpapá\nSupermamá',
+              hideListInfo: true,
+              buyButton: {
+                'data-item-min-quantity': 1,
+                'data-item-price': '12.00',
+                'data-item-custom1-name': 'Tipo',
+                'data-item-custom1-options':
+                  'Happy Birthday|Feliz Cumple|Supermamá|Superpapá',
+                'data-item-stackable': 'never',
+              },
             },
           ],
         },
