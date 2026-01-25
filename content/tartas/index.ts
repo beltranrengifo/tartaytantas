@@ -668,7 +668,7 @@ export default [
               hideListInfo: true,
               buyButton: {
                 'data-item-min-quantity': 1,
-                'data-item-price': '9.00',
+                'data-item-price': '10.00',
                 'data-item-custom1-name': 'Tipo',
                 'data-item-custom1-options':
                   'Happy Birthday|Feliz Cumple|Supermamá|Superpapá',
@@ -685,7 +685,7 @@ export default [
               hideListInfo: true,
               buyButton: {
                 'data-item-min-quantity': 1,
-                'data-item-price': '12.00',
+                'data-item-price': '18.00',
                 'data-item-custom1-name': 'Tipo',
                 'data-item-custom1-options':
                   'Happy Birthday|Feliz Cumple|Supermamá|Superpapá',
