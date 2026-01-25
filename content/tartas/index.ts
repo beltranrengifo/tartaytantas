@@ -373,7 +373,7 @@ export default [
               image: 'banoffee600.jpg',
               title: 'BANOFFEE',
               description:
-                'Plátano, dulce de leche y nata montada con base de galleta
+                'Plátano, dulce de leche y nata montada con base de galleta.',
                 descriptionHelper:
                 'Podemos hacerla sin harina de trigo, pero con trazas.',
               listInfo:
