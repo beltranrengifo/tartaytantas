@@ -201,7 +201,7 @@ export default [
               descriptionHelper:
                 'Podemos hacerla sin harina de trigo, pero con trazas.',
               listInfo:
-                'Molde de 24 cm, 10/12 raciones. 37 €.\nSin trigo molde de 24cm, 10/12 raciones 39 €.\nMolde de 20 cm. 6/8 raciones. 32,50 €',
+                'Molde de 24 cm, 10/12 raciones. 37€.\nSin trigo molde de 24cm, 10/12 raciones 39€.\nMolde de 20 cm. 6/8 raciones. 32,50€',
               buyButton: getBuyButtonStandardCakeSpecificInfo({
                 basePrice: '32.50',
                 basePriceIncrement: '4.50',
@@ -215,7 +215,7 @@ export default [
               descriptionHelper:
                 'Podemos hacerla sin harina de trigo, pero con trazas.',
               listInfo:
-                'Molde de 24 cm, 10/12 raciones. 35,80 €.\nSin trigo molde de 24cm, 10/12 raciones 39 €.\nMolde de 20 cm. 6/8 raciones. 31,30 €',
+                'Molde de 24 cm, 10/12 raciones. 35,80€.\nSin trigo molde de 24cm, 10/12 raciones 39€.\nMolde de 20 cm. 6/8 raciones. 31,30€',
               buyButton: getBuyButtonStandardCakeSpecificInfo({
                 basePrice: '31.30',
                 basePriceIncrement: '4.50',
@@ -226,7 +226,7 @@ export default [
               title: 'ALEJITO',
               description:
                 'Tarta milhojas de obleas y chocolate con cobertura de nuestra deliciosa nata montada.',
-              listInfo: 'Molde de 24 cm, 10/12 raciones. 34 €',
+              listInfo: 'Molde de 24 cm, 10/12 raciones. 34€',
               buyButton: getBuyButtonStandardCakeSpecificInfo({
                 basePrice: '34.00',
                 onlyBigSize: true,
@@ -240,7 +240,7 @@ export default [
               descriptionHelper:
                 'Podemos hacerla sin harina de trigo, pero con trazas.',
               listInfo:
-                'Molde de 24 cm, 10/12 raciones. 35 €.\nSin trigo molde de 24cm, 10/12 raciones 39 €.\nMolde de 20 cm. 6/8 raciones. 30,60 €',
+                'Molde de 24 cm, 10/12 raciones. 35€.\nSin trigo molde de 24cm, 10/12 raciones 39€.\nMolde de 20 cm. 6/8 raciones. 30,60€',
               buyButton: getBuyButtonStandardCakeSpecificInfo({
                 basePrice: '30.60',
                 basePriceIncrement: '4.40',
@@ -252,7 +252,7 @@ export default [
               description:
                 'Bizcocho de vainilla con galletas tipo Oreo troceadas, con relleno y cobertura de crema de queso y terminada con galletas tipo Oreo trituradas.',
               listInfo:
-                'Molde de 24 cm, 10/12 raciones. 34,50 €\nMolde de 20 cm. 6/8 raciones. 29,90 €',
+                'Molde de 24 cm, 10/12 raciones. 34,50€\nMolde de 20 cm. 6/8 raciones. 29,90€',
               buyButton: getBuyButtonStandardCakeSpecificInfo({
                 basePrice: '29.90',
                 basePriceIncrement: '4.60',
@@ -265,7 +265,7 @@ export default [
                 'Tres pisos de bizcocho de espinacas con un toque cítrico,  relleno y cobertura de crema de nata y queso, coronada con frambuesas.',
               descriptionHelper:
                 'Podemos hacerla sin harina de trigo, pero con trazas.',
-              listInfo: 'Molde de 20 cm, 10/12 raciones. 42 €\nSin trigo molde de 20cm, 10/12 raciones 45 €.',
+              listInfo: 'Molde de 20 cm, 10/12 raciones. 42€\nSin trigo molde de 20cm, 10/12 raciones 45€.',
               buyButton: getBuyButtonStandardCakeSpecificInfo({
                 basePrice: '42.00',
               }),
@@ -278,7 +278,7 @@ export default [
               descriptionHelper:
                 'Podemos hacerla sin harina de trigo, pero con trazas.',
               listInfo:
-                'Molde de 24 cm, 10/12 raciones. 37 €\nSin trigo molde de 24cm, 10/12 raciones 39 €.\nMolde de 20 cm. 6/8 raciones. 32,80 €',
+                'Molde de 24 cm, 10/12 raciones. 37€\nSin trigo molde de 24cm, 10/12 raciones 39€.\nMolde de 20 cm. 6/8 raciones. 32,80€',
               buyButton: getBuyButtonStandardCakeSpecificInfo({
                 basePrice: '32.80',
                 basePriceIncrement: '4.20',
@@ -290,7 +290,7 @@ export default [
               description:
                 'Tarta de chocolate con un toque a malta, base de galleta y decorada con bolas de chocolate y cereales.',
               listInfo:
-                'Molde de 24 cm, 10/12 raciones. 34 €\nMolde de 20 cm. 6/8 raciones. 29,00 €',
+                'Molde de 24 cm, 10/12 raciones. 34€\nMolde de 20 cm. 6/8 raciones. 29,00€',
               buyButton: getBuyButtonStandardCakeSpecificInfo({
                 basePrice: '29.00',
                 basePriceIncrement: '5.00',
@@ -301,7 +301,7 @@ export default [
               title: 'LIMÓN Y MERENGUE',
               description:
                 'Tarta de crema de limón, con base de galleta y merengue italiano tostado con soplete.',
-              listInfo: 'Molde de 24 cm, 10/12 raciones. 35,50 €',
+              listInfo: 'Molde de 24 cm, 10/12 raciones. 35,50€',
               buyButton: getBuyButtonStandardCakeSpecificInfo({
                 basePrice: '35.50',
                 onlyBigSize: true,
@@ -312,7 +312,7 @@ export default [
               title: 'PAVLOVA',
               description:
                 'Merengue crujiente con nata y frambuesas. Apta para intolerantes al gluten.',
-              listInfo: 'Molde de 24 cm, 10/12 raciones. 40 €',
+              listInfo: 'Molde de 24 cm, 10/12 raciones. 40€',
               buyButton: getBuyButtonStandardCakeSpecificInfo({
                 basePrice: '34.00',
                 onlyBigSize: true,
@@ -326,7 +326,7 @@ export default [
               descriptionHelper:
                 'Podemos hacerla sin harina de trigo, pero con trazas.',
               listInfo:
-                'Molde de 24 cm, 10/12 raciones. 36 €\nSin trigo molde de 24cm, 10/12 raciones 39 €.\nMolde de 20 cm. 6/8 raciones. 31,70 €',
+                'Molde de 24 cm, 10/12 raciones. 36€\nSin trigo molde de 24cm, 10/12 raciones 39€.\nMolde de 20 cm. 6/8 raciones. 31,70€',
               buyButton: getBuyButtonStandardCakeSpecificInfo({
                 basePrice: '31.70',
                 basePriceIncrement: '4.30',
@@ -340,7 +340,7 @@ export default [
               descriptionHelper:
                 'Podemos hacerla sin harina de trigo, pero con trazas.',
               listInfo:
-                'Molde de 24 cm, 10/12 raciones. 36 €\nSin trigo molde de 24cm, 10/12 raciones 39 €.\nMolde de 20 cm. 6/8 raciones. 31,70 €',
+                'Molde de 24 cm, 10/12 raciones. 36€\nSin trigo molde de 24cm, 10/12 raciones 39€.\nMolde de 20 cm. 6/8 raciones. 31,70€',
               buyButton: getBuyButtonStandardCakeSpecificInfo({
                 basePrice: '31.70',
                 basePriceIncrement: '4.30',
@@ -351,7 +351,7 @@ export default [
               title: 'MAMÁ AMELIA',
               description:
                 'La tarta de almendra de mi abuela. Sin harina de trigo, apta para intolerantes al gluten.',
-              listInfo: 'Molde de 24 cm, 10/12 raciones. 32,90 €',
+              listInfo: 'Molde de 24 cm, 10/12 raciones. 32,90€',
               buyButton: getBuyButtonStandardCakeSpecificInfo({
                 basePrice: '32.90',
                 onlyBigSize: true,
@@ -363,7 +363,7 @@ export default [
               description:
                 'Tarta de crema de nata, queso y galleta tipo Oreo molida con base y cobertura de galleta tipo Oreo.',
               listInfo:
-                'Molde de 24 cm, 10/12 raciones. 34 €\nMolde de 20 cm. 6/8 raciones. 30 €',
+                'Molde de 24 cm, 10/12 raciones. 34€\nMolde de 20 cm. 6/8 raciones. 30€',
               buyButton: getBuyButtonStandardCakeSpecificInfo({
                 basePrice: '30',
                 basePriceIncrement: '4.00',
@@ -377,7 +377,7 @@ export default [
               descriptionHelper:
                 'Podemos hacerla sin harina de trigo, pero con trazas.',
               listInfo:
-                'Molde de 24 cm, 10/12 raciones. 34,40 €\nSin trigo molde de 24cm, 10/12 raciones 37 €.\nMolde de 20 cm. 6/8 raciones. 29,30 €',
+                'Molde de 24 cm, 10/12 raciones. 34,40€\nSin trigo molde de 24cm, 10/12 raciones 37€.\nMolde de 20 cm. 6/8 raciones. 29,30€',
               buyButton: getBuyButtonStandardCakeSpecificInfo({
                 basePrice: '29.30',
                 basePriceIncrement: '5.10',
@@ -391,7 +391,7 @@ export default [
               descriptionHelper:
                 'Podemos hacerla sin harina de trigo, pero con trazas.',
               listInfo:
-                'Molde de 24 cm, 10/12 raciones. 36 €\nSin trigo molde de 24cm, 10/12 raciones 39 €.\nMolde de 20 cm. 6/8 raciones. 32 €',
+                'Molde de 24 cm, 10/12 raciones. 36€\nSin trigo molde de 24cm, 10/12 raciones 39€.\nMolde de 20 cm. 6/8 raciones. 32€',
               buyButton: getBuyButtonStandardCakeSpecificInfo({
                 basePrice: '32.00',
                 basePriceIncrement: '4.00',
@@ -405,7 +405,7 @@ export default [
               descriptionHelper:
                 'Podemos hacerla sin harina de trigo, pero con trazas.',
               listInfo:
-                'Molde de 24 cm, 10/12 raciones. 37,50 €\nSin trigo molde de 24cm, 10/12 raciones 40 €.\nMolde de 20 cm. 6/8 raciones. 33,50 €',
+                'Molde de 24 cm, 10/12 raciones. 37,50€\nSin trigo molde de 24cm, 10/12 raciones 40€.\nMolde de 20 cm. 6/8 raciones. 33,50€',
               buyButton: getBuyButtonStandardCakeSpecificInfo({
                 basePrice: '33.50',
                 basePriceIncrement: '4.00',
@@ -419,7 +419,7 @@ export default [
               descriptionHelper:
                 'Podemos hacerla sin harina de trigo, pero con trazas. Consulta el precio.',
               listInfo:
-                'Molde de 24 cm, 10/12 raciones. 37 €\nSin trigo molde de 24cm, 10/12 raciones 40 €.\nMolde de 20 cm. 6/8 raciones. 33 €',
+                'Molde de 24 cm, 10/12 raciones. 37€\nSin trigo molde de 24cm, 10/12 raciones 40€.\nMolde de 20 cm. 6/8 raciones. 33€',
               buyButton: getBuyButtonStandardCakeSpecificInfo({
                 basePrice: '33.00',
                 basePriceIncrement: '4.00',
@@ -431,7 +431,7 @@ export default [
               description:
                 'Tarta de queso al horno con trozos y base de galleta tipo Oreo.',
               listInfo:
-                'Molde de 24 cm, 10/12 raciones. 37,00 €',
+                'Molde de 24 cm, 10/12 raciones. 37€',
               buyButton: getBuyButtonStandardCakeSpecificInfo({
                 basePrice: '37.00',
                 onlyBigSize: true,
@@ -445,7 +445,7 @@ export default [
               descriptionHelper:
                 'Podemos hacerla sin harina de trigo, pero con trazas.',
               listInfo:
-                'Molde de 24 cm, 10/12 raciones. 35 €\nSin trigo molde de 24cm, 10/12 raciones 38 €.\nMolde de 20 cm. 6/8 raciones. 31 €',
+                'Molde de 24 cm, 10/12 raciones. 35€\nSin trigo molde de 24cm, 10/12 raciones 38€.\nMolde de 20 cm. 6/8 raciones. 31€',
               buyButton: getBuyButtonStandardCakeSpecificInfo({
                 basePrice: '31.00',
                 basePriceIncrement: '4.00',
@@ -456,7 +456,7 @@ export default [
               title: 'BROWNIE DE AVELLANAS',
               description:
                 'Brownie de chocolate y avellanas. Un clásico de la repostería americana, a nuestra manera.',
-              listInfo: 'Molde de 21cm x 21cm, 9 raciones. 24 €',
+              listInfo: 'Molde de 21cm x 21cm, 9 raciones. 24€',
               buyButton: getBuyButtonStandardCakeSpecificInfo({
                 basePrice: '24.00',
                 useCustomSizeString: 'Molde de 21cm x 21cm, 9 raciones.',
@@ -467,7 +467,7 @@ export default [
               title: 'BROWNIE DE NUTELLA',
               description:
                 'Brownie de chocolate relleno de Nutella. Otra vuelta más al brownie.',
-              listInfo: 'Molde de 21cm x 21cm, 9 raciones. 26 €',
+              listInfo: 'Molde de 21cm x 21cm, 9 raciones. 26€',
               buyButton: getBuyButtonStandardCakeSpecificInfo({
                 basePrice: '26.00',
                 useCustomSizeString: 'Molde de 21cm x 21cm, 9 raciones.',
@@ -481,7 +481,7 @@ export default [
               descriptionHelper:
                 'Podemos hacerla sin harina de trigo, pero con trazas.',
               listInfo:
-                'Molde de 24 cm, 10/12 raciones. 36 €\nSin trigo molde de 24cm, 10/12 raciones 39 €.\nMolde de 20 cm. 6/8 raciones. 32,80 €',
+                'Molde de 24 cm, 10/12 raciones. 36€\nSin trigo molde de 24cm, 10/12 raciones 39€.\nMolde de 20 cm. 6/8 raciones. 32,80€',
               buyButton: getBuyButtonStandardCakeSpecificInfo({
                 basePrice: '32.80',
                 basePriceIncrement: '3.20',
@@ -494,7 +494,7 @@ export default [
                 'Tres pisos de bizcocho Red Velvet,  relleno y cobertura de crema de nata y queso, coronada con fresas, frambuesas y suspiros de merengue. La decoración puede cambiar.',
               descriptionHelper:
                 'Podemos hacerla sin harina de trigo, pero con trazas.',
-              listInfo: 'Molde de 20 cm, 10/12 raciones. 42 €.\nSin trigo molde de 24cm, 10/12 raciones 49 €.',
+              listInfo: 'Molde de 20 cm, 10/12 raciones. 42€.\nSin trigo molde de 24cm, 10/12 raciones 49€.',
               buyButton: getBuyButtonStandardCakeSpecificInfo({
                 basePrice: '42.00',
               }),
@@ -504,7 +504,7 @@ export default [
               title: 'TRES LECHES',
               description:
                 'Bizcocho genovés empapado en tres leches, cubierto con dulce de leche y merengue tostado.',
-              listInfo: 'Molde de 24 cm, 10/12 raciones. 36,50 €',
+              listInfo: 'Molde de 24 cm, 10/12 raciones. 36,50€',
               buyButton: getBuyButtonStandardCakeSpecificInfo({
                 basePrice: '36.50',
                 onlyBigSize: true,
@@ -553,7 +553,7 @@ export default [
               description:
                 'Tres pisos de bizcocho Red Velvet relleno de crema de queso, decorada con frutos rojos. La decoración puede cambiar.',
               listInfo:
-                'Molde de 18x10 cm, 10 raciones. 46 €\nMolde de 20x10 cm. 15 raciones. 63 €',
+                'Molde de 18x10 cm, 10 raciones. 46€\nMolde de 20x10 cm. 15 raciones. 63€',
               buyButton: getBuyButtonNakedCakeSpecificInfo({
                 basePrice: '46.00',
                 basePriceIncrement: '17',
@@ -565,7 +565,7 @@ export default [
               description:
                 'Tres pisos de bizcocho de chocolate relleno de buttercream de chocolate con leche o negro. Coronada con rosas de buttercream.',
               listInfo:
-                'Molde de 18x10 cm, 10 raciones. 46 €\nMolde de 20x10 cm. 15 raciones. 63 €',
+                'Molde de 18x10 cm, 10 raciones. 46€\nMolde de 20x10 cm. 15 raciones. 63€',
               buyButton: getBuyButtonNakedCakeSpecificInfo({
                 basePrice: '46.00',
                 basePriceIncrement: '17',
@@ -577,7 +577,7 @@ export default [
               description:
                 'Tres pisos de bizcocho de vainilla relleno de buttercream de chocolate blanco, coronada buttercream y bolas de cereales de colores. La decoración puede cambiar.',
               listInfo:
-                'Molde de 18x10 cm, 10 raciones. 46 €\nMolde de 20x10 cm. 15 raciones. 63 €',
+                'Molde de 18x10 cm, 10 raciones. 46€\nMolde de 20x10 cm. 15 raciones. 63€',
               buyButton: getBuyButtonNakedCakeSpecificInfo({
                 basePrice: '46.00',
                 basePriceIncrement: '17',
@@ -606,7 +606,7 @@ export default [
               image: 'muffins.jpg',
               title: 'MUFFINS',
               description:
-                'La versión muffin de nuestras tartas, con el mismo relleno y cobertura. Por encargo, mínimo 12u de cada tipo . 3 €',
+                'La versión muffin de nuestras tartas, con el mismo relleno y cobertura. Por encargo, mínimo 12u de cada tipo . 3€',
               listInfo: 'Zanahoria\nBeltrán\nWendy\nBosco\nRed Velvet',
               hideListInfo: true,
               buyButton: {
@@ -621,7 +621,7 @@ export default [
             {
               image: 'bizcochos.jpg',
               title: 'BIZCOCHOS',
-              description: '550 g / 10,50 €',
+              description: '550 g / 10,50€',
               listInfo:
                 'Zanahoria\nVainilla\nOreo\nChocolate\nRed Velvet\nYogur\nLimón\nVainilla con edulcorante\nChocolate con edulcorante',
               hideListInfo: true,
@@ -663,7 +663,7 @@ export default [
               title: 'FELIZ CUMPLEAÑOS',
               description:
                 'Personaliza tu tarta con un topper en madera de 15/20 cm.',
-              listInfo: 'Topper en madera de 15/20 cm 10 €',
+              listInfo: 'Topper en madera de 15/20 cm 10€',
             },
             {
               image: 'toppersacrilico600.jpg',
@@ -671,7 +671,7 @@ export default [
               description:
                 'Decora tu tarta con un topper acrílico de 15/20cm.',
               descriptionHelper:
-                'Si quieres personalizar el texto mándanos un mensaje.Precio topper personalizado 18 €',
+                'Si quieres personalizar el texto mándanos un mensaje.Precio topper personalizado 18€',
               listInfo: '\nHappy Birthday\nFeliz cumple\nSuperpapá\nSupermamá',
               hideListInfo: true,
               buyButton: {
