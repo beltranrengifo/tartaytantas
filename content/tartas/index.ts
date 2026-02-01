@@ -374,7 +374,7 @@ export default [
               title: 'BANOFFEE',
               description:
                 'Plátano, dulce de leche y nata montada con base de galleta.',
-                descriptionHelper:
+              descriptionHelper:
                 'Podemos hacerla sin harina de trigo, pero con trazas.',
               listInfo:
                 'Molde de 24 cm, 10/12 raciones. 34,40 €\nSin trigo molde de 24cm, 10/12 raciones 37 €.\nMolde de 20 cm. 6/8 raciones. 29,30 €',
@@ -433,7 +433,7 @@ export default [
               listInfo:
                 'Molde de 24 cm, 10/12 raciones. 37,00 €',
               buyButton: getBuyButtonStandardCakeSpecificInfo({
-                basePrice: '37.00'
+                basePrice: '37.00',
                 onlyBigSize: true,
               }),
             },
@@ -657,16 +657,15 @@ export default [
                   'De pepitas|De pistacho|De lacasitos|De Oreo|De Red Velvet|De Nutella',
                 'data-item-stackable': 'never',
               },
-               {
+            },
+            {
               image: 'toppersmadera600.jpg',
               title: 'FELIZ CUMPLEAÑOS',
               description:
                 'Personaliza tu tarta con un topper en madera de 15/20 cm.',
-              listInfo:
-                'Topper en madera de 15/20 cm 10 €',
-              }),
+              listInfo: 'Topper en madera de 15/20 cm 10 €',
             },
-               {
+            {
               image: 'toppersacrilico600.jpg',
               title: 'CAKE TOPPER ACRILICO',
               description:

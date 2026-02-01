@@ -5,7 +5,7 @@ const CAKES_GRID_ITEMS = ['NEW YORK CHEESECAKE', 'ZANAHORIA', 'BOSCO']
 
 export const getGridItemsFromCakes = () => {
   const cakesOptions: any = cakesContent.find(
-    (items) => items.name === 'tartas'
+    (item) => item.name === 'tartas'
   )?.components[0].options
 
   const cakes = cakesOptions.items
