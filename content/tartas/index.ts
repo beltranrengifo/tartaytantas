@@ -510,6 +510,15 @@ export default [
                 onlyBigSize: true,
               }),
             },
+             {
+              image: 'torrehermosa600.jpg',
+              title: 'TARTA SUSPIRO DE TORREHERMOSA',
+              description:
+                'Somos distribuidores autorizados de la famosa Tarta Suspiro',
+              listInfo: 'Consulta sabores y tamaños disponibles',
+              hideListInfo: true,
+              }),
+            },
             {
               image: 'vasitos600.jpg',
               title: 'INDIVIDUALES',
