@@ -511,7 +511,7 @@ export default [
               }),
             },
              {
-              image: 'torrehermosa600.jpg',
+              image: 'suspiro600.jpg',
               title: 'TARTA SUSPIRO DE TORREHERMOSA',
               description:
                 'Somos distribuidores autorizados de la famosa Tarta Suspiro',
