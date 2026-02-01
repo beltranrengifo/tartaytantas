@@ -662,14 +662,24 @@ export default [
               image: 'toppersmadera600.jpg',
               title: 'CAKE TOPPER FELIZ CUMPLEAÑOS EN MADERA',
               description:
-                'Personaliza tu tarta con un topper en madera de 15/20 cm.',
-              listInfo: 'Topper en madera de 15/20 cm 10€',
+                'Personaliza tu tarta con un topper en madera de 15/20 cm.Precio topper genérico 9€',
+              descriptionHelper:
+                'Si quieres personalizar el texto mándanos un mensaje.Precio topper personalizado 10€',
+               listInfo: '\nHappy Birthday\nFeliz cumple\nSuperpapá\nSupermamá',
+              hideListInfo: true,
+              buyButton: {
+                'data-item-min-quantity': 1,
+                'data-item-price': '13.00',
+                'data-item-custom1-name': 'Tipo',
+                'data-item-custom1-options':
+                  'Happy Birthday|Feliz Cumple|Supermamá|Superpapá',
+                'data-item-stackable': 'never',
             },
             {
               image: 'toppersacrilico600.jpg',
               title: 'CAKE TOPPER ACRILICO',
               description:
-                'Personaliza tu tarta con un topper acrílico de 15/20cm. Precio topper genérico 13€',
+                'Personaliza tu tarta con un topper acrílico de 15/20cm. Precio topper genérico 12€',
               descriptionHelper:
                 'Si quieres personalizar el texto mándanos un mensaje.Precio topper personalizado 18€',
               listInfo: '\nHappy Birthday\nFeliz cumple\nSuperpapá\nSupermamá',
