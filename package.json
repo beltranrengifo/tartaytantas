@@ -33,7 +33,7 @@
     "@aceforth/nuxt-optimized-images": "^1.4.0",
     "@babel/plugin-proposal-optional-chaining": "^7.12.7",
     "@commitlint/cli": "^11.0.0",
-    "@commitlint/config-conventional": "^11.0.0",
+    "@commitlint/config-conventional": "^20.0.0",
     "@nuxt/types": "^2.14.12",
     "@nuxt/typescript-build": "^2.0.4",
     "@nuxtjs/eslint-config": "^3.1.0",
