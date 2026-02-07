@@ -515,10 +515,9 @@ export default [
               title: 'TARTA SUSPIRO DE TORREHERMOSA',
               description:
                 'Somos distribuidores autorizados de la famosa Tarta Suspiro',
-              listInfo: 
+              listInfo:
                 'Consulta sabores y tamaños disponibles',
               hideListInfo: true,
-              }),
             },
             {
               image: 'vasitos600.jpg',
@@ -684,6 +683,7 @@ export default [
                 'data-item-custom1-options':
                   'Happy Birthday|Feliz Cumple|Supermamá|Superpapá',
                 'data-item-stackable': 'never',
+              },
             },
             {
               image: 'toppersacrilico600.jpg',
